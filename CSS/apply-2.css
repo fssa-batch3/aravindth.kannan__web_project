@@ -1,0 +1,86 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url(./../Images/success\ fully\ appl.jpg);
+  background-size: cover;
+}
+
+.header {
+  height: 60%;
+}
+.header-1 {
+  display: flex;
+  height: 200px;
+  width: 100%;
+  align-items: center;
+}
+.logo {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-1 {
+  margin-left: 25%;
+  width: 100px;
+  height: 80px;
+}
+.All-navs {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex: 1;
+  height: 100%;
+}
+a {
+  text-shadow: 0px 0px 10px white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+}
+a:hover {
+  transform: scale(1.1);
+}
+.success {
+  box-shadow: 0px 0px 50px white;
+  margin: auto;
+  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 600px;
+  border-radius: 20px;
+}
+
+.congrats {
+  display: flex;
+  justify-content: center;
+}
+.congrats-1 {
+  color: white;
+  font-size: 40px;
+  font-weight: bolder;
+  text-shadow: 0px 0px 20px white;
+}
+.right {
+  display: flex;
+  justify-content: center;
+}
+.right-1 {
+  width: 350px;
+  height: 350px;
+  border-radius: 200px;
+}
+.member {
+  display: flex;
+  justify-content: center;
+}
+.member-1 {
+  font-size: 40px;
+  font-weight: bolder;
+  text-shadow: 0px 0px 20px white;
+  color: white;
+}
