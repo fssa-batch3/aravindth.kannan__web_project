@@ -10,8 +10,7 @@ body {
   display: flex;
   flex-direction: column;
 
-  /* height: 100%;
-  width: 100%; */
+  
 }
 .header {
   height: 60%;
@@ -82,7 +81,7 @@ a:hover {
 }
 .about-us-font-1 {
   font-family: serif;
-  font-size: 15px;
+  
   margin-left: 4%;
   font-size: 35px;
   color: white;
@@ -120,7 +119,7 @@ a:hover {
 }
 .barber-font-1 {
   font-family: serif;
-  font-size: 20px;
+  
   margin-left: 4%;
   font-size: 35px;
   color: white;
@@ -157,7 +156,7 @@ a:hover {
 }
 .features-font-1 {
   font-family: serif;
-  font-size: 20px;
+  
   margin-left: 4%;
   font-size: 35px;
   color: white;
