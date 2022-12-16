@@ -32,7 +32,7 @@ footer {
 .about {
   flex: 2;
   display: flex;
-  gap: 10px;
+  gap: 5px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -42,7 +42,7 @@ footer {
 }
 h1 {
   font-size: 30px;
-  /* text-decoration: none; */
+  text-decoration: none;
   color: black;
   transition: 0.5s;
   margin: auto;
@@ -50,12 +50,13 @@ h1 {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   text-align: center;
-  text-shadow: 0px 0px 2px rgb(250, 250, 250);
+  text-shadow: 0px 0px 20px white;
 }
 
 h1:hover {
-  transform: scale(1.2);
+  /* transform: scale(1.2); */
   color: rgb(6, 6, 6);
+  padding-left: 40px;
   /* text-decoration: none; */
   text-shadow: 0px 0px 20px white;
   /* text-rendering: auto; */
