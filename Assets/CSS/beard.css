@@ -120,6 +120,8 @@ body {
     width: 95%;
   }
   .small-font-1 {
+    flex: 4;
+    width: 95%;
     text-shadow: 0px 0px 10px white;
     font-size: 30px;
     color: white;
@@ -147,10 +149,6 @@ body {
     border-radius: 20px;
     width: 90%;
     height: 98%;
-  }
-  .small-font-1 {
-    flex: 4;
-    width: 95%;
   }
   .small-font-2 {
     text-shadow: 0px 0px 10px white;

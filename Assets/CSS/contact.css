@@ -90,6 +90,7 @@ p {
 }
 .message-box {
   width: 100%;
+  margin-top: 30px;
   /* display: flex;
   justify-content: center; */
 }
@@ -104,9 +105,6 @@ p {
   background-color: transparent;
   width: 80%;
   height: 90px;
-}
-.message-box {
-  margin-top: 30px;
 }
 .submit {
   margin-top: 40px;
