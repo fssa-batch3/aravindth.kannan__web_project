@@ -4,6 +4,7 @@ body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(./../Images/apply\ form.jpg);
   background-size: cover;
+  overflow-x: hidden;
 }
 
 .header {
@@ -90,6 +91,7 @@ label {
 }
 .name-box-1 {
   margin-left: 120px;
+  padding-left: 2px;
   width: 70%;
   background-color: transparent;
   font-size: 20px;
@@ -105,8 +107,9 @@ label {
 .address-box-1 {
   margin-left: 120px;
   width: 70%;
+  padding-left: 2%;
   background-color: transparent;
-  font-size: 30px;
+  font-size: 20px;
   height: 80px;
   color: white;
   border: 1px solid white;
