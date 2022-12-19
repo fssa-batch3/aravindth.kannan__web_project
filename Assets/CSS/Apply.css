@@ -91,7 +91,7 @@ label {
 }
 .name-box-1 {
   margin-left: 120px;
-  padding-left: 2px;
+  padding-left: 2%;
   width: 70%;
   background-color: transparent;
   font-size: 20px;
@@ -110,7 +110,7 @@ label {
   padding-left: 2%;
   background-color: transparent;
   font-size: 20px;
-  height: 80px;
+  height: 60px;
   color: white;
   border: 1px solid white;
   border-radius: 15px;
