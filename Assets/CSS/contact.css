@@ -59,12 +59,10 @@ a:hover {
 }
 .phone {
   display: flex;
-  border-radius: 20px;
   flex-direction: column;
-  margin-left: 15%;
+  margin-left: 14%;
   width: 25%;
   gap: 0px;
-  box-shadow: inset 0px 0px 20px white;
   padding: 20px;
 }
 p {
@@ -76,53 +74,44 @@ p {
 .second-div {
   width: 25%;
   margin-bottom: 40px;
-  border-radius: 20px;
 
   gap: 10px;
-  box-shadow: inset 0px 0px 20px white;
   height: 30%;
-  margin-left: 15%;
+  margin-left: 14%;
   display: flex;
   flex-direction: column;
-  /* gap: 20px; */
   justify-content: space-around;
   padding: 20px;
 }
 .message-box {
   width: 100%;
   margin-top: 30px;
-  /* display: flex;
-  justify-content: center; */
 }
 .enter-text {
-  /* margin: auto; */
-  box-shadow: 0px 0px 20px 0px white;
+  box-shadow: inset 0px 0px 10px 0px white;
   font-size: 30px;
-  border: 2px solid white;
-  border-radius: 20px;
+  border-radius: 3px;
   font-weight: bolder;
   color: white;
   background-color: transparent;
   width: 80%;
-  height: 90px;
+  height: 60px;
 }
 .submit {
   margin-top: 40px;
   display: flex;
-  justify-content: center;
 }
 .submit-1 {
-  box-shadow: 0px 0px 20px 0px white;
+  box-shadow: inset 0px 0px 10px 0px white;
   background-color: transparent;
-  border-radius: 20px;
-  border: 2px solid white;
+  border-radius: 3px;
   width: 200px;
-  /* border-radius: 20px; */
   height: 70px;
   color: white;
   font-weight: bolder;
   font-size: 30px;
   margin-bottom: 5%;
+  transition: 0.7s;
 }
 .submit-1:hover {
   transform: scale(1.2);
