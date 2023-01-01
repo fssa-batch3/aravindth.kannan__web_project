@@ -9,7 +9,6 @@ body {
   );
 }
 .date-and-time {
-  margin-bottom: 40px;
   display: flex;
   margin: 200px 200px 200px 200px;
   width: 75%;
