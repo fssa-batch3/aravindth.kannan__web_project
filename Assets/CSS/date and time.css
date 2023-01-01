@@ -11,10 +11,9 @@ body {
 .date-and-time {
   margin-bottom: 40px;
   display: flex;
-  margin: auto;
+  margin: 200px 200px 200px 200px;
   width: 75%;
   height: 700px;
-  margin-top: 200px;
   border-radius: 3px;
   box-shadow: inset 0px 0px 20px white;
 }

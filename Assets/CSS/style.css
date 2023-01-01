@@ -54,12 +54,7 @@ body {
   width: 100%;
   background-color: transparent;
 }
-.user-box-1,
-.email-id-box-1,
-.password-box-1 {
-  border: none;
-  outline: none;
-}
+
 .user-box-1,
 .email-id-box-1,
 .password-box-1 {
