@@ -1,9 +1,12 @@
 body {
   margin: 0px;
   padding: 0px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    url(./../Images/success\ fully\ appl.jpg);
-  background-size: cover;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(59, 59, 59, 1) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }
 
 .header {
@@ -12,6 +15,8 @@ body {
 .header-1 {
   display: flex;
   height: 200px;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 20px white;
   width: 100%;
   align-items: center;
 }
@@ -20,11 +25,10 @@ body {
   display: flex;
   justify-content: center;
 }
-
 .logo-1 {
   margin-left: 25%;
-  width: 100px;
-  height: 80px;
+  width: 200px;
+  height: 200px;
 }
 .All-navs {
   display: flex;
@@ -45,14 +49,16 @@ a:hover {
   transform: scale(1.1);
 }
 .success {
-  box-shadow: 0px 0px 50px white;
+  box-shadow: inset 0px 0px 20px white;
   margin: auto;
   border: 2px solid white;
   display: flex;
   flex-direction: column;
   width: 70%;
+  margin-top: 100px;
+  border: none;
   height: 600px;
-  border-radius: 20px;
+  border-radius: 3px;
 }
 
 .congrats {
@@ -62,6 +68,8 @@ a:hover {
 .congrats-1 {
   color: white;
   font-size: 40px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-weight: bolder;
   text-shadow: 0px 0px 20px white;
 }
@@ -72,13 +80,15 @@ a:hover {
 .right-1 {
   width: 350px;
   height: 350px;
-  border-radius: 200px;
+  border-radius: 50px;
 }
 .member {
   display: flex;
   justify-content: center;
 }
 .member-1 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-size: 40px;
   font-weight: bolder;
   text-shadow: 0px 0px 20px white;

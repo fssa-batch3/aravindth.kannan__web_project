@@ -1,23 +1,69 @@
 body {
   margin: 0px;
   padding: 0px;
-  background-image: url(./../Images/book-7.jpg);
-  background-size: cover;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(59, 59, 59, 1) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+.header {
+  height: 60%;
+}
+.header-1 {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(59, 59, 59, 1) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  box-shadow: inset 0px 0px 20px white;
+  display: flex;
+  height: 200px;
+  width: 100%;
+  align-items: center;
+}
+.logo-2 {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-1 {
+  margin-left: 25%;
+  width: 200px;
+  height: 150px;
+}
+.All-navs {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex: 1;
+  height: 100%;
+}
+a {
+  text-shadow: 0px 0px 10px white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+}
+a:hover {
+  transform: scale(1.1);
 }
 .success {
-  /* margin-top: 0px; */
-  box-shadow: 0px 0px 50px white;
-  margin-top: 120px;
-  margin-left: 180px;
-  border: 2px solid white;
+  box-shadow: inset 0px 0px 20px white;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  margin-left: 170px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 40px;
   width: 80%;
-  /* border: none; */
   height: 900px;
-  border-radius: 20px;
-  background-color: rgba(44, 32, 208, 0.354);
+  border-radius: 3px;
+  background-color: rgba(52, 52, 53, 0.354);
 }
 
 .congrats {
@@ -28,6 +74,9 @@ body {
   color: white;
   font-size: 40px;
   font-weight: bolder;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+
   text-shadow: 0px 0px 20px white;
 }
 .right {
@@ -37,11 +86,14 @@ body {
 .right-1 {
   width: 350px;
   height: 350px;
-  border-radius: 200px;
+  border-radius: 30px;
 }
 .otp {
   font-size: 40px;
   font-weight: bolder;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+
   color: rgb(16, 217, 60);
   text-align: center;
   text-shadow: 0px 0px 20px green;
@@ -52,11 +104,11 @@ body {
 }
 .member-1 {
   font-size: 60px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-weight: bolder;
-  text-shadow: 0px 0px 6px rgb(30, 229, 16);
-  color: rgb(87, 225, 13);
+  text-shadow: 0px 0px 6px white;
+  color: white;
 }
 .button-div {
   display: flex;
@@ -65,16 +117,18 @@ body {
 .button {
   width: 200px;
   height: 50px;
-  background-color: greenyellow;
-  color: black;
+  background-color: transparent;
+  color: white;
   font-size: 30px;
   font-weight: bolder;
   font-family: Arial, Helvetica, sans-serif;
-  box-shadow: 0px 0px 30px greenyellow;
+  box-shadow: inset 0px 0px 10px white;
   border: none;
   transition: 0.7s;
-  border-radius: 20px;
+  border-radius: 3px;
 }
 .button:hover {
   transform: scale(1.2);
+  background-color: white;
+  color: black;
 }

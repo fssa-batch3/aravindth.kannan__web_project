@@ -1,16 +1,28 @@
 body {
   padding: 0px;
   margin: 0px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(./../Images/book-2.jpg);
-  background-size: cover;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(59, 59, 59, 1) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }
 
 .header {
   height: 60%;
+  padding: 10px;
 }
 .header-1 {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(59, 59, 59, 1) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
   display: flex;
+  border: none;
+  box-shadow: inset 0px 0px 20px white;
   height: 200px;
   width: 100%;
   align-items: center;
@@ -23,8 +35,8 @@ body {
 
 .logo-1 {
   margin-left: 25%;
-  width: 100px;
-  height: 80px;
+  width: 200px;
+  height: 150px;
 }
 .All-navs {
   display: flex;
@@ -52,25 +64,18 @@ a:hover {
   height: 20%;
 }
 
-.about-font {
-  color: white;
-  font-weight: bolder;
-  text-shadow: 0px 0px 20px white;
-  font-family: "Times New Roman", Times, serif;
-}
 .haircut-1 {
-  /* margin-left: 80px; */
   font-size: 50px;
   font-weight: bolder;
   color: white;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  text-shadow: 0px 0px 20px white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: 0px 0px 5px white;
 }
 .book {
   background-color: transparent;
   border: none;
-  box-shadow: 0px 0px 50px white;
-  border-radius: 40px;
+  box-shadow: inset 0px 0px 20px white;
+  border-radius: 3px;
   width: 450px;
   height: 800px;
 }
@@ -82,10 +87,10 @@ a:hover {
 }
 .book-head-1 {
   text-align: center;
-  text-shadow: 0px 0px 10px white;
-  font-size: 35px;
+  text-shadow: 0px 0px 5px white;
+  font-size: 40px;
   font-weight: bolder;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
 }
 .book-img {
@@ -95,8 +100,7 @@ a:hover {
 }
 .book-img-1 {
   margin: auto;
-  box-shadow: 0px 0px 20px white;
-  border-radius: 20px;
+  border-radius: 3px;
   width: 90%;
   height: 90%;
 }
@@ -107,9 +111,9 @@ a:hover {
 .book-font-1 {
   text-shadow: 0px 0px 10px white;
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
 }
 .select-button {
@@ -117,13 +121,12 @@ a:hover {
   height: 13%;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
 }
 .select-button-1 {
   width: 150px;
   height: 50px;
-  border-radius: 20px;
-  box-shadow: 0px 0px 20px white;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 10px white;
   border: none;
   background-color: transparent;
   color: white;
@@ -131,7 +134,7 @@ a:hover {
   text-shadow: 0px 0px 30px white;
   font-size: 20px;
   font-weight: bolder;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .select-button-1:hover {
@@ -147,9 +150,10 @@ a:hover {
 .book-font-2 {
   text-shadow: 0px 0px 10px white;
   text-align: center;
+  margin: 10px;
   font-size: 20px;
   font-weight: bold;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
 }
 
@@ -159,39 +163,44 @@ a:hover {
   width: 95%;
   height: 500px;
   background-color: transparent;
-  box-shadow: 0px 0px 40px white;
+  box-shadow: inset 0px 0px 20px 0px white;
   border: none;
-  border-radius: 30px;
+  border-radius: 3px;
 }
 .pic-time {
   flex: 1;
-  /* width: 100%; */
-  /* height: 100%; */
   padding: 25px;
 }
 .pic-time-1 {
-  border-radius: 20px;
-  /* margin: 20px; */
+  border-radius: 3px;
   width: 95%;
   height: 95%;
-  /* z-index: 2; */
-  box-shadow: 0px 0px 20px white;
 }
+
 .book-details {
-  padding: 20px;
   flex: 3;
+  margin: 30px;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-.book-details-1 {
-  text-align: center;
+.about-font {
   color: white;
-  font-size: 28px;
+  margin: 20px;
+  padding: 0px;
+  font-size: 40px;
+  font-weight: bolder;
+  text-shadow: 0px 0px 20px white;
+}
+.book-details-1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  margin: 30px;
+  font-size: 24px;
 }
 .details-2 {
   margin-top: 100px;
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 20px;
 }

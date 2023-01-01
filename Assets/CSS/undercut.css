@@ -1,10 +1,12 @@
 body {
   margin: 0px;
   padding: 0px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(./../Images/haircut\ style.jpg);
-  background-size: cover;
-  /* background-repeat: no-repeat; */
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(59, 59, 59, 1) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }
 .header {
   height: 60%;
@@ -12,9 +14,15 @@ body {
 }
 .header-1 {
   display: flex;
-  /* border: 2px solid white; */
-  border-radius: 30px;
-  box-shadow: 0px 0px 20px white;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(59, 59, 59, 1) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  /* position: fixed; */
+
+  box-shadow: inset 0px 0px 20px white;
   height: 200px;
   width: 100%;
   align-items: center;
@@ -27,8 +35,8 @@ body {
 
 .logo-1 {
   margin-left: 25%;
-  width: 100px;
-  height: 80px;
+  width: 200px;
+  height: 150px;
 }
 .All-navs {
   display: flex;
@@ -69,8 +77,8 @@ section {
 }
 .big-div {
   margin-top: 40px;
-  border-radius: 30px;
-  box-shadow: 0px 0px 20px white;
+  /* border-radius: 30px; */
+  box-shadow: inset 0px 0px 20px white;
   display: flex;
   /* border: 1px solid white; */
   width: 97%;
@@ -84,9 +92,7 @@ section {
 .big-img-1 {
   width: 90%;
   height: 100%;
-  /* border: 2px solid black; */
-  box-shadow: 0px 0px 10px white;
-  border-radius: 30px;
+  border-radius: 3px;
 }
 .two-img {
   padding: 20px;
@@ -96,9 +102,6 @@ section {
   flex: 3;
 }
 .font-1 {
-  /* border: 2px solid white; */
-  box-shadow: 0px 0px 10px white;
-  border-radius: 30px;
   display: flex;
   width: 100%;
   height: 45%;
@@ -110,8 +113,7 @@ section {
 }
 
 .small-pic-1 {
-  box-shadow: 0px 0px 20px white;
-  border-radius: 20px;
+  border-radius: 3px;
   width: 90%;
   height: 98%;
 }
@@ -132,8 +134,8 @@ section {
 
 .font-2 {
   /* border: 2px solid white; */
-  box-shadow: 0px 0px 20px white;
-  border-radius: 30px;
+  box-shadow: inset 0px 0px 20px white;
+  border-radius: 3px;
   display: flex;
   width: 97%;
   height: 400px;
@@ -141,18 +143,26 @@ section {
 }
 .small-pic-2 {
   padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   flex: 1;
 }
 .small-pic-3 {
-  box-shadow: 0px 0px 20px white;
-  border-radius: 20px;
+  border-radius: 3px;
   width: 90%;
-  height: 98%;
+  height: 90%;
+}
+.small-font-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .small-font-2 {
   text-shadow: 0px 0px 10px white;
-  font-size: 40px;
+  font-size: 30px;
+  margin: 50px;
   color: white;
   text-align: center;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
