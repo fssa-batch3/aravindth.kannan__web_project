@@ -75,6 +75,11 @@ section {
   flex-direction: column;
   gap: 100px;
 }
+.all_styles {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .big-div {
   margin-top: 40px;
   /* border-radius: 30px; */

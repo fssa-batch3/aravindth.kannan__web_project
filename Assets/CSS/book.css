@@ -10,8 +10,8 @@ body {
 }
 
 .header {
-  height: 60%;
-  padding: 10px;
+  /* height: 60%; */
+  /* padding: 10px; */
 }
 .header-1 {
   background: linear-gradient(
@@ -59,6 +59,7 @@ a:hover {
 
 .haircut {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   width: 100%;
   height: 20%;
@@ -83,6 +84,7 @@ a:hover {
   width: 100%;
   height: 20%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 .book-head-1 {
@@ -97,6 +99,7 @@ a:hover {
   width: 100%;
   height: 50%;
   display: flex;
+  flex-wrap: wrap;
 }
 .book-img-1 {
   margin: auto;
@@ -119,6 +122,7 @@ a:hover {
 .select-button {
   width: 100%;
   height: 13%;
+  flex-wrap: wrap;
   display: flex;
   justify-content: center;
 }
@@ -144,6 +148,7 @@ a:hover {
 }
 .selecters {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20%;
 }
@@ -159,6 +164,7 @@ a:hover {
 
 .about-time-cut {
   display: flex;
+  flex-wrap: wrap;
   margin: 40px;
   width: 95%;
   height: 500px;
@@ -181,6 +187,7 @@ a:hover {
   flex: 3;
   margin: 30px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   flex-direction: column;
 }
@@ -195,12 +202,24 @@ a:hover {
 .book-details-1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
-  margin: 30px;
+  /* margin: 30px; */
   font-size: 24px;
 }
 .details-2 {
   margin-top: 100px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   gap: 20px;
+}
+@media screen and (max-width: 390px) {
+  .book-details-1,
+  .about-font,
+  .book-font-2,
+  .select-button-1,
+  .book-font-1,
+  .book-head-1,
+  .haircut-1 {
+    font-size: 10px;
+  }
 }

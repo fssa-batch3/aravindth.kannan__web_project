@@ -9,6 +9,7 @@ body {
 }
 .header-1 {
   display: flex;
+  /* flex-wrap: wrap; */
   height: 200px;
   width: 100%;
   align-items: center;
@@ -16,6 +17,7 @@ body {
 .logo {
   width: 200px;
   display: flex;
+  /* flex-wrap: wrap; */
   justify-content: center;
 }
 
@@ -25,6 +27,7 @@ body {
 }
 .All-navs {
   display: flex;
+  /* flex-wrap: wrap; */
   align-items: center;
   justify-content: space-evenly;
   flex: 1;
@@ -43,6 +46,7 @@ a:hover {
 }
 .website-name {
   display: flex;
+  flex-wrap: wrap;
   justify-content: end;
 }
 .website-name-1 {
@@ -55,6 +59,7 @@ a:hover {
 }
 .welcome-div {
   display: flex;
+  flex-wrap: wrap;
   justify-content: end;
 }
 .welcome-1 {
@@ -68,6 +73,7 @@ a:hover {
 }
 .service-font {
   display: flex;
+  /* flex-wrap: wrap; */
   justify-content: end;
 }
 .service {
@@ -83,4 +89,34 @@ a:hover {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-style: italic;
+}
+
+@media screen and (max-width: 600px) {
+  .service-font-1 {
+    font-size: 15px;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .service-font {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  .welcome-1 {
+    font-size: 30px;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .website-name-1 {
+    font-size: 50px;
+    margin: auto;
+  }
+  .logo-1 {
+    width: 75px;
+    height: 60px;
+  }
+  body {
+    background-image: url(../Images/home\ page\ -\ Copy.jpg);
+    background-repeat: no-repeat;
+  }
 }
