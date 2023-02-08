@@ -16,6 +16,7 @@ body {
 }
 .logo {
   width: 200px;
+  background-color: black;
   display: flex;
   /* flex-wrap: wrap; */
   justify-content: center;
@@ -27,6 +28,7 @@ body {
 }
 .All-navs {
   display: flex;
+  background-color: black;
   /* flex-wrap: wrap; */
   align-items: center;
   justify-content: space-evenly;
@@ -35,9 +37,10 @@ body {
 }
 a {
   text-shadow: 0px 0px 10px white;
+  /* background-color: black; */
   text-decoration: none;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 25px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
 }

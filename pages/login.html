@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./Assets/CSS/style.css" />
+    <link rel="stylesheet" href="/Assets/CSS/style.css" />
     <title>Login</title>
   </head>
   <body>
@@ -12,88 +12,129 @@
       <img
         class="logo"
         alt="image"
-        src="./Assets/Images/MASter__4_-removebg-preview.png"
+        src="/Assets/Images/MASter__4_-removebg-preview.png"
       />
     </div>
-    <div class="content">
-      <div class="content-1">
-        <div class="login">
-          <h1 class="login-1">Login</h1>
-        </div>
-        <div class="user-name">
-          <p class="user-name-1">User Name</p>
-        </div>
-        <div class="user-box">
+    <form id="login_form">
+      <div class="content">
+        <div class="content-1">
+          <div class="login">
+            <h1 class="login-1">Login</h1>
+          </div>
+          <!-- <div class="user-name">
+            <p class="user-name-1">User Name</p>
+          </div> -->
+          <!-- <div class="user-box">
+            <input
+              type="text"
+              placeholder=" "
+              class="user-box-1"
+              value="aravindth"
+              id="username"
+            />
+          </div> -->
+          <div class="email-id">
+            <p class="email-id-1">Email</p>
+          </div>
+          <div class="email-id-box">
+            <input
+              class="email-id-box-1"
+              type="email"
+              placeholder=" "
+              value="kaviprakash594@gmail.com"
+              id="email"
+            />
+          </div>
+          <div class="password">
+            <p class="password-1">Password</p>
+          </div>
           <input
-            type="text"
+            class="password-box-1"
+            type="password"
             placeholder=" "
-            class="user-box-1"
-            value="aravindth"
-            id="username"
+            value="a22092003"
+            id="password"
           />
-        </div>
-        <div class="email-id">
-          <p class="email-id-1">Email</p>
-        </div>
-        <div class="email-id-box">
-          <input
-            class="email-id-box-1"
-            type="email"
-            placeholder=" "
-            value="kaviprakash594@gmail.com"
-            id="email"
-          />
-        </div>
-        <div class="password">
-          <p class="password-1">Password</p>
-        </div>
-        <input
-          class="password-box-1"
-          type="password"
-          placeholder=" "
-          value="a22092003"
-          id="password"
-        />
-        <div class="Password-box"></div>
+          <div class="Password-box"></div>
 
-        <div class="login-button">
-          <!-- <a href="./pages/home.html"> -->
-          <button class="login-button-1" type="button" onclick="submit()">
-            Login
-          </button>
-          <!-- </a> -->
-        </div>
+          <div class="login-button">
+            <!-- <a href="./pages/home.html"> -->
+            <button class="login-button-1" type="submit">Login</button>
+            <!-- </a> -->
+          </div>
 
-        <div class="forgot-password">
-          <p class="forgot-password-1">Forgot-Password?</p>
+          <div class="forgot-password">
+            <p class="forgot-password-1">Forgot-Password?</p>
+          </div>
         </div>
       </div>
-    </div>
+    </form>
 
     <!-- Java script -->
     <script>
-
-
-
       // JSON
 
-      
+      let logIn = document.getElementById("login_form");
+      logIn.addEventListener("submit", (event) => {
+        event.preventDefault();
+        let all_user_data = JSON.parse(localStorage.getItem("userinfo"));
+        console.log(all_user_data);
+        // const userName = document.getElementById("username");
+        const useremail = document.getElementById("email").value;
+        const emailPassword = document.getElementById("password").value;
+        let match = false;
+        for (let i = 0; i < all_user_data.length; i++) {
+          if (
+            useremail == all_user_data[i].useremail &&
+            emailPassword == all_user_data[i].emailPassword
+          ) {
+            match = true;
 
-      function submit() {
-        const username = document.getElementById("username").value;
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
+            break;
+          } else {
+            match = false;
+          }
+        }
 
-        console.log(username);
-        console.log(email);
-        console.log(password);
+        if ((match = true)) {
+          alert("Success");
+          const matchObject = all_user_data.find(
+            (o) => o["email"] == useremail
+          );
+          console.log(matchObject);
+          const thisUser = JSON.stringify(matchObject);
+          localStorage.setItem("this_user", thisUser);
 
-        localStorage.setItem("username", username);
-        localStorage.setItem("email", email);
-        localStorage.setItem("password", password);
+          // document.querySelector("login_form").reset();
+          window.location.href = "/index.html";
+        } else {
+          alert("Fail");
+        }
+      });
 
-        window.location.href = "./pages/home.html";
-      } 
+      // function submit() {
+      //   let details_arr = [];
+      //   const username = document.getElementById("username").value;
+      //   const email = document.getElementById("email").value;
+      //   const password = document.getElementById("password").value;
+
+      //   console.log(username);
+      //   console.log(email);
+      //   console.log(password);
+
+      //   let user_details = {
+      //     username: username,
+      //     email: email,
+      //     password: password,
+      //   };
+      //   details_arr.push(user_details);
+      //   console.log(details_arr);
+      //   localStorage.setItem("username", username);
+      //   localStorage.setItem("email", email);
+      //   localStorage.setItem("password", password);
+
+      //   window.location.href = "./pages/home.html";
+      // }
     </script>
   </body>
 </html>
