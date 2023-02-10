@@ -12,49 +12,41 @@
       <div class="head_div">
         <p class="head">Registration info</p>
       </div>
+
       <div class="all_inputs">
-        <label for="user_name" class="all_label">Username</label>
-        <input
-          class="input"
-          type="text"
-          placeholder="Username"
-          id="username"
-          required
-        />
+        <label for="user_name" pattern="[A-Z a-z]{1,32}" class="all_label"
+          >Username</label
+        >
+        <br />
+        <br />
+        <input class="input" type="text" id="username" autocomplete="name" />
       </div>
 
       <div class="all_inputs">
         <label for="email" class="all_label">Email Id</label>
-        <input
-          class="input"
-          type="email"
-          placeholder="Email id"
-          id="email"
-          required
-        />
+        <br />
+        <br />
+        <input class="input" type="email" id="email" autocomplete="email" />
       </div>
 
       <div class="all_inputs">
         <label for="password" class="all_label">Password</label>
+        <br />
+        <br />
         <input
           class="input"
           type="password"
-          placeholder="Password"
           id="password"
-          required
+          autocomplete="password"
         />
       </div>
 
       <div class="all_inputs">
         <label for="phone" class="all_label">phone number</label>
+        <br />
+        <br />
 
-        <input
-          class="input"
-          type="number"
-          placeholder="Phone number"
-          id="phone_number"
-          required
-        />
+        <input class="input" type="number" id="phone_number" />
       </div>
 
       <div class="submit">
@@ -69,8 +61,6 @@
 
       // Java Script
 
-      // onrefresh();
-
       const signUp = document.getElementById("form");
       signUp.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -80,53 +70,57 @@
           array = JSON.parse(localStorage.getItem("userinfo"));
         }
 
-        const userName = document.getElementById("username").value;
-        const useremail = document.getElementById("email").value;
-        const emailPassword = document.getElementById("password").value;
-        const phoneNumber = document.getElementById("phone_number").value;
+        const userName = document.getElementById("username").value.trim();
+        const useremail = document.getElementById("email").value.trim();
+        const emailPassword = document.getElementById("password").value.trim();
+        const phoneNumber = document
+          .getElementById("phone_number")
+          .value.trim();
 
-        let userData = {
-          userName: userName,
-          email: useremail,
-          email_password: emailPassword,
-          phoneNumber: phoneNumber,
-        };
+        if (userName == "" || userName === null) {
+          alert("Enter your user name");
+          userName.focus();
+          return false;
+        } else if (useremail == "" || useremail == null) {
+          alert("Enter your Email ID");
+          return false;
+        } else if (emailPassword.length < 6) {
+          alert("Password should be more than 6 characters");
+          return false;
+        } else if (phoneNumber.length != 10) {
+          alert("Phone number should be 10 numbers");
+          return false;
+        }
 
-        // array.push(userData);
-        arr = JSON.parse(localStorage.getItem("userinfo"));
-        arr.push(userData);
-        // localStorage.removeItem("userinfo")
-        let stringarray = JSON.stringify(arr);
-        localStorage.setItem("userinfo", stringarray);
+        // let match = true;
+        for (let i = 0; i < array.length; i++) {
+          if (array[i]["email"] === useremail) {
+            match = true;
+            break;
+          } else {
+            match = false;
+          }
+        }
 
-        window.location.href = "/index.html";
+        if (match = true) {
+          alert("This email is already exists");
+        } else {
+          let userData = {
+            userName: userName,
+            email: useremail,
+            email_password: emailPassword,
+            phoneNumber: phoneNumber,
+          };
+
+          arr = JSON.parse(localStorage.getItem("userinfo"));
+          arr.push(userData);
+
+          let stringarray = JSON.stringify(arr);
+          localStorage.setItem("userinfo", stringarray);
+
+          window.location.href = "/index.html";
+        }
       });
-      // function EmailExist(inputEmail) {
-      //   let isExist = false;
-      //   for (let i = 0; i < array.length; i++) {
-      //     if (inputEmail == array[i].email) {
-      //       isExist = true;
-      //       break;
-      //     }
-      //   }
-      //   return isExist;
-      // }
-
-      // let form = document.getElementById("register_form_id");
-      // let obj = new Object();
-      // register_form_id.addEventListener("submit", function (event) {
-      // event.preventDefault();
-      // const user_data = {};
-      // const username = document.getElementById("username").value;
-      // user_data["user_name"] = username;
-      // const email = document.getElementById("email").value;
-      // user_data["user_email"] = email;
-      // const passWord = document.getElementById("password").value;
-      // user_data["user_pass"] = passWord;
-      // const phone = document.getElementById("phone_number").value;
-      // user_data["user_phone"] = phone;
-      // localStorage.setItem("user_data", JSON.stringify(user_data));
-      // });
     </script>
   </body>
 </html>
