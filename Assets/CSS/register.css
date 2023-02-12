@@ -4,12 +4,14 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #c6c6c4;background-color: #c8c6c5;
-  background-image: linear-gradient(90deg, #c8c6c5 0%, #b5b3b4 55%, #ada9aa 100%);
-  
-  
-
-  
+  background-color: #c6c6c4;
+  background-color: #c8c6c5;
+  background-image: linear-gradient(
+    90deg,
+    #c8c6c5 0%,
+    #b5b3b4 55%,
+    #ada9aa 100%
+  );
 }
 
 input:valid {
@@ -39,30 +41,29 @@ input:invalid {
   align-items: center;
 }
 .head {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bolder;
   color: rgb(10, 10, 10);
 }
 .all_label {
   font-size: 2rem;
-  margin-top: 2%;
   color: white;
 }
 .all_inputs {
-  margin-left: 15%;
+  margin-left: 18%;
   width: 100%;
   height: 15%;
 }
 .input {
-  font-size: 2rem;
+  font-size: 20px;
   color: black;
   padding-left: 2%;
-  width: 70%;
-  height: 50%;
+  width: 60%;
+  height: 30%;
   border-radius: 0px 20px 0px;
 }
 .submit {
-  margin-top: 5%;
+  /* margin-top: 5%; */
   width: 100%;
   display: flex;
   flex-wrap: wrap;

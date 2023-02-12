@@ -60,14 +60,12 @@
       // JSON
 
       // Java Script
-
       const signUp = document.getElementById("form");
       signUp.addEventListener("submit", function (event) {
         event.preventDefault();
-
-        if (localStorage.getItem("userinfo") !== null) {
-          let arr = [];
-          array = JSON.parse(localStorage.getItem("userinfo"));
+        let userNew = [];
+        if (localStorage.getItem("userinfo") != null) {
+          userNew = JSON.parse(localStorage.getItem("userinfo"));
         }
 
         const userName = document.getElementById("username").value.trim();
@@ -79,30 +77,23 @@
 
         if (userName == "" || userName === null) {
           alert("Enter your user name");
-          userName.focus();
-          return false;
         } else if (useremail == "" || useremail == null) {
           alert("Enter your Email ID");
-          return false;
         } else if (emailPassword.length < 6) {
           alert("Password should be more than 6 characters");
-          return false;
         } else if (phoneNumber.length != 10) {
           alert("Phone number should be 10 numbers");
-          return false;
         }
-
         // let match = true;
-        for (let i = 0; i < array.length; i++) {
-          if (array[i]["email"] === useremail) {
+        for (let i = 0; i < userNew.length; i++) {
+          if (userNew[i]["email"] === useremail) {
             match = true;
             break;
           } else {
             match = false;
           }
         }
-
-        if (match = true) {
+        if (match === true) {
           alert("This email is already exists");
         } else {
           let userData = {
@@ -111,13 +102,10 @@
             email_password: emailPassword,
             phoneNumber: phoneNumber,
           };
-
-          arr = JSON.parse(localStorage.getItem("userinfo"));
-          arr.push(userData);
-
-          let stringarray = JSON.stringify(arr);
+          // arr = JSON.parse(localStorage.getItem("userinfo"));
+          userNew.push(userData);
+          const stringarray = JSON.stringify(userNew);
           localStorage.setItem("userinfo", stringarray);
-
           window.location.href = "/index.html";
         }
       });

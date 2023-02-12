@@ -87,14 +87,14 @@ a {
   height: 100px;
   color: white;
   font-size: 25px;
-  /* padding-left: 3%; */
+  padding-left: 3%;
   background-color: transparent;
   border: none;
   box-shadow: inset 0px 0px 10px white;
 }
 .message {
   width: 100%;
-  /* padding-left: 3%; */
+  padding-left: 3%;
   height: 200px;
   font-size: 30px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
