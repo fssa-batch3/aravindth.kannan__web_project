@@ -17,7 +17,7 @@
         <label for="email" class="all_label">username:</label>
         <br />
         <br />
-        <input type="email" class="form-control personName" id="usernsme" />
+        <input type="name" class="form-control personName" id="usernsme" />
       </div>
       <div class="form-group">
         <label for="email" class="all_label">Email:</label>
@@ -32,19 +32,23 @@
         <input type="text" class="form-control personPassword" id="password" />
       </div>
 
-      <!-- <div class="form-group">
+      <div class="form-group">
         <label for="pwd" class="all_label"> Confirm Password:</label>
         <br />
         <br />
-        <input type="text" class="form-control personPassword" id="c_password" />
-      </div> -->
+        <input
+          type="text"
+          class="form-control personcPassword"
+          id="c_password"
+        />
+      </div>
 
-      <!-- <div class="form-group">
+      <div class="form-group">
         <label for="pwd" class="all_label">Phone number:</label>
         <br />
         <br />
-        <input type="text" class="form-control personPassword" id="phone" />
-      </div> -->
+        <input type="text" class="form-control personPhone" id="phone" />
+      </div>
 
       <!-- <div class="form-group">
         <label for="phone" class="all_label">Phone number:</label>
@@ -67,7 +71,13 @@
           <input type="phone" class="form-control" id="phone_number" />
         </div> -->
       <div class="submit">
-        <button type="submit" class="submit_btn">Save</button>
+        <a
+          class="submit_btn"
+          href="./profile_edit.html"
+        >
+          Edit
+        </a>
+      
       </div>
     </form>
     <!-- </div> -->
@@ -81,14 +91,17 @@
       const usename = document.querySelector(".personName");
       const useemail = document.querySelector(".personEmail");
       const usePassword = document.querySelector(".personPassword");
-      // const usePhone = document.querySelector(".personPhone");
+      const usecpassword = document.querySelector(".personcPassword");
+      const usePhone = document.querySelector(".personPhone");
       // const useCpassword = document.querySelector(".personc_password");
 
       usename.value = thisUser["userName"];
       useemail.value = thisUser["email"];
       usePassword.value = thisUser["email_password"];
-      // useCpassword.value = thisUser["c_Password"];
-      // usePhone.value = thisUser["phonenumber"];
+      usecpassword.value = thisUser["emailc_password"];
+      usePhone.value = thisUser["phoneNumber"];
+
+      // window.location.href = "../pages/profile_edit.html";
     </script>
   </body>
 </html>

@@ -64,7 +64,9 @@
           </div>
 
           <div class="forgot-password">
-            <a href="./register.html" class="forgot-password-1"><p>Register</p></a>
+            <a href="./register.html" class="forgot-password-1"
+              ><p>Register</p></a
+            >
           </div>
         </div>
       </div>
@@ -84,6 +86,8 @@
         const emailPassword = document.getElementById("password").value;
         let match = false;
         for (let i = 0; i < all_user_data.length; i++) {
+
+          
           if (
             useremail == all_user_data[i].useremail &&
             emailPassword == all_user_data[i].emailPassword
@@ -93,6 +97,7 @@
             break;
           } else {
             match = false;
+            break;
           }
         }
 
@@ -104,6 +109,7 @@
           console.log(matchObject);
           const thisUser = JSON.stringify(matchObject);
           localStorage.setItem("this_user", thisUser);
+           
 
           // document.querySelector("login_form").reset();
           window.location.href = "/index.html";
