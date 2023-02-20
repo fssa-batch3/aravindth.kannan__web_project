@@ -18,5 +18,5 @@ I finished my
 2. login page [completed]
 3. profile page [completed]
 4. profile edit [completed]
-5. delet user [pending]
+5. delete user [pending]
 
