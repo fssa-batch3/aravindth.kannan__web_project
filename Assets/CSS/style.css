@@ -7,45 +7,38 @@
 }
 
 body {
-  background-image: url(./../Images/login\ page.jpg);
-  background-size: cover;
+  background-color: black;
+  /* background-image: linear-gradient(90deg, #0f0f0e 0%, #fedf07 100%); */
   display: flex;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+
   flex-direction: column;
-  align-content: flex-start;
 }
 .content {
+  background-color: black;
+  /* background-image: linear-gradient(135deg, #b3b2ae 0%, #111010 74%); */
+
   margin-top: 23px;
+  padding: 2%;
   margin-left: 80px;
-  /* text-align: left; */
+  box-shadow: 0px 0px 10px 3px greenyellow;
   width: 25%;
-  height: 70%;
-  border-radius: 3px;
-  box-shadow: 0px 0px 20px black;
-  backdrop-filter: blur(10px);
+  height: 80%;
+  /* background-color: black; */
+  /* border-radius: 3px; */
 }
 
-.content-1 {
-  padding: 60px;
-  height: 80%;
-  top: 8px;
-  width: 98%;
-  z-index: 99;
-  /* margin-top: -52px; */
-  border-radius: 10px;
-  background-size: 100% 100%;
-}
 .login {
   display: flex;
   justify-content: center;
-  height: 15%;
+  height: 20%;
   align-items: center;
 }
 .login-1 {
   margin-top: 20px;
   font-weight: bolder;
   color: white;
-  text-shadow: 0px 0px 20px rgb(5, 5, 5);
+  /* text-shadow: 0px 0px 20px rgb(5, 5, 5); */
   font-size: 50px;
 }
 .user-name {
@@ -54,24 +47,26 @@ body {
 
 .user-box {
   width: 100%;
-  background-color: transparent;
+  height: 15%;
+  /* background-color: transparent; */
 }
 
 .user-box-1,
 .email-id-box-1,
 .password-box-1 {
   margin-top: 20px;
-  padding-left: 5%;
+  /* padding-left: 5%; */
   width: 100%;
   height: 50px;
   font-size: 20px;
   border-radius: 3px;
-  background-color: transparent;
+  /* background-color: transparent; */
   border: none;
-  box-shadow: 0px 0px 20px black;
+  /* box-shadow: 0px 0px 20px black; */
 }
 .email-id {
   width: 100%;
+  height: 20%;
 }
 .email-id-1,
 .password-1,
@@ -79,51 +74,54 @@ body {
   margin-top: 20px;
   padding-left: 2%;
   font-size: 30px;
+  /* height: 20%; */
   font-weight: bold;
   color: white;
-  text-shadow: 0px 0px 20px rgb(8, 8, 8);
+  /* text-shadow: 0px 0px 20px rgb(8, 8, 8); */
 }
 .email-id-box {
   width: 100%;
-  background-color: transparent;
+
+  /* background-color: transparent; */
 }
 
 .password {
   width: 100%;
+  height: 20%;
 }
 
 .Password-box {
   width: 100%;
-  background-color: transparent;
+  height: 20%;
+  /* background-color: transparent; */
 }
 
 .login-button {
   padding-top: 10%;
-  background-color: transparent;
+  /* background-color: transparent; */
   display: flex;
   justify-content: center;
   height: 30%;
   width: 100%;
 }
 .login-button-1 {
-  width: 200px;
-  color: white;
-  height: 70px;
-  background-color: transparent;
-  text-shadow: 0px 0px 10px white;
-  border: none;
-  box-shadow: inset 0px 0px 20px black;
-  border-radius: 3px;
+  width: 45%;
+  color: black;
+  height: 100%;
+  background-color: greenyellow;
+  /* border: 2px solid black; */
+
+  /* border: none; */
+
   font-size: 40px;
   font-weight: bolder;
-  background-image: linear-gradient(to right, transparent 50%, black);
-  background-size: 200%;
+
   transition: 0.7s;
 }
 .login-button-1:hover {
-  background-position: 100%;
-  background-color: rgb(111, 118, 118);
-  transform: scale(1.1);
+  /* background-position: 100%; */
+
+  transform: scale(1.09);
 }
 .forgot-password {
   display: flex;
@@ -135,8 +133,8 @@ body {
   font-size: 20px;
   font-size: 30px;
   font-weight: bold;
-  color: azure;
-  text-shadow: 0px 0px 20px rgb(11, 11, 11);
+  color: white;
+  /* text-shadow: 0px 0px 20px rgb(11, 11, 11); */
   transition: 0.7s;
 }
 .forgot-password-1:hover {
@@ -144,10 +142,10 @@ body {
 }
 
 .logo {
-  margin-left: 40px;
-  width: 300px;
-  height: 250px;
-  padding-left: 30px;
+  /* margin: auto; */
+  width: 22rem;
+  height: 15rem;
+  padding-left: 5%;
 }
 
 @media screen and (max-width: 600px) {

@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: black;
+  /* background-image: linear-gradient(90deg, #0f0f0e 0%, #fedf07 100%); */
 }
 * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -16,18 +17,19 @@ input:invalid {
   border: 2px solid red;
 }
 .resister_form {
+  background-color: black;
+  /* background-image: linear-gradient(135deg, #b3b2ae 0%, #111010 74%); */
+  box-shadow: 0px 0px 10px 3px greenyellow;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   margin: auto;
-  box-shadow: 0px 0px 5px 3px greenyellow;
-  border-radius: 1% 20%;
+
   margin-top: 8%;
-  background-color: rgb(97, 14, 242);
-  /* background-image: linear-gradient(90deg, #0d0f0f 0%, #f9f8f2 100%); */
+  /* border: 2px solid yellow; */
 
   height: 50rem;
-  width: 40%;
+  width: 30%;
 }
 .head_div {
   width: 100%;
@@ -52,11 +54,10 @@ input:invalid {
 }
 .input {
   font-size: 15px;
-  color: black;
+  color: white;
   padding-left: 2%;
   width: 60%;
   height: 30%;
-  border-radius: 0px 20px 0px;
 }
 .submit {
   width: 100%;
@@ -67,15 +68,14 @@ input:invalid {
   align-items: center;
 }
 .submit_btn {
+  color: black;
   font-size: 2rem;
   font-weight: bolder;
   width: 12rem;
   height: 5rem;
-  border-radius: 0px 20px 0px;
-  border: none;
-  box-shadow: 0px 0px 20px white;
-  background-color: #0d0f0f;
-  background-image: linear-gradient(90deg, #0d0f0f 0%, #f9f8f2 100%);
+  border: black;
+  background-color: greenyellow;
+
   transition: 0.7s;
 }
 .submit_btn:hover {
