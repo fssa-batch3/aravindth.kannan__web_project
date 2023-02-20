@@ -71,6 +71,7 @@
           <input type="phone" class="form-control" id="phone_number" />
         </div> -->
       <div class="submit">
+        <button type="submit" class="delete_btn" id="delete_button">Delete</button>
         <a
           class="submit_btn"
           href="./profile_edit.html"
@@ -86,6 +87,9 @@
       // JSON
 
       // java Script
+
+
+      
       const thisUser = JSON.parse(localStorage.getItem("this_user"));
 
       const usename = document.querySelector(".personName");
@@ -100,6 +104,24 @@
       usePassword.value = thisUser["email_password"];
       usecpassword.value = thisUser["emailc_password"];
       usePhone.value = thisUser["phoneNumber"];
+
+
+
+      let delete_oneuser = document.getElementById("delete_button")
+      delete_oneuser.addEventListener("click" , function(event){
+      event.preventDefault()
+      let index = user_details.indexOf(get_obj)
+      let msg = confirm("Are you sure you want to delete this account")
+      if(msg !== true){
+        return
+      } else{
+        user_details.splice(index,1)
+        console.log(user_details);
+        localStorage.setItem("user",JSON.stringify(user_details))
+        window.location.href ="../pages/login.html";
+      }
+    });
+
 
       // window.location.href = "../pages/profile_edit.html";
     </script>

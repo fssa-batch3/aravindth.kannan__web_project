@@ -86,8 +86,6 @@
         const emailPassword = document.getElementById("password").value;
         let match = false;
         for (let i = 0; i < all_user_data.length; i++) {
-
-          
           if (
             useremail == all_user_data[i].useremail &&
             emailPassword == all_user_data[i].emailPassword
@@ -107,9 +105,8 @@
             (o) => o["email"] == useremail
           );
           console.log(matchObject);
-          const thisUser = JSON.stringify(matchObject);
+          const thisUser = JSON.stringify(matchObject.email);
           localStorage.setItem("this_user", thisUser);
-           
 
           // document.querySelector("login_form").reset();
           window.location.href = "/index.html";
