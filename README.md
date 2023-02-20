@@ -13,7 +13,7 @@ overflow:https://drive.google.com/drive/folders/1P-E-nWN4ttYLG0JN5f7A3aH9boUCzbn
 
 wireframe:https://drive.google.com/drive/folders/1d4lUeEf66xgovHEqxksKz9XPdEkYUQQ-
 
-I finished my
+* User crud
 1. register page [completed]
 2. login page [completed]
 3. profile page [completed]
