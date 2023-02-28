@@ -92,8 +92,10 @@
         const phoneNumber = document
           .getElementById("phone_number")
           .value.trim();
+          const singleUserid = Date.now();
 
         let userData = {
+          userId:singleUserid,
           userName: userName,
           email: useremail,
           email_password: emailPassword,

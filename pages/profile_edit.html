@@ -75,73 +75,73 @@
     </form>
     <!-- Java Script -->
     <script>
-      const thisUser = JSON.parse(localStorage.getItem("this_user"));
 
+      const thisUser = JSON.parse(localStorage.getItem("this_user"));
+      const userInfo = JSON.parse(localStorage.getItem("userinfo"));
+
+      let oneUser = userInfo.find(function(event){
+        let userEmail = event["email"]
+        if(thisUser == userEmail){
+          return true;
+        }
+      });
+      // get single user data from local storage
       const usename = document.querySelector(".personName");
       const useemail = document.querySelector(".personEmail");
       const usePassword = document.querySelector(".personPassword");
       const usecpassword = document.querySelector(".personcPassword");
       const usePhone = document.querySelector(".personPhone");
-      // const useCpassword = document.querySelector(".personc_password");
 
-      usename.value = thisUser["userName"];
-      useemail.value = thisUser["email"];
-      usePassword.value = thisUser["email_password"];
-      usecpassword.value = thisUser["emailc_password"];
-      usePhone.value = thisUser["phoneNumber"];
+      usename.value = oneUser["userName"];
+      useemail.value = oneUser["email"];
+      usePassword.value = oneUser["email_password"];
+      usecpassword.value = oneUser["emailc_password"];
+      usePhone.value = oneUser["phoneNumber"];
+     
 
+     
+      // edit page function
       let save = document.getElementById("form_E");
       save.addEventListener("submit", function (event) {
         event.preventDefault();
-
-        let editUsername = document.getElementById("username").value;
-        let editEmail = document.getElementById("email").value;
-        let editPassword = document.getElementById("password").value;
-        let editCpassword = document.getElementById("c_password").value;
-        let editPhone = document.getElementById("phone").value;
+        // get data from edit form
+        let userName = document.getElementById("username").value;
+        let email = document.getElementById("email").value;
+        let email_password = document.getElementById("password").value;
+        let emailc_password = document.getElementById("c_password").value;
+        let phoneNumber = document.getElementById("phone").value;
 
         let editUserdata = {
-          editUsername,
-          editEmail,
-          editPassword,
-          editCpassword,
-          editPhone,
+          userName,
+          email,
+          email_password,
+          emailc_password,
+          phoneNumber,
         };
 
+        console.log(oneUser);
+        console.log(editUserdata);
+        // email validation 
         let newData = JSON.parse(localStorage.getItem("userinfo"));
         console.log(newData);
-        let oldData = newData.find((i) => i.email === editEmail);
+        let oldData = newData.find((i) => i.email == email);
         console.log(oldData);
 
         if (oldData == undefined) {
           alert("Email Id not match");
-        } else {
+        } 
+        // assign the value in object
+        else {
           let updated = Object.assign(oldData, editUserdata);
           console.log(newData);
           console.log(oldData);
           let index = newData.indexOf(oldData.email);
           newData[index] = updated;
           console.log(newData);
-          localStorage.setItem("this_user", JSON.stringify(newData));
+          localStorage.setItem("userinfo", JSON.stringify(newData));
         }
 
-        // let data = JSON.parse(localStorage.getItem("data"));
-        // console.log(data)
-        //         let olddata = data.find(i => i.useremail == useremail)
-        //         console.log(olddata)
-        //         if (olddata == undefined) {
-        //             alert("Email Id not match")
-        //         }
-        //         else {
-        //             let updated = Object.assign(olddata, newData);
-        //             console.log(data)
-        //             console.log(olddata)
-        //             let index = data.indexOf(olddata.Email);
-        //             data[index] = updated;
-        //             console.log(data)
-        //             localStorage.setItem("data", JSON.stringify(data));
-        //       }
-        // //     });
+       
       });
     </script>
   </body>
