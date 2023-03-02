@@ -75,13 +75,12 @@
     </form>
     <!-- Java Script -->
     <script>
-
       const thisUser = JSON.parse(localStorage.getItem("this_user"));
       const userInfo = JSON.parse(localStorage.getItem("userinfo"));
 
-      let oneUser = userInfo.find(function(event){
-        let userEmail = event["email"]
-        if(thisUser == userEmail){
+      let oneUser = userInfo.find(function (event) {
+        let userEmail = event["email"];
+        if (thisUser == userEmail) {
           return true;
         }
       });
@@ -97,9 +96,7 @@
       usePassword.value = oneUser["email_password"];
       usecpassword.value = oneUser["emailc_password"];
       usePhone.value = oneUser["phoneNumber"];
-     
 
-     
       // edit page function
       let save = document.getElementById("form_E");
       save.addEventListener("submit", function (event) {
@@ -121,15 +118,19 @@
 
         console.log(oneUser);
         console.log(editUserdata);
-        // email validation 
+        // email validation
         let newData = JSON.parse(localStorage.getItem("userinfo"));
         console.log(newData);
+
+        if(email_password === emailc_password){
+
+        
         let oldData = newData.find((i) => i.email == email);
         console.log(oldData);
 
         if (oldData == undefined) {
           alert("Email Id not match");
-        } 
+        }
         // assign the value in object
         else {
           let updated = Object.assign(oldData, editUserdata);
@@ -139,9 +140,12 @@
           newData[index] = updated;
           console.log(newData);
           localStorage.setItem("userinfo", JSON.stringify(newData));
+          window.location.href = "./profile.html";
         }
-
-       
+      }
+      else{
+        alert("password and confirm password should be same");
+      }
       });
     </script>
   </body>
