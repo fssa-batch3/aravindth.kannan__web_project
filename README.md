@@ -13,10 +13,13 @@ overflow:https://drive.google.com/drive/folders/1P-E-nWN4ttYLG0JN5f7A3aH9boUCzbn
 
 wireframe:https://drive.google.com/drive/folders/1d4lUeEf66xgovHEqxksKz9XPdEkYUQQ-
 
-* User crud
+* User crud [completed]
 1. register page [completed]
 2. login page [completed]
 3. profile page [completed]
 4. profile edit [completed]
-5. delete user [pending] [48 hours]
+5. delete user [completed]
+6. give User Id [completed]
 
+* details page[pending]
+1. automatically create JSON [pending][48 hours]
