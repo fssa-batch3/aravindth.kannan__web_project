@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Assets/CSS/profile.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form class="profile_form" id="form_E">
+      <div class="head_div">
+        <h2 class="head">Edit Profile</h2>
+      </div>
+      <div class="form-group">
+        <label for="email" class="all_label">username:</label>
+        <br />
+        <br />
+        <input type="name" class="form-control personName" id="username" />
+      </div>
+      <div class="form-group">
+        <label for="email" class="all_label">Email:</label>
+        <br />
+        <br />
+        <input type="email" class="form-control personEmail" id="email" />
+      </div>
+      <div class="form-group">
+        <label for="pwd" class="all_label">Password:</label>
+        <br />
+        <br />
+        <input type="text" class="form-control personPassword" id="password" />
+      </div>
+
+      <div class="form-group">
+        <label for="pwd" class="all_label"> Confirm Password:</label>
+        <br />
+        <br />
+        <input
+          type="text"
+          class="form-control personcPassword"
+          id="c_password"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="pwd" class="all_label">Phone number:</label>
+        <br />
+        <br />
+        <input type="text" class="form-control personPhone" id="phone" />
+      </div>
+
+      <!-- <div class="form-group">
+          <label for="phone" class="all_label">Phone number:</label>
+          <br />
+          <br />
+          <input
+            type="text"
+            class="form-control personPassword"
+            id="password"
+          />
+        </div> -->
+
+      <!-- <div>
+            <p>Name:<span class="personName">aravindth</span></p>
+            <p>email:<span class="personEmail">aravindth@gmail.com</span></p>
+            <p>password: <span class="personPassword">7654637654546</span></p>
+          </div> -->
+      <!-- <div class="form-group">
+            <label for="pwd">Phone number:</label>
+            <input type="phone" class="form-control" id="phone_number" />
+          </div> -->
+          <!-- <a href="./barber_profile.html"></a> -->
+      <div class="submit">
+        <button type="submit" class="submit_btn">Save</button>
+      </div>
+    </form>
+    <!-- Java Script -->
+    <script>
+      const thisUser = JSON.parse(localStorage.getItem("single_barber"));
+      const userInfo = JSON.parse(localStorage.getItem("barberinfo"));
+
+      let oneUser = userInfo.find(function (event) {
+        let userEmail = event["email"];
+        if (thisUser == userEmail) {
+          return true;
+        }
+      });
+      // get single user data from local storage
+      const usename = document.querySelector(".personName");
+      const useemail = document.querySelector(".personEmail");
+      const usePassword = document.querySelector(".personPassword");
+      const usecpassword = document.querySelector(".personcPassword");
+      const usePhone = document.querySelector(".personPhone");
+
+      usename.value = oneUser["userName"];
+      useemail.value = oneUser["email"];
+      usePassword.value = oneUser["email_password"];
+      usecpassword.value = oneUser["emailc_password"];
+      usePhone.value = oneUser["phoneNumber"];
+
+      // edit page function
+      let save = document.getElementById("form_E");
+      save.addEventListener("submit", function (event) {
+        event.preventDefault();
+        // get data from edit form
+        let userName = document.getElementById("username").value;
+        let email = document.getElementById("email").value;
+        let email_password = document.getElementById("password").value;
+        let emailc_password = document.getElementById("c_password").value;
+        let phoneNumber = document.getElementById("phone").value;
+
+        let editUserdata = {
+          userName,
+          email,
+          email_password,
+          emailc_password,
+          phoneNumber,
+        };
+
+        console.log(oneUser);
+        console.log(editUserdata);
+        // email validation
+        let newData = JSON.parse(localStorage.getItem("barberinfo"));
+        console.log(newData);
+
+        if(email_password === emailc_password){
+
+        
+        let oldData = newData.find((i) => i.email == email);
+        console.log(oldData);
+
+        if (oldData == undefined) {
+          alert("Email Id not match");
+        }
+        // assign the value in object
+        else {
+          let updated = Object.assign(oldData, editUserdata);
+          console.log(newData);
+          console.log(oldData);
+          let index = newData.indexOf(oldData.email);
+          newData[index] = updated;
+          console.log(newData);
+          localStorage.setItem("barberinfo", JSON.stringify(newData));
+          window.location.href = "./barber_profile.html";
+        }
+      }
+      else{
+        alert("password and confirm password should be same");
+      }
+      });
+    </script>
+  </body>
+</html>
