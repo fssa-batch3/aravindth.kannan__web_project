@@ -1,5 +1,235 @@
-body{
-    padding: 0px;
-    margin: 0px;
-    background-color: rgb(68, 67, 67);
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: rgb(48, 47, 47);
+}
+
+* {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.full_content {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: auto;
+  background-color: rgb(218, 165, 165);
+}
+.topic_div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.topic {
+  color: white;
+  font-size: 3rem;
+}
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+  /* margin: 5%; */
+  gap: 3%;
+}
+.photo {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 10rem;
+}
+.right_side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text {
+  font-size: 3rem;
+  color: white;
+  font-weight: bolder;
+}
+.information {
+  /* margin: auto; */
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: auto;
+  background-color: aquamarine;
+}
+.input_div {
+  width: 100%;
+}
+.label {
+  color: white;
+  font-size: 2rem;
+}
+.input {
+  width: 60%;
+  height: 2rem;
+}
+.card_text_div {
+  width: 80%;
+  margin: auto;
+}
+.Your_card {
+  font-size: 2rem;
+}
+.card {
+  background-color: black;
+  display: flex;
+  width: 98%;
+  margin: auto;
+  height: 26rem;
+  border-radius: 3rem;
+  box-shadow: 0px 0px 10px greenyellow;
+}
+.left-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.shop-img {
+  width: 90%;
+  box-shadow: 0px 0px 10px greenyellow;
+  border-radius: 15rem;
+  height: 90%;
+}
+.details {
+  flex: 1;
+  margin: 2%;
+  display: flex;
+  flex-direction: column;
+}
+.shop-details {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.name_div {
+  width: 100%;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  display: flex;
+}
+.b_name {
+  font-size: 25px;
+  color: white;
+  text-shadow: 0px 0px 2px white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.barber_name {
+  font-size: 25px;
+  color: white;
+  text-shadow: 0px 0px 2px white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+  margin-top: 5%;
+}
+.select-button {
+  width: 30%;
+  text-decoration: none;
+
+  height: 100%;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  /* text-shadow: 0px 0px 10px white; */
+  color: white;
+  background-color: transparent;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  box-shadow: inset 0px 0px 5px white;
+  transition: 0.7s;
+}
+.b_detail {
+  width: 30%;
+  height: 100%;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: white;
+  background-color: transparent;
+  border-radius: 3px;
+  border: none;
+  box-shadow: inset 0px 0px 5px white;
+  transition: 0.7s;
+}
+.sample_div {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.sample {
+  width: 28%;
+  box-shadow: 0px 0px 5px greenyellow;
+  height: 70%;
+}
+.three_buttons {
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+.select-button:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+  }
+  .detail:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+}
+.create_card{
+    width: 40%;
+  text-decoration: none;
+  height: 100%;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: white;
+  background-color: transparent;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  box-shadow: inset 0px 0px 5px white;
+  transition: 0.7s;
+}
+.edit_card{
+    width: 40%;
+  height: 100%;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: white;
+  background-color: transparent;
+  border-radius: 3px;
+  border: none;
+  box-shadow: inset 0px 0px 5px white;
+  transition: 0.7s;
 }

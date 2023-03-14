@@ -5,110 +5,113 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>personal barber profile</title>
-    <link rel="stylesheet" href="../Assets/CSS/barber_personal_profile.css">
+    <link rel="stylesheet" href="../Assets/CSS/barber_personal_profile.css" />
+
   </head>
   <body>
-    <div class="topic_div">
-      <h1 class="topic">Barber profile</h1>
-    </div>
-    <div class="profile">
-      <img class="photo" id="photo" />
-      <div class="right_side">
-        <p class="text">Scissor Masters</p>
-        <p class="text">Official Barber</p>
+    <div class="full_content">
+      <div class="topic_div">
+        <h1 class="topic">Barber profile</h1>
       </div>
-    </div>
-    <div class="information">
-      <div class="input_div">
-        <label class="label">Barber Name: </label>
-        <input class="input" type="text" id="name" disabled />
+      <div class="profile">
+        <img class="photo" src="../Assets/Images/barber-3.jpg" id="photo" />
+        <div class="right_side">
+          <p class="text">Scissor Masters</p>
+          <p class="text">Official Barber</p>
+        </div>
       </div>
-      <div class="input_div">
-        <label class="label">Email id: </label>
-        <input class="input" type="text" id="email" disabled />
+      <div class="information">
+        <div class="input_div">
+          <label class="label">Barber Name: </label>
+          <input class="input" type="text" id="name" disabled />
+        </div>
+        <div class="input_div">
+          <label class="label">Email id: </label>
+          <input class="input" type="text" id="email" disabled />
+        </div>
+        <div class="input_div">
+          <label class="label">Experience: </label>
+          <input class="input" type="text" id="experience" disabled />
+        </div>
+        <div class="input_div">
+          <label class="label">Slogan: </label>
+          <input class="input" type="text" id="slogan" disabled />
+        </div>
+        <div class="input_div">
+          <label class="label">Phone number: </label>
+          <input class="input" type="text" id="phone_number" disabled />
+        </div>
+        <div class="input_div">
+          <label class="label">Address: </label>
+          <input class="input" type="text" id="address" disabled />
+        </div>
       </div>
-      <div class="input_div">
-        <label class="label">Experience: </label>
-        <input class="input" type="text" id="experience" disabled />
-      </div>
-      <div class="input_div">
-        <label class="label">Slogan: </label>
-        <input class="input" type="text" id="slogan" disabled />
-      </div>
-      <div class="input_div">
-        <label class="label">Phone number: </label>
-        <input class="input" type="text" id="phone_number" disabled />
-      </div>
-      <div class="input_div">
-        <label class="label">Address: </label>
-        <input class="input" type="text" id="address" disabled />
-      </div>
-    </div>
 
-    <div class="card_text_div">
-      <p class="Your_card">Your card</p>
-    </div>
+      <div class="card_text_div">
+        <p class="Your_card">Your card</p>
+      </div>
 
-    <!-- your card -->
-    <div class="card">
-      <div class="left-side">
-        <div class="img-div">
+      <!-- your card -->
+      <div class="card">
+        <div class="left-side">
+          <div class="img-div">
+            <img
+              class="shop-img"
+              alt="image"
+              src="../Assets/Images/barber-2.jpeg"
+            />
+          </div>
+        </div>
+        <div class="details">
+          <div class="shop-details">
+            <div class="name_div">
+              <pre class="b_name">name:  </pre>
+
+              <p class="barber_name">xxxxxx</p>
+            </div>
+            <div class="name_div">
+              <pre class="b_name">slogan:  </pre>
+              <p class="barber_name">xxxxxxx</p>
+            </div>
+            <div class="name_div">
+              <pre class="b_name">experience:  </pre>
+              <p class="barber_name">xxxxxxx</p>
+            </div>
+          </div>
+          <div class="select">
+            <button class="b_detail">Details</button>
+            <a class="select-button">Select</a>
+          </div>
+        </div>
+        <div class="sample_div">
           <img
-            class="shop-img"
-            alt="image"
-            src="../Assets/Images/barber-2.jpeg"
+            class="sample"
+            alt="haircutname"
+            src="../Assets/Images/fade-4.jpeg"
+          />
+          <img
+            class="sample"
+            alt="haircutname"
+            src="../Assets/Images/fade-5.jpg"
+          />
+          <img
+            class="sample"
+            alt="haircutname"
+            src="../Assets/Images/fade-7.jpeg"
           />
         </div>
       </div>
-      <div class="details">
-        <div class="shop-details">
-          <div class="name_div">
-            <pre class="b_name">name:  </pre>
-
-            <p class="barber_name">xxxxxx</p>
-          </div>
-          <div class="name_div">
-            <pre class="b_name">slogan:  </pre>
-            <p class="barber_name">xxxxxxx</p>
-          </div>
-          <div class="name_div">
-            <pre class="b_name">experience:  </pre>
-            <p class="barber_name">xxxxxxx</p>
-          </div>
-        </div>
-        <div class="select">
-          <button class="b_detail">Details</button>
-          <a class="select-button">Select</a>
-        </div>
+      <div class="three_buttons">
+        <a class="create_card">Create card</a>
+        <button class="edit_card">Edit card</button>
+        <button class="edit_card">delete card</button>
       </div>
-      <div class="sample_div">
-        <img
-          class="sample"
-          alt="haircutname"
-          src="../Assets/Images/fade-4.jpeg"
-        />
-        <img
-          class="sample"
-          alt="haircutname"
-          src="../Assets/Images/fade-5.jpg"
-        />
-        <img
-          class="sample"
-          alt="haircutname"
-          src="../Assets/Images/fade-7.jpeg"
-        />
-      </div>
-    </div>
-    <div class="three_buttons">
-      <a class="create_card">Create card</a>
-      <button class="edit_card">Edit card</button>
-      <button class="edit_card">delete card</button>
-    </div>
 
-    <div class="profile_edit_div">
-      <p class="edit_text">Edit your profile</p>
-      <button class="edit_profile">Edit profile</button>
-      <button class="edit_profile">Delete profile</button>
+      <div class="three_buttons">
+        <p class="Your_card">Edit your profile</p>
+        <button class="edit_card">Edit profile</button>
+        <button class="edit_card">Delete profile</button>
+      </div>
     </div>
   </body>
 </html>
