@@ -1,12 +1,12 @@
 body {
   margin: 0px;
   padding: 0px;
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 1) 0%,
     rgba(59, 59, 59, 1) 50%,
     rgba(0, 0, 0, 1) 100%
-  );
+  ); */
 }
 .full-content {
   display: flex;
@@ -48,24 +48,33 @@ body {
 /* dropdown css is ended*/
 .dropbtn {
   text-shadow: 0px 0px 10px white;
-  background-color: black;
+  /* background-color: black; */
   text-decoration: none;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 1.8rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: white;
+  color: black;
+  border: none;
 }
 .dropbtn:hover {
   transform: scale(1.1);
 }
 .header-1 {
-  background: linear-gradient(
+  background-color: #eef1eb;
+  background-color: #55585b;
+  background-image: linear-gradient(
+    312deg,
+    #55585b 0%,
+    #dadfdf 50%,
+    #ffffff 100%
+  );
+  /* background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 1) 0%,
     rgba(59, 59, 59, 1) 50%,
     rgba(0, 0, 0, 1) 100%
-  );
-  box-shadow: inset 0px 0px 20px white;
+  ); */
+  /* box-shadow: inset 0px 0px 20px white; */
   display: flex;
 
   height: 200px;
@@ -99,7 +108,7 @@ a {
   font-weight: bold;
   font-size: 30px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: white;
+  color: black;
 }
 a:hover {
   transform: scale(1.1);
@@ -115,12 +124,12 @@ a:hover {
   font-weight: bold;
   margin-left: 4%;
   font-size: 40px;
-  color: white;
+  color: black;
   text-shadow: 0px 0px 20px white;
 }
 .about-box {
   display: flex;
-  box-shadow: inset 0px 0px 20px white;
+  box-shadow: inset 0px 10px 20px black;
 
   padding: 40px;
 }
@@ -136,7 +145,7 @@ a:hover {
   flex: 3;
 }
 .big-font {
-  color: white;
+  color: black;
   text-shadow: 0px 0px 20px white;
   font-size: 40px;
   font-weight: bolder;
@@ -149,8 +158,8 @@ a:hover {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin-left: 4%;
   font-size: 30px;
-  color: white;
-  text-shadow: 0px 0px 2px white;
+  color: black;
+  /* text-shadow: 0px 0px 2px white; */
 }
 
 .our-barber {
@@ -159,7 +168,7 @@ a:hover {
 }
 .our-barber-box {
   padding: 40px;
-  box-shadow: inset 0px 0px 20px white;
+  /* box-shadow: inset 0px 0px 20px white; */
   display: flex;
 }
 .barber-img {
@@ -181,7 +190,7 @@ a:hover {
 .our-features-box {
   padding: 40px;
   display: flex;
-  box-shadow: inset 0px 0px 20px white;
+  box-shadow: inset 0px 10px 20px black;
   height: 400px;
 }
 .features-img {
