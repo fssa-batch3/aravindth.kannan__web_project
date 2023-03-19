@@ -163,8 +163,8 @@
         event.preventDefault();
         // create new empty array
         let emptyArray = [];
-        if(localStorage.getItem("barberinfo") != null){
-          emptyArray = JSON.parse(localStorage.getItem("barberinfo"));
+        if(localStorage.getItem("apply_barber") != null){
+          emptyArray = JSON.parse(localStorage.getItem("apply_barber"));
         }
         //  get data from form 
         const barberName = document.getElementById("b_name").value;
@@ -196,17 +196,18 @@
         for(let i = 0; i < emptyArray.length; i++){
           if(barberEmail === emptyArray[i]["barberemail_id"]){
             checker = true;
-            alert("This user email id is already exists");
-            break;
+          
           } else{
             checker = false;
+            alert("please enter your login email");
+            break;
           }
         }
         // push that array in local storage
-        if(checker === false){
+        if(checker === true){
           emptyArray.push(barberadata);
           const pushArray = JSON.stringify(emptyArray);
-          localStorage.setItem("barberinfo",pushArray);
+          localStorage.setItem("apply_barber",pushArray);
         }
       })
 

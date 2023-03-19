@@ -175,5 +175,34 @@
         </div>
       </div>
     </footer>
+
+
+    <!-- Java Script -->
+    <script>
+
+      // JSON
+
+//  get from barberinfo in local storage!
+      const apply_barber = JSON.parse(localStorage.getItem("apply_barber"));
+      const barberinfo = JSON.parse(localStorage.getItem("barberinfo"));
+      // //  get object from local storage used by email
+
+        let oneBarber = barberinfo.find(function (event){
+        let barberEmail = event["email"];
+        if(apply_barber == barberEmail){
+          // return true;
+        }
+      });
+
+      const barberName = document.getElementById("name").innerHTML = oneBarber["barbername"];
+      const barberEmail = document.getElementById("email").innerHTML = oneBarber["barberemail_id"];
+      const barberProfile = document.getElementById("photo").setAttribute("src",oneBarber["barber_photo"]);
+      const barberExperience = document.getElementById("experience").innerHTML = oneBarber["barber_experience"];
+      const barberSlogan = document.getElementById("slogan").innerHTML = oneBarber["barber_slogan"];
+      const barberPhone = document.getElementById("phone_number").innerHTML = oneBarber["barber_phone"];
+      const barberAddress = document.getElementById("address").innerHTML = oneBarber["barber_address"];
+
+
+    </script>
   </body>
 </html>

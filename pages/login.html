@@ -80,7 +80,7 @@
       let logIn = document.getElementById("login_form");
       logIn.addEventListener("submit", (event) => {
         event.preventDefault();
-        let all_user_data = JSON.parse(localStorage.getItem("userinfo"));
+        const all_user_data = JSON.parse(localStorage.getItem("userinfo"));
         console.log(all_user_data);
         // const userName = document.getElementById("username");
         const useremail = document.getElementById("email").value;

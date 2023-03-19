@@ -4,8 +4,8 @@ body {
   background-image: url(./../Images/home\ page.jpg);
   background-size: cover;
 }
-.header {
-  height: 60%;
+.header-1 {
+  /* height: 60%; */
   background-color: #eef1eb;
   background-color: #55585b;
   background-image: linear-gradient(
@@ -14,12 +14,10 @@ body {
     #dadfdf 50%,
     #ffffff 100%
   );
-}
-.header-1 {
   display: flex;
 
-  /* flex-wrap: wrap; */
-  height: 200px;
+  flex-wrap: wrap;
+  height: 12rem;
   width: 100%;
   align-items: center;
 }
@@ -94,11 +92,12 @@ body {
 
 /* dropdown css is ended*/
 .dropbtn {
-  font-weight: bold;
   font-size: 1.8rem;
+
+  font-weight: bold;
+  border: none;
   background-color: transparent;
 
-  border: none;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: black;
 }
