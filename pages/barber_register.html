@@ -8,64 +8,102 @@
     <link rel="stylesheet" href="../Assets/CSS/register.css" />
   </head>
   <body>
-    <form class="resister_form" id="form">
+    <form id="form">
       <div class="head_div">
         <p class="head">Registration info</p>
       </div>
+      <div class="form">
+        <div class="resister_form" class="all_inputs">
+          <div class="all_inputs">
+            <label class="all_label" pattern="[A-Z a-z]{1,32}">Username</label>
+            <br />
+            <br />
+            <input
+              class="input"
+              type="text"
+              id="username"
+              autocomplete="name"
+            />
+          </div>
+          <br />
+          <div class="all_inputs">
+            <label for="email" class="all_label">Email Id</label>
+            <br />
+            <br />
+            <input class="input" type="email" id="email" autocomplete="email" />
+          </div>
+          <br />
+          <div class="all_inputs">
+            <label for="password" class="all_label">Password</label>
+            <br />
+            <br />
+            <input
+              class="input"
+              type="password"
+              id="password"
+              autocomplete="password"
+            />
+          </div>
+          <br />
+          <div class="all_inputs">
+            <label for="password" class="all_label"> Confirm Password</label>
+            <br />
+            <br />
+            <input
+              class="input"
+              type="password"
+              id="c_password"
+              autocomplete="password"
+            />
+          </div>
+          <br />
+          <div class="all_inputs">
+            <label for="phone" class="all_label">phone number</label>
+            <br />
+            <br />
 
-      <div class="all_inputs">
-        <label for="user_name" pattern="[A-Z a-z]{1,32}" class="all_label"
-          >Username</label
-        >
-        <br />
-        <br />
-        <input class="input" type="text" id="username" autocomplete="name" />
-      </div>
+            <input class="input" type="number" id="phone_number" />
+          </div>
+        </div>
 
-      <div class="all_inputs">
-        <label for="email" class="all_label">Email Id</label>
-        <br />
-        <br />
-        <input class="input" type="email" id="email" autocomplete="email" />
-      </div>
+        <div class="resister_form">
+          <div class="all_inputs">
+            <label class="all_label">Profile-URL</label>
+            <br />
+            <br />
+            <input class="input" type="url" id="photo" />
+          </div>
 
-      <div class="all_inputs">
-        <label for="password" class="all_label">Password</label>
-        <br />
-        <br />
-        <input
-          class="input"
-          type="password"
-          id="password"
-          autocomplete="password"
-        />
-      </div>
+          <div class="all_inputs">
+            <label class="all_label">Slogan</label>
+            <br />
+            <br />
+            <input class="input" type="text" id="slogan" />
+          </div>
 
-      <div class="all_inputs">
-        <label for="password" class="all_label"> Confirm Password</label>
-        <br />
-        <br />
-        <input
-          class="input"
-          type="password"
-          id="c_password"
-          autocomplete="password"
-        />
-      </div>
-
-      <div class="all_inputs">
-        <label for="phone" class="all_label">phone number</label>
-        <br />
-        <br />
-
-        <input class="input" type="number" id="phone_number" />
-      </div>
-      
-
-      <div class="submit">
-        <button class="submit_btn" type="submit" id="btn">Submit</button>
+          <div class="all_inputs">
+            <label class="all_label">Experience</label>
+            <br />
+            <br />
+            <input class="input" type="text" id="experience" />
+          </div>
+          <div class="all_inputs">
+            <label class="all_label">Address</label>
+            <br />
+            <br />
+            <textarea id="address" name="address" rows="5" cols="50"></textarea>
+          </div>
+          <br /><br />
+          <br />
+          <br />
+          <br />
+          <div class="submit">
+            <button class="submit_btn" type="submit" id="btn">Submit</button>
+          </div>
+        </div>
       </div>
     </form>
+
     <!-- <a href="./login_barber.html"></a> -->
 
     <!-- javav-script -->
@@ -83,29 +121,29 @@
           userNew = JSON.parse(localStorage.getItem("barberinfo"));
         }
 
-        const userName = document.getElementById("username").value.trim();
-        const useremail = document.getElementById("email").value.trim();
-        const emailPassword = document.getElementById("password").value.trim();
-        const emailc_password = document
+        const barberName = document.getElementById("username").value.trim();
+        const barberEmail = document.getElementById("email").value.trim();
+        const barberEmailPassword = document.getElementById("password").value.trim();
+        const barberEmailcPassword = document
           .getElementById("c_password")
           .value.trim();
 
         const phoneNumber = document
           .getElementById("phone_number")
           .value.trim();
-          const singleUserid = Date.now();
+        const singleUserid = Date.now();
 
         let userData = {
-          userId:singleUserid,
-          userName: userName,
-          email: useremail,
-          email_password: emailPassword,
-          emailc_password: emailc_password,
+          userId: singleUserid,
+          barberName: barberName,
+          email: barberEmail,
+          email_password: barberEmailPassword,
+          barberEmailcPassword: barberEmailcPassword,
           phoneNumber: phoneNumber,
         };
 
         for (let i = 0; i < userNew.length; i++) {
-          if (useremail === userNew[i]["email"]) {
+          if (barberEmail === userNew[i]["email"]) {
             checker = true;
             alert("email is already exists");
             break;
@@ -114,7 +152,7 @@
           }
         }
         if (checker === false) {
-          if (emailPassword === emailc_password) {
+          if (barberEmailPassword === barberEmailcPassword) {
             userNew.push(userData);
             const newarray = JSON.stringify(userNew);
             localStorage.setItem("barberinfo", newarray);

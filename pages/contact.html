@@ -4,121 +4,176 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>contact us</title>
+    <link rel="stylesheet" href="../Assets/CSS/universe.css" />
     <link rel="stylesheet" href="../Assets/CSS/contact.css" />
-    <link rel="stylesheet" href="../Assets/CSS/footer-2.css" />
+
+    <title>contact us</title>
   </head>
   <body>
-    <div class="header">
-      <div class="header-1">
-        <div class="logo-2">
-          <img
-            class="logo-1"
-            alt="image"
-            src="../Assets/Images/MASter__white_-removebg-preview.png"
-          />
+    <!-- header is started -->
+    <header>
+      <div class="header">
+        <div>
+          <a href="../index.html">
+            <img
+              class="logo_img"
+              src="../Assets/Images/sharp logo black.png"
+              alt="logo"
+            />
+          </a>
         </div>
-        <div class="All-navs">
-          <a href="./About Us.html">About Us</a>
-          <a href="./hair cut Style.html">Hair Styles</a>
-          <!-- <a href="./book.html">Booking For Haircut</a> -->
-          <!-- <a href="./Apply.html">Apply For Barber</a> -->
-          <a href="./contact.html">Contact Us</a>
+        <div>
+          <nav class="All-navs">
+            <div class="nav_dropdown">
+              <button class="nav_dropbtn">Hair styles</button>
+              <div class="nav_dropdown-content">
+                <a href="../pages/short_style.html">Short</a>
+                <a href="../pages/medium_style.html">Medium</a>
+                <a href="../pages/long_style.html">Long</a>
+                <a href="../pages/fade_style.html">Fade</a>
+                <a href="../pages/undercut_style.html">Undercut</a>
+                <a href="../pages/beard_style.html">Beard</a>
+              </div>
+            </div>
+            <a class="nav" href="../pages/services.html">services</a>
+            <a class="nav" href="../pages/about_us.html">About Us</a>
+            <a class="nav" href="../pages/contact_us.html">Contact Us</a>
+            <!-- <div class="nav_dropdown">
+              <button class="nav_dropbtn">Login</button>
+              <div class="nav_dropdown-content">
+                <a href="#">Customer</a>
+                <a href="#">Barber</a>
+              </div>
+            </div> -->
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- header is ended -->
+
+    <!-- section is started -->
+    <div class="maincontent">
+      <div>
+        <img
+          src="../Assets/Images/contact.jpg"
+          alt="haircut image"
+          height="620px"
+          width="840px"
+        />
+      </div>
+
+      <div class="cont_container">
+        <div class="cont_contact" id="cont_contact">
+          <div class="cont_contact__title">Contact</div>
+          <div class="cont_contact__content">
+            <div class="cont_name_cnt">
+              <input type="text" class="cont_name" id="cont_name" required />
+              <label for="name">Full Name</label>
+            </div>
+            <div class="cont_email_cnt">
+              <input type="email" class="cont_email" id="cont_email" required />
+              <label for="email">Email Address</label>
+            </div>
+            <div class="cont_subject_cnt">
+              <input
+                type="text"
+                class="cont_subject"
+                id="cont_subject"
+                required
+              />
+              <label for="subject">Subject</label>
+            </div>
+            <div class="cont_msg_ctn">
+              <textarea
+                name="msg"
+                cols="30"
+                rows="4"
+                id="cont_msg"
+                class="cont_msg"
+                required
+              ></textarea>
+              <label for="msg" class="cont_msg_lbl">Message</label>
+            </div>
+            <button class="cont_btn">Send Message</button>
+          </div>
         </div>
       </div>
     </div>
+    <!-- section is ended -->
 
-    <section class="about-font">
-      <div class="big">
-        <p class="big-font">Contact Us</p>
-      </div>
-      <br />
-      <div class="small">
-        <p class="small-font">
-          We available for freelance work.Connect with us via Phone:9087654321
-          [or] Email:nothing@gamil.com
-        </p>
-      </div>
-      <br />
-      <div class="contact-form">
-        <form class="all-inputs">
-          <input class="box" type="text" placeholder="Enter name" required />
-          <input class="box" type="email" placeholder="E-email" name="email" />
-          <input
-            class="box"
-            type="text"
-            placeholder="Write a subject"
-            required
-          />
-          <textarea
-            class="message"
-            name="message"
-            placeholder="Your message"
-          ></textarea>
-        </form>
-        <br />
-        <div class="submit">
-          <button class="submit-1">SUBMIT</button>
-        </div>
-      </div>
-    </section>
+    <!-- footer is started -->
     <footer>
-      <div class="content-5">
-        <div class="footer-1">
-          <div class="logo-div">
-            <img
-              class="logo-4"
-              alt="image"
-              src="../Assets/Images/MASter__4_-removebg-preview.png"
-            />
-          </div>
-          <div class="about">
-            <a href="./About Us.html"><h1 class="footer-content">About Us</h1></a>
-            <a href="./hair cut Style.html"><h1 class="footer-content">hair Styles</h1></a>
-            <!-- <a href="./book.html"><h1 class="footer-content">Booking for Haircut</h1></a> -->
-            <!-- <a href="./Apply.html"><h1 class="footer-content">Apply for Barber</h1></a> -->
-            <a href="./contact.html"><h1 class="footer-content">Contact Us</h1></a>
+      <div class="footer">
+        <div class="footer_firsthalf">
+          <div>
+            <h3>About us</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo
+              optio sequi minima, reprehenderit excepturi quos beatae deserunt
+              praesentium officiis ipsa vitae nostrum maxime ratione
+              exercitationem ea culpa odio expedita tempora. Lorem ipsum dolor
+              sit amet, consectetur adipisicing elit. Nemo optio sequi minima,
+              reprehenderit excepturi quos beatae deserunt praesentium officiis
+              ipsa vitae nostrum maxime ratione exercitationem ea culpa odio
+              expedita tempora.
+            </p>
           </div>
 
-          <div class="all-icons">
-            <img
-              class="icon"
-              alt="image"
-              src="../Assets/Images/facebook-2.png"
-            />
-            
-            <img
-              class="icon"
-              alt="image"
-              src="../Assets/Images/instagram-2.png"
-            />
-            <img
-              class="icon"
-              alt="image"
-              src="../Assets/Images/twitter-2.png"
-            />
-            <img class="icon" alt="image" src="../Assets/Images/whatsapp.png" />
+          <br />
+          <div class="footicons">
+            <a href="#"
+              ><img
+                class="footround"
+                src="../Assets/Images/whatsapp.png"
+                alt="What's app"
+            /></a>
+            <a href="#">
+              <img
+                class="footround"
+                src="../Assets/Images/facebook-2.png"
+                alt="face book"
+            /></a>
+            <a href="#">
+              <img
+                class="footround"
+                src="../Assets/Images/instagram-2.png"
+                alt="instagram"
+            /></a>
+            <a href="#"
+              ><img
+                class="footround"
+                src="../Assets/Images/twitter-2.png"
+                alt="twitter"
+            /></a>
           </div>
-          <div class="all-styles">
-            <a href="./hair cut Style.html"><h1 class="footer-content">Short</h1></a>
-            <a href="./long.html"><h1 class="footer-content">Long</h1></a>
-            <a href="./undercut.html"><h1 class="footer-content">Undercut</h1></a>
-            <a href="./fade.html"><h1 class="footer-content">Fade</h1></a>
-            <a href="./medium.html"><h1 class="footer-content">Medium</h1></a>
-            <a href="./beard.html"><h1 class="footer-content">Beard</h1></a>
-          </div>
-          <div class="logo-div">
-          <img
-          class="logo-4"
-          alt="image"
-          src="../Assets/Images/MASter__4_-removebg-preview.png"
-        />
         </div>
-      </div>
 
-          
+        <div class="footer_secondhalf">
+          <div class="footcard">
+            <img src="../Assets/Images/about us.jpg" alt="Haircut" />
+            <div class="footinfo">
+              <div>
+                <h3>Address</h3>
+                <p>
+                  Lorem, ipsum dolor sit amet <br />
+                  consectetur adipisicing <br />
+                  elit. Nam nulla dolorem <br />
+                  fugiat <br />
+                </p>
+              </div>
+              <div>
+                <h3>Contact us</h3>
+                <p>9764652785</p>
+              </div>
+              <div>
+                <h3>email</h3>
+                <p>sharp&clean@gmail.com</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
+    <!-- footer is ended -->
   </body>
 </html>

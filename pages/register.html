@@ -60,7 +60,6 @@
 
         <input class="input" type="number" id="phone_number" />
       </div>
-      
 
       <div class="submit">
         <button class="submit_btn" type="submit" id="btn">Submit</button>
@@ -92,10 +91,10 @@
         const phoneNumber = document
           .getElementById("phone_number")
           .value.trim();
-          const singleUserid = Date.now();
+        const singleUserid = Date.now();
 
         let userData = {
-          userId:singleUserid,
+          userId: singleUserid,
           userName: userName,
           email: useremail,
           email_password: emailPassword,
@@ -117,12 +116,13 @@
             userNew.push(userData);
             const newarray = JSON.stringify(userNew);
             localStorage.setItem("userinfo", newarray);
-            window.location.href = "/index.html";
+            window.location.href = "./login.html";
           } else {
             alert("Invalid Password");
           }
         }
       });
     </script>
+    <!-- <a href="./login.html"></a> -->
   </body>
 </html>

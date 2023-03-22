@@ -1,216 +1,175 @@
-body {
-  margin: 0px;
-  padding: 0px;
-  /* background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(59, 59, 59, 1) 50%,
-    rgba(0, 0, 0, 1) 100%
-  ); */
-}
-.full-content {
+/* section 1 is started */
+.about_us {
   display: flex;
-
-  flex-direction: column;
-}
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  border-radius: 1rem;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: rgb(7, 7, 7);
-  padding: 6px 6px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
   background-color: white;
-  border-radius: 1rem;
-  border: 1px solid black;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* dropdown css is ended*/
-.dropbtn {
-  text-shadow: 0px 0px 10px white;
-  /* background-color: black; */
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.8rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: black;
-  border: none;
-}
-.dropbtn:hover {
-  transform: scale(1.1);
-}
-.header-1 {
-  background-color: #eef1eb;
-  background-color: #55585b;
-  background-image: linear-gradient(
-    312deg,
-    #55585b 0%,
-    #dadfdf 50%,
-    #ffffff 100%
-  );
-  /* background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(59, 59, 59, 1) 50%,
-    rgba(0, 0, 0, 1) 100%
-  ); */
-  /* box-shadow: inset 0px 0px 20px white; */
+.about_info {
   display: flex;
-
+  flex-direction: column;
+  width: 1200px;
+}
+.about_us h2 {
+  display: flex;
+  align-items: center;
+  background-color: #b9c1cc;
+  width: 500px;
   height: 200px;
-  width: 100%;
-  align-items: center;
+  font-size: 40px;
+  padding-left: 20px;
 }
-.logo-2 {
-  width: 200px;
+.about_us p {
   display: flex;
-
+  margin-left: 300px;
+  width: 700px;
+  font-size: 20px;
+  color: #000000;
+}
+.heroimgdiv {
+  margin-left: -150px;
+}
+.heroimg {
+  width: 475px;
+  height: 649px;
+}
+/* section 2 is started */
+.online_booking {
+  display: flex;
+  align-items: center;
+  background-color: #555c66;
+}
+.bookimg {
+  margin-left: 160px;
+}
+.book {
+  margin-top: 450px;
+  margin-left: -380px;
+  font-size: 25px;
+  width: 620px;
+  height: fit-content;
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px;
+}
+.bookbtn {
+  font-size: 19px;
+  font-weight: bold;
+  width: 150px;
+  height: 60px;
+  border: 5px soild black;
+  border-radius: 5px;
+}
+.bookbtn:hover {
+  background-color: black;
+  color: white;
+}
+/* section 3 is started */
+.shop {
+  display: flex;
   justify-content: center;
-}
-
-.logo-1 {
-  margin-left: 25%;
-  width: 200px;
-  height: 150px;
-}
-
-.All-navs {
-  display: flex;
-
   align-items: center;
+  font-size: 30px;
+  /* background-color: #b9c1cc; */
+}
+/* .service_section {
+    background-color: #b9c1cc;
+  } */
+.features {
+  padding: 30px;
+  display: flex;
   justify-content: space-evenly;
-  flex: 1;
-  height: 100%;
+  align-items: center;
 }
-a {
-  text-shadow: 0px 0px 10px white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 30px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: black;
-}
-a:hover {
-  transform: scale(1.1);
-}
-
-.about-us {
-  width: 100%;
-}
-.about-us-1,
-.our-barber-1,
-.our-features-1 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  margin-left: 4%;
-  font-size: 40px;
-  color: black;
-  text-shadow: 0px 0px 20px white;
-}
-.about-box {
+.all {
   display: flex;
-  box-shadow: inset 0px 10px 20px black;
-
-  padding: 40px;
+  width: 500px;
+  flex-wrap: wrap;
 }
-.about-img {
-  flex: 1;
-}
-.ex-img {
-  border-radius: 3px;
-  width: 100%;
-  height: 100%;
-}
-.about-us-font {
-  flex: 3;
-}
-.big-font {
+.service {
+  margin: 20px;
+  padding: 20px 50px;
+  background-color: white;
+  border-radius: 10px;
   color: black;
-  text-shadow: 0px 0px 20px white;
-  font-size: 40px;
-  font-weight: bolder;
+  font-size: 20px;
+  font-weight: bold;
+}
+/* works css */
+
+.Our-works {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 70px;
+  justify-content: center;
   text-align: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: rgb(185, 193, 204);
+  background: linear-gradient(
+    0deg,
+    rgba(185, 193, 204, 1) 60%,
+    rgba(85, 92, 102, 1) 60%
+  );
 }
-.about-us-font-1,
-.barber-font-1,
-.features-font-1 {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin-left: 4%;
-  font-size: 30px;
-  color: black;
-  /* text-shadow: 0px 0px 2px white; */
+.works {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 1500px;
+  flex-direction: column;
+  align-items: center;
+}
+.works h2 {
+  font-size: 50px;
+  color: white;
+}
+.free_img {
+  width: 380px;
+  height: 430px;
+  margin: 10px;
+  border-radius: 12px;
+}
+.free_img:hover {
+  transform: scale(1.01);
+  box-shadow: 3px 3px 10px 2px rgb(155, 155, 155);
 }
 
-.our-barber {
-  width: 100%;
-  height: 20%;
+/* testimolials */
+.fullcard {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
-.our-barber-box {
+.review {
+  font-size: 25px;
+  text-align: center;
+  color: black;
+}
+.reviewcard {
+  width: 250px;
+  height: 250px;
+  text-align: right;
+  background-color: #555c66;
+  color: white;
   padding: 40px;
-  /* box-shadow: inset 0px 0px 20px white; */
+  border-radius: 20px;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+.flex {
   display: flex;
 }
-.barber-img {
-  flex: 1;
-  height: 400px;
-}
-.barber {
-  width: 100%;
-  height: 100%;
-  border-radius: 3px;
-}
-.barber-font {
-  flex: 3;
-}
-.our-features {
-  width: 100%;
-  height: 20%;
-}
-.our-features-box {
-  padding: 40px;
+.flexin {
+  width: 200px;
   display: flex;
-  box-shadow: inset 0px 10px 20px black;
-  height: 400px;
+  justify-content: space-between;
 }
-.features-img {
-  flex: 1;
+.flex h3 {
+  margin-left: -40px;
+  font-size: 25px;
 }
-.features-img-1 {
-  width: 100%;
-  height: 100%;
-  border-radius: 3px;
-}
-.features-font {
-  flex: 3;
-}
-@media screen and (max-width: 390px) {
-  .full-content,
-  .logo-2,
-  .our-features-box,
-  .our-barber-box,
-  .about-box,
-  .All-navs {
-    flex-direction: column;
-  }
+.tester {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  border: 6px solid #b9c1cc;
 }

@@ -16,6 +16,10 @@ input:valid {
 input:invalid {
   border: 2px solid red;
 }
+.form {
+  display: flex;
+  justify-content: space-evenly;
+}
 .resister_form {
   background-color: black;
   /* background-image: linear-gradient(135deg, #b3b2ae 0%, #111010 74%); */
@@ -24,11 +28,9 @@ input:invalid {
   flex-direction: column;
   flex-wrap: wrap;
   margin: auto;
-
-  margin-top: 8%;
-  /* border: 2px solid yellow; */
-
-  height: 50rem;
+  padding-top: 40px;
+  border: 2px solid yellow;
+  height: 45rem;
   width: 30%;
 }
 .head_div {
@@ -39,7 +41,7 @@ input:invalid {
   align-items: center;
 }
 .head {
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: bolder;
   color: white;
 }
