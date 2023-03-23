@@ -4,16 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home page</title>
-    <link rel="stylesheet" href="../Assets/CSS/home page.css" />
-    <link rel="stylesheet" href="../Assets/CSS/universe.css">
-    
+    <link rel="stylesheet" href="../Assets/CSS/universe.css" />
+    <link rel="stylesheet" href="../Assets/CSS/contact.css" />
+
+    <title>contact us</title>
   </head>
   <body>
+    <!-- header is started -->
     <header>
       <div class="header">
         <div>
-          <a href="barber_home.html">
+          <a href="../index.html">
             <img
               class="logo_img"
               src="../Assets/Images/sharp logo black.png"
@@ -26,45 +27,81 @@
             <div class="nav_dropdown">
               <button class="nav_dropbtn">Hair styles</button>
               <div class="nav_dropdown-content">
-                <a href="./hair cut Style.html">Short</a>
-                <a href="./medium.html">Medium</a>
-                <a href="./long.html">Long</a>
-                <a href="./fade.html">Fade</a>
-                <a href="./undercut.html">Undercut</a>
-                <a href="./beard.html">Beard</a>
+                <a href="../pages/short_style.html">Short</a>
+                <a href="../pages/medium_style.html">Medium</a>
+                <a href="../pages/long_style.html">Long</a>
+                <a href="../pages/fade_style.html">Fade</a>
+                <a href="../pages/undercut_style.html">Undercut</a>
+                <a href="../pages/beard_style.html">Beard</a>
               </div>
             </div>
-            <a class="nav" href="#">Barber card</a>
-            <a class="nav" href="#">Shop card</a>
-            <a class="nav" href="#"
-              >Booking list</a
-            >
-            <a class="nav" href="./barber_about.html">About Us</a>
-            
-            <a class="nav" href="./barber_contact_us.html">Contact Us</a>
-            <a class="nav" href="./barber_profile.html"
-              ><img
-                src="../Assets/Images/profile-2.png"
-                alt="profile"
-                height="30px"
-                width="30px"
-            /></a>
+            <a class="nav" href="../pages/services.html">services</a>
+            <a class="nav" href="../pages/about_us.html">About Us</a>
+            <a class="nav" href="../pages/contact_us.html">Contact Us</a>
+            <!-- <div class="nav_dropdown">
+              <button class="nav_dropbtn">Login</button>
+              <div class="nav_dropdown-content">
+                <a href="#">Customer</a>
+                <a href="#">Barber</a>
+              </div>
+            </div> -->
           </nav>
         </div>
       </div>
     </header>
-    <div class="website-name">
-      <p class="website-name-1">SCISSOR MASTERS</p>
-    </div>
-    <div class="welcome-div">
-      <p class="welcome-1">WELCOME</p>
-    </div>
-    <div class="service-font">
-      <div class="service">
-        <p class="service-font-1">We will provide the best haircut Service</p>
+    <!-- header is ended -->
+
+    <!-- section is started -->
+    <div class="maincontent">
+      <div>
+        <img
+          src="../Assets/Images/contact.jpg"
+          alt="haircut image"
+          height="620px"
+          width="840px"
+        />
       </div>
-    </div>  
-    
+
+      <div class="cont_container">
+        <div class="cont_contact" id="cont_contact">
+          <div class="cont_contact__title">Contact</div>
+          <div class="cont_contact__content">
+            <div class="cont_name_cnt">
+              <input type="text" class="cont_name" id="cont_name" required />
+              <label for="name">Full Name</label>
+            </div>
+            <div class="cont_email_cnt">
+              <input type="email" class="cont_email" id="cont_email" required />
+              <label for="email">Email Address</label>
+            </div>
+            <div class="cont_subject_cnt">
+              <input
+                type="text"
+                class="cont_subject"
+                id="cont_subject"
+                required
+              />
+              <label for="subject">Subject</label>
+            </div>
+            <div class="cont_msg_ctn">
+              <textarea
+                name="msg"
+                cols="30"
+                rows="4"
+                id="cont_msg"
+                class="cont_msg"
+                required
+              ></textarea>
+              <label for="msg" class="cont_msg_lbl">Message</label>
+            </div>
+            <button class="cont_btn">Send Message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- section is ended -->
+
+    <!-- footer is started -->
     <footer>
       <div class="footer">
         <div class="footer_firsthalf">
@@ -137,5 +174,6 @@
         </div>
       </div>
     </footer>
+    <!-- footer is ended -->
   </body>
 </html>
