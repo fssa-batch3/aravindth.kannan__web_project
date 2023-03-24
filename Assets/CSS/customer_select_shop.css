@@ -1,0 +1,91 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(59, 59, 59, 1) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+.big-font {
+  text-align: center;
+  font-size: 70px;
+  font-weight: bolder;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  text-shadow: 0px 0px 5px white;
+}
+.content {
+  display: flex;
+  width: 98%;
+  margin: auto;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 20px white;
+  height: 350px;
+}
+.left-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-div {
+  width: 400px;
+  height: 300px;
+}
+.shop-img {
+  width: 98%;
+  border-radius: 3px;
+  height: 98%;
+}
+.select {
+  display: flex;
+  justify-content: center;
+}
+.select-button {
+  width: 200px;
+  height: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-shadow: 0px 0px 10px white;
+  color: white;
+  background-color: transparent;
+  border-radius: 3px;
+  border: none;
+  box-shadow: inset 0px 0px 10px white;
+  transition: 0.7s;
+}
+.select-button:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.1);
+}
+.right-side {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-details {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.details-font {
+  margin: 40px;
+  font-size: 25px;
+  color: white;
+  text-shadow: 0px 0px 2px white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.all-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}

@@ -1,0 +1,90 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(59, 59, 59, 1) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.success {
+  box-shadow: inset 0px 0px 20px white;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  margin-left: 170px;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 900px;
+  border-radius: 3px;
+  background-color: rgba(52, 52, 53, 0.354);
+}
+
+.congrats {
+  display: flex;
+  justify-content: center;
+}
+.congrats-1 {
+  color: white;
+  font-size: 40px;
+  font-weight: bolder;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+
+  text-shadow: 0px 0px 20px white;
+}
+.right {
+  display: flex;
+  justify-content: center;
+}
+.right-1 {
+  width: 350px;
+  height: 350px;
+  border-radius: 30px;
+}
+.otp {
+  font-size: 40px;
+  font-weight: bolder;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+
+  color: rgb(16, 217, 60);
+  text-align: center;
+  text-shadow: 0px 0px 20px green;
+}
+.member {
+  display: flex;
+  justify-content: center;
+}
+.member-1 {
+  font-size: 60px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bolder;
+  text-shadow: 0px 0px 6px white;
+  color: white;
+}
+.button-div {
+  display: flex;
+  justify-content: center;
+}
+.button {
+  width: 200px;
+  height: 50px;
+  background-color: transparent;
+  color: white;
+  font-size: 30px;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: inset 0px 0px 10px white;
+  border: none;
+  transition: 0.7s;
+  border-radius: 3px;
+}
+.button:hover {
+  transform: scale(1.2);
+  background-color: white;
+  color: black;
+}

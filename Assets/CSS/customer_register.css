@@ -1,0 +1,85 @@
+body {
+  /* background-image: url(./../Images/login\ page.jpg); */
+  /* background-size: cover; */
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  /* background-image: linear-gradient(90deg, #0f0f0e 0%, #fedf07 100%); */
+}
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input:valid {
+  border: 2px solid green;
+}
+input:invalid {
+  border: 2px solid red;
+}
+.form {
+  display: flex;
+  justify-content: space-evenly;
+}
+.resister_form {
+  background-color: black;
+  /* background-image: linear-gradient(135deg, #b3b2ae 0%, #111010 74%); */
+  box-shadow: 0px 0px 10px 3px greenyellow;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: auto;
+  padding-top: 40px;
+  border: 2px solid yellow;
+  height: 45rem;
+  width: 30%;
+}
+.head_div {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.head {
+  font-size: 4rem;
+  font-weight: bolder;
+  color: white;
+}
+.all_label {
+  font-size: 2rem;
+  color: white;
+}
+.all_inputs {
+  margin-left: 18%;
+  width: 100%;
+  height: 15%;
+}
+.input {
+  font-size: 15px;
+  color: black;
+  padding-left: 2%;
+  width: 60%;
+  height: 30%;
+}
+.submit {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.submit_btn {
+  color: black;
+  font-size: 2rem;
+  font-weight: bolder;
+  width: 12rem;
+  height: 5rem;
+  border: black;
+  background-color: greenyellow;
+
+  transition: 0.7s;
+}
+.submit_btn:hover {
+  transform: scale(1.1);
+}
