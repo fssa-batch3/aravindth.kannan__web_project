@@ -100,7 +100,7 @@
         <button type="submit" class="delete_btn" id="delete_button">
           Delete
         </button>
-        <a class="submit_btn" href="./profile_edit.html"> Edit </a>
+        <a class="submit_btn" href="./customer_profile_edit.html"> Edit </a>
       </div>
     </form>
     <!-- </div> -->
@@ -222,11 +222,12 @@
           userInfo.splice(index, 1);
 
           localStorage.setItem("userinfo", JSON.stringify(userInfo));
-          window.location.href = "../pages/login.html";
+          window.location.href = "../index.html";
         }
       });
 
       // window.location.href = "../pages/profile_edit.html";
     </script>
+   
   </body>
 </html>
