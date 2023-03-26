@@ -86,11 +86,10 @@
         let match = false;
         for (let i = 0; i < all_user_data.length; i++) {
           if (
-            useremail == all_user_data[i].useremail &&
-            emailPassword == all_user_data[i].emailPassword
+            useremail == all_user_data[i].email &&
+            emailPassword == all_user_data[i].email_password
           ) {
             match = true;
-
             break;
           } else {
             match = false;
@@ -98,7 +97,7 @@
           }
         }
 
-        if ((match = true)) {
+        if (match == true) {
           alert("Success");
           const matchObject = all_user_data.find(
             (o) => o["email"] == useremail
@@ -113,30 +112,6 @@
           alert("Fail");
         }
       });
-
-      // function submit() {
-      //   let details_arr = [];
-      //   const username = document.getElementById("username").value;
-      //   const email = document.getElementById("email").value;
-      //   const password = document.getElementById("password").value;
-
-      //   console.log(username);
-      //   console.log(email);
-      //   console.log(password);
-
-      //   let user_details = {
-      //     username: username,
-      //     email: email,
-      //     password: password,
-      //   };
-      //   details_arr.push(user_details);
-      //   console.log(details_arr);
-      //   localStorage.setItem("username", username);
-      //   localStorage.setItem("email", email);
-      //   localStorage.setItem("password", password);
-
-      //   window.location.href = "./pages/home.html";
-      // }
     </script>
   </body>
 </html>

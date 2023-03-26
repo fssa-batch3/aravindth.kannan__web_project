@@ -61,7 +61,7 @@
         <h1 class="topic">Barber profile</h1>
       </div>
       <div class="profile">
-        <img class="photo" src="../Assets/Images/barber-3.jpg" id="photo" />
+        <img class="photo" id="b_photo" />
         <div class="right_side">
           <p class="text">Scissor Masters</p>
           <p class="text">Official Barber</p>
@@ -70,11 +70,19 @@
       <div class="information">
         <div class="input_div">
           <label class="label">Barber Name: </label>
-          <input class="input" type="text" id="name" disabled />
+          <input class="input" type="text" id="barber_name" disabled />
         </div>
         <div class="input_div">
           <label class="label">Email id: </label>
-          <input class="input" type="text" id="email" disabled />
+          <input class="input" type="text" id="barber_email" disabled />
+        </div>
+        <div class="input_div">
+          <label class="label">Password: </label>
+          <input class="input" type="text" id="barber_password" disabled />
+        </div>
+        <div class="input_div">
+          <label class="label">Confirm password: </label>
+          <input class="input" type="text" id="barber_c_password" disabled />
         </div>
         <div class="input_div">
           <label class="label">Experience: </label>
@@ -93,12 +101,11 @@
           <input class="input" type="text" id="address" disabled />
         </div>
       </div>
-
+      <!-- your card -->
       <div class="card_text_div">
         <p class="Your_card">Your card</p>
       </div>
 
-      <!-- your card -->
       <div class="card">
         <div class="left-side">
           <div class="img-div">
@@ -237,5 +244,33 @@
       </div>
     </footer>
     <!-- footer is ended -->
+
+    <!-- Java Script -->
+
+    <script>
+      // get data from both storage of login & register
+
+      const thisBarber = JSON.parse(localStorage.getItem("single_barber"));
+      const barberInfo = JSON.parse(localStorage.getItem("barberinfo"));
+      // get object from local storage by email
+
+      let oneBarber = barberInfo.find(function (event) {
+        let oneBarberEmail = event["barber_email"];
+        if (thisBarber == oneBarberEmail) {
+          return true;
+        }
+      });
+
+    
+
+      const barberProfile = document.getElementById("b_photo").setAttribute("src",oneBarber["barber_profile"]);
+      const barberName = document.getElementById("barber_name").value = oneBarber["barberName"];
+      const barberEmail = document.getElementById("barber_email").value = oneBarber["barber_email"];
+      const barberPassword = document.getElementById("barber_password").value = oneBarber["email_password"];
+      const barberCPassword = document.getElementById("barber_c_password").value = oneBarber["confirm_Password"];
+      const barberSlogan = document.getElementById("slogan").value = oneBarber["barber_slogan"];
+      const barberPhone = document.getElementById("phone_number").value = oneBarber["phoneNumber"];
+      const barberAddress = document.getElementById("address").value = oneBarber["barber_address"];
+    </script>
   </body>
 </html>

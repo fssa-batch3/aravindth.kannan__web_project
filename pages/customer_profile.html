@@ -190,7 +190,7 @@
       // get data from local storage
       const thisUser = JSON.parse(localStorage.getItem("this_user"));
       const userInfo = JSON.parse(localStorage.getItem("userinfo"));
-      // get object from local storage used by email
+      // get object from local storage by email
       let oneUser = userInfo.find(function (event) {
         let userEmail = event["email"];
         if (thisUser == userEmail) {

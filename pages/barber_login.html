@@ -15,7 +15,7 @@
         src="../Assets/Images/MASter__white_-removebg-preview.png"
       />
     </div>
-    <form id="login_form">
+    <form id="b_login_form">
       <div class="content">
         <div class="login">
           <h1 class="login-1">Login</h1>
@@ -41,7 +41,7 @@
             type="email"
             placeholder=" "
             value="kaviprakash594@gmail.com"
-            id="email"
+            id="b_email"
           />
         </div>
         <div class="password">
@@ -52,7 +52,7 @@
           type="password"
           placeholder=" "
           value="a22092003"
-          id="password"
+          id="b_password"
         />
         <div class="Password-box"></div>
 
@@ -75,40 +75,37 @@
     <script>
       // JSON
 
-      let logIn = document.getElementById("login_form");
+      let logIn = document.getElementById("b_login_form");
       logIn.addEventListener("submit", (event) => {
         event.preventDefault();
         let all_user_data = JSON.parse(localStorage.getItem("barberinfo"));
         console.log(all_user_data);
         // const userName = document.getElementById("username");
-        const useremail = document.getElementById("email").value;
-        const emailPassword = document.getElementById("password").value;
+        const useremail = document.getElementById("b_email").value;
+        const emailPassword = document.getElementById("b_password").value;
         let match = false;
         for (let i = 0; i < all_user_data.length; i++) {
           if (
-            useremail == all_user_data[i].useremail &&
-            emailPassword == all_user_data[i].emailPassword
+            useremail == all_user_data[i].barber_email &&
+            emailPassword == all_user_data[i].email_password
           ) {
             match = true;
-
-            break;
-          } else {
-            match = false;
+            console.log("hello");
             break;
           }
         }
 
-        if ((match = true)) {
+        if (match == true) {
           alert("Success");
           const matchObject = all_user_data.find(
-            (o) => o["email"] == useremail
+            (o) => o["barber_email"] == useremail
           );
           console.log(matchObject);
-          const thisUser = JSON.stringify(matchObject.email);
+          const thisUser = JSON.stringify(matchObject.barber_email);
           localStorage.setItem("single_barber", thisUser);
 
           // document.querySelector("login_form").reset();
-          window.location.href = "./barber_home_page.html";
+          window.location.href = "./barber_home.html";
         } else {
           alert("Fail");
         }
@@ -138,5 +135,6 @@
       //   window.location.href = "./pages/home.html";
       // }
     </script>
+    
   </body>
 </html>

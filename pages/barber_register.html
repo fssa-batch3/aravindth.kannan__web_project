@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>barber register</title>
     <link rel="stylesheet" href="../Assets/CSS/barber_register.css" />
   </head>
   <body>
@@ -30,7 +30,7 @@
             <label for="email" class="all_label">Email Id</label>
             <br />
             <br />
-            <input class="input" type="email" id="email" autocomplete="email" />
+            <input class="input" type="email" id="b_email" autocomplete="email" />
           </div>
           <br />
           <div class="all_inputs">
@@ -122,30 +122,31 @@
         }
 
         const barberName = document.getElementById("username").value.trim();
-        const barberEmail = document.getElementById("email").value.trim();
-        const barberEmailPassword = document
-          .getElementById("password")
-          .value.trim();
-        const barberEmailcPassword = document
-          .getElementById("c_password")
-          .value.trim();
-
-        const phoneNumber = document
-          .getElementById("phone_number")
-          .value.trim();
+        const barberEmail = document.getElementById("b_email").value.trim();
+        const barberEmailPassword = document.getElementById("password").value.trim();
+        const barberEmailcPassword = document.getElementById("c_password").value.trim();
+        const phoneNumber = document.getElementById("phone_number").value.trim();
+        const barberProfile = document.getElementById("photo").value.trim();
+        const barberSlogan = document.getElementById("slogan").value.trim();
+        const barberExperience = document.getElementById("experience").value.trim();
+        const barberAddress = document.getElementById("address").value.trim();
         const singleUserid = Date.now();
 
         let userData = {
           userId: singleUserid,
           barberName: barberName,
-          email: barberEmail,
+          barber_email: barberEmail,
           email_password: barberEmailPassword,
-          barberEmailcPassword: barberEmailcPassword,
+          confirm_Password: barberEmailcPassword,
           phoneNumber: phoneNumber,
+          barber_profile:barberProfile,
+          barber_slogan:barberSlogan,
+          barber_experience:barberExperience,
+          barber_address:barberAddress,
         };
 
         for (let i = 0; i < userNew.length; i++) {
-          if (barberEmail === userNew[i]["email"]) {
+          if (barberEmail === userNew[i]["barber_email"]) {
             checker = true;
             alert("email is already exists");
             break;
@@ -158,12 +159,13 @@
             userNew.push(userData);
             const newarray = JSON.stringify(userNew);
             localStorage.setItem("barberinfo", newarray);
-            window.location.href = "./login_barber.html";
+            window.location.href = "./barber_login.html";
           } else {
             alert("Invalid Password");
           }
         }
       });
     </script>
+   
   </body>
 </html>
