@@ -159,13 +159,15 @@
       <div class="three_buttons">
         <a href="./create_barber_card.html" class="create_card">Create card</a>
         <button class="edit_card">Edit card</button>
-        <button class="edit_card">delete card</button>
+        <button  class="edit_card">delete card</button>
       </div>
 
       <div class="three_buttons">
         <p class="Your_card">Edit your profile</p>
-        <button class="edit_card">Edit profile</button>
-        <button class="edit_card">Delete profile</button>
+        <a class="create_card" href="./barber_profile_edit.html"
+          >Edit profile</a
+        >
+        <button  id="delete_barber" class="edit_card">Delete profile</button>
       </div>
     </div>
     <!-- section is ended -->
@@ -261,16 +263,38 @@
         }
       });
 
-    
+
 
       const barberProfile = document.getElementById("b_photo").setAttribute("src",oneBarber["barber_profile"]);
       const barberName = document.getElementById("barber_name").value = oneBarber["barberName"];
       const barberEmail = document.getElementById("barber_email").value = oneBarber["barber_email"];
       const barberPassword = document.getElementById("barber_password").value = oneBarber["email_password"];
+      const barberExperience = document.getElementById("experience").value = oneBarber["barber_experience"];
       const barberCPassword = document.getElementById("barber_c_password").value = oneBarber["confirm_Password"];
       const barberSlogan = document.getElementById("slogan").value = oneBarber["barber_slogan"];
       const barberPhone = document.getElementById("phone_number").value = oneBarber["phoneNumber"];
       const barberAddress = document.getElementById("address").value = oneBarber["barber_address"];
+
+      // delete function
+
+      let deleteOneBarber = document.getElementById("delete_barber");
+
+      deleteOneBarber.addEventListener("click",function(event){
+        event.preventDefault();
+
+        let index = barberInfo.indexOf(oneBarber);
+
+        let msg = confirm("Are you sure! you want to delete this account");
+
+        if(msg !== true){
+          return;
+        }else{
+          barberInfo.splice(index, 1);
+
+          localStorage.setItem("barberinfo",JSON.stringify(barberInfo));
+          window.location.href = "../index.html";
+        }
+      })
     </script>
   </body>
 </html>

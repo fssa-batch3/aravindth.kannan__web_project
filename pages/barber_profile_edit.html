@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>barber profile edit</title>
+    <link rel="stylesheet" href="../Assets/CSS/barber_register.css" />
+  </head>
+  <body>
+    <form id="E_form">
+      <div class="head_div">
+        <p class="head">Registration info</p>
+      </div>
+      <div class="form">
+        <div class="resister_form" class="all_inputs">
+          <div class="all_inputs">
+            <label class="all_label" pattern="[A-Z a-z]{1,32}">Username</label>
+            <br />
+            <br />
+            <input
+              class="input"
+              type="text"
+              id="B_name"
+              autocomplete="name"
+            />
+          </div>
+          <br />
+          <div class="all_inputs">
+            <label for="email" class="all_label">Email Id</label>
+            <br />
+            <br />
+            <input class="input" type="email" id="B_email" autocomplete="email" />
+          </div>
+          <br />
+          <div class="all_inputs">
+            <label for="password" class="all_label">Password</label>
+            <br />
+            <br />
+            <input
+              class="input"
+              type="text"
+              id="b_password"
+              autocomplete="password"
+            />
+          </div>
+          <br />
+          <div class="all_inputs">
+            <label for="password" class="all_label"> Confirm Password</label>
+            <br />
+            <br />
+            <input
+              class="input"
+              type="text"
+              id="b_c_password"
+              autocomplete="password"
+            />
+          </div>
+          <br />
+          <div class="all_inputs">
+            <label for="phone" class="all_label">phone number</label>
+            <br />
+            <br />
+
+            <input class="input" type="number" id="b_phone_number" />
+          </div>
+        </div>
+
+        <div class="resister_form">
+          <div class="all_inputs">
+            <label class="all_label">Profile-URL</label>
+            <br />
+            <br />
+            <input class="input" type="url" id="B_photo" />
+          </div>
+
+          <div class="all_inputs">
+            <label class="all_label">Slogan</label>
+            <br />
+            <br />
+            <input class="input" type="text" id="b_slogan" />
+          </div>
+
+          <div class="all_inputs">
+            <label class="all_label">Experience</label>
+            <br />
+            <br />
+            <input class="input" type="text" id="b_experience" />
+          </div>
+          <div class="all_inputs">
+            <label class="all_label">Address</label>
+            <br />
+            <br />
+            <textarea id="b_address" name="address" rows="5" cols="50"></textarea>
+          </div>
+          <br /><br />
+          <br />
+          <br />
+          <br />
+          <div class="submit">
+            <button class="submit_btn" type="submit" id="btn">Save</button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <!-- <a href="./login_barber.html"></a> -->
+
+    <!-- javav-script -->
+
+    <script>
+      // JSON
+      // Java Script
+      const thisBarber = JSON.parse(localStorage.getItem("single_barber"));
+      const barberInfo = JSON.parse(localStorage.getItem("barberinfo"));
+         // get object from local storage by email
+
+      let oneBarber = barberInfo.find(function (event) {
+        let oneBarberEmail = event["barber_email"];
+        if (thisBarber == oneBarberEmail) {
+          return true;
+        }
+      });
+
+     
+         // show data from local storage!
+        const barberName = document.getElementById("B_name").value = oneBarber["barberName"]
+        const barberEmail = document.getElementById("B_email").value = oneBarber["barber_email"]
+        const barberEmailPassword = document.getElementById("b_password").value = oneBarber["email_password"]
+        const barberEmailcPassword = document.getElementById("b_c_password").value = oneBarber["confirm_Password"]
+        const phoneNumber = document.getElementById("b_phone_number").value = oneBarber["phoneNumber"]
+        const barberProfile = document.getElementById("B_photo").value = oneBarber["barber_profile"]
+        const barberSlogan = document.getElementById("b_slogan").value = oneBarber["barber_slogan"]
+        const barberExperience = document.getElementById("b_experience").value = oneBarber["barber_experience"]
+        const barberAddress = document.getElementById("b_address").value = oneBarber["barber_address"]
+        
+
+         // edit page function!
+
+        let save = document.getElementById("E_form");
+
+        save.addEventListener("submit",function(event){
+            event.preventDefault();
+
+         // get data from edit form!
+
+            let barberName = document.getElementById("B_name").value;
+            let barber_email = document.getElementById("B_email").value;
+            let email_password = document.getElementById("b_password").value;
+            let confirm_Password = document.getElementById("b_c_password").value;
+            let phoneNumber = document.getElementById("b_phone_number").value;
+            let barber_profile = document.getElementById("B_photo").value;
+            let barber_slogan = document.getElementById("b_slogan").value;
+            let barber_experience = document.getElementById("b_experience").value;
+            let barber_address = document.getElementById("b_address").value;
+//  some errors in this step
+            let editBarberData = {
+                barberName,
+                barber_email,
+                email_password,
+                confirm_Password,
+                phoneNumber,
+                barber_profile,
+                barber_slogan,
+                barber_experience,
+                barber_address,
+            };
+
+         // email validation!
+
+                let newData = JSON.parse(localStorage.getItem("barberinfo"));
+
+                if(email_password === confirm_Password) {
+                let oldData = newData.find((i) => i.barber_email == barber_email);
+
+                if(oldData == undefined) {
+                    alert("Email Id not match");
+                }
+
+         // assign the value in object!
+                else {
+                    let updated = Object.assign(oldData, editBarberData);
+                    let index = newData.indexOf(oldData.barber_email);
+                    newData[index] = updated;
+                    localStorage.setItem("barberinfo", JSON.stringify(newData));
+                    window.location.href = "./barber_profile.html";
+                }
+            }else{
+                alert("password and confirm password should be same");
+            }
+       
+        });
+
+       
+    </script>
+    <!-- <a href="./barber_profile.html"></a> -->
+   
+  </body>
+</html>

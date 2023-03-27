@@ -243,11 +243,9 @@
           phoneNumber,
         };
 
-        console.log(oneUser);
-        console.log(editUserdata);
+       
         // email validation
         let newData = JSON.parse(localStorage.getItem("userinfo"));
-        console.log(newData);
 
         if (email_password === emailc_password) {
           let oldData = newData.find((i) => i.email == email);
@@ -259,11 +257,8 @@
           // assign the value in object
           else {
             let updated = Object.assign(oldData, editUserdata);
-            console.log(newData);
-            console.log(oldData);
             let index = newData.indexOf(oldData.email);
             newData[index] = updated;
-            console.log(newData);
             localStorage.setItem("userinfo", JSON.stringify(newData));
             window.location.href = "./customer_profile.html";
           }
