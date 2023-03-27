@@ -88,9 +88,8 @@ Create an account
       
          
     *Expected Result:    
-      1. The user is redirected to the user profile page.   
-      
-      a. Click the "Edit" button.         
+      1. The user is redirected to the user profile page.    
+      a. Click the "Edit" button.          
       b. You can edit your profile.          
       c. Click the "delete" button.        
       d. You can delete your profile.    
