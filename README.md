@@ -50,7 +50,7 @@ Create an account
           a. Navigate to the registration page.  
           b. Enter the required information such as name,email,password and phone number.   
           c. Click the "Register" button.  
-          d. Click the "Edit" button.  
+          d. Click the "Edit" button.   
           e. You can edit your profile.  
           f. Click the "delete" button.
           g. You can delete your profile.
@@ -73,11 +73,11 @@ Create an account
           a. Navigate to the registration page.    
           b. Enter the required information such as name,email,password,phone number,barber profile,slogan,experience and address.    
           c. Click the "Register" button. 
-           d. Click the "Edit" button.    
-          e. You can edit your profile.    
-          f. Click the "delete" button.   
-          g. You can delete your profile.   
-   *Expected Result:    
+           d. Click the "Edit" button.      
+          e. You can edit your profile.      
+          f. Click the "delete" button.     
+          g. You can delete your profile.     
+   *Expected Result:     
           1.The user is redirected to the login page.     
           
 Create an account   
