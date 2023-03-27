@@ -21,5 +21,18 @@ wireframe:https://drive.google.com/drive/folders/1d4lUeEf66xgovHEqxksKz9XPdEkYUQ
 5. delete user [completed]
 6. give User Id [completed]
 
-* details page[pending]
-1. automatically create JSON [pending][48 hours]
+* barber user crud [completed]
+1. register page [completed]
+2. login page [completed]
+3. profile page [completed]
+4. delete barber [completed]
+5. give barber Id [completed]
+
+* Add hair styles in admin page [completed]
+1. create a JSON for all hair styles [completed]
+2. create a card for each hair styles [completed]
+
+* barber card [working]
+1. create card form [completed]
+2. add card in select barber page [completed]
+3. edit card [pending]
