@@ -59,13 +59,14 @@ Create an account
     *steps:   
       a.Navigate to the login page.   
       b.Enter the required information such as email.and password.   
-      c.Click the "login" button.  
-      d. Click the "Edit" button.   
-      e. You can edit your profile.  
-      f. Click the "delete" button.
-      g. You can delete your profile.
+      c.Click the "login" button.    
+     
     *Expected Result:   
-      1. The user is redirected to the user profile page.   
+      1. The user is redirected to the user profile page.  
+      a. Click the "Edit" button.           
+      b. You can edit your profile.            
+      c. Click the "delete" button.          
+      d. You can delete your profile.       
 
 barber:    
 Create an account   
@@ -83,13 +84,16 @@ Create an account
     *steps:    
       a.Navigate to the login page.   
       b.Enter the required information such as email.and password.    
-      c.Click the "login" button.    
-      d. Click the "Edit" button.        
-      e. You can edit your profile.      
-      f. Click the "delete" button.     
-      g. You can delete your profile.   
-    *Expected Result:   
-      1. The user is redirected to the user profile page.    
+      c.Click the "login" button.   
+      
+         
+    *Expected Result:    
+      1. The user is redirected to the user profile page.   
+      
+      a. Click the "Edit" button.         
+      b. You can edit your profile.          
+      c. Click the "delete" button.        
+      d. You can delete your profile.    
       
 Barber card:    
 * Scenario 1:Successfully create card for barber    
