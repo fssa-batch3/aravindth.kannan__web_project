@@ -41,52 +41,52 @@ wireframe:https://drive.google.com/drive/folders/1d4lUeEf66xgovHEqxksKz9XPdEkYUQ
 
 
 
-USER STORY:
+USER STORY:   
 
-user:
-Create an account
-* Scenario 1: Successfully create an account
-   *Steps:
-          a. Navigate to the registration page.
-          b. Enter the required information such as name,email,password and phone number.
-          c. Click the "Register" button.
-   *Expected Result:
-          1.The user is redirected to the login page.
+user:  
+Create an account    
+* Scenario 1: Successfully create an account  
+   *Steps:    
+          a. Navigate to the registration page.  
+          b. Enter the required information such as name,email,password and phone number.   
+          c. Click the "Register" button.   
+   *Expected Result:   
+          1.The user is redirected to the login page.   
           
-Create an account
-* Scenario 1: Successfully login in to account
-    *steps:
-      a.Navigate to the login page.
-      b.Enter the required information such as email.and password.
-      c.Click the "login" button.
-    *Expected Result:
-      1. The user is redirected to the user profile page.
+Create an account   
+* Scenario 1: Successfully login in to account   
+    *steps:   
+      a.Navigate to the login page.   
+      b.Enter the required information such as email.and password.   
+      c.Click the "login" button.    
+    *Expected Result:   
+      1. The user is redirected to the user profile page.   
 
-barber:
-Create an account
-* Scenario 1: Successfully create an account
-   *Steps:
-          a. Navigate to the registration page.
-          b. Enter the required information such as name,email,password,phone number,barber profile,slogan,experience and address.
-          c. Click the "Register" button.
-   *Expected Result:
-          1.The user is redirected to the login page.
+barber:    
+Create an account   
+* Scenario 1: Successfully create an account   
+   *Steps:    
+          a. Navigate to the registration page.    
+          b. Enter the required information such as name,email,password,phone number,barber profile,slogan,experience and address.    
+          c. Click the "Register" button.   
+   *Expected Result:    
+          1.The user is redirected to the login page.     
           
-Create an account
-* Scenario 1: Successfully login in to account
-    *steps:
-      a.Navigate to the login page.
-      b.Enter the required information such as email.and password.
-      c.Click the "login" button.
-    *Expected Result:
-      1. The user is redirected to the user profile page.
+Create an account   
+* Scenario 1: Successfully login in to account    
+    *steps:    
+      a.Navigate to the login page.   
+      b.Enter the required information such as email.and password.    
+      c.Click the "login" button.   
+    *Expected Result:   
+      1. The user is redirected to the user profile page.    
       
-Barber card:
-* Scenario 1:Successfully create card for barber
-   * steps:
-      a.Navigate to the barber card page.
-      b.Enter the required information such as  card email,barber name,experience,slogan,sample_1,sample_2,sample_3 and card profile.
-      c.Click the "submit" button.
-   *Expected Result:
-      1. The user page add new card for barber.
+Barber card:    
+* Scenario 1:Successfully create card for barber    
+   * steps:    
+      a.Navigate to the barber card page.   
+      b.Enter the required information such as  card email,barber name,experience,slogan,sample_1,sample_2,sample_3 and card profile.   
+      c.Click the "submit" button.    
+   *Expected Result:    
+      1. The user page add new card for barber.    
 
