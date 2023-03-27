@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>select-barber</title>
+    <link rel="stylesheet" href="../Assets/CSS/customer_select_barber.css" />
+    <!-- <link rel="stylesheet" href="../Assets/CSS/footer-2.css" /> -->
+    <link rel="stylesheet" href="../Assets/CSS/universe.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div>
+          <a href="../pages/customer_home.html">
+            <img
+              class="logo_img"
+              src="../Assets/Images/sharp logo black.png"
+              alt="logo"
+            />
+          </a>
+        </div>
+        <div>
+          <nav class="All-navs">
+            <div class="nav_dropdown">
+              <button class="nav_dropbtn">Hair styles</button>
+              <div class="nav_dropdown-content">
+                <a href="./hair cut Style.html">Short</a>
+                <a href="./medium.html">Medium</a>
+                <a href="./long.html">Long</a>
+                <a href="./fade.html">Fade</a>
+                <a href="./undercut.html">Undercut</a>
+                <a href="./beard.html">Beard</a>
+              </div>
+            </div>
+            <a class="nav" href="./book.html">book now</a>
+
+            <a class="nav" href="../pages/customer_about_us.html">About Us</a>
+            <a class="nav" href="../pages/customer_contact_us.html"
+              >Contact Us</a
+            >
+            <a class="nav" href="../pages/customer_profile.html"
+              ><img
+                src="../Assets/Images/profile-2.png"
+                alt="profile"
+                height="30px"
+                width="30px"
+            /></a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <p class="big-font">Select Your Barber</p>
+
+    <div class="all-content">
+      <!-- <div class="content">
+        <div class="left-side">
+          <div class="img-div">
+            <img
+              class="shop-img"
+              alt="image"
+              src="../Assets/Images/barber-2.jpeg"
+            />
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="shop-details">
+            <div class="name_div">
+              <pre class="name">name:  </pre>
+
+              <p class="barber_name">kavi</p>
+            </div>
+            <div class="name_div">
+              <pre class="name">slogan:  </pre>
+              <p class="barber_name">what the hell</p>
+            </div>
+            <div class="name_div">
+              <pre class="name">experience:  </pre>
+              <p class="barber_name">barberex</p>
+            </div>
+          </div>
+          <div class="select">
+            <button class="detail">Details</button>
+            <a href="./booking-barber.html" class="select-button">Select</a>
+          </div>
+        </div>
+        <div class="sample_div">
+          <img
+            class="sample"
+            alt="haircutname"
+            src="../Assets/Images/fade-4.jpeg"
+          />
+          <img
+            class="sample"
+            alt="haircutname"
+            src="../Assets/Images/fade-5.jpg"
+          />
+          <img
+            class="sample"
+            alt="haircutname"
+            src="../Assets/Images/fade-7.jpeg"
+          />
+        </div>
+      </div> -->
+    </div>
+
+    <footer>
+      <div class="footer">
+        <div class="footer_firsthalf">
+          <div>
+            <h3>About us</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo
+              optio sequi minima, reprehenderit excepturi quos beatae deserunt
+              praesentium officiis ipsa vitae nostrum maxime ratione
+              exercitationem ea culpa odio expedita tempora. Lorem ipsum dolor
+              sit amet, consectetur adipisicing elit. Nemo optio sequi minima,
+              reprehenderit excepturi quos beatae deserunt praesentium officiis
+              ipsa vitae nostrum maxime ratione exercitationem ea culpa odio
+              expedita tempora.
+            </p>
+          </div>
+
+          <br />
+          <div class="footicons">
+            <a href="#"
+              ><img
+                class="footround"
+                src="../Assets/Images/whatsapp.png"
+                alt="What's app"
+            /></a>
+            <a href="#">
+              <img
+                class="footround"
+                src="../Assets/Images/facebook-2.png"
+                alt="face book"
+            /></a>
+            <a href="#">
+              <img
+                class="footround"
+                src="../Assets/Images/instagram-2.png"
+                alt="instagram"
+            /></a>
+            <a href="#"
+              ><img
+                class="footround"
+                src="../Assets/Images/twitter-2.png"
+                alt="twitter"
+            /></a>
+          </div>
+        </div>
+
+        <div class="footer_secondhalf">
+          <div class="footcard">
+            <img src="../Assets/Images/about us.jpg" alt="Haircut" />
+            <div class="footinfo">
+              <div>
+                <h3>Address</h3>
+                <p>
+                  Lorem, ipsum dolor sit amet <br />
+                  consectetur adipisicing <br />
+                  elit. Nam nulla dolorem <br />
+                  fugiat <br />
+                </p>
+              </div>
+              <div>
+                <h3>Contact us</h3>
+                <p>9764652785</p>
+              </div>
+              <div>
+                <h3>email</h3>
+                <p>sharp&clean@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- java script -->
+
+    <script>
+      // JSON
+
+      const select_barber_list = [];
+
+      // Java Script
+
+      let barber_card = JSON.parse(localStorage.getItem("barber_card"));
+
+      // console.log(barber_card);
+
+      for (let i = 0; i < barber_card.length; i++) {
+        select_barber_list.push(barber_card[i]);
+        console.log(select_barber_list);
+      }
+
+      for (i = 0; i < select_barber_list.length; i++) {
+        const barber = select_barber_list[i];
+
+        // console.log("Test : ", select_barber_list[i]["profile_photo"]);
+
+        let content = document.createElement("div");
+        content.setAttribute("class", "content");
+
+        let left_side = document.createElement("div");
+        left_side.setAttribute("class", "left-side");
+        content.append(left_side);
+
+        let image_div = document.createElement("div");
+        image_div.setAttribute("class", "img-div");
+        left_side.append(image_div);
+
+        let image = document.createElement("img");
+        image.setAttribute("class", "shop-img");
+        image.setAttribute("alt", select_barber_list[i]["barbername"]);
+        image.setAttribute("src", select_barber_list[i]["barber_photo"]);
+        image_div.append(image);
+
+        let right_side = document.createElement("div");
+        right_side.setAttribute("class", "right-side");
+        content.append(right_side);
+
+        let shop_details = document.createElement("div");
+        shop_details.setAttribute("class", "shop-details");
+        right_side.append(shop_details);
+
+        let name_div = document.createElement("div");
+        name_div.setAttribute("class", "name_div");
+        shop_details.append(name_div);
+
+        let name = document.createElement("pre");
+        name.setAttribute("class", "name");
+        name.innerText = "Name:  ";
+        name_div.append(name);
+
+        let barbername = document.createElement("p");
+        barbername.setAttribute("class", "barber_name");
+        barbername.innerText = select_barber_list[i]["barbername"];
+        name_div.append(barbername);
+
+        let slogan_div = document.createElement("div");
+        slogan_div.setAttribute("class", "name_div");
+        shop_details.append(slogan_div);
+
+        let slogan = document.createElement("pre");
+        slogan.setAttribute("class", "name");
+        slogan.innerText = "Slogan:  ";
+        slogan_div.append(slogan);
+
+        let barberslogan = document.createElement("p");
+        barberslogan.setAttribute("class", "barber_name");
+        barberslogan.innerText = select_barber_list[i]["barber_slogan"];
+        slogan_div.append(barberslogan);
+
+        let exp_div = document.createElement("div");
+        exp_div.setAttribute("class", "name_div");
+        shop_details.append(exp_div);
+
+        let exp = document.createElement("pre");
+        exp.setAttribute("class", "name");
+        exp.innerText = "Experience:  ";
+        exp_div.append(exp);
+
+        let barbersexp = document.createElement("p");
+        barbersexp.setAttribute("class", "barber_name");
+        barbersexp.innerText = select_barber_list[i]["barber_experience"];
+        exp_div.append(barbersexp);
+
+        let select_div = document.createElement("div");
+        select_div.setAttribute("class", "select");
+        right_side.append(select_div);
+
+        let detail_btn = document.createElement("button");
+        detail_btn.setAttribute("class", "detail");
+        detail_btn.innerText = "Details";
+        select_div.append(detail_btn);
+
+        let select_btn = document.createElement("a");
+        select_btn.setAttribute("class", "select-button");
+        select_btn.innerText = "Select";
+        select_div.append(select_btn);
+
+        let sample_div = document.createElement("div");
+        sample_div.setAttribute("class", "sample_div");
+        content.append(sample_div);
+
+        let sample_image = document.createElement("img");
+        sample_image.setAttribute("class", "sample");
+        sample_image.setAttribute(
+          "src",
+          select_barber_list[i]["barber_sample"]
+        );
+        sample_image.setAttribute("alt", select_barber_list[i]["barbername"]);
+        sample_div.append(sample_image);
+
+        let sample_image_1 = document.createElement("img");
+        sample_image_1.setAttribute("class", "sample");
+        sample_image_1.setAttribute(
+          "src",
+          select_barber_list[i]["barber_sample_1"]
+        );
+        sample_image_1.setAttribute("alt", select_barber_list[i]["barbername"]);
+        sample_div.append(sample_image_1);
+
+        let sample_image_2 = document.createElement("img");
+        sample_image_2.setAttribute("class", "sample");
+        sample_image_2.setAttribute(
+          "src",
+          select_barber_list[i]["barber_sample_2"]
+        );
+        sample_image_2.setAttribute("alt", select_barber_list[i]["barbername"]);
+        sample_div.append(sample_image_2);
+
+        document.querySelector(".all-content").append(content);
+      }
+      console.log(select_barber_list);
+
+      // const username = localStorage.getItem("username");
+      // console.log(usernsme);
+
+      // document.getElementById("username").innerText = username;
+    </script>
+  </body>
+</html>
