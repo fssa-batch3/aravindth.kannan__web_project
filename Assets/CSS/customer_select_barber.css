@@ -177,22 +177,6 @@ body {
     text-align: center;
     flex-direction: column;
   }
-  /* .experience,
-  .b_experience {
-    /* margin: 40px; */
-  /* font-size: 25px;
-    color: white;
-    text-shadow: 0px 0px 2px white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-  .details-font,
-  .slogan {
-    /* margin: 40px; */
-  /* font-size: 25px;
-    color: white;
-    text-shadow: 0px 0px 2px white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  } */
   .sample_div {
     flex: 2;
     display: flex;

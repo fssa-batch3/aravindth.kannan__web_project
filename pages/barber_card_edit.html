@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../Assets/CSS/universe.css" />
-    <link rel="stylesheet" href="../Assets/CSS/barber_card_form.css">
+    <link rel="stylesheet" href="../Assets/CSS/barber_card_form.css" />
     <title>barber booking list</title>
   </head>
   <body>
@@ -81,6 +81,7 @@
             class="name-box-1"
             type="email"
             autocomplete="name"
+            disabled
           />
         </div>
       </div>
@@ -134,8 +135,6 @@
         <button class="submit-1">Submit</button>
       </div>
     </form>
-
-    
 
     <!-- section is ended -->
 
@@ -213,12 +212,53 @@
       </div>
     </footer>
     <!-- footer is ended -->
-    
+
     <!-- java script -->
 
     <script>
-      // get data from this form
+      const thisBarber = JSON.parse(localStorage.getItem("single_barber"));
+      const barberInfo = JSON.parse(localStorage.getItem("barberinfo"));
+      // get object from local storage by email
 
+      let oneBarber = barberInfo.find(function (event) {
+        let oneBarberEmail = event["barber_email"];
+        if (thisBarber == oneBarberEmail) {
+          return true;
+        }
+      });
+
+      // card java script (or) function
+      const barberCardInfo = JSON.parse(localStorage.getItem("barber_card"));
+      // store a email for verify!
+      let barber_email = oneBarber["barber_email"];
+      let barber_card = barberCardInfo.find(function (event) {
+        let one_barber_card = event["barber_card_email"];
+        if (barber_email == one_barber_card) {
+          return true;
+        }
+      });
+
+      //  set the value of that card for barber profile
+      const cardbarberProfile = (document.getElementById("photo").value =
+        barber_card["barber_photo"]);
+      const cardbarberName = (document.getElementById("b_name").value =
+        barber_card["barbername"]);
+      const cardbarberEmail = (document.getElementById(
+        "barber_card_email"
+      ).value = barber_card["barber_card_email"]);
+      const cardbarberSlogan = (document.getElementById("slogan").value =
+        barber_card["barber_slogan"]);
+      const cardbarberExperience = (document.getElementById(
+        "experience"
+      ).value = barber_card["barber_experience"]);
+      const cardbarberSample_1 = (document.getElementById("sample").value =
+        barber_card["barber_sample"]);
+      const cardbarberSample_2 = (document.getElementById("sample_1").value =
+        barber_card["barber_sample_1"]);
+      const cardbarberSample_3 = (document.getElementById("sample_2").value =
+        barber_card["barber_sample_2"]);
+
+      //  get data from this form
       let checker = false;
 
       const barberCard = document.getElementById("create_b_card");
@@ -232,43 +272,37 @@
           newArray = JSON.parse(localStorage.getItem("barber_card"));
         }
 
-        const barberName = document.getElementById("b_name").value;
-        const barberCardEmail = document.getElementById("barber_card_email").value;
-        const barberPhoto = document.getElementById("photo").value;
-        const barberSlogan = document.getElementById("slogan").value;
-        const barberExperience = document.getElementById("experience").value;
-        const barberSample = document.getElementById("sample").value;
-        const barberSample_1 = document.getElementById("sample_1").value;
-        const barberSample_2 = document.getElementById("sample_2").value;
-        const barberId = Date.now();
-
+        let barbername = document.getElementById("b_name").value;
+        let barber_card_email =
+          document.getElementById("barber_card_email").value;
+        let barber_photo = document.getElementById("photo").value;
+        let barber_slogan = document.getElementById("slogan").value;
+        let barber_experience = document.getElementById("experience").value;
+        let barber_sample = document.getElementById("sample").value;
+        let barber_sample_1 = document.getElementById("sample_1").value;
+        let barber_sample_2 = document.getElementById("sample_2").value;
+// create object for edit data
         let one_barber_card = {
-          barberid: barberId,
-          barbername: barberName,
-          barber_card_email:barberCardEmail,
-          barber_photo: barberPhoto,
-          barber_slogan: barberSlogan,
-          barber_experience: barberExperience,
-          barber_sample: barberSample,
-          barber_sample_1: barberSample_1,
-          barber_sample_2: barberSample_2,
+          barbername,
+          barber_card_email,
+          barber_photo,
+          barber_slogan,
+          barber_experience,
+          barber_sample,
+          barber_sample_1,
+          barber_sample_2,
         };
+//  assign data in the correct object!
+        let newData = JSON.parse(localStorage.getItem("barber_card"));
 
-        // verify this card is already exists or not.
-        for (i = 0; i < newArray.length; i++) {
-          if (barberCardEmail === newArray[i]["barber_card_email"]) {
-            checker = true;
-            alret("this card is already exists");
-            break;
-          } else {
-            checker = false;
-          }
-        }
-
-        if (checker === false) {
-          newArray.push(one_barber_card);
-          const pushArray = JSON.stringify(newArray);
-          localStorage.setItem("barber_card", pushArray);
+        let oldData = newData.find(i => i.barber_card_email == barber_card_email);
+        if (oldData == undefined) {
+          alert("Email id not match");
+        } else {
+          let updated = Object.assign(oldData, one_barber_card);
+          let index = newData.indexOf(oldData.barberCardEmail);
+          newData[index] = updated;
+          localStorage.setItem("barber_card", JSON.stringify(newData));
           window.location.href = "./barber_profile.html";
         }
       });

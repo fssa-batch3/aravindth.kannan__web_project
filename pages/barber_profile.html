@@ -113,7 +113,7 @@
             id="card_profile"
               class="shop-img"
               alt="image"
-              
+              src="../Assets/Images/barber-4.jpg"
             />
           </div>
         </div>
@@ -143,27 +143,27 @@
           id="card_sample_1"
             class="sample"
             alt="haircutname"
-            
+            src="../Assets/Images/beard-6.jpeg"
           />
           <img
           id="card_sample_2"
             class="sample"
             alt="haircutname"
-           
+           src="../Assets/Images/barber-8.jpg"
           />
           <img
           id="card_sample_3"
             class="sample"
             alt="haircutname"
-            
+            src="../Assets/Images/beard-4.jpeg"
           />
         </div>
       </div>
       <!-- card end -->
       <div class="three_buttons">
-        <a href="./create_barber_card.html" class="create_card">Create card</a>
-        <button class="edit_card">Edit card</button>
-        <button  class="edit_card">delete card</button>
+        <a href="./barber_card.html" class="create_card">Create card</a>
+        <a  href="./barber_card_edit.html" class="create_card">Edit card</a>
+        <button  class="edit_card" id="delete_card">delete card</button>
       </div>
 
       <div class="three_buttons">
@@ -267,8 +267,6 @@
         }
       });
 
-
-
       const barberProfile = document.getElementById("b_photo").setAttribute("src",oneBarber["barber_profile"]);
       const barberName = document.getElementById("barber_name").value = oneBarber["barberName"];
       const barberEmail = document.getElementById("barber_email").value = oneBarber["barber_email"];
@@ -279,35 +277,29 @@
       const barberPhone = document.getElementById("phone_number").value = oneBarber["phoneNumber"];
       const barberAddress = document.getElementById("address").value = oneBarber["barber_address"];
 
-      // delete function
+      // delete  profile function
 
       let deleteOneBarber = document.getElementById("delete_barber");
 
       deleteOneBarber.addEventListener("click",function(event){
         event.preventDefault();
         let index = barberInfo.indexOf(oneBarber);
-// give a confirm alert
+      // give a confirm alert
         let msg = confirm("Are you sure! you want to delete this account");
         if(msg !== true){
           return;
         }else{
           barberInfo.splice(index, 1);
-
           localStorage.setItem("barberinfo",JSON.stringify(barberInfo));
           window.location.href = "../index.html";
         }
       });
 
-
-      
-
       // card java script (or) function
-
       const barberCardInfo = JSON.parse(localStorage.getItem("barber_card"));
-// store a email for verify!
+     // store a email for verify!
       let barber_email = oneBarber["barber_email"]
-      
-      let barberCard =barberCardInfo.find(function (event){
+      let barberCard = barberCardInfo.find(function (event){
         let one_barber_card = event["barber_card_email"];
         if( barber_email == one_barber_card){
           return true;
@@ -316,13 +308,32 @@
       });
 
       //  set the value of that card for barber profile
-      const cardbarberProfile = document.getElementById("card_profile").setAttribute = ("src",barberCard["barber_photo"]);
-      const cardbarberName = document.getElementById("card_b_name").innerHTML = barberCard["barbername"];
-      const cardbarberSlogan = document.getElementById("card_slogan").innerHTML = barberCard["barber_slogan"];
-      const cardbarberExperience = document.getElementById("card_experience").innerHTML = barberCard["barber_experience"];
-      const cardbarberSample_1 = document.getElementById("card_sample_1").setAttribute = ("src",barberCard["barber_sample"]);
-      const cardbarberSample_2 = document.getElementById("card_sample_2").setAttribute = ("src",barberCard["barber_sample_1"]);
-      const cardbarberSample_3 = document.getElementById("card_sample_3").setAttribute = ("src",barberCard["barber_sample_2"]);
+      let cardbarberProfile = document.getElementById("card_profile").setAttribute("src",barberCard["barber_photo"]);
+      let cardbarberName = document.getElementById("card_b_name").innerHTML = barberCard["barbername"];
+      let cardbarberSlogan = document.getElementById("card_slogan").innerHTML = barberCard["barber_slogan"];
+      let cardbarberExperience = document.getElementById("card_experience").innerHTML = barberCard["barber_experience"];
+      let cardbarberSample_1 = document.getElementById("card_sample_1").setAttribute("src",barberCard["barber_sample"]);
+      let cardbarberSample_2 = document.getElementById("card_sample_2").setAttribute("src",barberCard["barber_sample_1"]);
+      let cardbarberSample_3 = document.getElementById("card_sample_3").setAttribute("src",barberCard["barber_sample_2"]);
+
+
+//  delete card function
+let deleteOneCard = document.getElementById("delete_card");
+
+deleteOneCard.addEventListener("click",function(event){
+  event.preventDefault();
+  let index = barberCardInfo.indexOf(barberCard);
+// give a confirm alert
+  let msg = confirm("Are you sure! you want to delete this account");
+  if(msg !== true){
+    return;
+  }else{
+    barberCardInfo.splice(index, 1);
+    localStorage.setItem("barber_card",JSON.stringify(barberCardInfo));
+    window.location.href = "../index.html";
+  }
+});
+
 
     </script>
   </body>
