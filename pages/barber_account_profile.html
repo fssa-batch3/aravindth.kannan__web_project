@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Assets/CSS/universe.css" />
+    <link rel="stylesheet" href="../Assets/CSS/barber_profile.css" />
+    <title>barber account </title>
+  </head>
+  <body>
+    <!-- header is started -->
+    <header>
+        <div class="header">
+          <div>
+            <a href="../pages/barber_home.html">
+              <img
+                class="logo_img"
+                src="../Assets/Images/sharp logo black.png"
+                alt="logo"
+              />
+            </a>
+          </div>
+          <div>
+            <nav class="All-navs">
+              <div class="nav_dropdown">
+                <button class="nav_dropbtn">Hair styles</button>
+                <div class="nav_dropdown-content">
+                  <a href="../pages/barber_short_style.html">Short</a>
+                  <a href="../pages/barber_medium_style.html">Medium</a>
+                  <a href="../pages/barber_long_style.html">Long</a>
+                  <a href="../pages/barber_fade_style.html">Fade</a>
+                  <a href="../pages/barber_undercut_style.html">Undercut</a>
+                  <a href="../pages/barber_beard_style.html">Beard</a>
+                </div>
+              </div>
+              <a class="nav" href="../pages/barber_card.html">Barber card</a>
+              <a class="nav" href="../pages/barber_shop_card.html">Shop card</a>
+              <a class="nav" href="../pages/barber_booking_list.html"
+                >booking list</a
+              >
+  
+              <a class="nav" href="../pages/barber_about_us.html">About Us</a>
+              <a class="nav" href="../pages/barber_contact_us.html">Contact Us</a>
+              <a class="nav" href="./barber_profile.html">Barber profile</a>
+              <a class="nav" href="./shop_profile.html">Shop profile</a>
+              <a class="nav" href="./barber_account_profile.html"
+                ><img
+                  src="../Assets/Images/profile-2.png"
+                  alt="profile"
+                  height="30px"
+                  width="30px"
+              /></a>
+            </nav>
+          </div>
+        </div>
+      </header>
+    <!-- header is ended -->
+
+    <!-- section is started -->
+    <div class="full_content">
+      <div class="topic_div">
+        <h1 class="topic">Account Details</h1>
+      </div>
+      
+      <div class="information">
+        <div class="input_div">
+          <label class="label">Barber Name: </label>
+          <input class="input" type="text" id="barber_name" disabled />
+        </div>
+        <div class="input_div">
+          <label class="label">Email id: </label>
+          <input class="input" type="text" id="barber_email" disabled />
+        </div>
+        <div class="input_div">
+          <label class="label">Password: </label>
+          <input class="input" type="text" id="barber_password" disabled />
+        </div>
+        <div class="input_div">
+          <label class="label">Confirm password: </label>
+          <input class="input" type="text" id="barber_c_password" disabled />
+        </div>
+       
+      
+        <div class="input_div">
+          <label class="label">Phone number: </label>
+          <input class="input" type="text" id="phone_number" disabled />
+        </div>
+       
+      </div>
+
+      <div class="three_buttons">
+        <p class="Your_card">Edit your profile</p>
+        <a class="create_card" href="./barber_account_edit.html"
+          >Edit profile</a
+        >
+        <button  id="delete_barber" class="edit_card">Delete profile</button>
+      </div>
+    </div>
+    <!-- section is ended -->
+
+    <!-- footer is started -->
+    <footer>
+      <div class="footer">
+        <div class="footer_firsthalf">
+          <div>
+            <h3>About us</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo
+              optio sequi minima, reprehenderit excepturi quos beatae deserunt
+              praesentium officiis ipsa vitae nostrum maxime ratione
+              exercitationem ea culpa odio expedita tempora. Lorem ipsum dolor
+              sit amet, consectetur adipisicing elit. Nemo optio sequi minima,
+              reprehenderit excepturi quos beatae deserunt praesentium officiis
+              ipsa vitae nostrum maxime ratione exercitationem ea culpa odio
+              expedita tempora.
+            </p>
+          </div>
+
+          <br />
+          <div class="footicons">
+            <a href="#"
+              ><img
+                class="footround"
+                src="../Assets/Images/whatsapp.png"
+                alt="What's app"
+            /></a>
+            <a href="#">
+              <img
+                class="footround"
+                src="../Assets/Images/facebook-2.png"
+                alt="face book"
+            /></a>
+            <a href="#">
+              <img
+                class="footround"
+                src="../Assets/Images/instagram-2.png"
+                alt="instagram"
+            /></a>
+            <a href="#"
+              ><img
+                class="footround"
+                src="../Assets/Images/twitter-2.png"
+                alt="twitter"
+            /></a>
+          </div>
+        </div>
+
+        <div class="footer_secondhalf">
+          <div class="footcard">
+            <img src="../Assets/Images/about us.jpg" alt="Haircut" />
+            <div class="footinfo">
+              <div>
+                <h3>Address</h3>
+                <p>
+                  Lorem, ipsum dolor sit amet <br />
+                  consectetur adipisicing <br />
+                  elit. Nam nulla dolorem <br />
+                  fugiat <br />
+                </p>
+              </div>
+              <div>
+                <h3>Contact us</h3>
+                <p>9764652785</p>
+              </div>
+              <div>
+                <h3>email</h3>
+                <p>sharp&clean@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer is ended -->
+
+    <!-- Java Script -->
+
+    <script>
+      // get data from both storage of login & register
+
+      const thisBarber = JSON.parse(localStorage.getItem("single_barber"));
+      const barberInfo = JSON.parse(localStorage.getItem("barberinfo"));
+      // get object from local storage by email
+
+      let oneBarber = barberInfo.find(function (event) {
+        let oneBarberEmail = event["barber_email"];
+        if (thisBarber == oneBarberEmail) {
+          return true;
+        }
+      });
+
+      // const barberProfile = document.getElementById("b_photo").setAttribute("src",oneBarber["barber_profile"]);
+      const barberName = document.getElementById("barber_name").value = oneBarber["barberName"];
+      const barberEmail = document.getElementById("barber_email").value = oneBarber["barber_email"];
+      const barberPassword = document.getElementById("barber_password").value = oneBarber["email_password"];
+      // const barberExperience = document.getElementById("experience").value = oneBarber["barber_experience"];
+      const barberCPassword = document.getElementById("barber_c_password").value = oneBarber["confirm_Password"];
+      // const barberSlogan = document.getElementById("slogan").value = oneBarber["barber_slogan"];
+      const barberPhone = document.getElementById("phone_number").value = oneBarber["phoneNumber"];
+      // const barberAddress = document.getElementById("address").value = oneBarber["barber_address"];
+
+      // delete  profile function
+
+      let deleteOneBarber = document.getElementById("delete_barber");
+
+      deleteOneBarber.addEventListener("click",function(event){
+        event.preventDefault();
+        let index = barberInfo.indexOf(oneBarber);
+      // give a confirm alert
+        let msg = confirm("Are you sure! you want to delete this account");
+        if(msg !== true){
+          return;
+        }else{
+          barberInfo.splice(index, 1);
+          localStorage.setItem("barberinfo",JSON.stringify(barberInfo));
+          window.location.href = "../index.html";
+        }
+      });
+
+    
+
+
+    </script>
+  </body>
+</html>

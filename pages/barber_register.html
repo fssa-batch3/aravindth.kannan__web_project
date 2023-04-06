@@ -66,7 +66,7 @@
           </div>
         </div>
 
-        <div class="resister_form">
+        <!-- <div class="resister_form">
           <div class="all_inputs">
             <label class="all_label">Profile-URL</label>
             <br />
@@ -92,7 +92,7 @@
             <br />
             <br />
             <textarea id="address" name="address" rows="5" cols="50"></textarea>
-          </div>
+          </div> -->
           <br /><br />
           <br />
           <br />
@@ -126,10 +126,10 @@
         const barberEmailPassword = document.getElementById("password").value.trim();
         const barberEmailcPassword = document.getElementById("c_password").value.trim();
         const phoneNumber = document.getElementById("phone_number").value.trim();
-        const barberProfile = document.getElementById("photo").value.trim();
-        const barberSlogan = document.getElementById("slogan").value.trim();
-        const barberExperience = document.getElementById("experience").value.trim();
-        const barberAddress = document.getElementById("address").value.trim();
+        // const barberProfile = document.getElementById("photo").value.trim();
+        // const barberSlogan = document.getElementById("slogan").value.trim();
+        // const barberExperience = document.getElementById("experience").value.trim();
+        // const barberAddress = document.getElementById("address").value.trim();
         const singleUserid = Date.now();
 
         let userData = {
@@ -139,10 +139,10 @@
           email_password: barberEmailPassword,
           confirm_Password: barberEmailcPassword,
           phoneNumber: phoneNumber,
-          barber_profile:barberProfile,
-          barber_slogan:barberSlogan,
-          barber_experience:barberExperience,
-          barber_address:barberAddress,
+          // barber_profile:barberProfile,
+          // barber_slogan:barberSlogan,
+          // barber_experience:barberExperience,
+          // barber_address:barberAddress,
         };
 
         for (let i = 0; i < userNew.length; i++) {

@@ -54,7 +54,7 @@
     <p class="big-font">Select Your Barber</p>
 
     <div class="all-content">
-      <!-- <div class="content">
+      <div class="content">
         <div class="left-side">
           <div class="img-div">
             <img
@@ -102,7 +102,7 @@
             src="../Assets/Images/fade-7.jpeg"
           />
         </div>
-      </div> -->
+      </div>
     </div>
 
     <footer>
@@ -193,7 +193,6 @@
 
       for (let i = 0; i < barber_card.length; i++) {
         select_barber_list.push(barber_card[i]);
-        console.log(select_barber_list);
       }
 
       for (i = 0; i < select_barber_list.length; i++) {
@@ -240,33 +239,33 @@
         barbername.innerText = select_barber_list[i]["barbername"];
         name_div.append(barbername);
 
-        let slogan_div = document.createElement("div");
-        slogan_div.setAttribute("class", "name_div");
-        shop_details.append(slogan_div);
+        // let slogan_div = document.createElement("div");
+        // slogan_div.setAttribute("class", "name_div");
+        // shop_details.append(slogan_div);
 
-        let slogan = document.createElement("pre");
-        slogan.setAttribute("class", "name");
-        slogan.innerText = "Slogan:  ";
-        slogan_div.append(slogan);
+        // let slogan = document.createElement("pre");
+        // slogan.setAttribute("class", "name");
+        // slogan.innerText = "Slogan:  ";
+        // slogan_div.append(slogan);
 
-        let barberslogan = document.createElement("p");
-        barberslogan.setAttribute("class", "barber_name");
-        barberslogan.innerText = select_barber_list[i]["barber_slogan"];
-        slogan_div.append(barberslogan);
+        // let barberslogan = document.createElement("p");
+        // barberslogan.setAttribute("class", "barber_name");
+        // barberslogan.innerText = select_barber_list[i]["barber_slogan"];
+        // slogan_div.append(barberslogan);
 
-        let exp_div = document.createElement("div");
-        exp_div.setAttribute("class", "name_div");
-        shop_details.append(exp_div);
+        // let exp_div = document.createElement("div");
+        // exp_div.setAttribute("class", "name_div");
+        // shop_details.append(exp_div);
 
-        let exp = document.createElement("pre");
-        exp.setAttribute("class", "name");
-        exp.innerText = "Experience:  ";
-        exp_div.append(exp);
+        // let exp = document.createElement("pre");
+        // exp.setAttribute("class", "name");
+        // exp.innerText = "Experience:  ";
+        // exp_div.append(exp);
 
-        let barbersexp = document.createElement("p");
-        barbersexp.setAttribute("class", "barber_name");
-        barbersexp.innerText = select_barber_list[i]["barber_experience"];
-        exp_div.append(barbersexp);
+        // let barbersexp = document.createElement("p");
+        // barbersexp.setAttribute("class", "barber_name");
+        // barbersexp.innerText = select_barber_list[i]["barber_experience"];
+        // exp_div.append(barbersexp);
 
         let select_div = document.createElement("div");
         select_div.setAttribute("class", "select");

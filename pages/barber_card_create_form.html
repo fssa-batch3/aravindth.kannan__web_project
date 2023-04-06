@@ -6,64 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../Assets/CSS/universe.css" />
     <link rel="stylesheet" href="../Assets/CSS/barber_card_form.css" />
-    <title>Apply barber</title>
+    <title>barber card create</title>
   </head>
   <body>
     <!-- header is started -->
     <header>
-      <div class="header">
-        <div>
-          <a href="../pages/barber_home.html">
-            <img
-              class="logo_img"
-              src="../Assets/Images/sharp logo black.png"
-              alt="logo"
-            />
-          </a>
-        </div>
-        <div>
-          <nav class="All-navs">
-            <div class="nav_dropdown">
-              <button class="nav_dropbtn">Hair styles</button>
-              <div class="nav_dropdown-content">
-                <a href="../pages/barber_short_style.html">Short</a>
-                <a href="../pages/barber_medium_style.html">Medium</a>
-                <a href="../pages/barber_long_style.html">Long</a>
-                <a href="../pages/barber_fade_style.html">Fade</a>
-                <a href="../pages/barber_undercut_style.html">Undercut</a>
-                <a href="../pages/barber_beard_style.html">Beard</a>
+        <div class="header">
+          <div>
+            <a href="../pages/barber_home.html">
+              <img
+                class="logo_img"
+                src="../Assets/Images/sharp logo black.png"
+                alt="logo"
+              />
+            </a>
+          </div>
+          <div>
+            <nav class="All-navs">
+              <div class="nav_dropdown">
+                <button class="nav_dropbtn">Hair styles</button>
+                <div class="nav_dropdown-content">
+                  <a href="../pages/barber_short_style.html">Short</a>
+                  <a href="../pages/barber_medium_style.html">Medium</a>
+                  <a href="../pages/barber_long_style.html">Long</a>
+                  <a href="../pages/barber_fade_style.html">Fade</a>
+                  <a href="../pages/barber_undercut_style.html">Undercut</a>
+                  <a href="../pages/barber_beard_style.html">Beard</a>
+                </div>
               </div>
-            </div>
-            <a class="nav" href="../pages/barber_card.html">Barber card</a>
-            <a class="nav" href="../pages/barber_shop_card.html">Shop card</a>
-            <a class="nav" href="../pages/barber_booking_list.html"
-              >booking list</a
-            >
-
-            <a class="nav" href="../pages/barber_about_us.html">About Us</a>
-            <a class="nav" href="../pages/barber_contact_us.html">Contact Us</a>
-            <a class="nav" href="./barber_profile.html">Barber profile</a>
-            <a class="nav" href="./shop_profile.html">Shop profile</a>
-            <a class="nav" href="./barber_account_profile.html"
-              ><img
-                src="../Assets/Images/profile-2.png"
-                alt="profile"
-                height="30px"
-                width="30px"
-            /></a>
-          </nav>
+              <a class="nav" href="../pages/barber_card.html">Barber card</a>
+              <a class="nav" href="../pages/barber_shop_card.html">Shop card</a>
+              <a class="nav" href="../pages/barber_booking_list.html"
+                >booking list</a
+              >
+  
+              <a class="nav" href="../pages/barber_about_us.html">About Us</a>
+              <a class="nav" href="../pages/barber_contact_us.html">Contact Us</a>
+              <a class="nav" href="./barber_profile.html">Barber profile</a>
+              <a class="nav" href="./shop_profile.html">Shop profile</a>
+              <a class="nav" href="./barber_account_profile.html"
+                ><img
+                  src="../Assets/Images/profile-2.png"
+                  alt="profile"
+                  height="30px"
+                  width="30px"
+              /></a>
+            </nav>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
     <!-- header is ended -->
 
     <!-- section is started -->
     <div class="head">
       <p class="head_text">Create Your Barber Card</p>
     </div>
-    <form class="card_form" id="barber_profile_form">
+    <form class="card_form" id="create_b_card">
       <div class="name">
         <label>Name</label>
+
         <div class="name-box">
           <input
             id="b_name"
@@ -75,6 +76,7 @@
       </div>
       <div class="name">
         <label>Email</label>
+
         <div class="name-box">
           <input
             id="barber_card_email"
@@ -90,37 +92,46 @@
           <input class="name-box-1" type="url" id="photo" />
         </div>
       </div>
-      <div class="email">
+
+      <!-- <div class="email">
         <label>Slogan</label>
         <div class="address-box">
           <input class="name-box-1" type="text" id="slogan" />
         </div>
       </div>
-      <div class="email">
-        <label>Phone</label>
-        <div class="address-box">
-          <input class="name-box-1" type="number" id="barber_phone" />
-        </div>
-      </div>
+
       <div class="experience">
         <label>Experience</label>
         <div class="address-box">
           <input class="name-box-1" type="text" id="experience" />
         </div>
-      </div>  
-          <div class="all_inputs">
-            <label class="all_label">Address</label>
-            <br />
-            <br />
-            <textarea id="address" class="name-box-1" name="address" rows="5" cols="50"></textarea>
-          </div>
+      </div> -->
 
-          <div class="all_inputs">
-            <label class="all_label">About</label>
-            <br />
-            <br />
-            <textarea id="about" class="name-box-1" name="address" rows="5" cols="50"></textarea>
-          </div>
+      <div class="sample-haircut">
+        <input
+          class="name-box-1"
+          type="url"
+          id="sample"
+          placeholder="sample haircut -1"
+        />
+      </div>
+      <div class="sample-haircut">
+        <input
+          class="name-box-1"
+          type="url"
+          id="sample_1"
+          placeholder="sample haircut -2"
+        />
+      </div>
+      <div class="sample-haircut">
+        <input
+          class="name-box-1"
+          type="url"
+          id="sample_2"
+          placeholder="sample haircut -3"
+        />
+      </div>
+
       <div class="submit">
         <button class="submit-1">Submit</button>
       </div>
@@ -129,7 +140,7 @@
     <!-- section is ended -->
 
     <!-- footer is started -->
-    <footer>
+    <!-- <footer>
       <div class="footer">
         <div class="footer_firsthalf">
           <div>
@@ -200,7 +211,7 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
     <!-- footer is ended -->
 
     <!-- java script -->
@@ -210,46 +221,41 @@
 
       let checker = false;
 
-      const barberCard = document.getElementById("barber_profile_form");
+      const barberCard = document.getElementById("create_b_card");
 
       barberCard.addEventListener("submit", function (event) {
         event.preventDefault();
         // create empty array
         let newArray = [];
 
-        if (localStorage.getItem("barber_profile") != null) {
-          newArray = JSON.parse(localStorage.getItem("barber_profile"));
+        if (localStorage.getItem("barber_card") != null) {
+          newArray = JSON.parse(localStorage.getItem("barber_card"));
         }
 
         const barberName = document.getElementById("b_name").value;
         const barberCardEmail =
           document.getElementById("barber_card_email").value;
         const barberPhoto = document.getElementById("photo").value;
-        const barberSlogan = document.getElementById("slogan").value;
-        const barberPhone = document.getElementById("barber_phone").value;
-        const barberAddress = document.getElementById("address").value;
-        const barberAbout = document.getElementById("about").value;
-        const barberExperience = document.getElementById("experience").value;
+        const barberSample = document.getElementById("sample").value;
+        const barberSample_1 = document.getElementById("sample_1").value;
+        const barberSample_2 = document.getElementById("sample_2").value;
         const barberId = Date.now();
 
         let one_barber_card = {
           barberid: barberId,
           barbername: barberName,
-          barber_email: barberCardEmail,
+          barber_card_email: barberCardEmail,
           barber_photo: barberPhoto,
-          barber_slogan: barberSlogan,
-          barber_phone:barberPhone,
-          barber_address:barberAddress,
-          barber_about: barberAbout,
-          barber_experience: barberExperience,
-          
+          barber_sample: barberSample,
+          barber_sample_1: barberSample_1,
+          barber_sample_2: barberSample_2,
         };
 
         // verify this card is already exists or not.
         for (i = 0; i < newArray.length; i++) {
-          if (barberCardEmail === newArray[i]["barber_email"]) {
+          if (barberCardEmail === newArray[i]["barber_card_email"]) {
             checker = true;
-            alert("this card is already exists");
+            alret("this card is already exists");
             break;
           } else {
             checker = false;
@@ -259,7 +265,7 @@
         if (checker === false) {
           newArray.push(one_barber_card);
           const pushArray = JSON.stringify(newArray);
-          localStorage.setItem("barber_profile", pushArray);
+          localStorage.setItem("barber_card", pushArray);
           window.location.href = "./barber_profile.html";
         }
       });
