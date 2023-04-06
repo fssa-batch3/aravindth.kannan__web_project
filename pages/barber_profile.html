@@ -296,7 +296,7 @@
         }else{
           barberProfileArray.splice(index, 1);
           localStorage.setItem("barber_profile",JSON.stringify(barberProfileArray));
-          window.location.href = "../index.html";
+          window.location.href = "./barber_home.html";
         }
       });
 
@@ -315,8 +315,6 @@
       //  set the value of that card for barber profile
       let cardbarberProfile = document.getElementById("card_profile").setAttribute("src",barberCard["barber_photo"]);
       let cardbarberName = document.getElementById("card_b_name").innerHTML = barberCard["barbername"];
-      // let cardbarberSlogan = document.getElementById("card_slogan").innerHTML = barberCard["barber_slogan"];
-      // let cardbarberExperience = document.getElementById("card_experience").innerHTML = barberCard["barber_experience"];
       let cardbarberSample_1 = document.getElementById("card_sample_1").setAttribute("src",barberCard["barber_sample"]);
       let cardbarberSample_2 = document.getElementById("card_sample_2").setAttribute("src",barberCard["barber_sample_1"]);
       let cardbarberSample_3 = document.getElementById("card_sample_3").setAttribute("src",barberCard["barber_sample_2"]);

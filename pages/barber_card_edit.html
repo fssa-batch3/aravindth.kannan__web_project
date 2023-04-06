@@ -262,11 +262,11 @@
       barberCard.addEventListener("submit", function (event) {
         event.preventDefault();
         // create empty array
-        let newArray = [];
+        // let newArray = [];
 
-        if (localStorage.getItem("barber_card") != null) {
-          newArray = JSON.parse(localStorage.getItem("barber_card"));
-        }
+        // if (localStorage.getItem("barber_card") != null) {
+        //   newArray = JSON.parse(localStorage.getItem("barber_card"));
+        // }
 
         let barbername = document.getElementById("b_name").value;
         let barber_card_email =
@@ -295,7 +295,7 @@
           alert("Email id not match");
         } else {
           let updated = Object.assign(oldData, one_barber_card);
-          let index = newData.indexOf(oldData.barberCardEmail);
+          let index = newData.indexOf(oldData.barber_card_email);
           newData[index] = updated;
           localStorage.setItem("barber_card", JSON.stringify(newData));
           window.location.href = "./barber_profile.html";
