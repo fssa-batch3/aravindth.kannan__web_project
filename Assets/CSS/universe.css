@@ -4,7 +4,9 @@
   /* width: 100%; */
   justify-content: space-between;
   align-items: center;
-  background-color: #b9c1cc;
+  background-color: #e6ebed;
+  background-image: linear-gradient(0deg, #e6ebed 0%, #b7c0bd 100%);
+
   height: 130px;
 }
 
@@ -27,44 +29,37 @@
 .nav_dropdown {
   position: relative;
   display: inline-block;
-  border: none;
+  /* border: none; */
 }
 
 .nav_dropdown-content {
   display: none;
   position: absolute;
-  background-color: #eef1eb;
-  background-color: #55585b;
-  background-image: linear-gradient(
-    312deg,
-    #55585b 0%,
-    #dadfdf 50%,
-    #ffffff 100%
-  );
+  border-radius: 10px;
+  background-color: white;
+  opacity: 0.8;
   min-width: 8rem;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
   z-index: 1;
 }
 
 .nav_dropdown-content a {
-  font-size: 20px;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
   color: black;
   padding: 12px 10px;
   text-decoration: none;
   border: none;
   display: block;
+  transition: 0.6s;
 }
 
 .nav_dropdown-content a:hover {
-  background-color: white;
-  background-color: #eef1eb;
-  background-color: #55585b;
-  background-image: linear-gradient(
-    312deg,
-    #55585b 0%,
-    #dadfdf 50%,
-    #ffffff 100%
-  );
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+  transform: scale(1.1);
 }
 
 .nav_dropdown:hover .nav_dropdown-content {
@@ -78,8 +73,17 @@
   background-color: transparent;
   text-decoration: none;
   border: none;
+  cursor: pointer;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: black;
+  transition: 0.4s;
+}
+
+.nav:hover,
+.nav_dropbtn:hover {
+  transform: scale(1);
+
+  border-bottom: 5px solid black;
 }
 /* dropdown css is ended*/
 
@@ -91,7 +95,9 @@
   justify-content: space-around;
   align-items: center;
   height: 550px;
-  background-color: #b9c1cc;
+  background-color: #e6ebed;
+  background-image: linear-gradient(0deg, #e6ebed 0%, #b7c0bd 100%);
+
   /* background-color: #eef1eb;
   background-color: #55585b;
   background-image: linear-gradient(
