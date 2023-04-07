@@ -8,20 +8,20 @@
     <link rel="stylesheet" href="../Assets/CSS/barber_register.css" />
   </head>
   <body>
-    <form id="form">
-      <div class="head_div">
-        <p class="head">Registration info</p>
-      </div>
-      <div class="form">
-        <div class="resister_form" class="all_inputs">
+    <form  class="resister_form" id="form">
+      
+          <div class="head_div">
+            <p class="head">Sign up</p>
+          </div>
           <div class="all_inputs">
-            <label class="all_label" pattern="[A-Z a-z]{1,32}">Username</label>
+            <label class="all_label" >Username</label>
             <br />
-            <br />
+            
             <input
               class="input"
               type="text"
               id="username"
+              pattern="[A-Z a-z]{1,32}"
               autocomplete="name"
             />
           </div>
@@ -29,14 +29,14 @@
           <div class="all_inputs">
             <label for="email" class="all_label">Email Id</label>
             <br />
-            <br />
+            
             <input class="input" type="email" id="b_email" autocomplete="email" />
           </div>
           <br />
           <div class="all_inputs">
             <label for="password" class="all_label">Password</label>
             <br />
-            <br />
+            
             <input
               class="input"
               type="password"
@@ -48,7 +48,7 @@
           <div class="all_inputs">
             <label for="password" class="all_label"> Confirm Password</label>
             <br />
-            <br />
+            
             <input
               class="input"
               type="password"
@@ -60,47 +60,17 @@
           <div class="all_inputs">
             <label for="phone" class="all_label">phone number</label>
             <br />
-            <br />
+            
 
             <input class="input" type="number" id="phone_number" />
           </div>
-        </div>
-
-        <!-- <div class="resister_form">
-          <div class="all_inputs">
-            <label class="all_label">Profile-URL</label>
-            <br />
-            <br />
-            <input class="input" type="url" id="photo" />
-          </div>
-
-          <div class="all_inputs">
-            <label class="all_label">Slogan</label>
-            <br />
-            <br />
-            <input class="input" type="text" id="slogan" />
-          </div>
-
-          <div class="all_inputs">
-            <label class="all_label">Experience</label>
-            <br />
-            <br />
-            <input class="input" type="text" id="experience" />
-          </div>
-          <div class="all_inputs">
-            <label class="all_label">Address</label>
-            <br />
-            <br />
-            <textarea id="address" name="address" rows="5" cols="50"></textarea>
-          </div> -->
+        
           <br /><br />
-          <br />
-          <br />
-          <br />
+        
           <div class="submit">
-            <button class="submit_btn" type="submit" id="btn">Submit</button>
+            <button class="submit_btn" type="submit" id="btn">Sign up</button>
           </div>
-        </div>
+        
       </div>
     </form>
 
@@ -126,10 +96,7 @@
         const barberEmailPassword = document.getElementById("password").value.trim();
         const barberEmailcPassword = document.getElementById("c_password").value.trim();
         const phoneNumber = document.getElementById("phone_number").value.trim();
-        // const barberProfile = document.getElementById("photo").value.trim();
-        // const barberSlogan = document.getElementById("slogan").value.trim();
-        // const barberExperience = document.getElementById("experience").value.trim();
-        // const barberAddress = document.getElementById("address").value.trim();
+   
         const singleUserid = Date.now();
 
         let userData = {
@@ -139,10 +106,7 @@
           email_password: barberEmailPassword,
           confirm_Password: barberEmailcPassword,
           phoneNumber: phoneNumber,
-          // barber_profile:barberProfile,
-          // barber_slogan:barberSlogan,
-          // barber_experience:barberExperience,
-          // barber_address:barberAddress,
+         
         };
 
         for (let i = 0; i < userNew.length; i++) {

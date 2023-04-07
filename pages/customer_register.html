@@ -10,59 +10,76 @@
   <body>
     <form class="resister_form" id="form">
       <div class="head_div">
-        <p class="head">Registration info</p>
+        <p class="head">Sign up</p>
       </div>
 
       <div class="all_inputs">
-        <label for="user_name" pattern="[A-Z a-z]{1,32}" class="all_label"
-          >Username</label
-        >
+        <label for="user_name" class="all_label">Username</label>
         <br />
-        <br />
-        <input class="input" type="text" id="username" autocomplete="name" />
+
+        <input
+          required
+          class="input"
+          pattern="[A-Z a-z]{1,32}"
+          type="text"
+          id="username"
+          autocomplete="name"
+        />
       </div>
+      <br />
 
       <div class="all_inputs">
         <label for="email" class="all_label">Email Id</label>
         <br />
-        <br />
-        <input class="input" type="email" id="email" autocomplete="email" />
+
+        <input
+          required
+          class="input"
+          type="email"
+          id="email"
+          autocomplete="email"
+        />
       </div>
+      <br />
 
       <div class="all_inputs">
         <label for="password" class="all_label">Password</label>
         <br />
-        <br />
+
         <input
+          required
           class="input"
           type="password"
           id="password"
           autocomplete="password"
         />
       </div>
+      <br />
 
       <div class="all_inputs">
         <label for="password" class="all_label"> Confirm Password</label>
         <br />
-        <br />
+
         <input
+          required
           class="input"
           type="password"
           id="c_password"
           autocomplete="password"
         />
       </div>
+      <br>
 
       <div class="all_inputs">
         <label for="phone" class="all_label">phone number</label>
         <br />
-        <br />
+        
 
-        <input class="input" type="number" id="phone_number" />
+        <input required class="input" type="number" id="phone_number" />
       </div>
 
       <div class="submit">
-        <button class="submit_btn" type="submit" id="btn">Submit</button>
+        <button class="submit_btn" type="submit" id="btn">Sign up</button>
       </div>
     </form>
 

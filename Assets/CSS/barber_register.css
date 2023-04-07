@@ -1,6 +1,6 @@
 body {
-  /* background-image: url(./../Images/login\ page.jpg); */
-  /* background-size: cover; */
+  background-image: url(./../Images/login\ page.jpg);
+  background-size: cover;
   margin: 0;
   padding: 0;
   background-color: black;
@@ -10,27 +10,29 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-input:valid {
+/* input:valid {
   border: 2px solid green;
 }
 input:invalid {
   border: 2px solid red;
-}
-.form {
+} */
+/* .form {
   display: flex;
   justify-content: space-evenly;
-}
+} */
 .resister_form {
-  background-color: black;
+  background-color: transparent;
   /* background-image: linear-gradient(135deg, #b3b2ae 0%, #111010 74%); */
-  box-shadow: 0px 0px 10px 3px greenyellow;
+  box-shadow: 20px 20px 10px 0px black;
   display: flex;
+  border-radius: 5px;
   flex-direction: column;
   flex-wrap: wrap;
-  margin: auto;
+  margin-top: 7%;
+  margin-left: 6%;
   padding-top: 40px;
-  border: 2px solid yellow;
-  height: 45rem;
+  border: 2px solid black;
+  height: 70%;
   width: 30%;
 }
 .head_div {
@@ -41,13 +43,15 @@ input:invalid {
   align-items: center;
 }
 .head {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bolder;
   color: white;
+  text-shadow: 0px 0px 8px black;
 }
 .all_label {
   font-size: 2rem;
   color: white;
+  text-shadow: 0px 0px 5px black;
 }
 .all_inputs {
   margin-left: 18%;
@@ -55,28 +59,34 @@ input:invalid {
   height: 15%;
 }
 .input {
+  background-color: transparent;
   font-size: 15px;
   color: black;
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px black;
   padding-left: 2%;
   width: 60%;
-  height: 30%;
+  height: 2rem;
 }
 .submit {
   width: 100%;
-  height: 10%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  /* height: 10%; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 .submit_btn {
-  color: black;
+  color: white;
   font-size: 2rem;
   font-weight: bolder;
   width: 12rem;
-  height: 5rem;
+  border-radius: 5px;
+  height: 4rem;
   border: black;
-  background-color: greenyellow;
+  background-color: black;
 
   transition: 0.7s;
 }

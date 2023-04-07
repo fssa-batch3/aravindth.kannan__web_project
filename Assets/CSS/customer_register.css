@@ -1,36 +1,39 @@
 body {
-  /* background-image: url(./../Images/login\ page.jpg); */
-  /* background-size: cover; */
+  background-image: url(../Images/login\ page.jpg);
+  background-size: cover;
   margin: 0;
+  /* backdrop-filter: blur(3px); */
+  /* filter:blur(8px); */
   padding: 0;
-  background-color: black;
+  /* background-color: black; */
   /* background-image: linear-gradient(90deg, #0f0f0e 0%, #fedf07 100%); */
 }
 * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-input:valid {
+/* input:valid {
   border: 2px solid green;
 }
 input:invalid {
   border: 2px solid red;
-}
-.form {
+} */
+/* .form {
   display: flex;
   justify-content: space-evenly;
-}
+} */
 .resister_form {
-  background-color: black;
+  background-color: transparent;
   /* background-image: linear-gradient(135deg, #b3b2ae 0%, #111010 74%); */
-  box-shadow: 0px 0px 10px 3px greenyellow;
+  box-shadow: 20px 20px 10px 0px black;
   display: flex;
+  border-radius: 5px;
   flex-direction: column;
   flex-wrap: wrap;
-  margin: auto;
-  margin-top: 10%;
+  margin-left: 7%;
+  margin-top: 6%;
   padding-top: 40px;
-  border: 2px solid yellow;
+  border: 2px solid black;
   height: 70%;
   width: 30%;
 }
@@ -45,10 +48,12 @@ input:invalid {
   font-size: 3rem;
   font-weight: bolder;
   color: white;
+  text-shadow: 0px 0px 8px black;
 }
 .all_label {
   font-size: 2rem;
   color: white;
+  text-shadow: 0px 0px 5px black;
 }
 .all_inputs {
   margin-left: 18%;
@@ -58,9 +63,12 @@ input:invalid {
 .input {
   font-size: 15px;
   color: black;
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px black;
+  background-color: transparent;
   padding-left: 2%;
   width: 60%;
-  height: 2rem;
+  height: 30%;
 }
 .submit {
   width: 100%;
@@ -72,13 +80,14 @@ input:invalid {
   align-items: center;
 }
 .submit_btn {
-  color: black;
+  color: white;
   font-size: 2rem;
   font-weight: bolder;
   width: 12rem;
+  border-radius: 5px;
   height: 4rem;
   border: black;
-  background-color: greenyellow;
+  background-color: black;
 
   transition: 0.7s;
 }

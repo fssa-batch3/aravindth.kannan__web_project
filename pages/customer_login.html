@@ -12,7 +12,7 @@
       <img
         class="logo"
         alt="image"
-        src="../Assets/Images/MASter__white_-removebg-preview.png"
+        src="../Assets/Images/sharp logo black.png"
       />
     </div>
     <form id="login_form">
@@ -39,8 +39,8 @@
           <input
             class="email-id-box-1"
             type="email"
-            placeholder=" "
-            value="kaviprakash594@gmail.com"
+            placeholder="abcd@gmail.com "
+            required
             id="email"
           />
         </div>
@@ -50,8 +50,8 @@
         <input
           class="password-box-1"
           type="password"
-          placeholder=" "
-          value="a22092003"
+          placeholder="12345678 "
+          required
           id="password"
         />
         <div class="Password-box"></div>
@@ -65,7 +65,7 @@
 
         <div class="forgot-password">
           <a href="./customer_register.html" class="forgot-password-1"
-            ><p>Register</p></a
+            ><p>Sign up</p></a
           >
         </div>
       </div>
@@ -76,7 +76,7 @@
       // JSON
 
       let logIn = document.getElementById("login_form");
-      logIn.addEventListener("submit", (event) => {
+      logIn.addEventListener("submit", event => {
         event.preventDefault();
         const all_user_data = JSON.parse(localStorage.getItem("userinfo"));
         console.log(all_user_data);
@@ -99,9 +99,7 @@
 
         if (match == true) {
           alert("Success");
-          const matchObject = all_user_data.find(
-            (o) => o["email"] == useremail
-          );
+          const matchObject = all_user_data.find(o => o["email"] == useremail);
           console.log(matchObject);
           const thisUser = JSON.stringify(matchObject.email);
           localStorage.setItem("this_user", thisUser);
