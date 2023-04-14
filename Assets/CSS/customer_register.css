@@ -68,7 +68,7 @@ input:invalid {
   background-color: transparent;
   padding-left: 2%;
   width: 60%;
-  height: 30%;
+  height: 2rem;
 }
 .submit {
   width: 100%;
@@ -83,7 +83,7 @@ input:invalid {
   color: white;
   font-size: 2rem;
   font-weight: bolder;
-  width: 12rem;
+  width: 63%;
   border-radius: 5px;
   height: 4rem;
   border: black;

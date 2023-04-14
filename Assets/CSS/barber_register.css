@@ -30,13 +30,14 @@ input:invalid {
   flex-wrap: wrap;
   margin-top: 7%;
   margin-left: 6%;
-  padding-top: 40px;
+  /* padding-top: 40px; */
   border: 2px solid black;
   height: 70%;
   width: 30%;
 }
 .head_div {
   width: 100%;
+  /* height: ; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -82,7 +83,7 @@ input:invalid {
   color: white;
   font-size: 2rem;
   font-weight: bolder;
-  width: 12rem;
+  width: 63%;
   border-radius: 5px;
   height: 4rem;
   border: black;

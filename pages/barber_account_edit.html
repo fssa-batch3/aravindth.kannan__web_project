@@ -5,18 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>barber account edit</title>
-    <link rel="stylesheet" href="../Assets/CSS/barber_register.css" />
+    <link rel="stylesheet" href="../Assets/CSS/barber_account_profile.css">
+    <!-- <link rel="stylesheet" href="../Assets/CSS/barber_register.css" /> -->
   </head>
   <body>
-    <form id="E_form">
-      <div class="head_div">
-        <p class="head">Registration info</p>
+    <form class="full_content" id="E_form">
+      <div class="topic_div">
+        <p class="topic">Registration info</p>
       </div>
-      <div class="form">
-        <div class="resister_form" class="all_inputs">
-          <div class="all_inputs">
-            <label class="all_label" pattern="[A-Z a-z]{1,32}">Username</label>
-            <br />
+      
+          <div class="input_div">
+            <label class="label" pattern="[A-Z a-z]{1,32}">Username</label>
             <br />
             <input
               class="input"
@@ -26,17 +25,17 @@
             />
           </div>
           <br />
-          <div class="all_inputs">
-            <label for="email" class="all_label">Email Id</label>
+          <div class="input_div">
+            <label for="email" class="label">Email Id</label>
             <br />
-            <br />
+            
             <input class="input" type="email" id="B_email" autocomplete="email" />
           </div>
           <br />
-          <div class="all_inputs">
-            <label for="password" class="all_label">Password</label>
+          <div class="input_div">
+            <label for="password" class="label">Password</label>
             <br />
-            <br />
+           
             <input
               class="input"
               type="text"
@@ -45,10 +44,10 @@
             />
           </div>
           <br />
-          <div class="all_inputs">
-            <label for="password" class="all_label"> Confirm Password</label>
+          <div class="input_div">
+            <label for="password" class="label"> Confirm Password</label>
             <br />
-            <br />
+           
             <input
               class="input"
               type="text"
@@ -57,51 +56,17 @@
             />
           </div>
           <br />
-          <div class="all_inputs">
-            <label for="phone" class="all_label">phone number</label>
-            <br />
+          <div class="input_div">
+            <label for="phone" class="label">phone number</label>
             <br />
 
             <input class="input" type="number" id="b_phone_number" />
           </div>
-        </div>
-
-        <!-- <div class="resister_form">
-          <div class="all_inputs">
-            <label class="all_label">Profile-URL</label>
-            <br />
-            <br />
-            <input class="input" type="url" id="B_photo" />
-          </div> -->
-
-          <!-- <div class="all_inputs">
-            <label class="all_label">Slogan</label>
-            <br />
-            <br />
-            <input class="input" type="text" id="b_slogan" />
+         
+          <div class="three_buttons">
+            <button class="create_card" type="submit" id="btn">Save</button>
           </div>
-
-          <div class="all_inputs">
-            <label class="all_label">Experience</label>
-            <br />
-            <br />
-            <input class="input" type="text" id="b_experience" />
-          </div>
-          <div class="all_inputs">
-            <label class="all_label">Address</label>
-            <br />
-            <br />
-            <textarea id="b_address" name="address" rows="5" cols="50"></textarea>
-          </div> -->
-          <br /><br />
-          <br />
-          <br />
-          <br />
-          <div class="submit">
-            <button class="submit_btn" type="submit" id="btn">Save</button>
-          </div>
-        </div>
-      </div>
+        
     </form>
 
     <!-- <a href="./login_barber.html"></a> -->

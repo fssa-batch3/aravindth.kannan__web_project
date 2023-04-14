@@ -78,7 +78,7 @@
       let logIn = document.getElementById("login_form");
       logIn.addEventListener("submit", event => {
         event.preventDefault();
-        const all_user_data = JSON.parse(localStorage.getItem("userinfo"));
+        let all_user_data = JSON.parse(localStorage.getItem("userinfo"));
         console.log(all_user_data);
         // const userName = document.getElementById("username");
         const useremail = document.getElementById("email").value;
@@ -91,10 +91,7 @@
           ) {
             match = true;
             break;
-          } else {
-            match = false;
-            break;
-          }
+          } 
         }
 
         if (match == true) {
