@@ -12,101 +12,25 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: black;
 }
-/* card css */
-.content {
-  background-color: black;
-  display: flex;
-  width: 98%;
-  margin: auto;
-  height: 26rem;
-  border-radius: 3rem;
-  box-shadow: 0px 0px 10px greenyellow;
-}
-.left-side {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.img-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-  height: 80%;
-}
-.shop-img {
-  width: 80%;
-  box-shadow: 0px 0px 10px greenyellow;
-
-  height: 80%;
-}
-.name_div {
-  width: 100%;
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: center;
-}
-.name {
-  font-size: 25px;
-  color: white;
-  text-shadow: 0px 0px 2px white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.barber_name {
-  font-size: 25px;
-  color: white;
-  text-shadow: 0px 0px 2px white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.right-side {
-  flex: 1;
-  margin: 2%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.shop-details {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-}
-.sample_div {
-  flex: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-.sample {
-  width: 28%;
-  box-shadow: 0px 0px 5px greenyellow;
-  height: 70%;
-}
 
 .all-content {
-  display: grid;
-  gap: 4%;
-  margin-bottom: 2%;
+    display: flex;
+    gap: 4%;
+    margin-bottom: 2%;
+    justify-content: center;
 }
 
 /* new card css start */
 
-
-
 .card {
   background: #2d2d2d;
+  margin: 1%;
   position: relative;
   border: 1px solid white;
   height: 350px;
   width: 40%;
   cursor: pointer;
   border-radius: 10px;
-
   transition: 0.5s;
 }
 .card:hover {
@@ -130,26 +54,29 @@ body {
   position: relative;
   display: flex;
   gap: 1%;
-  justify-content: end;
   height: 60%;
   width: 100%;
 }
 .card-img {
-  flex: 1;
+  width: 25%;
+  height: 100%;
 }
 .card-img img {
+  margin-left: 2%;
   border-radius: 6%;
   border: 1px solid white;
-  height: 100%;
-  width: 100%;
+  height: 98%;
+  width: 98%;
   object-fit: cover;
 }
 
 .projects {
   display: flex;
-  border-radius: 2%;
+  /* border-radius: 2%; */
+  flex-direction: row;
   align-content: space-around;
   justify-content: space-around;
+  border-left: 1px solid white;
   flex: 3;
   width: 70%;
   height: 94%;
@@ -165,7 +92,12 @@ body {
   border: 1px solid white;
   border-radius: 3%;
   width: 90%;
+  object-fit: cover;
   height: 90%;
+  transition: 0.5s;
+}
+.project img:hover {
+  transform: scale(1.03);
 }
 
 .card-footer {

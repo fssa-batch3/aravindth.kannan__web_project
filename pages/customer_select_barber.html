@@ -91,9 +91,8 @@
           </div>
         </div>
       </div>
-
+      <br />
       <!-- new card end -->
-      
     </div>
     <!-- footer start -->
 
@@ -179,61 +178,104 @@
 
       // Java Script
 
-      let barber_card = JSON.parse(localStorage.getItem("barber_card"));
+      const barberCard = JSON.parse(localStorage.getItem("barber_card"));
 
       // console.log(barber_card);
 
-      for (let i = 0; i < barber_card.length; i++) {
-        select_barber_list.push(barber_card[i]);
+      for (let i = 0; i < barberCard.length; i++) {
+        select_barber_list.push(barberCard[i]);
       }
 
       for (i = 0; i < select_barber_list.length; i++) {
-        const barber = select_barber_list[i];
-
-        // console.log("Test : ", select_barber_list[i]["profile_photo"]);
+        // const barber = select_barber_list[i];
 
         let content = document.createElement("div");
-        content.setAttribute("class", "content");
+        content.setAttribute("class", "card");
+        document.querySelector(".all-content").append(content);
 
-        let left_side = document.createElement("div");
-        left_side.setAttribute("class", "left-side");
-        content.append(left_side);
+        let card_head_div = document.createElement("div");
+        card_head_div.setAttribute("class", "card-header");
+        content.append(card_head_div);
 
-        let image_div = document.createElement("div");
-        image_div.setAttribute("class", "img-div");
-        left_side.append(image_div);
+        let card_head = document.createElement("h3");
+        card_head.innerText = "Sample haircuts";
+        card_head_div.append(card_head);
 
-        let image = document.createElement("img");
-        image.setAttribute("class", "shop-img");
-        image.setAttribute("alt", select_barber_list[i]["barbername"]);
-        image.setAttribute("src", select_barber_list[i]["barber_photo"]);
-        image_div.append(image);
+        let card_content = document.createElement("div");
+        card_content.setAttribute("class", "card-content");
+        content.append(card_content);
 
-        let right_side = document.createElement("div");
-        right_side.setAttribute("class", "right-side");
-        content.append(right_side);
+        let card_img_div = document.createElement("div");
+        card_img_div.setAttribute("class", "card-img");
+        card_content.append(card_img_div);
 
-        let shop_details = document.createElement("div");
-        shop_details.setAttribute("class", "shop-details");
-        right_side.append(shop_details);
+        let profile = document.createElement("img");
+        profile.setAttribute("alt", select_barber_list[i]["barbername"]);
+        profile.setAttribute("src", select_barber_list[i]["barber_photo"]);
+        card_img_div.append(profile);
+
+        let samples_div = document.createElement("div");
+        samples_div.setAttribute("class", "projects");
+        card_content.append(samples_div);
+
+        let one_sample_div = document.createElement("div");
+        one_sample_div.setAttribute("class", "project");
+        samples_div.append(one_sample_div);
+
+        let sample_1 = document.createElement("img");
+        sample_1.setAttribute("alt", select_barber_list[i]["barbername"]);
+        sample_1.setAttribute("src", select_barber_list[i]["barber_sample"]);
+        one_sample_div.append(sample_1);
+
+        let two_sample_div = document.createElement("div");
+        two_sample_div.setAttribute("class", "project");
+        samples_div.append(two_sample_div);
+
+        let sample_2 = document.createElement("img");
+        sample_2.setAttribute("alt", select_barber_list[i]["barbername"]);
+        sample_2.setAttribute("src", select_barber_list[i]["barber_sample_1"]);
+        two_sample_div.append(sample_2);
+
+        let three_sample_div = document.createElement("div");
+        three_sample_div.setAttribute("class", "project");
+        samples_div.append(three_sample_div);
+
+        let sample_3 = document.createElement("img");
+        sample_3.setAttribute("alt", select_barber_list[i]["barbername"]);
+        sample_3.setAttribute("src", select_barber_list[i]["barber_sample_2"]);
+        three_sample_div.append(sample_3);
+
+        let card_footer = document.createElement("div");
+        card_footer.setAttribute("class", "card-footer");
+        content.append(card_footer);
 
         let name_div = document.createElement("div");
-        name_div.setAttribute("class", "name_div");
-        shop_details.append(name_div);
+        name_div.setAttribute("class", "profile-group");
+        card_footer.append(name_div);
 
-        let name = document.createElement("pre");
-        name.setAttribute("class", "name");
-        name.innerText = "Name:  ";
-        name_div.append(name);
+        let name_text = document.createElement("div");
+        name_text.setAttribute("class", "name");
+        name_text.innerText = "Name";
+        name_div.append(name_text);
 
-        let barbername = document.createElement("p");
-        barbername.setAttribute("class", "barber_name");
-        barbername.innerText = select_barber_list[i]["barbername"];
-        name_div.append(barbername);
+        let barber_name = document.createElement("div");
+        barber_name.setAttribute("class", "job");
+        barber_name.innerText = select_barber_list[i]["barbername"];
+        name_div.append(barber_name);
 
-        // let slogan_div = document.createElement("div");
-        // slogan_div.setAttribute("class", "name_div");
-        // shop_details.append(slogan_div);
+        let buttons_div = document.createElement("div");
+        buttons_div.setAttribute("class", "select");
+        card_footer.append(buttons_div);
+
+        let detail_btn = document.createElement("button");
+        detail_btn.setAttribute("class", "detail");
+        detail_btn.innerText = "Details";
+        buttons_div.append(detail_btn);
+
+        let select_btn = document.createElement("a");
+        select_btn.setAttribute("class", "select-button");
+        select_btn.innerText = "Select";
+        buttons_div.append(select_btn);
 
         // let slogan = document.createElement("pre");
         // slogan.setAttribute("class", "name");
@@ -259,54 +301,44 @@
         // barbersexp.innerText = select_barber_list[i]["barber_experience"];
         // exp_div.append(barbersexp);
 
-        let select_div = document.createElement("div");
-        select_div.setAttribute("class", "select");
-        right_side.append(select_div);
+        // let select_div = document.createElement("div");
+        // select_div.setAttribute("class", "select");
+        // right_side.append(select_div);
 
-        let detail_btn = document.createElement("button");
-        detail_btn.setAttribute("class", "detail");
-        detail_btn.innerText = "Details";
-        select_div.append(detail_btn);
+        // let sample_div = document.createElement("div");
+        // sample_div.setAttribute("class", "sample_div");
+        // content.append(sample_div);
 
-        let select_btn = document.createElement("a");
-        select_btn.setAttribute("class", "select-button");
-        select_btn.innerText = "Select";
-        select_div.append(select_btn);
+        // let sample_image = document.createElement("img");
+        // sample_image.setAttribute("class", "sample");
+        // sample_image.setAttribute(
+        //   "src",
+        //   select_barber_list[i]["barber_sample"]
+        // );
+        // sample_image.setAttribute("alt", select_barber_list[i]["barbername"]);
+        // sample_div.append(sample_image);
 
-        let sample_div = document.createElement("div");
-        sample_div.setAttribute("class", "sample_div");
-        content.append(sample_div);
+        // let sample_image_1 = document.createElement("img");
+        // sample_image_1.setAttribute("class", "sample");
+        // sample_image_1.setAttribute(
+        //   "src",
+        //   select_barber_list[i]["barber_sample_1"]
+        // );
+        // sample_image_1.setAttribute("alt", select_barber_list[i]["barbername"]);
+        // sample_div.append(sample_image_1);
 
-        let sample_image = document.createElement("img");
-        sample_image.setAttribute("class", "sample");
-        sample_image.setAttribute(
-          "src",
-          select_barber_list[i]["barber_sample"]
-        );
-        sample_image.setAttribute("alt", select_barber_list[i]["barbername"]);
-        sample_div.append(sample_image);
+        // let sample_image_2 = document.createElement("img");
+        // sample_image_2.setAttribute("class", "sample");
+        // sample_image_2.setAttribute(
+        //   "src",
+        //   select_barber_list[i]["barber_sample_2"]
+        // );
+        // sample_image_2.setAttribute("alt", select_barber_list[i]["barbername"]);
+        // sample_div.append(sample_image_2);
 
-        let sample_image_1 = document.createElement("img");
-        sample_image_1.setAttribute("class", "sample");
-        sample_image_1.setAttribute(
-          "src",
-          select_barber_list[i]["barber_sample_1"]
-        );
-        sample_image_1.setAttribute("alt", select_barber_list[i]["barbername"]);
-        sample_div.append(sample_image_1);
-
-        let sample_image_2 = document.createElement("img");
-        sample_image_2.setAttribute("class", "sample");
-        sample_image_2.setAttribute(
-          "src",
-          select_barber_list[i]["barber_sample_2"]
-        );
-        sample_image_2.setAttribute("alt", select_barber_list[i]["barbername"]);
-        sample_div.append(sample_image_2);
-
-        document.querySelector(".all-content").append(content);
+        // document.querySelector(".all-content").append(content);
       }
-      console.log(select_barber_list);
+      // console.log(select_barber_list);
 
       // const username = localStorage.getItem("username");
       // console.log(usernsme);
