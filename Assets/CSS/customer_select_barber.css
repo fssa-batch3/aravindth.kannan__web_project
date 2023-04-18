@@ -1,58 +1,7 @@
 body {
-  margin: 0px;
-  padding: 0px;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(59, 59, 59, 1) 50%,
-    rgba(0, 0, 0, 1) 100%
-  );
-}
-.header {
-  height: 60%;
-}
-.header-1 {
-  margin-top: 0px;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(59, 59, 59, 1) 50%,
-    rgba(0, 0, 0, 1) 100%
-  );
-  box-shadow: inset 0px 0px 20px white;
-  display: flex;
-  height: 200px;
-  width: 100%;
-  align-items: center;
-}
-.logo-2 {
-  width: 200px;
-  display: flex;
-  justify-content: center;
-}
-
-.logo-1 {
-  margin-left: 25%;
-  width: 200px;
-  height: 150px;
-}
-.All-navs {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex: 1;
-  height: 100%;
-}
-a {
-  text-shadow: 0px 0px 10px white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 30px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: white;
-}
-a:hover {
-  transform: scale(1.1);
+  margin: 0;
+  padding: 0;
+  background-color: #a5a5a5;
 }
 
 .big-font {
@@ -61,8 +10,7 @@ a:hover {
   font-weight: bolder;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: white;
-  text-shadow: 0px 0px 10px white;
+  color: black;
 }
 /* card css */
 .content {
@@ -73,8 +21,6 @@ a:hover {
   height: 26rem;
   border-radius: 3rem;
   box-shadow: 0px 0px 10px greenyellow;
-  /* box-shadow: 0px 0px 10px greenyellow; */
-  /* height: 350px; */
 }
 .left-side {
   flex: 1;
@@ -92,7 +38,7 @@ a:hover {
 .shop-img {
   width: 80%;
   box-shadow: 0px 0px 10px greenyellow;
-  /* border-radius: 15rem; */
+
   height: 80%;
 }
 .name_div {
@@ -108,61 +54,12 @@ a:hover {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .barber_name {
-  /* margin: 40px; */
   font-size: 25px;
   color: white;
   text-shadow: 0px 0px 2px white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.select {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2%;
-  margin-top: 5%;
-}
-.detail {
-  width: 30%;
-  height: 100%;
-  font-size: 2rem;
-  font-weight: bold;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  color: white;
-  background-color: transparent;
-  border-radius: 3px;
-  border: none;
-  box-shadow: inset 0px 0px 5px white;
-  transition: 0.7s;
-}
-.detail:hover {
-  background-color: white;
-  color: black;
-  transform: scale(1.1);
-}
-.select-button {
-  width: 30%;
-  text-decoration: none;
-  height: 100%;
-  font-size: 30px;
-  font-weight: bold;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  color: white;
-  background-color: transparent;
-  border-radius: 3px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  box-shadow: inset 0px 0px 5px white;
-  transition: 0.7s;
-}
-.select-button:hover {
-  background-color: white;
-  color: black;
-  transform: scale(1.1);
-}
+
 .right-side {
   flex: 1;
   margin: 2%;
@@ -192,7 +89,156 @@ a:hover {
 }
 
 .all-content {
+  display: grid;
+  gap: 4%;
+  margin-bottom: 2%;
+}
+
+/* new card css start */
+
+
+
+.card {
+  background: #2d2d2d;
+  position: relative;
+  border: 1px solid white;
+  height: 350px;
+  width: 40%;
+  cursor: pointer;
+  border-radius: 10px;
+
+  transition: 0.5s;
+}
+.card:hover {
+  transform: scale(1);
+}
+
+.card-header {
+  background: transparent;
+  border-bottom: 1px solid white;
+  width: 100%;
+}
+.card-header h3 {
+  text-align: end;
+  margin-right: 7%;
+  color: #fff;
+  font-size: 1.3em;
+}
+
+.card-content {
+  margin-top: 1%;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  gap: 40px;
+  gap: 1%;
+  justify-content: end;
+  height: 60%;
+  width: 100%;
+}
+.card-img {
+  flex: 1;
+}
+.card-img img {
+  border-radius: 6%;
+  border: 1px solid white;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.projects {
+  display: flex;
+  border-radius: 2%;
+  align-content: space-around;
+  justify-content: space-around;
+  flex: 3;
+  width: 70%;
+  height: 94%;
+  padding-top: 2%;
+}
+
+.project {
+  height: 99%;
+  width: 30%;
+  margin-left: 1.9%;
+}
+.project img {
+  border: 1px solid white;
+  border-radius: 3%;
+  width: 90%;
+  height: 90%;
+}
+
+.card-footer {
+  margin-top: 2%;
+  background: black;
+  position: absolute;
+  display: flex;
+  border-top: 1px solid white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 60px;
+  width: 100%;
+  bottom: 0;
+}
+
+.profile-group {
+  flex: 3;
+  padding-left: 3%;
+}
+
+.name {
+  margin-top: 1%;
+  color: #cecece;
+  font-size: 1rem;
+}
+
+.job {
+  margin-top: 2%;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  font-size: 1.3rem;
+}
+
+.select {
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  align-items: center;
+  gap: 4%;
+}
+.detail {
+  width: 40%;
+  height: 50%;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: black;
+  background-color: white;
+  border-radius: 3px;
+  border: none;
+  transition: 0.7s;
+}
+.detail:hover {
+  transform: scale(1.1);
+}
+.select-button {
+  width: 40%;
+  text-decoration: none;
+  height: 50%;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: black;
+  background-color: white;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  transition: 0.7s;
+}
+.select-button:hover {
+  transform: scale(1.1);
 }
