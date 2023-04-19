@@ -18,6 +18,8 @@
             <br />
             
             <input
+            pattern="[A-Za-z0-9]+"
+          title="Make sure that name should not contain space"
               class="input"
               type="text"
               id="username"
@@ -30,7 +32,9 @@
             <label for="email" class="all_label">Email Id</label>
             <br />
             
-            <input class="input" type="email" id="b_email" autocomplete="email" />
+            <input
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            class="input" type="email" id="b_email" autocomplete="email" />
           </div>
           <br />
           <div class="all_inputs">
@@ -38,6 +42,9 @@
             <br />
             
             <input
+            pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\S+$).{8,}$"
+            title="Must contain at least one number and one uppercase and lowercase letter,at least 8 or more characters and must not contain space "
+  
               class="input"
               type="password"
               id="password"
@@ -50,6 +57,9 @@
             <br />
             
             <input
+            pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\S+$).{8,}$"
+            title="Must contain at least one number and one uppercase and lowercase letter,at least 8 or more characters and must not contain space "
+  
               class="input"
               type="password"
               id="c_password"

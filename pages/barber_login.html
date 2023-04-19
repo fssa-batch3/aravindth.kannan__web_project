@@ -37,10 +37,10 @@
         </div>
         <div class="email-id-box">
           <input
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
             class="email-id-box-1"
             type="email"
             placeholder="abcda@gmail.com"
-         
             id="b_email"
           />
         </div>
@@ -48,10 +48,11 @@
           <p class="password-1">Password</p>
         </div>
         <input
+          pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\S+$).{8,}$"
+          title="Must contain at least one number and one uppercase and lowercase letter,at least 8 or more characters and must not contain space "
           class="password-box-1"
           type="password"
           placeholder=" 123456"
-          
           id="b_password"
         />
         <div class="Password-box"></div>
@@ -76,7 +77,7 @@
       // JSON
 
       let logIn = document.getElementById("b_login_form");
-      logIn.addEventListener("submit", (event) => {
+      logIn.addEventListener("submit", event => {
         event.preventDefault();
         let all_user_data = JSON.parse(localStorage.getItem("barberinfo"));
         console.log(all_user_data);
@@ -98,7 +99,7 @@
         if (match == true) {
           alert("Success");
           const matchObject = all_user_data.find(
-            (o) => o["barber_email"] == useremail
+            o => o["barber_email"] == useremail
           );
           console.log(matchObject);
           const thisUser = JSON.stringify(matchObject.barber_email);
@@ -135,6 +136,5 @@
       //   window.location.href = "./pages/home.html";
       // }
     </script>
-    
   </body>
 </html>
