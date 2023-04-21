@@ -41,65 +41,82 @@ wireframe:https://drive.google.com/drive/folders/1d4lUeEf66xgovHEqxksKz9XPdEkYUQ
 
 
 
-USER STORY:   
+# Mens-haircut-website
 
-user:  
-Create an account    
-* Scenario 1: Successfully create an account  
-   *Steps:    
-          a. Navigate to the registration page.  
-          b. Enter the required information such as name,email,password and phone number.   
-          c. Click the "Register" button.  
+## user  
+### Create an account    
+- Scenario 1: Successfully create an account  
+   - Steps:    
+          1. Navigate to the registration page.  
+          2. Enter the required information such as name,email,password and phone number.   
+          3. Click the "Register" button.  
          
-   *Expected Result:   
-          1.The user is redirected to the login page.   
+   - Expected Result:   
+          - The user is redirected to the login page.   
           
-Create an account   
-* Scenario 1: Successfully login in to account   
-    *steps:   
-      a.Navigate to the login page.   
-      b.Enter the required information such as email.and password.   
-      c.Click the "login" button.    
+### Create an account   
+- Scenario 1: Successfully login in to account   
+    - steps:   
+        1. Navigate to the login page.   
+        2. Enter the required information such as email.and password.   
+        3. Click the "login" button.    
      
-    *Expected Result:   
-      1. The user is redirected to the user profile page.  
-      a. Click the "Edit" button.           
-      b. You can edit your profile.            
-      c. Click the "delete" button.          
-      d. You can delete your profile.       
+    - Expected Result:   
+      -  The user is redirected to the user home page.  
+        
 
-barber:    
-Create an account   
-* Scenario 1: Successfully create an account   
-   *Steps:    
-          a. Navigate to the registration page.    
-          b. Enter the required information such as name,email,password,phone number,barber profile,slogan,experience and address.    
-          c. Click the "Register" button. 
+ 
+### View all type of haircut styles
+-  Scenario 1: Successfully view all hair styles in our website.
+   - Steps:    
+          1. login as a customer    
+          2. Navigate to the all hairstyles page(learn page)  
+          3. View the list of available haircut styles.
              
-   *Expected Result:     
-          1.The user is redirected to the login page.     
+   - Expected Result:     
+      -  the customer can view the list of all haircut styles.   
           
-Create an account   
-* Scenario 1: Successfully login in to account    
-    *steps:    
-      a.Navigate to the login page.   
-      b.Enter the required information such as email.and password.    
-      c.Click the "login" button.   
-      
+### Edit user profile details
+-  Scenario 1: Successfully edit user profile details    
+    - steps:    
+        1. Log in as a customer.   
+        2. Navigate to the profile page.
+        3. Click the "Edit" button.
+        4. Update the user profile details.
+        5. Click the "Submit" button.   
          
-    *Expected Result:    
-      1. The user is redirected to the user profile page.    
-      a. Click the "Edit" button.          
-      b. You can edit your profile.          
-      c. Click the "delete" button.        
-      d. You can delete your profile.    
+    - Expected Result:    
+     - The user profile details are updated.
       
-Barber card:    
-* Scenario 1:Successfully create card for barber    
-   * steps:    
-      a.Navigate to the barber card page.   
-      b.Enter the required information such as  card email,barber name,experience,slogan,sample_1,sample_2,sample_3 and card profile.   
-      c.Click the "submit" button.    
-   *Expected Result:    
-      1. The user page add new card for barber.    
+### Delete user profile details     
+- Scenario 1:Succesfully Delete user profile 
+   - steps:    
+        1. Log in as a customer. 
+        2. Navigate to the profile page.   
+        3. Click the "Delete" button. 
+        4. confirm message will through in the top of the page.
+        5. Click the "ok"  button.
+   - Expected Result:    
+      - The user can Delete their profile
+      - the user is redirected to the index page.
+
+# Barber
+
+### Create an account
+- Scenario 1: Succesefully create an account
+    - steps:
+        1. Navigate to the registration page.
+        2. Enter the required in formation such as name,email,password,phone.
+        3. Click "sign up" button.
+   - Expected Result:
+      - The barber is redirected to the login page.
+
+### Log in account
+- Scenario 1: Successfully login in to account 
+   - steps:
+        1. Navigate to the login page.
+        2. Enter the required information such as email, and password.
+        3. Click the "Login" button.
+   - Expected Result:
+      - The barber is redirected to the barber homePge.
 
