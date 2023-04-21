@@ -56,7 +56,55 @@
     <!-- section is started -->
     <p class="big-font">Select Your Shop</p>
     <div class="all-content">
-     <!-- all cards assemble here -->
+      <!-- new card for shop details -->
+
+
+      <div class="container">     
+
+        <div class="profile-card">
+
+          <img
+            class="img-responsive"
+            src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925"
+          />
+          <div class="name_div">
+            <h2 class="hvr-underline-from-center">Prakash</h2>
+          </div>
+
+          <div class="sample_text_div">
+            <h2 class="hvr-underline-from-center">Sample haircuts</h2>
+          </div>
+          <div class="profile-info">
+            
+            <img
+              class="profile-pic"
+              src="https://pbs.twimg.com/profile_images/910579937089859584/rbsL-1ze_400x400.jpg"
+            />
+
+            <img
+              class="profile-pic"
+              src="https://pbs.twimg.com/profile_images/910579937089859584/rbsL-1ze_400x400.jpg"
+            />
+
+            <img
+              class="profile-pic"
+              src="https://pbs.twimg.com/profile_images/910579937089859584/rbsL-1ze_400x400.jpg"
+            />
+
+          </div>
+
+          <div class="two_btn_div">
+            <a class="select_btn">Details</a>
+            <a class="select_btn">Select</a>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- all cards assemble here -->
     </div>
     <!-- section is ended -->
 
@@ -135,7 +183,6 @@
     </footer>
     <!-- footer is ended -->
 
-
     <!-- java script -->
     <script>
       // JSON
@@ -158,116 +205,90 @@
         // console.log("Test : ", select_shop_list[i]["profile_photo"]);
 
         let content = document.createElement("div");
-        content.setAttribute("class", "content");
+        content.setAttribute("class", "container");
 
-        let left_side = document.createElement("div");
-        left_side.setAttribute("class", "left-side");
-        content.append(left_side);
+        let profile_card = document.createElement("div");
+        profile_card.setAttribute("class", "profile-card");
+        content.append(profile_card);
 
-        let image_div = document.createElement("div");
-        image_div.setAttribute("class", "img-div");
-        left_side.append(image_div);
+        let shop_image = document.createElement("img");
+        shop_image.setAttribute("class", "img-responsive");
+        shop_image.setAttribute("alt", select_shop_list[i]["shop_card_name"]);
+        shop_image.setAttribute("src", select_shop_list[i]["shop_card_photo"]);
+        profile_card.append(shop_image);
 
-        let image = document.createElement("img");
-        image.setAttribute("class", "shop-img");
-        image.setAttribute("alt", select_shop_list[i]["shop_card_name"]);
-        image.setAttribute("src", select_shop_list[i]["shop_card_photo"]);
-        image_div.append(image);
-
-        let right_side = document.createElement("div");
-        right_side.setAttribute("class", "right-side");
-        content.append(right_side);
-
-        let shop_details = document.createElement("div");
-        shop_details.setAttribute("class", "shop-details");
-        right_side.append(shop_details);
 
         let name_div = document.createElement("div");
         name_div.setAttribute("class", "name_div");
-        shop_details.append(name_div);
+        profile_card.append(name_div);
 
-        let name = document.createElement("pre");
-        name.setAttribute("class", "name");
-        name.innerText = "Name:  ";
+        let name = document.createElement("h2");
+        name.setAttribute("class", "hvr-underline-from-center");
+        name.innerText = select_shop_list[i]["shop_card_name"];
         name_div.append(name);
 
-        let barbername = document.createElement("p");
-        barbername.setAttribute("class", "barber_name");
-        barbername.innerText = select_shop_list[i]["shop_card_name"];
-        name_div.append(barbername);
-
-        // let slogan_div = document.createElement("div");
-        // slogan_div.setAttribute("class", "name_div");
-        // shop_details.append(slogan_div);
-
-        // let slogan = document.createElement("pre");
-        // slogan.setAttribute("class", "name");
-        // slogan.innerText = "Slogan:  ";
-        // slogan_div.append(slogan);
-
-        // let barberslogan = document.createElement("p");
-        // barberslogan.setAttribute("class", "barber_name");
-        // barberslogan.innerText = select_shop_list[i]["barber_slogan"];
-        // slogan_div.append(barberslogan);
-
-        // let exp_div = document.createElement("div");
-        // exp_div.setAttribute("class", "name_div");
-        // shop_details.append(exp_div);
-
-        // let exp = document.createElement("pre");
-        // exp.setAttribute("class", "name");
-        // exp.innerText = "Experience:  ";
-        // exp_div.append(exp);
-
-        // let barbersexp = document.createElement("p");
-        // barbersexp.setAttribute("class", "barber_name");
-        // barbersexp.innerText = select_shop_list[i]["barber_experience"];
-        // exp_div.append(barbersexp);
-
-        let select_div = document.createElement("div");
-        select_div.setAttribute("class", "select");
-        right_side.append(select_div);
-
-        let detail_btn = document.createElement("button");
-        detail_btn.setAttribute("class", "detail");
-        detail_btn.innerText = "Details";
-        select_div.append(detail_btn);
-
-        let select_btn = document.createElement("a");
-        select_btn.setAttribute("class", "select-button");
-        select_btn.innerText = "Select";
-        select_div.append(select_btn);
 
         let sample_div = document.createElement("div");
-        sample_div.setAttribute("class", "sample_div");
-        content.append(sample_div);
+        sample_div.setAttribute("class", "sample_text_div");
+        profile_card.append(sample_div);
+
+        let sample_text = document.createElement("h2");
+        sample_text.setAttribute("class", "hvr-underline-from-center");
+        sample_text.innerText = "Sample haircuts";
+        sample_div.append(sample_text);
+      
+        let sample_img_div = document.createElement("div");
+        sample_img_div.setAttribute("class", "profile-info");
+        profile_card.append(sample_img_div);
+
 
         let sample_image = document.createElement("img");
-        sample_image.setAttribute("class", "sample");
-        sample_image.setAttribute(
-          "src",
-          select_shop_list[i]["shop_sample"]
-        );
+        sample_image.setAttribute("class", "profile-pic");
+        sample_image.setAttribute("src", select_shop_list[i]["shop_sample"]);
         sample_image.setAttribute("alt", select_shop_list[i]["shop_card_name"]);
-        sample_div.append(sample_image);
+        sample_img_div.append(sample_image);
 
         let sample_image_1 = document.createElement("img");
-        sample_image_1.setAttribute("class", "sample");
+        sample_image_1.setAttribute("class", "profile-pic");
         sample_image_1.setAttribute(
           "src",
           select_shop_list[i]["shop_sample_1"]
         );
-        sample_image_1.setAttribute("alt", select_shop_list[i]["shop_card_name"]);
-        sample_div.append(sample_image_1);
+        sample_image_1.setAttribute(
+          "alt",
+          select_shop_list[i]["shop_card_name"]
+        );
+        sample_img_div.append(sample_image_1);
 
         let sample_image_2 = document.createElement("img");
-        sample_image_2.setAttribute("class", "sample");
+        sample_image_2.setAttribute("class", "profile-pic");
         sample_image_2.setAttribute(
           "src",
           select_shop_list[i]["shop_sample_2"]
         );
-        sample_image_2.setAttribute("alt", select_shop_list[i]["shop_card_name"]);
-        sample_div.append(sample_image_2);
+        sample_image_2.setAttribute(
+          "alt",
+          select_shop_list[i]["shop_card_name"]
+        );
+        sample_img_div.append(sample_image_2);
+       
+        let select_div = document.createElement("div");
+        select_div.setAttribute("class", "two_btn_div");
+        profile_card.append(select_div);
+
+        let detail_btn = document.createElement("a");
+        detail_btn.setAttribute("class", "select_btn");
+        detail_btn.innerText = "Details";
+        select_div.append(detail_btn);
+
+        let select_btn = document.createElement("a");
+        select_btn.setAttribute("class", "select_btn");
+        select_btn.innerText = "Select";
+        select_div.append(select_btn);
+
+        
+
+        
 
         document.querySelector(".all-content").append(content);
       }

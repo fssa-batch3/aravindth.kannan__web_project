@@ -8,32 +8,34 @@ body {
 }
 .full_content {
   width: 100%;
+  height: auto;
 
   display: flex;
-  gap: 3rem;
+  gap: 1rem;
   background-color: grey;
   /* background-image: linear-gradient(45deg, #04ef25 0%, #e7efed 100%); */
 }
 
 .photo_div {
   height: max-content;
+  position: relative;
   display: flex;
   flex-direction: column;
   flex: 1;
   background-color: rgb(223, 225, 225);
-  margin: 1% 1%;
-  position: relative;
+  margin: 5% 3%;
   border-radius: 1em;
 }
 .profile {
   display: flex;
   flex-wrap: wrap;
+  /* background-color: red; */
   justify-content: center;
-  align-items: center;
-  /* border-radius: 3%; */
+  /* align-items: center; */
+
   width: 80%;
   height: 280px;
-  /* height: 300px; */
+
   border-bottom: 0.1em solid rgb(71, 70, 70);
   margin: 7% auto;
   gap: 3%;
@@ -128,7 +130,8 @@ body {
 .information {
   padding: 1%;
   flex: 3;
-  height: 49em;
+  height: fit-content;
+  height: 55em;
   overflow-y: auto;
   margin: 1%;
   border-radius: 0.7%;
