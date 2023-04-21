@@ -52,15 +52,15 @@ wireframe:https://drive.google.com/drive/folders/1d4lUeEf66xgovHEqxksKz9XPdEkYUQ
           3. Click the "Register" button.  
          
    - Expected Result:   
-          - The user is redirected to the login page.   
+        -  The user is redirected to the login page.   
           
 ### Create an account   
 - Scenario 1: Successfully login in to account   
     - steps:   
-        1. Navigate to the login page.   
-        2. Enter the required information such as email.and password.   
-        3. Click the "login" button.    
-     
+          1. Navigate to the login page.   
+          2. Enter the required information such as email.and password.   
+          3. Click the "login" button.    
+      
     - Expected Result:   
       -  The user is redirected to the user home page.  
         
@@ -86,7 +86,7 @@ wireframe:https://drive.google.com/drive/folders/1d4lUeEf66xgovHEqxksKz9XPdEkYUQ
         5. Click the "Submit" button.   
          
     - Expected Result:    
-     - The user profile details are updated.
+       -  The user profile details are updated.
       
 ### Delete user profile details     
 - Scenario 1:Succesfully Delete user profile 
@@ -118,5 +118,165 @@ wireframe:https://drive.google.com/drive/folders/1d4lUeEf66xgovHEqxksKz9XPdEkYUQ
         2. Enter the required information such as email, and password.
         3. Click the "Login" button.
    - Expected Result:
-      - The barber is redirected to the barber homePge.
+      - The barber is redirected to the barber homePage.
+
+### Edit barber account profile details
+-  Scenario 1: Successfully edit barber account profile details    
+    - steps:    
+        1. Log in as a barber.   
+        2. Navigate to the profile acoount page.
+        3. Click the "Edit" button.
+        4. Update the barber account profile details.
+        5. Click the "Submit" button.   
+         
+    - Expected Result:    
+       -  The barber account profile details are updated.
+      
+### Delete barber account profile details     
+- Scenario 1:Succesfully Delete barber account profile 
+   - steps:    
+        1. Log in as a barber. 
+        2. Navigate to the profile account page.   
+        3. Click the "Delete" button. 
+        4. confirm message will through in the top of the page.
+        5. Click the "ok"  button.
+   - Expected Result:    
+      - The barber account can Delete their profile
+      - the barber account is redirected to the index page.
+
+### create barber profile
+-  Scenario 1: Successfully applyed for barber.
+   - steps:
+        1. Navigate to the apply for barber page.
+        2. Enter the required information such as email, barber name, photo,Slogan, Phone, Experience, Address, About barber.
+        3. Click the "Submit" button.
+   - Expected Result:
+      - The barber is redirected to the barber profile.
+
+### Edit barber profile details
+-  Scenario 1: Successfully edit barber profile details    
+    - steps:    
+        1. As a official barber.   
+        2. Navigate to the barber profile page.
+        3. Click the "Edit" button.
+        4. Update the barber profile details.
+        5. Click the "Submit" button.   
+         
+    - Expected Result:    
+       -  The barber profile details are updated.
+      
+### Delete barber profile details     
+- Scenario 1:Succesfully Delete barber profile 
+   - steps:    
+        1. As a official barber. 
+        2. Navigate to the barber profile page.   
+        3. Click the "Delete" button. 
+        4. confirm message will through in the top of the page.
+        5. Click the "ok"  button.
+   - Expected Result:    
+      - The barber can Delete their profile
+      - the barber is redirected to the index page.
+
+
+### create barber card
+-  Scenario 1: Successfully created  a barber crad.
+   - steps:
+        1. Navigate to the apply for create barber card page.
+        2. Enter the required information such as email, barber name, 3 haircut styles.
+        3. Click the "Submit" button.
+   - Expected Result:
+      - The barber is redirected to the barber profile.
+
+### Edit barber card details
+-  Scenario 1: Successfully edit barber card details    
+    - steps:    
+        1. As a official barber.   
+        2. Navigate to the barber profile page.
+        3. Click the "Edit" button.
+        4. Update the barber card details.
+        5. Click the "Submit" button.   
+         
+    - Expected Result:    
+       -  The barber card details are updated.
+      
+### Delete barber card details     
+- Scenario 1:Succesfully Delete barber card.
+   - steps:    
+        1. As a official barber. 
+        2. Navigate to the barber profile page.   
+        3. Click the "Delete card" button. 
+        4. confirm message will through in the top of the page.
+        5. Click the "ok"  button.
+   - Expected Result:    
+      - The barber can Delete their card
+      - the barber is redirected to the profile page.
+
+
+### create barber shop profile
+-  Scenario 1: Successfully applyed for barber shop.
+   - steps:
+        1. Navigate to the apply for barber shop page.
+        2. Enter the required information such as email, barber shop name, photo,Slogan, Phone, Experience, Address, About barber shop, haircut price detail.
+        3. Click the "Submit" button.
+   - Expected Result:
+      - The barber is redirected to the barber shop profile.
+
+### Edit barber shop profile details
+-  Scenario 1: Successfully edit barber shop profile details    
+    - steps:    
+        1. As a official barber shop.   
+        2. Navigate to the barber shop profile page.
+        3. Click the "Edit" button.
+        4. Update the barber shop profile details.
+        5. Click the "Submit" button.   
+         
+    - Expected Result:    
+       -  The barber shop profile details are updated.
+      
+### Delete barber shop profile details     
+- Scenario 1:Succesfully Delete barber shop profile 
+   - steps:    
+        1. As a official barber shop. 
+        2. Navigate to the barber shop profile page.   
+        3. Click the "Delete" button. 
+        4. confirm message will through in the top of the page.
+        5. Click the "ok"  button.
+   - Expected Result:    
+      - The barber  can Delete their shop profile
+      - the barber is redirected to the index page.
+
+
+### create barber shop card
+-  Scenario 1: Successfully created  a barber shop crad.
+   - steps:
+        1. Navigate to the apply for create barber shop card page.
+        2. Enter the required information such as email, barber shop name, 3 haircut styles.
+        3. Click the "Submit" button.
+   - Expected Result:
+      - The barber is redirected to the barber shop profile.
+
+### Edit barber shop card details
+-  Scenario 1: Successfully edit barber shop card details    
+    - steps:    
+        1. As a official barber shop.   
+        2. Navigate to the barber shop profile page.
+        3. Click the "Edit" button.
+        4. Update the barber shop card details.
+        5. Click the "Submit" button.   
+         
+    - Expected Result:    
+       -  The barber shop card details are updated.
+      
+### Delete barber shop card details     
+- Scenario 1:Succesfully Delete barber shop card.
+   - steps:    
+        1. As a official barber shop. 
+        2. Navigate to the barber shop profile page.   
+        3. Click the "Delete card" button. 
+        4. confirm message will through in the top of the page.
+        5. Click the "ok"  button.
+   - Expected Result:    
+      - The barber  can Delete  their shop card
+      - the barber shop is redirected to the shop profile page.
+
 
