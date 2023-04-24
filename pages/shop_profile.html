@@ -58,124 +58,138 @@
     <!-- header is ended -->
 
     <!-- section is started -->
+    <div class="topic_div">
+      <h1 class="topic">Shop profile</h1>
+    </div>
+
     <div class="full_content">
-      <div class="topic_div">
-        <h1 class="topic">Shop profile</h1>
-      </div>
-      <div class="profile">
-        <img class="photo" id="photo" />
-        <div class="right_side">
-          <p class="text">Scissor Masters</p>
-          <p class="text">Official shops</p>
+      <!-- card side start -->
+      <div class="card_and_profile_div">
+        <div class="profile">
+          <img class="photo" id="photo" />
+          <div class="right_side">
+            <p class="text">Scissor Masters</p>
+            <br />
+            <p class="text">Official shops</p>
+          </div>
+        </div>
+
+        <div class="card_text_div">
+          <p class="Your_card">Your card</p>
+        </div>
+        <!-- card for shop -->
+
+        <div class="container">
+          <div class="profile-card">
+            <img
+              id="card_profile"
+              alt="shop image"
+              class="img-responsive"
+              src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925"
+            />
+            <div class="name_div">
+              <h2 id="card_b_name" class="hvr-underline-from-center">
+                Prakash
+              </h2>
+            </div>
+
+            <div class="sample_text_div">
+              <h2 class="hvr-underline-from-center">Sample haircuts</h2>
+            </div>
+            <div class="profile-info">
+              <img
+                id="card_sample_1"
+                alt="haircutname"
+                class="profile-pic"
+                src="https://pbs.twimg.com/profile_images/910579937089859584/rbsL-1ze_400x400.jpg"
+              />
+
+              <img
+                id="card_sample_2"
+                alt="haircutname"
+                class="profile-pic"
+                src="https://pbs.twimg.com/profile_images/910579937089859584/rbsL-1ze_400x400.jpg"
+              />
+
+              <img
+                id="card_sample_3"
+                alt="haircutname"
+                class="profile-pic"
+                src="https://pbs.twimg.com/profile_images/910579937089859584/rbsL-1ze_400x400.jpg"
+              />
+            </div>
+
+            <div class="two_btn_div">
+              <a class="select_btn">Details</a>
+              <a class="select_btn">Select</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- card end -->
+
+        <div class="three_buttons">
+          <a href="./shop_card_create.html" class="create_card">Create card</a>
+          <a href="./shop_card_edit.html" class="create_card">Edit card</a>
+          <button class="edit_card" id="delete_shop_card">delete card</button>
         </div>
       </div>
-      <div class="information">
-        <div class="input_div">
-          <label class="label">Shop Name: </label>
-          <input class="input" type="text" id="shop_name" disabled />
-        </div>
-        <div class="input_div">
-          <label class="label"> Shop email id: </label>
-          <input class="input" type="text" id="shop_email" disabled />
-        </div>
-        
-        <div class="input_div">
-          <label class="label">Shop experience: </label>
-          <input class="input" type="text" id="shop_experience" disabled />
-        </div>
-        <div class="input_div">
-          <label class="label"> Shop slogan: </label>
-          <input class="input" type="text" id="shop_slogan" disabled />
-        </div>
-        <div class="input_div">
+      <!-- card side end -->
+
+      <!-- about shop start -->
+      <div class="about_shop">
+        <div class="information">
+          <div class="input_div">
+            <label class="label">Shop Name: </label>
+            <br />
+            <input class="input" type="text" id="shop_name" disabled />
+          </div>
+          <div class="input_div">
+            <label class="label"> Shop email id: </label>
+            <br />
+            <input class="input" type="text" id="shop_email" disabled />
+          </div>
+
+          <div class="input_div">
+            <label class="label">Shop experience: </label>
+            <br />
+            <input class="input" type="text" id="shop_experience" disabled />
+          </div>
+          <div class="input_div">
+            <label class="label"> Shop slogan: </label>
+            <br />
+            <input class="input" type="text" id="shop_slogan" disabled />
+          </div>
+          <div class="input_div">
             <label class="label"> Haircut price detail: </label>
+            <br />
             <input class="input" type="text" id="shop_haircut_price" disabled />
           </div>
-        <div class="input_div">
-          <label class="label"> Shop phone number: </label>
-          <input class="input" type="text" id="shop_phone_number" disabled />
-        </div>
-        <div class="input_div">
-          <label class="label"> Shop address: </label>
-          <input class="input" type="text" id="shop_address" disabled />
-        </div>
-        <div class="input_div">
-          <label class="label">About shop: </label>
-          <input class="input" type="text" id="shop_about_id" disabled />
-        </div>
-      </div>
-      <!-- your card -->
-      <div class="card_text_div">
-        <p class="Your_card">Your card</p>
-      </div>
-<!-- full card details -->
-      <div class="card">
-        <div class="left-side">
-          <div class="img-div">
-            <img
-            id="card_profile"
-              class="shop-img"
-              alt="image"
-              src="../Assets/Images/barber-4.jpg"
-            />
+          <div class="input_div">
+            <label class="label"> Shop phone number: </label>
+            <br />
+            <input class="input" type="text" id="shop_phone_number" disabled />
+          </div>
+          <div class="big_input_div">
+            <label class="label"> Shop address: </label>
+            <br />
+            <input class="big_input" type="text" id="shop_address" disabled />
+          </div>
+          <div class="about_div">
+            <label class="label">About shop: </label>
+            <br />
+            <input class="big_input" type="text" id="shop_about_id" disabled />
           </div>
         </div>
-        <div class="details">
-          <div class="shop-details">
-            <div class="name_div">
-              <pre class="b_name">name:  </pre>
 
-              <p  id="card_b_name" class="barber_name"></p>
-            </div>
-            <!-- <div class="name_div">
-              <pre class="b_name">slogan:  </pre>
-              <p  id="card_slogan" class="barber_name"></p>
-            </div>
-            <div class="name_div">
-              <pre class="b_name">experience:  </pre>
-              <p  id="card_experience" class="barber_name"></p>
-            </div> -->
-          </div>
-          <div class="select">
-            <button id="card_details" class="b_detail">Details</button>
-            <a class="select-button">Select</a>
-          </div>
-        </div>
-        <div class="sample_div">
-          <img
-          id="card_sample_1"
-            class="sample"
-            alt="haircutname"
-            src="../Assets/Images/beard-6.jpeg"
-          />
-          <img
-          id="card_sample_2"
-            class="sample"
-            alt="haircutname"
-           src="../Assets/Images/barber-8.jpg"
-          />
-          <img
-          id="card_sample_3"
-            class="sample"
-            alt="haircutname"
-            src="../Assets/Images/beard-4.jpeg"
-          />
+        <div class="three_buttons">
+          <a class="create_card" href="./shop_profile_edit.html"
+            >Edit profile</a
+          >
+          <button id="delete_shop" class="edit_card">Delete profile</button>
         </div>
       </div>
-      <!-- card end -->
-      <div class="three_buttons">
-        <a href="./shop_card_create.html" class="create_card">Create card</a>
-        <a  href="./shop_card_edit.html" class="create_card">Edit card</a>
-        <button  class="edit_card" id="delete_shop_card">delete card</button>
-      </div>
-
-      <div class="three_buttons">
-        <p class="Your_card">Edit your profile</p>
-        <a class="create_card" href="./shop_profile_edit.html"
-          >Edit profile</a
-        >
-        <button  id="delete_shop" class="edit_card">Delete profile</button>
-      </div>
+      <!-- about side end -->
     </div>
     <!-- section is ended -->
 
@@ -270,74 +284,87 @@
         }
       });
 
-      const shopPhoto = document.getElementById("photo").setAttribute("src",oneShop["shop_photo"]);
-      const shopName = document.getElementById("shop_name").value = oneShop["shop_name"];
-      const shopEmail = document.getElementById("shop_email").value = oneShop["shop_email"];
-      const shopExperience = document.getElementById("shop_experience").value = oneShop["shop_experience"];    
-      const shopSlogan = document.getElementById("shop_slogan").value = oneShop["shop_slogan"];
-      const shopPhone = document.getElementById("shop_phone_number").value = oneShop["shop_phone"];
-      const shopAddress = document.getElementById("shop_address").value = oneShop["shop_address"];
-      const shopprice = document.getElementById("shop_haircut_price").value = oneShop["shop_price"];
-      const shopAbout = document.getElementById("shop_about_id").value = oneShop["shop_about"];
+      const shopPhoto = document
+        .getElementById("photo")
+        .setAttribute("src", oneShop["shop_photo"]);
+      const shopName = (document.getElementById("shop_name").value =
+        oneShop["shop_name"]);
+      const shopEmail = (document.getElementById("shop_email").value =
+        oneShop["shop_email"]);
+      const shopExperience = (document.getElementById("shop_experience").value =
+        oneShop["shop_experience"]);
+      const shopSlogan = (document.getElementById("shop_slogan").value =
+        oneShop["shop_slogan"]);
+      const shopPhone = (document.getElementById("shop_phone_number").value =
+        oneShop["shop_phone"]);
+      const shopAddress = (document.getElementById("shop_address").value =
+        oneShop["shop_address"]);
+      const shopprice = (document.getElementById("shop_haircut_price").value =
+        oneShop["shop_price"]);
+      const shopAbout = (document.getElementById("shop_about_id").value =
+        oneShop["shop_about"]);
 
       // delete  profile function
 
       let deleteOneShop = document.getElementById("delete_shop");
 
-      deleteOneShop.addEventListener("click",function(event){
+      deleteOneShop.addEventListener("click", function (event) {
         event.preventDefault();
         let index = shopInfo.indexOf(oneShop);
-      // give a confirm alert
+        // give a confirm alert
         let msg = confirm("Are you sure! you want to delete this account");
-        if(msg !== true){
+        if (msg !== true) {
           return;
-        }else{
-            shopInfo.splice(index, 1);
-          localStorage.setItem("shopinfo",JSON.stringify(shopInfo));
+        } else {
+          shopInfo.splice(index, 1);
+          localStorage.setItem("shopinfo", JSON.stringify(shopInfo));
           window.location.href = "./barber_home.html";
         }
       });
 
-
-
       // card java script (or) function
       const shopCard = JSON.parse(localStorage.getItem("shop_card"));
-     // store a email for verify!
-      let shop_Email = oneShop["shop_email"]
-      let shop_Card = shopCard.find(function (event){
+      // store a email for verify!
+      let shop_Email = oneShop["shop_email"];
+      let shop_Card = shopCard.find(function (event) {
         let one_shop_card = event["shop_card_email"];
-        if( shop_Email == one_shop_card){
+        if (shop_Email == one_shop_card) {
           return true;
         }
-       
       });
 
       //  set the value of that card for barber profile
-      let cardshopProfile = document.getElementById("card_profile").setAttribute("src",shop_Card["shop_card_photo"]);
-      let cardshopName = document.getElementById("card_b_name").innerHTML = shop_Card["shop_card_name"];
-      let cardshopSample_1 = document.getElementById("card_sample_1").setAttribute("src",shop_Card["shop_sample"]);
-      let cardshopSample_2 = document.getElementById("card_sample_2").setAttribute("src",shop_Card["shop_sample_1"]);
-      let cardshopSample_3 = document.getElementById("card_sample_3").setAttribute("src",shop_Card["shop_sample_2"]);
+      let cardshopProfile = document
+        .getElementById("card_profile")
+        .setAttribute("src", shop_Card["shop_card_photo"]);
+      let cardshopName = (document.getElementById("card_b_name").innerHTML =
+        shop_Card["shop_card_name"]);
+      let cardshopSample_1 = document
+        .getElementById("card_sample_1")
+        .setAttribute("src", shop_Card["shop_sample"]);
+      let cardshopSample_2 = document
+        .getElementById("card_sample_2")
+        .setAttribute("src", shop_Card["shop_sample_1"]);
+      let cardshopSample_3 = document
+        .getElementById("card_sample_3")
+        .setAttribute("src", shop_Card["shop_sample_2"]);
 
+      //  delete card function
+      let deleteOneCard = document.getElementById("delete_shop_card");
 
-//  delete card function
-let deleteOneCard = document.getElementById("delete_shop_card");
-
-deleteOneCard.addEventListener("click",function(event){
-  event.preventDefault();
-  let index = shopCard.indexOf(shop_Card);
-// give a confirm alert
-  let msg = confirm("Are you sure! you want to delete this account");
-  if(msg !== true){
-    return;
-  }else{
-    shopCard.splice(index, 1);
-    localStorage.setItem("shop_card",JSON.stringify(shopCard));
-    window.location.href = "./shop_profile.html";
-  }
-});
-
-
+      deleteOneCard.addEventListener("click", function (event) {
+        event.preventDefault();
+        let index = shopCard.indexOf(shop_Card);
+        // give a confirm alert
+        let msg = confirm("Are you sure! you want to delete this account");
+        if (msg !== true) {
+          return;
+        } else {
+          shopCard.splice(index, 1);
+          localStorage.setItem("shop_card", JSON.stringify(shopCard));
+          window.location.href = "./shop_profile.html";
+        }
+      });
     </script>
     <!-- <a href="./barber_home.html"></a> -->
   </body>

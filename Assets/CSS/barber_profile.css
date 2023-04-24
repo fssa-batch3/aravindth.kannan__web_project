@@ -334,9 +334,7 @@ body {
   border: none;
   transition: 0.7s;
 }
-.select-button:hover {
-  transform: scale(1.1);
-}
+
 
 .three_buttons {
   width: 100%;
