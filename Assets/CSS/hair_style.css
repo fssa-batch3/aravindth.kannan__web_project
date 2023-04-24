@@ -1,8 +1,12 @@
 body {
   margin: 0px;
   padding: 0px;
-  background: rgb(245,239,242);
-background: radial-gradient(circle, rgba(245,239,242,1) 0%, rgba(207,207,208,1) 100%);
+  background: rgb(245, 239, 242);
+  background: radial-gradient(
+    circle,
+    rgba(245, 239, 242, 1) 0%,
+    rgba(207, 207, 208, 1) 100%
+  );
 }
 
 .Short {
@@ -134,25 +138,26 @@ span {
   margin-top: 0;
   /* padding: 10rem 0 0; */
   width: 300px;
-  height: fit-content;
+  height: 420px;
+  /* height: fit-content; */
   overflow: hidden;
 }
 .card_img {
   z-index: -5;
   position: relative;
   width: 100%;
-  height: 99%;
+  height: 100%;
+  object-fit: cover;
   background-size: cover;
   border-radius: 2%;
   transition: 200ms ease;
   opacity: 1;
-  padding: 10rem 0 0;
-  /* width: 100%; */
+
   overflow: hidden;
 }
 .card-content {
   z-index: 1;
-  margin-top: -60%;
+  margin-top: -55%;
   width: 285px;
   padding: 5%;
   background: linear-gradient(
@@ -167,9 +172,11 @@ span {
 .card-title {
   position: relative;
   width: fit-content;
+  color: white;
 }
 .card-title::after {
   content: "";
+
   width: 100%;
   height: 3px;
   bottom: 0;
