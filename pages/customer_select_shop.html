@@ -56,45 +56,7 @@
     <!-- section is started -->
     <p class="big-font">Select Your Shop</p>
     <div class="all-content">
-      <!-- new card for shop details -->
-
-      <div class="container">
-        <div class="profile-card">
-          <img
-            class="img-responsive"
-            src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925"
-          />
-          <div class="name_div">
-            <h2 class="hvr-underline-from-center">Prakash</h2>
-          </div>
-
-          <div class="sample_text_div">
-            <h2 class="hvr-underline-from-center">Sample haircuts</h2>
-          </div>
-          <div class="profile-info">
-            <img
-              class="profile-pic"
-              src="https://pbs.twimg.com/profile_images/910579937089859584/rbsL-1ze_400x400.jpg"
-            />
-
-            <img
-              class="profile-pic"
-              src="https://pbs.twimg.com/profile_images/910579937089859584/rbsL-1ze_400x400.jpg"
-            />
-
-            <img
-              class="profile-pic"
-              src="https://pbs.twimg.com/profile_images/910579937089859584/rbsL-1ze_400x400.jpg"
-            />
-          </div>
-
-          <div class="two_btn_div">
-            <a class="select_btn">Details</a>
-            <a class="select_btn">Select</a>
-          </div>
-        </div>
-      </div>
-
+      
       <!-- all cards assemble here -->
     </div>
     <!-- section is ended -->
@@ -268,8 +230,8 @@
         detail_btn.setAttribute("class", "select_btn");
         detail_btn.setAttribute(
           "href",
-          "./shop_detail_page.html?id=" + select_shop_list
-        [i]["shop_card_id"]);
+          "./shop_detail_page.html?id=" + select_shop_list[i]["shop_card_id"]
+        );
         detail_btn.innerText = "Details";
         select_div.append(detail_btn);
 
