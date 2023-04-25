@@ -1,0 +1,323 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: #ebe9e9;
+}
+
+* {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.full_content {
+  width: 95%;
+  display: flex;
+  margin: 0px;
+  padding: 2%;
+  gap: 3rem;
+}
+.topic_div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.topic {
+  color: black;
+  font-size: 3rem;
+}
+.card_and_profile_div {
+  background: rgb(213, 245, 245);
+  background: linear-gradient(
+    0deg,
+    rgb(242, 245, 245) 0%,
+    rgb(173, 173, 172) 100%
+  );
+  border: 1px solid black;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  height: fit-content;
+  width: 50%;
+}
+.about_shop {
+  width: 50%;
+  background-color: #cff3ed;
+  background-image: linear-gradient(62deg, #eff2f2 0%, #999996 100%);
+
+  border: 1px solid black;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.samples {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 30px;
+}
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  margin: auto;
+  border-bottom: 2px solid black;
+}
+.photo {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 8rem;
+  margin: 4% auto;
+  box-shadow: 0px 0px 10px black;
+}
+.right_side {
+  margin: auto;
+  border-top: 1px solid black;
+}
+.text {
+  font-size: 2rem;
+  margin: auto;
+  text-align: center;
+  color: black;
+  font-weight: bolder;
+}
+.information {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  margin: auto;
+
+  border-bottom: 2px solid black;
+}
+.input_div {
+  width: 90%;
+  margin: auto;
+  border-bottom: 1px solid black;
+  padding: 2%;
+}
+.big_input_div {
+  width: 90%;
+  margin: auto;
+  border-bottom: 1px solid black;
+  padding: 2%;
+}
+.about_div {
+  padding: 2%;
+  width: 90%;
+  margin: 1% 0;
+}
+
+.label {
+  color: rgb(92, 91, 91);
+  font-size: 1.5rem;
+}
+.input {
+  color: black;
+  font-weight: bold;
+  width: 100%;
+  font-size: 1.7rem;
+  height: 2rem;
+  border: none;
+  background-color: transparent;
+}
+.big_input {
+  color: black;
+  font-weight: bold;
+  width: 100%;
+  font-size: 1.7rem;
+  height: 6.6rem;
+  border: none;
+  background-color: transparent;
+}
+.card_text_div {
+  width: 100%;
+  border-top: 2px solid black;
+  margin-top: 4%;
+}
+.Your_card {
+  font-size: 2rem;
+  text-align: left;
+  margin-left: 10%;
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+/* card css start */
+.container {
+  border-radius: 10px;
+  margin: auto;
+
+  width: 72%;
+  height: fit-content;
+  /* background-color: red; */
+}
+
+.profile-card {
+  width: 100%;
+  border-radius: 10px;
+  background-color: grey;
+  /* margin-bottom: 20px; */
+}
+.img-responsive {
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  object-fit: cover;
+  height: 300px;
+}
+.name_div {
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4%;
+  width: fit-content;
+  padding-bottom: 0.1%;
+  border-radius: 6px;
+  margin-left: 0.5%;
+  position: absolute;
+  background-color: black;
+  margin-top: -3%;
+}
+.name_div h2 {
+  color: #e8e8e8;
+  font-size: 1.2em;
+  padding: 5px;
+}
+.sample_text_div {
+  padding-left: 2%;
+}
+.sample_text_div h2 {
+  color: white;
+}
+
+.profile-info {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: 4%;
+  color: #bdbdbd;
+  display: flex;
+}
+.profile-pic {
+  margin: auto;
+  width: 25%;
+  height: 9em;
+  object-fit: cover;
+  border-radius: 5%;
+  border: 1px solid white;
+  transition: 0.5s;
+}
+
+.profile-card:hover .profile-pic {
+  transform: scale(1.1);
+}
+
+.profile-card:hover {
+  opacity: 1;
+}
+
+.two_btn_div {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 100%;
+  height: 5em;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+.select_btn {
+  border-radius: 5px;
+  color: black;
+  font-size: 1.2em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 30%;
+  height: 50%;
+  transition: 0.5s;
+}
+.select_btn:hover {
+  transform: scale(1.1);
+}
+/* Underline From Center */
+.hvr-underline-from-center {
+  display: inline-block;
+
+  transform: translateZ(0);
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 52%;
+  right: 52%;
+  bottom: 0;
+  background: #ffffff;
+  border-radius: 50%;
+  height: 3px;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.profile-card:hover .hvr-underline-from-center:before,
+.profile-card:focus .hvr-underline-from-center:before,
+.profile-card:active .hvr-underline-from-center:before {
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #cecece;
+  border-radius: 0;
+}
+
+/* card end */
+.three_buttons {
+  width: 100%;
+  gap: 2%;
+  padding-bottom: 2%;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: center;
+  margin-top: 4%;
+}
+
+.create_card {
+  width: 18%;
+  text-decoration: none;
+  height: 3rem;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: white;
+  background-color: black;
+  border-radius: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  box-shadow: inset 0px 0px 5px black;
+  transition: 0.7s;
+}
+.edit_card {
+  width: 18%;
+  height: 3rem;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: white;
+  background-color: black;
+  border-radius: 5%;
+  border: none;
+  box-shadow: inset 0px 0px 5px black;
+  transition: 0.7s;
+}
+.edit_card:hover {
+  transform: scale(1.1);
+}
+.create_card:hover {
+  transform: scale(1.1);
+}

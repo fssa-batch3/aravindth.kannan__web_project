@@ -58,11 +58,8 @@
     <div class="all-content">
       <!-- new card for shop details -->
 
-
-      <div class="container">     
-
+      <div class="container">
         <div class="profile-card">
-
           <img
             class="img-responsive"
             src="https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925"
@@ -75,7 +72,6 @@
             <h2 class="hvr-underline-from-center">Sample haircuts</h2>
           </div>
           <div class="profile-info">
-            
             <img
               class="profile-pic"
               src="https://pbs.twimg.com/profile_images/910579937089859584/rbsL-1ze_400x400.jpg"
@@ -90,19 +86,14 @@
               class="profile-pic"
               src="https://pbs.twimg.com/profile_images/910579937089859584/rbsL-1ze_400x400.jpg"
             />
-
           </div>
 
           <div class="two_btn_div">
             <a class="select_btn">Details</a>
             <a class="select_btn">Select</a>
           </div>
-
         </div>
-
       </div>
-
-
 
       <!-- all cards assemble here -->
     </div>
@@ -217,7 +208,6 @@
         shop_image.setAttribute("src", select_shop_list[i]["shop_card_photo"]);
         profile_card.append(shop_image);
 
-
         let name_div = document.createElement("div");
         name_div.setAttribute("class", "name_div");
         profile_card.append(name_div);
@@ -227,7 +217,6 @@
         name.innerText = select_shop_list[i]["shop_card_name"];
         name_div.append(name);
 
-
         let sample_div = document.createElement("div");
         sample_div.setAttribute("class", "sample_text_div");
         profile_card.append(sample_div);
@@ -236,11 +225,10 @@
         sample_text.setAttribute("class", "hvr-underline-from-center");
         sample_text.innerText = "Sample haircuts";
         sample_div.append(sample_text);
-      
+
         let sample_img_div = document.createElement("div");
         sample_img_div.setAttribute("class", "profile-info");
         profile_card.append(sample_img_div);
-
 
         let sample_image = document.createElement("img");
         sample_image.setAttribute("class", "profile-pic");
@@ -271,13 +259,17 @@
           select_shop_list[i]["shop_card_name"]
         );
         sample_img_div.append(sample_image_2);
-       
+
         let select_div = document.createElement("div");
         select_div.setAttribute("class", "two_btn_div");
         profile_card.append(select_div);
 
         let detail_btn = document.createElement("a");
         detail_btn.setAttribute("class", "select_btn");
+        detail_btn.setAttribute(
+          "href",
+          "./shop_detail_page.html?id=" + select_shop_list
+        [i]["shop_card_id"]);
         detail_btn.innerText = "Details";
         select_div.append(detail_btn);
 
@@ -285,10 +277,6 @@
         select_btn.setAttribute("class", "select_btn");
         select_btn.innerText = "Select";
         select_div.append(select_btn);
-
-        
-
-        
 
         document.querySelector(".all-content").append(content);
       }
