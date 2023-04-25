@@ -168,6 +168,7 @@
         </div>
       </div>
     </footer>
+   
 
     <!-- java script -->
 
@@ -269,6 +270,7 @@
 
         let detail_btn = document.createElement("a");
         detail_btn.setAttribute("class", "select-button");
+        detail_btn.setAttribute("href","./barber_detail_page.html?id=" + select_barber_list[i]["barberid"]);
         detail_btn.innerText = "Details";
         buttons_div.append(detail_btn);
 

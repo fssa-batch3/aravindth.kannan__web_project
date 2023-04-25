@@ -1,0 +1,380 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.full_content {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  gap: 1rem;
+  background-color: grey;
+  /* background-image: linear-gradient(45deg, #04ef25 0%, #e7efed 100%); */
+}
+
+.photo_div {
+  height: max-content;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  background-color: rgb(223, 225, 225);
+  margin: 1% 1%;
+  border-radius: 1em;
+}
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 50%;
+  height: 280px;
+  border-bottom: 0.1em solid rgb(71, 70, 70);
+  margin: auto;
+  /* gap: 3%; */
+}
+.photo {
+  width: 80%;
+  height: 95%;
+  border-radius: 50%;
+  border: 0.1em solid black;
+}
+.site_name_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.barber_text {
+  margin-top: -3%;
+  font-size: 1.5rem;
+  color: black;
+  font-weight: bolder;
+}
+.site_name {
+  font-size: 2rem;
+  color: black;
+  letter-spacing: 1px;
+}
+.site_name::first-letter {
+  font-size: 3rem;
+  color: black;
+  font-weight: bolder;
+}
+
+.primary_information_div {
+  display: flex;
+  margin: 0 5%;
+  flex-direction: column;
+}
+.field_div {
+  border-radius: 2%;
+  border: 1px solid black;
+  margin: 3%;
+}
+.label {
+  color: grey;
+  font-size: 1.5rem;
+}
+.input_two {
+  color: black;
+  width: 80%;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+
+.two_buttons {
+  display: flex;
+  padding: 0.4%;
+  width: 100%;
+  gap: 4%;
+  height: 5em;
+  align-items: center;
+  justify-content: center;
+}
+
+.p_edit {
+  width: 25%;
+  text-decoration: none;
+  height: 3.5rem;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: white;
+  background-color: black;
+  border-radius: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  box-shadow: inset 0px 0px 5px black;
+  transition: 0.7s;
+}
+.p_edit:hover {
+  transform: scale(1.1);
+}
+
+/* small profile div css end */
+
+.information {
+  width: 54%;
+  height: fit-content;
+  overflow-y: auto;
+  margin: 1%;
+  border-radius: 10px;
+  gap: 1rem;
+  background-color: rgb(223, 225, 225);
+}
+.right_head {
+  width: 100%;
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+.right_head p {
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+.input_div {
+  border-radius: 2%;
+  width: 90%;
+  height: 6em;
+  margin: 2% auto;
+}
+
+.label_full_details {
+  color: grey;
+  font-size: 1.5em;
+}
+.input {
+  width: 100%;
+  color: black;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  height: 2rem;
+}
+.card_text_div {
+  width: 100%;
+  text-align: center;
+  border-top: 2px solid black;
+  margin-bottom: 2%;
+}
+.Your_card {
+  font-size: 2rem;
+}
+
+/* barber card */
+
+.card {
+  background: #2d2d2d;
+  margin: auto;
+  position: relative;
+  border: 1px solid white;
+  height: 340px;
+  width: 55%;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.card:hover {
+  transform: scale(1);
+}
+
+.card-header {
+  background: transparent;
+  border-bottom: 1px solid white;
+  width: 100%;
+}
+.card-header h3 {
+  text-align: end;
+  margin-right: 7%;
+  color: #fff;
+  font-size: 1.3em;
+}
+
+.card-content {
+  margin-top: 1%;
+  position: relative;
+  display: flex;
+  gap: 1%;
+  height: 60%;
+  width: 100%;
+}
+.card-img {
+  width: 25%;
+  height: 100%;
+}
+.card-img img {
+  margin-left: 2.6%;
+  border-radius: 6%;
+  border: 1px solid white;
+  height: 98%;
+  width: 98%;
+  object-fit: cover;
+}
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: space-around;
+  border-left: 1px solid white;
+  flex: 3;
+  width: 70%;
+  height: 94%;
+  padding-top: 2%;
+}
+
+.project {
+  height: 99%;
+  width: 30%;
+  margin-left: 1.9%;
+}
+.project img {
+  border: 1px solid white;
+  border-radius: 3%;
+  width: 90%;
+  object-fit: cover;
+  height: 90%;
+  transition: 0.5s;
+}
+.project img:hover {
+  transform: scale(1.03);
+}
+
+.card-footer {
+  margin-top: 2%;
+  background: black;
+  position: absolute;
+  display: flex;
+  border-top: 1px solid white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 60px;
+  width: 100%;
+  bottom: 0;
+}
+
+.profile-group {
+  flex: 3;
+  padding-left: 3%;
+}
+
+.name {
+  margin-top: 1%;
+  color: #cecece;
+  font-size: 1rem;
+}
+
+.job {
+  margin-top: 2%;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  font-size: 1.3rem;
+}
+
+.select {
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  align-items: center;
+  gap: 4%;
+}
+.detail {
+  width: 40%;
+  height: 50%;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: black;
+  background-color: white;
+  border-radius: 3px;
+  border: none;
+  transition: 0.7s;
+}
+.detail:hover {
+  transform: scale(1.1);
+}
+.select-button {
+  width: 40%;
+  text-decoration: none;
+  height: 50%;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: black;
+  background-color: white;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  transition: 0.7s;
+}
+
+.three_buttons {
+  width: 100%;
+
+  gap: 2%;
+  padding-bottom: 1%;
+  border-bottom: 2px solid black;
+  display: flex;
+  justify-content: center;
+  margin-top: 4%;
+}
+.select-button:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.1);
+}
+.detail:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.1);
+}
+.create_card {
+  width: 15%;
+  text-decoration: none;
+  height: 4rem;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: white;
+  background-color: black;
+  border-radius: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  box-shadow: inset 0px 0px 5px black;
+  transition: 0.7s;
+}
+.edit_card {
+  width: 15%;
+  height: 4rem;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: white;
+  background-color: black;
+  border-radius: 5%;
+  border: none;
+  box-shadow: inset 0px 0px 5px black;
+  transition: 0.7s;
+}
+.edit_card:hover {
+  transform: scale(1.1);
+}
+.create_card:hover {
+  transform: scale(1.1);
+}
