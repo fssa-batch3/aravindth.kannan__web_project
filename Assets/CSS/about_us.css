@@ -1,4 +1,8 @@
 /* section 1 is started */
+body {
+  margin: 0px;
+  padding: 0px;
+}
 .about_us {
   display: flex;
   background-color: white;
@@ -7,7 +11,7 @@
 .about_info {
   display: flex;
   flex-direction: column;
-  width: 1200px;
+  width: 100%;
 }
 .about_us h2 {
   display: flex;

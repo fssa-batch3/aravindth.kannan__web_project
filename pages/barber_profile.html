@@ -60,62 +60,57 @@
     <!-- section is started -->
     <div class="full_content">
       <div class="photo_div">
-        
         <div class="site_name_div">
           <p class="site_name">SHARP & CLEAN</p>
-          
+
           <p class="barber_text">Official barber</p>
         </div>
         <div class="profile">
           <img class="photo" id="b_photo" />
         </div>
-        
-          
-      <div class="primary_information_div">
-        <fieldset class="field_div">
-          <legend class="label">Barber name</legend>
-          <input class="input_two" type="text" id="barber_name" disabled />
-        </fieldset>
-        <fieldset class="field_div">
-          <legend class="label">Phone number </legend>
-          <input class="input_two" type="text" id="phone_number" disabled />
-        </fieldset>
-      </div>
+
+        <div class="primary_information_div">
+          <fieldset class="field_div">
+            <legend class="label">Barber name</legend>
+            <input class="input_two" type="text" id="barber_name" disabled />
+          </fieldset>
+          <fieldset class="field_div">
+            <legend class="label">Phone number</legend>
+            <input class="input_two" type="text" id="phone_number" disabled />
+          </fieldset>
+        </div>
 
         <div class="two_buttons">
-
-          <a class="p_edit" href="./barber_profile_edit.html"
-            >Edit profile</a
-          >
+          <a class="p_edit" href="./barber_profile_edit.html">Edit profile</a>
           <button id="delete_barber" class="p_edit">Delete profile</button>
         </div>
       </div>
-   <!-- left side end -->
+      <!-- left side end -->
 
       <div class="information">
         <div class="right_head">
-          <p> Barber information</p>
+          <p>Barber information</p>
         </div>
         <fieldset class="input_div">
-          <legend class="label_full_details">Email Id </legend>
+          <legend class="label_full_details">Email Id</legend>
           <input class="input" type="text" id="barber_email" disabled />
         </fieldset>
 
         <fieldset class="input_div">
-          <legend class="label_full_details">Experience </legend>
+          <legend class="label_full_details">Experience</legend>
           <input class="input" type="text" id="experience" disabled />
         </fieldset>
         <fieldset class="input_div">
-          <legend class="label_full_details">Slogan </legend>
+          <legend class="label_full_details">Slogan</legend>
           <input class="input" type="text" id="slogan" disabled />
         </fieldset>
 
         <fieldset class="input_div_add">
-          <legend class="label_full_details">Address </legend>
+          <legend class="label_full_details">Address</legend>
           <input class="input" type="text" id="address" disabled />
         </fieldset>
         <fieldset class="input_div_add">
-          <legend class="label_full_details">About </legend>
+          <legend class="label_full_details">About</legend>
           <input class="input" type="text" id="barber_about_id" disabled />
         </fieldset>
 
@@ -127,39 +122,42 @@
 
         <!-- full card details -->
 
-
         <div class="card">
           <div class="card-header">
             <h3>Sample haircuts</h3>
           </div>
-  
+
           <div class="card-content">
             <div class="card-img">
               <img
-              id="card_profile"
-              src="https://source.unsplash.com/0fN7Fxv1eWA" />
+                id="card_profile"
+                src="https://source.unsplash.com/0fN7Fxv1eWA"
+              />
             </div>
             <div class="projects">
               <div class="project">
                 <img
-                 id="card_sample_1"
-                 src="https://source.unsplash.com/Q3NEoed1dzs" />
+                  id="card_sample_1"
+                  src="https://source.unsplash.com/Q3NEoed1dzs"
+                />
               </div>
-  
+
               <div class="project">
-                <img 
-                id="card_sample_2"
-                src="https://source.unsplash.com/vYRAP3yMa3I" />
+                <img
+                  id="card_sample_2"
+                  src="https://source.unsplash.com/vYRAP3yMa3I"
+                />
               </div>
-  
+
               <div class="project">
-                <img 
-                id="card_sample_3"
-                src="https://source.unsplash.com/4uojMEdcwI8" />
+                <img
+                  id="card_sample_3"
+                  src="https://source.unsplash.com/4uojMEdcwI8"
+                />
               </div>
             </div>
           </div>
-  
+
           <div class="card-footer">
             <div class="profile-group">
               <div class="name">Name</div>
@@ -171,7 +169,7 @@
             </div>
           </div>
         </div>
-        
+
         <!-- card end -->
         <div class="three_buttons">
           <a href="./barber_card_create_form.html" class="create_card"
@@ -182,6 +180,72 @@
         </div>
       </div>
     </div>
+
+    <!-- add more haircut designs -->
+
+    <div class="all_haircut_designs">
+      <div class="form_div">
+        <form id="add_form" class="add_style_form">
+          <p>Add more haircuts</p>
+          <div class="small_form_div">
+            <label class="label">Haircut name</label>
+
+            <br />
+            <input
+              required
+              pattern="[A-Z a-z]{1,32}"
+              title="Make sure that name should space"
+              id="style_name"
+              class="name-box-1"
+              type="text"
+              autocomplete="name"
+            />
+          </div>
+
+          <div class="small_form_div">
+            <label class="label">Description</label>
+
+            <br />
+            <input
+              required
+             
+              id="style_para"
+              class="name-box-1"
+              type="text"
+              autocomplete="name"
+            />
+          </div>
+          <div class="small_form_div">
+            <label class="label">Email</label>
+
+            <br />
+            <input
+              required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+              id="design_email"
+              class="name-box-1"
+              type="email"
+              autocomplete="name"
+            />
+          </div>
+          <div class="small_form_div">
+            <label class="label">Haircut photo</label>
+            <br />
+            <input required class="name-box-1" type="url" id="design_photo" />
+          </div>
+          <div class="three_buttons">
+            <button class="submit_1">Submit</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="haircuts">
+        <p>Your's all haircuts</p>
+      </div>
+
+      <!-- all haircuts here -->
+    </div>
+
     <!-- section is ended -->
 
     <!-- footer is started -->
@@ -359,6 +423,67 @@
           window.location.href = "./barber_profile.html";
         }
       });
+
+      // get data from add more hairstyles
+
+      let checker = false;
+       const addDesign =  document.getElementById("add_form");
+       addDesign.addEventListener("submit", function (event){
+        event.preventDefault();
+
+        let new_hair = [];
+        if(localStorage.getItem("newhaircuts") != null){
+          new_hair = JSON.parse(localStorage.getItem("newhaircuts"));
+        }
+
+        const hairName = document.getElementById("style_name").value.trim();
+        const hairCutEmail = document.getElementById("design_email").value.trim();
+        const hairDescription = document.getElementById("style_para").value.trim();
+        const hairCutPhoto = document.getElementById("design_photo").value.trim();
+        const haircutId = Date.now();
+
+        let hair_cut_data = {
+          haircut_id: haircutId,
+          haircutname: hairName,
+          haircut_email: hairCutEmail,
+          haircut_para: hairDescription,
+          haircutImage: hairCutPhoto,
+        };
+
+        new_hair.push(hair_cut_data);
+        const new_Array = JSON.stringify(new_hair);
+        localStorage.setItem("newhaircuts", new_Array);
+ 
+       })
+
+      // add haircuts Java script
+
+      for (let i = 0; i < barber_list_beard.length; i++) {
+        let big_div = document.createElement("div");
+        big_div.setAttribute("class", "card");
+        document.querySelector(".all_styles").append(big_div);
+
+        let image = document.createElement("img");
+        image.setAttribute("class", "card_img");
+        image.setAttribute("src", barber_list_beard[i]["image"]);
+        image.setAttribute("alt", barber_list_beard[i]["alt"]);
+        image.setAttribute("alt", "image");
+        big_div.append(image);
+
+        let content_div = document.createElement("div");
+        content_div.setAttribute("class", "card-content");
+        big_div.append(content_div);
+
+        let name = document.createElement("h2");
+        name.setAttribute("class", "card-title");
+        name.innerText = barber_list_beard[i]["barber_name"];
+        content_div.append(name);
+
+        let text = document.createElement("p");
+        text.setAttribute("class", "card-text");
+        text.innerText = barber_list_beard[i]["description"];
+        content_div.append(text);
+      }
     </script>
   </body>
 </html>
