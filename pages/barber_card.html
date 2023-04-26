@@ -66,6 +66,9 @@
         <label>Name</label>
         <div class="name-box">
           <input
+          required
+          pattern="[A-Za-z0-9]+"
+          title="Make sure that name should not contain space"
             id="b_name"
             class="name-box-1"
             type="text"
@@ -77,6 +80,8 @@
         <label>Email</label>
         <div class="name-box">
           <input
+          required
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
             id="barber_card_email"
             class="name-box-1"
             type="email"
@@ -87,39 +92,59 @@
       <div class="name">
         <label>Profile-URL</label>
         <div class="name-box">
-          <input class="name-box-1" type="url" id="photo" />
+          <input 
+          required
+          class="name-box-1" type="url" id="photo" />
         </div>
       </div>
       <div class="email">
         <label>Slogan</label>
         <div class="address-box">
-          <input class="name-box-1" type="text" id="slogan" />
+          <input 
+          required
+          pattern="[A-Za-z0-9]+"
+          title="Make sure that name should not contain space"
+          class="name-box-1" type="text" id="slogan" />
         </div>
       </div>
       <div class="email">
         <label>Phone</label>
         <div class="address-box">
-          <input class="name-box-1" type="number" id="barber_phone" />
+          <input 
+          required
+          class="name-box-1" type="number" id="barber_phone" />
         </div>
       </div>
       <div class="experience">
         <label>Experience</label>
         <div class="address-box">
-          <input class="name-box-1" type="text" id="experience" />
+          <input 
+          required
+          pattern="[A-Za-z0-9]+"
+          title="Make sure that name should not contain space"
+          class="name-box-1" type="text" id="experience" />
         </div>
       </div>  
           <div class="all_inputs">
             <label class="all_label">Address</label>
             <br />
             <br />
-            <textarea id="address" class="name-box-1" name="address" rows="5" cols="50"></textarea>
+            <textarea 
+            required
+            pattern="[A-Za-z0-9]+"
+            title="Make sure that name should not contain space"
+            id="address" class="name-box-1" name="address" rows="5" cols="50"></textarea>
           </div>
 
           <div class="all_inputs">
             <label class="all_label">About</label>
             <br />
             <br />
-            <textarea id="about" class="name-box-1" name="address" rows="5" cols="50"></textarea>
+            <textarea 
+            required
+            pattern="[A-Za-z0-9]+"
+            title="Make sure that name should not contain space"
+            id="about" class="name-box-1" name="address" rows="5" cols="50"></textarea>
           </div>
       <div class="submit">
         <button class="submit-1">Submit</button>

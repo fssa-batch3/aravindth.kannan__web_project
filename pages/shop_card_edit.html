@@ -67,6 +67,9 @@
 
         <div class="name-box">
           <input
+          required
+          pattern="[A-Za-z0-9]+"
+          title="Make sure that name should not contain space"
             id="b_name"
             class="name-box-1"
             type="text"
@@ -79,6 +82,8 @@
 
         <div class="name-box">
           <input
+          required
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
             id="shop_Card_email"
             class="name-box-1"
             type="email"
@@ -89,12 +94,15 @@
       <div class="name">
         <label>Profile-URL</label>
         <div class="name-box">
-          <input class="name-box-1" type="url" id="photo" />
+          <input 
+          required
+          class="name-box-1" type="url" id="photo" />
         </div>
       </div>
 
       <div class="sample-haircut">
         <input
+        required
           class="name-box-1"
           type="url"
           id="sample"
@@ -103,6 +111,7 @@
       </div>
       <div class="sample-haircut">
         <input
+        required
           class="name-box-1"
           type="url"
           id="sample_1"
@@ -111,6 +120,7 @@
       </div>
       <div class="sample-haircut">
         <input
+        required
           class="name-box-1"
           type="url"
           id="sample_2"

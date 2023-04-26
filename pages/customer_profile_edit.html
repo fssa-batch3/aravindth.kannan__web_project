@@ -63,19 +63,40 @@
         <label for="email" class="all_label">username:</label>
         <br />
         <br />
-        <input type="name" class="form-control personName" id="username" />
+        <input
+        required
+          type="name"
+          pattern="[A-Za-z0-9]+"
+          title="Make sure that name should not contain space"
+          class="form-control personName"
+          id="username"
+        />
       </div>
       <div class="form-group">
         <label for="email" class="all_label">Email:</label>
         <br />
         <br />
-        <input type="email" class="form-control personEmail" id="email" />
+        <input
+        required
+        disabled
+          type="email"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+          class="form-control personEmail"
+          id="email"
+        />
       </div>
       <div class="form-group">
         <label for="pwd" class="all_label">Password:</label>
         <br />
         <br />
-        <input type="text" class="form-control personPassword" id="password" />
+        <input\
+        required
+          type="text"
+          pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\S+$).{8,}$"
+          title="Must contain at least one number and one uppercase and lowercase letter,at least 8 or more characters and must not contain space "
+          class="form-control personPassword"
+          id="password"
+        />
       </div>
 
       <div class="form-group">
@@ -83,6 +104,9 @@
         <br />
         <br />
         <input
+        required
+        pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\S+$).{8,}$"
+        title="Must contain at least one number and one uppercase and lowercase letter,at least 8 or more characters and must not contain space "
           type="text"
           class="form-control personcPassword"
           id="c_password"
@@ -93,7 +117,7 @@
         <label for="pwd" class="all_label">Phone number:</label>
         <br />
         <br />
-        <input type="text" class="form-control personPhone" id="phone" />
+        <input type="number" required class="form-control personPhone" id="phone" />
       </div>
 
       <!-- test -->
@@ -243,12 +267,11 @@
           phoneNumber,
         };
 
-       
         // email validation
         let newData = JSON.parse(localStorage.getItem("userinfo"));
 
         if (email_password === emailc_password) {
-          let oldData = newData.find((i) => i.email == email);
+          let oldData = newData.find(i => i.email == email);
           console.log(oldData);
 
           if (oldData == undefined) {
@@ -267,6 +290,5 @@
         }
       });
     </script>
-    
   </body>
 </html>
