@@ -77,7 +77,7 @@
           />
         </div>
       </div>
-      <div class="name">
+      <!-- <div class="name">
         <label>Email</label>
 
         <div class="name-box">
@@ -90,7 +90,7 @@
             autocomplete="name"
           />
         </div>
-      </div>
+      </div> -->
       <div class="name">
         <label>Profile-URL</label>
         <div class="name-box">
@@ -238,7 +238,7 @@
       })
     // set the value of that card for barber profile
         const shopName = document.getElementById("b_name").value = edit_shop_card["shop_card_name"];
-        const shopCardEmail = document.getElementById("shop_Card_email").value = edit_shop_card["shop_card_email"]
+        // const shopCardEmail = document.getElementById("shop_Card_email").value = edit_shop_card["shop_card_email"]
         const shopPhoto = document.getElementById("photo").value = edit_shop_card["shop_card_photo"];
         const shopSample = document.getElementById("sample").value = edit_shop_card["shop_sample"];
         const shopSample_1 = document.getElementById("sample_1").value = edit_shop_card["shop_sample_1"];
@@ -253,7 +253,7 @@
             event.preventDefault();
 
         let shop_card_name = document.getElementById("b_name").value;
-        let shop_card_email = document.getElementById("shop_Card_email").value;
+        let shop_card_email = thisBarber;
         let shop_card_photo = document.getElementById("photo").value;
         let shop_sample = document.getElementById("sample").value;
         let shop_sample_1 = document.getElementById("sample_1").value;

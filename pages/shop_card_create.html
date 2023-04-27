@@ -77,7 +77,7 @@
           />
         </div>
       </div>
-      <div class="name">
+      <!-- <div class="name">
         <label>Email</label>
 
         <div class="name-box">
@@ -90,7 +90,7 @@
             autocomplete="name"
           />
         </div>
-      </div>
+      </div> -->
       <div class="name">
         <label>Profile-URL</label>
         <div class="name-box">
@@ -215,7 +215,7 @@
 
     <script>
       // get data from this form
-
+      const thisBarber = JSON.parse(localStorage.getItem("single_barber"));
       let checker = false;
 
       const shopCard = document.getElementById("create_b_card");
@@ -230,11 +230,12 @@
         }
 
         const shopName = document.getElementById("b_name").value;
-        const shopCardEmail = document.getElementById("shop_card_email").value;
+        const shopCardEmail = thisBarber;
         const shopPhoto = document.getElementById("photo").value;
         const shopSample = document.getElementById("sample").value;
         const shopSample_1 = document.getElementById("sample_1").value;
         const shopSample_2 = document.getElementById("sample_2").value;
+
         const shopCardId = Date.now();
 
         let one_shop_card = {

@@ -75,7 +75,7 @@
           />
         </div>
       </div>
-      <div class="name">
+      <!-- <div class="name">
         <label>Email</label>
 
         <div class="name-box">
@@ -89,7 +89,7 @@
             disabled
           />
         </div>
-      </div>
+      </div> -->
       <div class="name">
         <label>Profile-URL</label>
         <div class="name-box">
@@ -99,19 +99,7 @@
         </div>
       </div>
 
-      <!-- <div class="email">
-        <label>Slogan</label>
-        <div class="address-box">
-          <input class="name-box-1" type="text" id="slogan" />
-        </div>
-      </div> -->
-
-      <!-- <div class="experience">
-        <label>Experience</label>
-        <div class="address-box">
-          <input class="name-box-1" type="text" id="experience" />
-        </div>
-      </div> -->
+     
 
       <div class="sample-haircut">
         <input
@@ -253,9 +241,9 @@
         barber_card["barber_photo"]);
       const cardbarberName = (document.getElementById("b_name").value =
         barber_card["barbername"]);
-      const cardbarberEmail = (document.getElementById(
-        "barber_card_email"
-      ).value = barber_card["barber_card_email"]);
+      // const cardbarberEmail = (document.getElementById(
+      //   "barber_card_email"
+      // ).value = barber_card["barber_card_email"]);
      
       const cardbarberSample_1 = (document.getElementById("sample").value =
         barber_card["barber_sample"]);
@@ -271,16 +259,12 @@
 
       barberCard.addEventListener("submit", function (event) {
         event.preventDefault();
-        // create empty array
-        // let newArray = [];
-
-        // if (localStorage.getItem("barber_card") != null) {
-        //   newArray = JSON.parse(localStorage.getItem("barber_card"));
-        // }
+       
+       
 
         let barbername = document.getElementById("b_name").value;
-        let barber_card_email =
-          document.getElementById("barber_card_email").value;
+        let barber_card_email = thisBarber;
+          
         let barber_photo = document.getElementById("photo").value;
         
         let barber_sample = document.getElementById("sample").value;
@@ -291,8 +275,7 @@
           barbername,
           barber_card_email,
           barber_photo,
-          // barber_slogan,
-          // barber_experience,
+         
           barber_sample,
           barber_sample_1,
           barber_sample_2,

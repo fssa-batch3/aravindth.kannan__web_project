@@ -76,7 +76,7 @@
           />
         </div>
       </div>
-      <div class="name">
+      <!-- <div class="name">
         <label> Shop email</label>
         <div class="name-box">
           <input
@@ -88,7 +88,7 @@
             autocomplete="name"
           />
         </div>
-      </div>
+      </div> -->
       <div class="name">
         <label>Shop photo</label>
         <div class="name-box">
@@ -255,7 +255,7 @@
      
 
       const shopName = document.getElementById("s_name").value = oneShop["shop_name"];
-      const shopEmail = document.getElementById("s_email").value = oneShop["shop_email"]
+      // const shopEmail = document.getElementById("s_email").value = oneShop["shop_email"]
       const shopPhoto = document.getElementById("s_photo").value = oneShop["shop_photo"] 
       const shopSlogan = document.getElementById("s_slogan").value = oneShop["shop_slogan"]
       const shopPhone = document.getElementById("s_phone").value = oneShop["shop_phone"]
@@ -269,7 +269,7 @@
         event.preventDefault();
 
         let shop_name = document.getElementById("s_name").value;
-        let shop_email = document.getElementById("s_email").value;
+        let shop_email = thisBarber;
         let shop_photo = document.getElementById("s_photo").value;
         let shop_slogan = document.getElementById("s_slogan").value;
         let shop_phone = document.getElementById("s_phone").value;
@@ -313,6 +313,6 @@
     
     
     </script>
-    <!-- <a href="./shop_profile.html"></a> -->
+    
   </body>
 </html>

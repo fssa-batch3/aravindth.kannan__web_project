@@ -24,7 +24,7 @@
           />
         </div>
       </div>
-      <div class="name">
+      <!-- <div class="name">
         <label>Email</label>
         <div class="name-box">
           <input
@@ -36,7 +36,7 @@
             autocomplete="name"
           />
         </div>
-      </div>
+      </div> -->
       <div class="name">
         <label>Profile-URL</label>
         <div class="name-box">
@@ -98,7 +98,7 @@
         <button class="submit-1">Save</button>
       </div>
     </form>
-    <!-- <a href="./login_barber.html"></a> -->
+
 
     <!-- javav-script -->
 
@@ -119,7 +119,6 @@
      
          // show data from local storage!
         const barberName = document.getElementById("b_name").value = oneBarber["barbername"]
-        const barberEmail = document.getElementById("B_email").value = oneBarber["barber_email"]
         const phoneNumber = document.getElementById("b_phone_number").value = oneBarber["barber_phone"]
         const barberProfile = document.getElementById("b_photo").value = oneBarber["barber_photo"]
         const barberSlogan = document.getElementById("b_slogan").value = oneBarber["barber_slogan"]
@@ -138,14 +137,13 @@
          // get data from edit form!
 
             let barbername = document.getElementById("b_name").value;
-            let barber_email = document.getElementById("B_email").value;
             let barber_phone = document.getElementById("b_phone_number").value;
             let barber_photo = document.getElementById("b_photo").value;
             let barber_slogan = document.getElementById("b_slogan").value;
             let barber_experience = document.getElementById("b_experience").value;
             let barber_address = document.getElementById("b_address").value;
             let barber_about = document.getElementById("about").value;
-
+            let barber_email = thisBarber;
 //  some errors in this step
             let editBarberData = {
                 barbername,

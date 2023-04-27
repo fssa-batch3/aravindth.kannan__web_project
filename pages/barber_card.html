@@ -76,19 +76,7 @@
           />
         </div>
       </div>
-      <div class="name">
-        <label>Email</label>
-        <div class="name-box">
-          <input
-          required
-          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-            id="barber_card_email"
-            class="name-box-1"
-            type="email"
-            autocomplete="name"
-          />
-        </div>
-      </div>
+      
       <div class="name">
         <label>Profile-URL</label>
         <div class="name-box">
@@ -232,7 +220,7 @@
 
     <script>
       // get data from this form
-
+      const thisBarber = JSON.parse(localStorage.getItem("single_barber"));
       let checker = false;
 
       const barberCard = document.getElementById("barber_profile_form");
@@ -247,8 +235,8 @@
         }
 
         const barberName = document.getElementById("b_name").value;
-        const barberCardEmail =
-          document.getElementById("barber_card_email").value;
+        // const barberCardEmail =
+        //   document.getElementById("barber_card_email").value;
         const barberPhoto = document.getElementById("photo").value;
         const barberSlogan = document.getElementById("slogan").value;
         const barberPhone = document.getElementById("barber_phone").value;
@@ -260,7 +248,7 @@
         let one_barber_card = {
           barberid: barberId,
           barbername: barberName,
-          barber_email: barberCardEmail,
+          barber_email: thisBarber,
           barber_photo: barberPhoto,
           barber_slogan: barberSlogan,
           barber_phone:barberPhone,

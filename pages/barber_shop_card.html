@@ -76,7 +76,7 @@
           />
         </div>
       </div>
-      <div class="name">
+      <!-- <div class="name">
         <label> Shop email</label>
         <div class="name-box">
           <input
@@ -88,7 +88,7 @@
             autocomplete="name"
           />
         </div>
-      </div>
+      </div> -->
       <div class="name">
         <label>Shop photo</label>
         <div class="name-box">
@@ -240,6 +240,7 @@
     <!-- java script -->
     <script>
       // JSON
+      const thisBarber = JSON.parse(localStorage.getItem("single_barber"));
       let checker = false;
       const shopCard = document.getElementById("shop_profile_form");
       shopCard.addEventListener("submit",function (event){
@@ -252,7 +253,7 @@
      
 
       const shopName = document.getElementById("s_name").value.trim();
-      const shopEmail = document.getElementById("s_email").value.trim();
+      // const shopEmail = document.getElementById("s_email").value.trim();
       const shopPhoto = document.getElementById("s_photo").value.trim();
       const shopSlogan = document.getElementById("s_slogan").value.trim();
       const shopPhone = document.getElementById("s_phone").value.trim();
@@ -265,7 +266,7 @@
       let shopData = {
         shop_id: shopId,
         shop_name: shopName,
-        shop_email: shopEmail,
+        shop_email: thisBarber,
         shop_photo: shopPhoto,
         shop_slogan: shopSlogan,
         shop_phone: shopPhone,

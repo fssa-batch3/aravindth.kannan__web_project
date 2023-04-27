@@ -91,10 +91,10 @@
         <div class="right_head">
           <p>Barber information</p>
         </div>
-        <fieldset class="input_div">
+        <!-- <fieldset class="input_div">
           <legend class="label_full_details">Email Id</legend>
           <input class="input" type="text" id="barber_email" disabled />
-        </fieldset>
+        </fieldset> -->
 
         <fieldset class="input_div">
           <legend class="label_full_details">Experience</legend>
@@ -185,8 +185,8 @@
 
     <div class="all_haircut_designs">
       <div class="form_div">
+        <p>Add more haircuts</p>
         <form id="add_form" class="add_style_form">
-          <p>Add more haircuts</p>
           <div class="small_form_div">
             <label class="label">Haircut name</label>
 
@@ -208,14 +208,13 @@
             <br />
             <input
               required
-             
               id="style_para"
               class="name-box-1"
               type="text"
               autocomplete="name"
             />
           </div>
-          <div class="small_form_div">
+          <!-- <div class="small_form_div">
             <label class="label">Email</label>
 
             <br />
@@ -227,7 +226,7 @@
               type="email"
               autocomplete="name"
             />
-          </div>
+          </div> -->
           <div class="small_form_div">
             <label class="label">Haircut photo</label>
             <br />
@@ -240,7 +239,7 @@
       </div>
 
       <div class="haircuts">
-        <p>Your's all haircuts</p>
+        <!-- <p class="haircuts_head">Your's all haircuts</p> -->
       </div>
 
       <!-- all haircuts here -->
@@ -346,8 +345,7 @@
         .setAttribute("src", oneBarber["barber_photo"]);
       const barberName = (document.getElementById("barber_name").value =
         oneBarber["barbername"]);
-      const barberEmail = (document.getElementById("barber_email").value =
-        oneBarber["barber_email"]);
+      
       const barberExperience = (document.getElementById("experience").value =
         oneBarber["barber_experience"]);
       const barberSlogan = (document.getElementById("slogan").value =
@@ -426,26 +424,32 @@
 
       // get data from add more hairstyles
 
+
       let checker = false;
-       const addDesign =  document.getElementById("add_form");
-       addDesign.addEventListener("submit", function (event){
+      const addDesign = document.getElementById("add_form");
+      addDesign.addEventListener("submit", function (event) {
         event.preventDefault();
 
         let new_hair = [];
-        if(localStorage.getItem("newhaircuts") != null){
+        if (localStorage.getItem("newhaircuts") != null) {
           new_hair = JSON.parse(localStorage.getItem("newhaircuts"));
         }
 
         const hairName = document.getElementById("style_name").value.trim();
-        const hairCutEmail = document.getElementById("design_email").value.trim();
-        const hairDescription = document.getElementById("style_para").value.trim();
-        const hairCutPhoto = document.getElementById("design_photo").value.trim();
+
+        const hairDescription = document
+          .getElementById("style_para")
+          .value.trim();
+        const hairCutPhoto = document
+          .getElementById("design_photo")
+          .value.trim();
         const haircutId = Date.now();
 
         let hair_cut_data = {
           haircut_id: haircutId,
           haircutname: hairName,
-          haircut_email: hairCutEmail,
+          // this email is profile email
+          haircut_email: thisBarber,
           haircut_para: hairDescription,
           haircutImage: hairCutPhoto,
         };
@@ -453,35 +457,43 @@
         new_hair.push(hair_cut_data);
         const new_Array = JSON.stringify(new_hair);
         localStorage.setItem("newhaircuts", new_Array);
- 
-       })
+      });
 
       // add haircuts Java script
 
-      for (let i = 0; i < barber_list_beard.length; i++) {
+      const oneBarberHaircuts = JSON.parse(localStorage.getItem("newhaircuts"));
+
+      let one_email_haircuts_array = oneBarberHaircuts.filter(
+        F => F.haircut_email == thisBarber
+      );
+
+
+      console.log(one_email_haircuts_array);
+
+      for (let i = 0; i < one_email_haircuts_array.length; i++) {
         let big_div = document.createElement("div");
-        big_div.setAttribute("class", "card");
-        document.querySelector(".all_styles").append(big_div);
+        big_div.setAttribute("class", "haircut_card");
+        document.querySelector(".haircuts").append(big_div);
 
         let image = document.createElement("img");
-        image.setAttribute("class", "card_img");
-        image.setAttribute("src", barber_list_beard[i]["image"]);
-        image.setAttribute("alt", barber_list_beard[i]["alt"]);
+        image.setAttribute("class", "haircut_card_img");
+        image.setAttribute("src", one_email_haircuts_array[i]["haircutImage"]);
+        image.setAttribute("alt", one_email_haircuts_array[i]["haircutname"]);
         image.setAttribute("alt", "image");
         big_div.append(image);
 
         let content_div = document.createElement("div");
-        content_div.setAttribute("class", "card-content");
+        content_div.setAttribute("class", "haircut_card-content");
         big_div.append(content_div);
 
         let name = document.createElement("h2");
-        name.setAttribute("class", "card-title");
-        name.innerText = barber_list_beard[i]["barber_name"];
+        name.setAttribute("class", "haircut_card-title");
+        name.innerText = one_email_haircuts_array[i]["haircutname"];
         content_div.append(name);
 
         let text = document.createElement("p");
-        text.setAttribute("class", "card-text");
-        text.innerText = barber_list_beard[i]["description"];
+        text.setAttribute("class", "haircut_card-text");
+        text.innerText = one_email_haircuts_array[i]["haircut_para"];
         content_div.append(text);
       }
     </script>
