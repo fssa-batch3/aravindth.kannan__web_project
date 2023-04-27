@@ -187,6 +187,58 @@
       </div>
       <!-- about side end -->
     </div>
+
+    <!-- add more haircut designs -->
+
+    <div class="all_haircut_designs">
+      <div class="form_div">
+        <p>Add more haircuts</p>
+        <form id="add_form_1" class="add_style_form">
+          <div class="small_form_div">
+            <label class="label">Haircut name</label>
+
+            <br />
+            <input
+              required
+              pattern="[A-Z a-z]{1,32}"
+              title="Make sure that name should space"
+              id="style_name"
+              class="name-box-1"
+              type="text"
+              autocomplete="name"
+            />
+          </div>
+
+          <div class="small_form_div">
+            <label class="label">Description</label>
+
+            <br />
+            <input
+              required
+              id="style_para"
+              class="name-box-1"
+              type="text"
+              autocomplete="name"
+            />
+          </div>
+        
+          <div class="small_form_div">
+            <label class="label">Haircut photo</label>
+            <br />
+            <input required class="name-box-1" type="url" id="design_photo" />
+          </div>
+          <div class="three_buttons">
+            <button class="submit_1">Submit</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="haircuts">
+        
+      </div>
+
+     
+    </div>
     <!-- section is ended -->
 
     <!-- footer is started -->
@@ -359,7 +411,82 @@
           window.location.href = "./shop_profile.html";
         }
       });
+
+      let checker = false
+      const addDesign = document.getElementById("add_form_1");
+      addDesign.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        let new_hair = [];
+        if (localStorage.getItem("shop_newhaircuts") != null) {
+          new_hair = JSON.parse(localStorage.getItem("shop_newhaircuts"));
+        }
+
+        const hairName = document.getElementById("style_name").value.trim();
+
+        const hairDescription = document
+          .getElementById("style_para")
+          .value.trim();
+        const hairCutPhoto = document
+          .getElementById("design_photo")
+          .value.trim();
+        const haircutId = Date.now();
+
+        let hair_cut_data = {
+          shop_haircut_id: haircutId,
+          shop_haircutname: hairName,
+          // this email is profile email
+          shop_haircut_email: thisBarber,
+          shop_haircut_para: hairDescription,
+          shop_haircutImage: hairCutPhoto,
+        };
+
+        new_hair.push(hair_cut_data);
+        const new_Array = JSON.stringify(new_hair);
+        localStorage.setItem("shop_newhaircuts", new_Array);
+      });
+
+       // add haircuts Java script
+
+       const oneBarberHaircuts = JSON.parse(localStorage.getItem("shop_newhaircuts"));
+
+      let one_email_haircuts_array = oneBarberHaircuts.filter(
+       F => F.shop_haircut_email == thisBarber
+        );
+
+
+       console.log(one_email_haircuts_array);
+
+
+      for (let i = 0; i < one_email_haircuts_array.length; i++) {
+        let big_div = document.createElement("div");
+        big_div.setAttribute("class", "haircut_card");
+        document.querySelector(".haircuts").append(big_div);
+
+        let image = document.createElement("img");
+        image.setAttribute("class", "haircut_card_img");
+        image.setAttribute("src", one_email_haircuts_array[i]["shop_haircutImage"]);
+        image.setAttribute("alt", one_email_haircuts_array[i]["shop_haircutname"]);
+        image.setAttribute("alt", "image");
+        big_div.append(image);
+
+        let content_div = document.createElement("div");
+        content_div.setAttribute("class", "haircut_card-content");
+        big_div.append(content_div);
+
+        let name = document.createElement("h2");
+        name.setAttribute("class", "haircut_card-title");
+        name.innerText = one_email_haircuts_array[i]["shop_haircutname"];
+        content_div.append(name);
+
+        let text = document.createElement("p");
+        text.setAttribute("class", "haircut_card-text");
+        text.innerText = one_email_haircuts_array[i]["shop_haircut_para"];
+        content_div.append(text);
+      }
+
+
     </script>
-    <!-- <a href="./barber_home.html"></a> -->
+
   </body>
 </html>
