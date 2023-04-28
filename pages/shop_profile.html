@@ -144,7 +144,6 @@
             <br />
             <input class="input" type="text" id="shop_name" disabled />
           </div>
-        
 
           <div class="input_div">
             <label class="label">Shop experience: </label>
@@ -221,7 +220,7 @@
               autocomplete="name"
             />
           </div>
-        
+
           <div class="small_form_div">
             <label class="label">Haircut photo</label>
             <br />
@@ -233,11 +232,7 @@
         </form>
       </div>
 
-      <div class="haircuts">
-        
-      </div>
-
-     
+      <div class="haircuts"></div>
     </div>
     <!-- section is ended -->
 
@@ -412,7 +407,7 @@
         }
       });
 
-      let checker = false
+      let checker = false;
       const addDesign = document.getElementById("add_form_1");
       addDesign.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -446,17 +441,17 @@
         localStorage.setItem("shop_newhaircuts", new_Array);
       });
 
-       // add haircuts Java script
+      // add haircuts Java script
 
-       const oneBarberHaircuts = JSON.parse(localStorage.getItem("shop_newhaircuts"));
+      const oneBarberHaircuts = JSON.parse(
+        localStorage.getItem("shop_newhaircuts")
+      );
 
       let one_email_haircuts_array = oneBarberHaircuts.filter(
-       F => F.shop_haircut_email == thisBarber
-        );
+        F => F.shop_haircut_email == thisBarber
+      );
 
-
-       console.log(one_email_haircuts_array);
-
+      console.log(one_email_haircuts_array);
 
       for (let i = 0; i < one_email_haircuts_array.length; i++) {
         let big_div = document.createElement("div");
@@ -465,8 +460,14 @@
 
         let image = document.createElement("img");
         image.setAttribute("class", "haircut_card_img");
-        image.setAttribute("src", one_email_haircuts_array[i]["shop_haircutImage"]);
-        image.setAttribute("alt", one_email_haircuts_array[i]["shop_haircutname"]);
+        image.setAttribute(
+          "src",
+          one_email_haircuts_array[i]["shop_haircutImage"]
+        );
+        image.setAttribute(
+          "alt",
+          one_email_haircuts_array[i]["shop_haircutname"]
+        );
         image.setAttribute("alt", "image");
         big_div.append(image);
 
@@ -483,10 +484,31 @@
         text.setAttribute("class", "haircut_card-text");
         text.innerText = one_email_haircuts_array[i]["shop_haircut_para"];
         content_div.append(text);
+
+        let delete_haircut = document.createElement("button");
+        delete_haircut.setAttribute("class","haircut_delete")
+        delete_haircut.innerText = "Delete";
+        delete_haircut.setAttribute(
+          "onclick",
+          "deleteCard(" + one_email_haircuts_array[i]["shop_haircut_id"] + ")"
+        );
+        content_div.append(delete_haircut);
       }
-
-
+      // delete haircut function
+      function deleteCard(id) {
+        let arr = oneBarberHaircuts;
+        let card = arr.find(e => {
+          if (id == e["shop_haircut_id"]) {
+            return true;
+          }
+        });
+        let con = confirm("Are you sure want to delete");
+        if (con == true) {
+          let index = arr.indexOf(card);
+          arr.splice(index, 1);
+          localStorage.setItem("shop_newhaircuts", JSON.stringify(arr));
+        }
+      }
     </script>
-
   </body>
 </html>

@@ -476,7 +476,7 @@ body {
 }
 .haircut_card-content {
   z-index: 1;
-  margin-top: -50%;
+  margin-top: -58%;
   width: 285px;
   height: fit-content;
   padding: 2%;
@@ -537,4 +537,14 @@ body {
 .haircut_card_img:hover {
   transform: scale(1.02);
   z-index: -2;
+}
+
+.haircut_delete {
+  width: 60px;
+  margin-left: 2%;
+  border-radius: 3px;
+  height: auto;
+  color: white;
+  border: 1px solid white;
+  background-color: black;
 }
