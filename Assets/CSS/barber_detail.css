@@ -121,14 +121,25 @@ body {
 
 /* small profile div css end */
 
-.information {
+.all_haircuts {
   width: 54%;
-  height: fit-content;
-  overflow-y: auto;
   margin: 1%;
+  padding: 2%;
   border-radius: 10px;
-  gap: 1rem;
   background-color: rgb(223, 225, 225);
+}
+.information {
+  margin-top: 3%;
+  width: 100%;
+  gap: 2%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  display: grid;
+  grid-template-columns: auto auto auto;
+
+  /* padding: 1%; */
+
+  /* gap: 1rem; */
 }
 .right_head {
   width: 100%;
@@ -377,4 +388,83 @@ body {
 }
 .create_card:hover {
   transform: scale(1.1);
+}
+
+/* card css */
+.haircut_card {
+  background-size: cover;
+  border-radius: 10px;
+  transition: 200ms ease;
+  opacity: 0.9;
+  margin-top: 0;
+  width: 300px;
+  height: 420px;
+  overflow: hidden;
+}
+.haircut_card_img {
+  z-index: -5;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-size: cover;
+  border-radius: 2%;
+  transition: 200ms ease;
+  opacity: 1;
+  overflow: hidden;
+}
+.haircut_card-content {
+  z-index: 1;
+  margin-top: -50%;
+  width: 285px;
+  height: fit-content;
+  padding: 2%;
+  background: linear-gradient(
+    hsl(0 0% 0% / 0),
+    hsl(20 0% 0% / 0.3) 20%,
+    hsl(0 0% 0% / 1)
+  );
+  transform: translateY(58%);
+  transition: transform 300ms ease-in-out;
+}
+
+.haircut_card-title {
+  position: relative;
+  width: fit-content;
+  color: white;
+}
+.haircut_card-title::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background: rgb(125 225 125);
+  position: absolute;
+  transform: scalex(0);
+  transform-origin: left;
+  transition: transform 500ms ease-in-out;
+}
+
+.haircut_card-text {
+  color: rgb(255 255 255 / 0.8);
+  font-size: 20px;
+  text-align: center;
+}
+
+.haircut_card:hover {
+  transform: scale(1.02);
+  /* opacity: 0; */
+}
+
+.haircut_card:hover .haircut_card-title::after {
+  transform: scalex(1);
+}
+
+.haircut_card:hover .haircut_card-content {
+  transform: translateY(0);
+}
+.haircut_card_img:hover {
+  transform: scale(1.02);
+  z-index: -2;
 }

@@ -12,7 +12,7 @@ body {
   display: flex;
   margin: 0px;
   padding: 2%;
-  gap: 3rem;
+  gap: 1rem;
 }
 .topic_div {
   display: flex;
@@ -36,12 +36,21 @@ body {
   height: fit-content;
   width: 50%;
 }
+.all_haircuts {
+  width: 45%;
+}
 .about_shop {
-  width: 50%;
+  width: 100%;
   height: fit-content;
+  padding: 6%;
+  gap: 3%;
+  display: grid;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  grid-template-columns: auto auto;
+
   background-color: #cff3ed;
   background-image: linear-gradient(62deg, #eff2f2 0%, #999996 100%);
-
   border: 1px solid black;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
@@ -98,6 +107,7 @@ body {
   border-bottom: 1px solid black;
   padding: 2%;
 }
+
 .about_div {
   padding: 2%;
   width: 90%;
@@ -321,4 +331,83 @@ body {
 }
 .create_card:hover {
   transform: scale(1.1);
+}
+
+/* card css */
+.haircut_card {
+  background-size: cover;
+  border-radius: 10px;
+  transition: 200ms ease;
+  opacity: 0.9;
+  margin-top: 0;
+  width: 300px;
+  height: 420px;
+  overflow: hidden;
+}
+.haircut_card_img {
+  z-index: -5;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-size: cover;
+  border-radius: 2%;
+  transition: 200ms ease;
+  opacity: 1;
+  overflow: hidden;
+}
+.haircut_card-content {
+  z-index: 1;
+  margin-top: -50%;
+  width: 285px;
+  height: fit-content;
+  padding: 2%;
+  background: linear-gradient(
+    hsl(0 0% 0% / 0),
+    hsl(20 0% 0% / 0.3) 20%,
+    hsl(0 0% 0% / 1)
+  );
+  transform: translateY(58%);
+  transition: transform 300ms ease-in-out;
+}
+
+.haircut_card-title {
+  position: relative;
+  width: fit-content;
+  color: white;
+}
+.haircut_card-title::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background: rgb(125 225 125);
+  position: absolute;
+  transform: scalex(0);
+  transform-origin: left;
+  transition: transform 500ms ease-in-out;
+}
+
+.haircut_card-text {
+  color: rgb(255 255 255 / 0.8);
+  font-size: 20px;
+  text-align: center;
+}
+
+.haircut_card:hover {
+  transform: scale(1.02);
+  /* opacity: 0; */
+}
+
+.haircut_card:hover .haircut_card-title::after {
+  transform: scalex(1);
+}
+
+.haircut_card:hover .haircut_card-content {
+  transform: translateY(0);
+}
+.haircut_card_img:hover {
+  transform: scale(1.02);
+  z-index: -2;
 }

@@ -24,7 +24,7 @@
             <legend class="label">Barber name</legend>
             <input class="input_two" type="text" id="barber_name" disabled />
           </fieldset>
-          
+
           <fieldset class="field_div">
             <legend class="label_full_details">Experience</legend>
             <input class="input" type="text" id="experience" disabled />
@@ -51,47 +51,89 @@
       </div>
       <!-- left side end -->
 
-      <div class="information">
-        <div class="right_head">
-          <p>Barber information</p>
+      
+        <div class="all_haircuts">
+          <div class="right_head">
+            <p>Barber information</p>
+          </div>
+          <div class="information">
+            
+          </div>
         </div>
-       
-      </div>
+        
+      
     </div>
 
     <!-- java script -->
 
     <script>
-          let url = location.search;
+      let url = location.search;
       let prams = new URLSearchParams(url);
       let id = prams.get("id");
 
       //   get data from localstorage
-      const onebarberCard = JSON.parse(localStorage.getItem("barber_card")).find(
-        e => e.barberid == id
-      );
+      const onebarberCard = JSON.parse(
+        localStorage.getItem("barber_card")
+      ).find(e => e.barberid == id);
       //   get data from localstorage
-      const one_barber = JSON.parse(localStorage.getItem("barber_profile")).find(
-        event => event.barber_email == onebarberCard["barber_card_email"]
-      );
+      const one_barber = JSON.parse(
+        localStorage.getItem("barber_profile")
+      ).find(event => event.barber_email == onebarberCard["barber_card_email"]);
 
-    //   set value
+      //   set value
 
-    const barberProfile = document
+      const barberProfile = document
         .getElementById("b_photo")
         .setAttribute("src", one_barber["barber_photo"]);
       const barberName = (document.getElementById("barber_name").value =
-      one_barber["barbername"]);
-     
+        one_barber["barbername"]);
+
       const barberExperience = (document.getElementById("experience").value =
-      one_barber["barber_experience"]);
+        one_barber["barber_experience"]);
       const barberSlogan = (document.getElementById("slogan").value =
-      one_barber["barber_slogan"]);
-      
+        one_barber["barber_slogan"]);
+
       const barberAddress = (document.getElementById("address").value =
-      one_barber["barber_address"]);
+        one_barber["barber_address"]);
       const barberAbout = (document.getElementById("barber_about_id").value =
-      one_barber["barber_about"]);
+        one_barber["barber_about"]);
+
+      //  that pbarber's all haircuts
+
+      const oneBarberHaircuts = JSON.parse(localStorage.getItem("newhaircuts"));
+
+      let one_email_haircuts_array = oneBarberHaircuts.filter(
+        F => F.haircut_email == onebarberCard["barber_card_email"]
+      );
+
+      console.log(one_email_haircuts_array);
+
+      for (let i = 0; i < one_email_haircuts_array.length; i++) {
+        let big_div = document.createElement("div");
+        big_div.setAttribute("class", "haircut_card");
+        document.querySelector(".information").append(big_div);
+
+        let image = document.createElement("img");
+        image.setAttribute("class", "haircut_card_img");
+        image.setAttribute("src", one_email_haircuts_array[i]["haircutImage"]);
+        image.setAttribute("alt", one_email_haircuts_array[i]["haircutname"]);
+        image.setAttribute("alt", "image");
+        big_div.append(image);
+
+        let content_div = document.createElement("div");
+        content_div.setAttribute("class", "haircut_card-content");
+        big_div.append(content_div);
+
+        let name = document.createElement("h2");
+        name.setAttribute("class", "haircut_card-title");
+        name.innerText = one_email_haircuts_array[i]["haircutname"];
+        content_div.append(name);
+
+        let text = document.createElement("p");
+        text.setAttribute("class", "haircut_card-text");
+        text.innerText = one_email_haircuts_array[i]["haircut_para"];
+        content_div.append(text);
+      }
     </script>
   </body>
 </html>
