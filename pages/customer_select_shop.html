@@ -51,12 +51,12 @@
         </div>
       </div>
     </header>
+
     <!-- header is ended -->
 
     <!-- section is started -->
     <p class="big-font">Select Your Shop</p>
     <div class="all-content">
-      
       <!-- all cards assemble here -->
     </div>
     <!-- section is ended -->
@@ -146,7 +146,7 @@
 
       let shop_card = JSON.parse(localStorage.getItem("shop_card"));
 
-      // console.log(shop_card);
+     
 
       for (let i = 0; i < shop_card.length; i++) {
         select_shop_list.push(shop_card[i]);
@@ -155,7 +155,7 @@
       for (i = 0; i < select_shop_list.length; i++) {
         const barber = select_shop_list[i];
 
-        // console.log("Test : ", select_shop_list[i]["profile_photo"]);
+      
 
         let content = document.createElement("div");
         content.setAttribute("class", "container");
@@ -237,6 +237,7 @@
 
         let select_btn = document.createElement("a");
         select_btn.setAttribute("class", "select_btn");
+        select_btn.setAttribute("href", "./customer_shop_booking_form.html");
         select_btn.innerText = "Select";
         select_div.append(select_btn);
 
@@ -244,10 +245,7 @@
       }
       console.log(select_shop_list);
 
-      // const username = localStorage.getItem("username");
-      // console.log(usernsme);
-
-      // document.getElementById("username").innerText = username;
+    
     </script>
   </body>
 </html>

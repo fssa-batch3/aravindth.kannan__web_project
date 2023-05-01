@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>select-barber</title>
     <link rel="stylesheet" href="../Assets/CSS/customer_select_barber.css" />
-    <!-- <link rel="stylesheet" href="../Assets/CSS/footer-2.css" /> -->
+
     <link rel="stylesheet" href="../Assets/CSS/universe.css" />
   </head>
   <body>
@@ -34,7 +34,7 @@
                 <a href="./customer_beard_style.html">Beard</a>
               </div>
             </div>
-            <a class="nav" href="./book.html">book now</a>
+            <a class="nav" href="./customer_book_now.html">book now</a>
 
             <a class="nav" href="../pages/customer_about_us.html">About Us</a>
             <a class="nav" href="../pages/customer_contact_us.html"
@@ -57,8 +57,6 @@
     <div class="all-content">
         <!-- barber card -->
       
-      
-      <!-- new card end -->
     </div>
     <!-- footer start -->
 
@@ -134,6 +132,7 @@
         </div>
       </div>
     </footer>
+   
    
 
     <!-- java script -->
@@ -242,6 +241,7 @@
 
         let select_btn = document.createElement("a");
         select_btn.setAttribute("class", "select-button");
+        select_btn.setAttribute("href","./customer_booking_barber.html");
         select_btn.innerText = "Select";
         buttons_div.append(select_btn);
 
