@@ -237,13 +237,13 @@
 
         let select_btn = document.createElement("a");
         select_btn.setAttribute("class", "select_btn");
-        select_btn.setAttribute("href", "./customer_shop_booking_form.html");
+        select_btn.setAttribute("href", "./customer_shop_booking_form.html?id=" + select_shop_list[i]["shop_card_id"]);
         select_btn.innerText = "Select";
         select_div.append(select_btn);
 
         document.querySelector(".all-content").append(content);
       }
-      console.log(select_shop_list);
+  
 
     
     </script>

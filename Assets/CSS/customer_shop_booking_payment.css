@@ -1,0 +1,96 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: aliceblue;
+}
+.full_content {
+  margin: 10% auto;
+
+  background-color: rgb(179, 179, 179);
+  width: 70%;
+  height: fit-content;
+}
+.content {
+  border: 1px solid black;
+  display: flex;
+  margin: auto;
+  padding: 2%;
+  width: 95.7%;
+  height: fit-content;
+}
+.right_and_left {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 100%;
+}
+.left {
+  border-bottom: 1px solid black;
+  width: 100%;
+  height: 50%;
+}
+.left h2 {
+  font-size: 40px;
+}
+.day_labels {
+  font-size: 20px;
+  color: black;
+}
+.date_font {
+  font-size: 25px;
+  font-weight: bold;
+}
+.right {
+  padding-left: 2%;
+  border-left: 1px solid black;
+  width: 40%;
+  height: 100%;
+}
+.right h2 {
+  font-size: 40px;
+}
+.shop_text {
+  font-size: 30px;
+  font-weight: bold;
+}
+.bottum {
+    background-color: rgb(114, 113, 113);
+  padding: 2%;
+  margin: 2%;
+  border: 1px solid black;
+}
+.bottum h1 {
+  font-size: 40px;
+}
+.pay_font {
+  font-size: 20px;
+  font-weight: bold;
+}
+.payment_div {
+  width: 100%;
+}
+.check {
+  width: 20px;
+  height: 20px;
+}
+.payment_btn {
+  color: white;
+  background-color: black;
+  font-size: 20px;
+  font-weight: bolder;
+  border: 1px solid black;
+  width: 100%;
+  height: 70px;
+}
+.payment_success_div {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  background-color: antiquewhite;
+}
+.payment_success_div p {
+  font-size: 30px;
+  text-align: center;
+}

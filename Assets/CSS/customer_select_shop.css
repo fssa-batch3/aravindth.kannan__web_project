@@ -113,6 +113,7 @@ body {
   gap: 10%;
 }
 .select_btn {
+  text-decoration: none;
   border-radius: 5px;
   color: black;
   font-size: 1.2em;
