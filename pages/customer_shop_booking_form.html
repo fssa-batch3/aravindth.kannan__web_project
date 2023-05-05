@@ -66,7 +66,7 @@
         <div class="select_div">
           <label class="name-1"> Select haircut</label>
           <br />
-          <select name="service" id="serviceid" class="all_service_drop_btn">
+          <select name="service" id="serviceid" class="all_service_drop_btn" required>
             <option>Short haircut = 35$</option>
             <option>Long haircut = 20$</option>
             <option>Medium haircut = 40$</option>
@@ -77,7 +77,7 @@
         </div>
         <div class="phone">
           <p class="phone-1">Date</p>
-          <input id="customer_shop_date" class="phone-input" type="date" />
+          <input id="customer_shop_date" class="phone-input" type="date"  required/>
         </div>
 
         <div class="book-now">
@@ -172,13 +172,11 @@
 
       let detail_btn = document.createElement("a");
       detail_btn.setAttribute("class", "select_btn");
-
       detail_btn.innerText = "Details";
       select_div.append(detail_btn);
-
+      
       let select_btn = document.createElement("a");
       select_btn.setAttribute("class", "select_btn");
-
       select_btn.innerText = "Select";
       select_div.append(select_btn);
 

@@ -241,7 +241,7 @@
 
         let select_btn = document.createElement("a");
         select_btn.setAttribute("class", "select-button");
-        select_btn.setAttribute("href","./customer_booking_barber.html");
+        select_btn.setAttribute("href","./customer_booking_barber.html?id=" + select_barber_list[i]["barberid"]);
         select_btn.innerText = "Select";
         buttons_div.append(select_btn);
 
