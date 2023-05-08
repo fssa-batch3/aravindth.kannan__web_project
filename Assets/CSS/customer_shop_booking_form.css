@@ -38,12 +38,9 @@ body {
   color: black;
 }
 .time_div {
-  width: 70%;
-  margin: auto;
-  display: grid;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  grid-template-columns: auto auto auto;
+  width: 30%;
+  font-size: 20px;
+  height: 30px;
 }
 .select_div {
   margin-top: 2%;
@@ -55,17 +52,15 @@ body {
   background-color: transparent;
 }
 
-.time_anker {
-  margin: 4%;
-  display: flex;
-  border-radius: 5px;
-  background-color: black;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+.book {
+  cursor: pointer;
+  width: 99%;
+  height: 50px;
+  font-size: 20px;
   color: white;
-  width: 100px;
-  height: 30px;
+  background-color: black;
+  margin-top: 3%;
+  border-radius: 4px;
 }
 .name-input,
 .phone-input {
@@ -90,6 +85,7 @@ body {
   display: flex;
 }
 .book-now-1 {
+  cursor: pointer;
   border-radius: 3px;
   font-size: 20px;
   display: flex;
@@ -103,9 +99,9 @@ body {
   transition: 0.7s;
 }
 .book-now-1:hover {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
   color: white;
-  background-color: black;
+  background-color: grey;
 }
 
 .right-side {

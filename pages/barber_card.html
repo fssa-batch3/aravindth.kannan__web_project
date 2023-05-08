@@ -258,23 +258,11 @@
           
         };
 
-        // verify this card is already exists or not.
-        for (i = 0; i < newArray.length; i++) {
-          if (barberCardEmail === newArray[i]["barber_email"]) {
-            checker = true;
-            alert("this card is already exists");
-            break;
-          } else {
-            checker = false;
-          }
-        }
-
-        if (checker === false) {
           newArray.push(one_barber_card);
           const pushArray = JSON.stringify(newArray);
           localStorage.setItem("barber_profile", pushArray);
           window.location.href = "./barber_profile.html";
-        }
+        
       });
     </script>
   </body>

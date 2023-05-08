@@ -32,12 +32,9 @@ body {
 .left h2 {
   font-size: 40px;
 }
-.day_labels {
-  font-size: 20px;
-  color: black;
-}
+
 .date_font {
-  font-size: 25px;
+  font-size: 23px;
   font-weight: bold;
 }
 .right {
@@ -50,11 +47,11 @@ body {
   font-size: 40px;
 }
 .shop_text {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
 }
 .bottum {
-    background-color: rgb(114, 113, 113);
+  background-color: rgb(114, 113, 113);
   padding: 2%;
   margin: 2%;
   border: 1px solid black;
@@ -76,6 +73,7 @@ body {
 .payment_btn {
   color: white;
   background-color: black;
+  cursor: pointer;
   font-size: 20px;
   font-weight: bolder;
   border: 1px solid black;
@@ -83,14 +81,44 @@ body {
   height: 70px;
 }
 .payment_success_div {
+  position: absolute;
+  border: 1px solid black;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  font-size: 30px;
+  text-align: center;
+}
+.payment_success_div_onclick img {
+  /* mix-blend-mode: color; */
+  height: 50%;
+  margin: auto;
+  border-radius: 30px;
+}
+.payment_success_div p {
+  text-align: center;
+  position: relative;
+  top: 40%;
+}
+.payment_success_div_onclick {
+  position: absolute;
   border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70px;
-  background-color: antiquewhite;
-}
-.payment_success_div p {
+  background: rgb(0 0 0 / 50%);
   font-size: 30px;
+  height: 100%;
   text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* overflow-x: hidden; */
+}
+
+.payment_success_div_text {
+  /* background-color: red; */
+  position: absolute;
+  top: 60%;
 }

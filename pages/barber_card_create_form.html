@@ -11,50 +11,50 @@
   <body>
     <!-- header is started -->
     <header>
-        <div class="header">
-          <div>
-            <a href="../pages/barber_home.html">
-              <img
-                class="logo_img"
-                src="../Assets/Images/sharp logo black.png"
-                alt="logo"
-              />
-            </a>
-          </div>
-          <div>
-            <nav class="All-navs">
-              <div class="nav_dropdown">
-                <button class="nav_dropbtn">Hair styles</button>
-                <div class="nav_dropdown-content">
-                  <a href="../pages/barber_short_style.html">Short</a>
-                  <a href="../pages/barber_medium_style.html">Medium</a>
-                  <a href="../pages/barber_long_style.html">Long</a>
-                  <a href="../pages/barber_fade_style.html">Fade</a>
-                  <a href="../pages/barber_undercut_style.html">Undercut</a>
-                  <a href="../pages/barber_beard_style.html">Beard</a>
-                </div>
-              </div>
-              <a class="nav" href="../pages/barber_card.html">Barber card</a>
-              <a class="nav" href="../pages/barber_shop_card.html">Shop card</a>
-              <a class="nav" href="../pages/barber_booking_list.html"
-                >booking list</a
-              >
-  
-              <a class="nav" href="../pages/barber_about_us.html">About Us</a>
-              <a class="nav" href="../pages/barber_contact_us.html">Contact Us</a>
-              <a class="nav" href="./barber_profile.html">Barber profile</a>
-              <a class="nav" href="./shop_profile.html">Shop profile</a>
-              <a class="nav" href="./barber_account_profile.html"
-                ><img
-                  src="../Assets/Images/profile-2.png"
-                  alt="profile"
-                  height="30px"
-                  width="30px"
-              /></a>
-            </nav>
-          </div>
+      <div class="header">
+        <div>
+          <a href="../pages/barber_home.html">
+            <img
+              class="logo_img"
+              src="../Assets/Images/sharp logo black.png"
+              alt="logo"
+            />
+          </a>
         </div>
-      </header>
+        <div>
+          <nav class="All-navs">
+            <div class="nav_dropdown">
+              <button class="nav_dropbtn">Hair styles</button>
+              <div class="nav_dropdown-content">
+                <a href="../pages/barber_short_style.html">Short</a>
+                <a href="../pages/barber_medium_style.html">Medium</a>
+                <a href="../pages/barber_long_style.html">Long</a>
+                <a href="../pages/barber_fade_style.html">Fade</a>
+                <a href="../pages/barber_undercut_style.html">Undercut</a>
+                <a href="../pages/barber_beard_style.html">Beard</a>
+              </div>
+            </div>
+            <a class="nav" href="../pages/barber_card.html">Barber card</a>
+            <a class="nav" href="../pages/barber_shop_card.html">Shop card</a>
+            <a class="nav" href="../pages/barber_booking_list.html"
+              >booking list</a
+            >
+
+            <a class="nav" href="../pages/barber_about_us.html">About Us</a>
+            <a class="nav" href="../pages/barber_contact_us.html">Contact Us</a>
+            <a class="nav" href="./barber_profile.html">Barber profile</a>
+            <a class="nav" href="./shop_profile.html">Shop profile</a>
+            <a class="nav" href="./barber_account_profile.html"
+              ><img
+                src="../Assets/Images/profile-2.png"
+                alt="profile"
+                height="30px"
+                width="30px"
+            /></a>
+          </nav>
+        </div>
+      </div>
+    </header>
     <!-- header is ended -->
 
     <!-- section is started -->
@@ -67,9 +67,9 @@
 
         <div class="name-box">
           <input
-             required
-          pattern="[A-Za-z0-9]+"
-          title="Make sure that name should not contain space"
+            required
+            pattern="[A-Za-z0-9]+"
+            title="Make sure that name should not contain space"
             id="b_name"
             class="name-box-1"
             type="text"
@@ -94,17 +94,13 @@
       <div class="name">
         <label>Profile-URL</label>
         <div class="name-box">
-          <input 
-          required
-          class="name-box-1" type="url" id="photo" />
+          <input required class="name-box-1" type="url" id="photo" />
         </div>
       </div>
 
-      
-
       <div class="sample-haircut">
         <input
-        required
+          required
           class="name-box-1"
           type="url"
           id="sample"
@@ -113,7 +109,7 @@
       </div>
       <div class="sample-haircut">
         <input
-        required
+          required
           class="name-box-1"
           type="url"
           id="sample_1"
@@ -122,7 +118,7 @@
       </div>
       <div class="sample-haircut">
         <input
-        required
+          required
           class="name-box-1"
           type="url"
           id="sample_2"
@@ -249,23 +245,11 @@
           barber_sample_2: barberSample_2,
         };
 
-        // verify this card is already exists or not.
-        for (i = 0; i < newArray.length; i++) {
-          if (barberCardEmail === newArray[i]["barber_card_email"]) {
-            checker = true;
-            alert("this card is already exists");
-            break;
-          } else {
-            checker = false;
-          }
-        }
-
-        if (checker === false) {
-          newArray.push(one_barber_card);
-          const pushArray = JSON.stringify(newArray);
-          localStorage.setItem("barber_card", pushArray);
-          window.location.href = "./barber_profile.html";
-        }
+        newArray.push(one_barber_card);
+        const pushArray = JSON.stringify(newArray);
+        localStorage.setItem("barber_card", pushArray);
+        window.location.href = "./barber_profile.html";
+  
       });
     </script>
   </body>

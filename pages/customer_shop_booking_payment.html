@@ -12,52 +12,113 @@
   </head>
   <body>
     <div class="full_content">
-    <div class="content">
-      <div class="right_and_left">
-        <div class="left">
-          <h2>Schedule Details</h2>
-          <ul>
-            <li class="date_font" id="date"><label class="day_labels">Day : </label>22-09-2023</li>
-            <li class="date_font" id="time"><label class="day_labels">Time : </label>11:30 AM - 1:15 PM</li>
-            <li class="date_font" id="haircut_name">
-              <label class="day_labels">Haircut name : </label>Long haircut
-            </li>
-          </ul>
-        </div>
-        <div class="bottum">
-          <h1>Please make payment for our service</h1>
-          <div>
-            <label class="pay_font"> <input class="check" type="checkbox" /> G pay</label>
-            <br />
-            <label class="pay_font"> <input class="check" type="checkbox" /> Phone pay</label>
-            <br />
-            <label class="pay_font"> <input class="check" type="checkbox" /> Paypal</label>
-            <br />
-            <label class="pay_font"> <input class="check" type="checkbox" /> Pay At arrival</label>
+      <div class="content">
+        <div class="right_and_left">
+          <div class="left">
+            <h2>Schedule Details</h2>
+            <ul>
+              <li class="date_font" id="date"></li>
+              <li class="date_font" id="time">11:30 AM - 1:15 PM</li>
+              <li class="date_font" id="haircut_name">Long haircut</li>
+            </ul>
+          </div>
+          <div class="bottum">
+            <h1>Please make payment for our service</h1>
+            <form id="payment_methods">
+              <input class="check" type="radio" name="payment" />
+              <label class="pay_font">G PAY</label>
+              <br />
+
+              <input class="check" type="radio" name="payment" />
+              <label class="pay_font"> Phone pay</label>
+              <br />
+
+              <input class="check" type="radio" name="payment" />
+              <label class="pay_font">Paypal</label>
+              <br />
+
+              <input class="check" type="radio" name="payment" />
+              <label class="pay_font">Pay At arrival</label>
+            </form>
           </div>
         </div>
-      </div>
-      <div class="right">
-        <h2>Shop Details</h2>
-        <ul>
-          <li class="shop_text" id="shop_anme"><label class="day_labels">Shop name : </label>mahaan</li>
-          <li class="shop_text" id="shop_ex"><label class="day_labels">Shop experience : </label>Ten years</li>
-          <li class="shop_text" id="shop_slogan"><label class="day_labels">Shop slogan : </label>Vantha vettuvom!</li>
-          <li class="shop_text" id="shop_phone"><label class="day_labels">Shop phone : </label>1234567890</li>
-          <li class="shop_text" id="shop_address"><label class="day_labels">Shop address : </label>3/25, East street, A.kumara puram, thoothukudi-08, tamil nadu.</li>
-          <li class="shop_text" id="shop_about"><label class="day_labels">Shop about : </label>Please Don't go to this shop</li>
+        <div class="right">
+          <h2>Shop Details</h2>
 
-        </ul>
+          <p class="shop_text" id="shop_name"></p>
+          <p class="shop_text" id="shop_ex"></p>
+          <p class="shop_text" id="shop_slogan"></p>
+          <p class="shop_text" id="shop_phone"></p>
+          <p class="shop_text" id="shop_address"></p>
+          <p class="shop_text" id="shop_about"></p>
+        </div>
+      </div>
+      <div class="payment_div" onclick="myFunction()">
+        <button class="payment_btn">Book now</button>
+      </div>
+
+      <div class="payment_success_div" id="success_message">
+        <img src="../Assets/Images/right_tick.gif" alt="success">
+        <p class="payment_success_div_text">Successfully booked</p>
       </div>
     </div>
-    <div class="payment_div">
-      <button class="payment_btn">
-        Book now
-      </button>
-    </div>
-    <div class="payment_success_div">
-      <p>"Successfully booked your time for haircut"</p>
-    </div>
-  </div>
+   
+
+    <script>
+      // get data form booking page used URL prams
+
+      let url = location.search;
+      let prams = new URLSearchParams(url);
+      let id = prams.get("id");
+
+      const oneShopBooking = JSON.parse(
+        localStorage.getItem("shopBookInfo")
+      ).find(e => e.shop_book_id == id);
+      // set values of booking details
+      let book_date = (document.getElementById("date").innerHTML =
+        "Date : " + oneShopBooking["shop_book_date"]);
+      let book_time = (document.getElementById("time").innerHTML =
+        "Time : " + oneShopBooking["shop_book_time"]);
+      let book_haircut = (document.getElementById("haircut_name").innerHTML =
+        "Haircut type : " + oneShopBooking["select_shop_Haircut"]);
+      // select the shop card from shop booking page.
+      const oneShopCard = JSON.parse(localStorage.getItem("shop_card")).find(
+        event => event.shop_card_id == oneShopBooking["shop_book_card_id"]
+      );
+      console.log(oneShopCard);
+      // get the shop full details from that shop card.
+      const oneShopDetail = JSON.parse(localStorage.getItem("shopinfo")).find(
+        ev => ev.shop_email == oneShopCard["shop_card_email"]
+      );
+      console.log(oneShopDetail);
+      // set values of booking shop details from that shop card.
+
+      let book_shop_name = (document.getElementById("shop_name").innerHTML =
+        "Shop name :   " + oneShopDetail["shop_name"]);
+
+      let book_experience = (document.getElementById("shop_ex").innerHTML =
+        "Shop experience :   " + oneShopDetail["shop_experience"]);
+
+      let book_slogan = (document.getElementById("shop_slogan").innerHTML =
+        "Shop slogan :   " + oneShopDetail["shop_slogan"]);
+
+      let book_phone = (document.getElementById("shop_phone").innerHTML =
+        "Shop phone :   " + oneShopDetail["shop_phone"]);
+
+      let book_shop_address = (document.getElementById(
+        "shop_address"
+      ).innerHTML = "Shop address :   " + oneShopDetail["shop_address"]);
+
+      let book_shop_about = (document.getElementById("shop_about").innerHTML =
+        "About shop :   " + oneShopDetail["shop_about"]);
+
+        function myFunction()
+          {
+              document.getElementById('success_message').setAttribute("class", "payment_success_div_onclick");
+          }
+
+
+
+    </script>
   </body>
 </html>

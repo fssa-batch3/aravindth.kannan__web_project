@@ -54,19 +54,24 @@
       </div>
     </header>
     <!-- header finished -->
-    <div class="content-1">
+    <form id="booking" class="content-1">
       <div class="left-side">
         <div class="booking-shop">
           <p class="font">Booking Your Shop</p>
         </div>
         <div class="name">
-          <p class="name-1">Shop name</p> 
+          <p class="name-1">Shop name</p>
           <input id="shop_name" class="name-input" type="text" disabled />
         </div>
         <div class="select_div">
           <label class="name-1"> Select haircut</label>
           <br />
-          <select name="service" id="serviceid" class="all_service_drop_btn" required>
+          <select
+            name="service"
+            id="haircutid"
+            class="all_service_drop_btn"
+            required
+          >
             <option>Short haircut = 35$</option>
             <option>Long haircut = 20$</option>
             <option>Medium haircut = 40$</option>
@@ -77,31 +82,40 @@
         </div>
         <div class="phone">
           <p class="phone-1">Date</p>
-          <input id="customer_shop_date" class="phone-input" type="date"  required/>
+          <input
+            id="customer_shop_date"
+            class="phone-input"
+            type="date"
+            required
+          />
         </div>
 
         <div class="book-now">
-          <button class="book-now-1">Check available time</button>
+          <button id="check_btn" class="book-now-1">
+            Check available time
+          </button>
         </div>
         <div class="phone">
           <p class="phone-1">Time Shedule</p>
-          <div class="time_div">
-            <a class="time_anker">08:00Am</a>
+          <select id="shop_time" class="time_div">
+            <option>08:00Am - 09:50Am</option>
 
-            <a class="time_anker">10:00Am</a>
+            <option>10:00Am - 11:50Am</option>
 
-            <a class="time_anker">12:00Pm</a>
+            <option>12:00Pm - 01:50Pm</option>
 
-            <a class="time_anker">02:00Pm</a>
+            <option>02:00Pm - 03:50Pm</option>
 
-            <a class="time_anker">04:00Pm</a>
+            <option>04:00Pm - 05:50Pm</option>
 
-            <a class="time_anker">06:00Pm</a>
-          </div>
+            <option>06:00Pm - 07:50Pm</option>
+          </select>
+          <br />
+          <button id="next_btn" class="book">Next</button>
         </div>
       </div>
       <div class="right-side"></div>
-    </div>
+    </form>
 
     <script>
       let url = location.search;
@@ -174,7 +188,7 @@
       detail_btn.setAttribute("class", "select_btn");
       detail_btn.innerText = "Details";
       select_div.append(detail_btn);
-      
+
       let select_btn = document.createElement("a");
       select_btn.setAttribute("class", "select_btn");
       select_btn.innerText = "Select";
@@ -186,6 +200,61 @@
 
       let shopName = (document.getElementById("shop_name").value =
         oneShopCard["shop_card_name"]);
+
+      // get data from booking form.
+
+      let Cheker = false;
+
+      const checkTime = document.getElementById("check_btn");
+      // check available function.
+      checkTime.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const selectHaircut = document.getElementById("haircutid").value.trim();
+        const shopDate = document
+          .getElementById("customer_shop_date")
+          .value.trim();
+        // shop card data
+        const shopCardName = shopName;
+
+        if (shopDate.value === "") {
+          alert("please fill the requirments ");
+        }
+      });
+
+      // get data from booking form.
+
+      const book = document.getElementById("booking");
+      book.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        let bookNew = [];
+        if (localStorage.getItem("shopBookInfo") != null) {
+          bookNew = JSON.parse(localStorage.getItem("shopBookInfo"));
+        }
+        const selectHaircut = document.getElementById("haircutid").value.trim();
+        const shopDate = document
+          .getElementById("customer_shop_date")
+          .value.trim();
+        const shopTime = document.getElementById("shop_time").value.trim();
+        const shopCardName = shopName;
+        const shopBookId = Date.now();
+
+        let shop_book_data = {
+          shop_book_card_id:oneShopCard["shop_card_id"],
+          shop_book_name: shopCardName,
+          select_shop_Haircut: selectHaircut,
+          shop_book_date: shopDate,
+          shop_book_time: shopTime,
+          shop_book_id: shopBookId,
+        };
+
+        bookNew.push(shop_book_data);
+        const stringArray = JSON.stringify(bookNew);
+        localStorage.setItem("shopBookInfo", stringArray);
+        window.location.href =
+          "./customer_shop_booking_payment.html?id=" + shopBookId;
+      });
     </script>
   </body>
 </html>
