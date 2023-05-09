@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../Assets/CSS/universe.css" />
+    <link rel="stylesheet" href="../Assets/CSS/barber_booking_list.css" />
     <title>barber booking list</title>
   </head>
   <body>
@@ -56,9 +57,26 @@
     </header>
     <!-- header is ended -->
 
-    <!-- section is started -->
-
-    <!-- section is ended -->
+    <!-- both booked list -->
+    <div class="both_list">
+      <!-- shop booked list section is started -->
+      <section class="shop_list">
+        <!-- <div class="booked_div">
+          <h2>Booked Details</h2>
+          <p class="shop_text" id="shop_name">sharp&clean</p>
+          <ul>
+            <li class="detail" id="customer_name"></li>
+            <li class="detail" id="date"></li>
+            <li class="detail" id="time"></li>
+            <li class="detail" id="hairstyle"></li>
+            <li class="detail" id="cus_phone"></li>
+          </ul>
+          <button id="done_button" class="done_btn">Done</button>
+        </div> -->
+      </section>
+      <!--  barber booked list section is started -->
+      <section class="barber_list"></section>
+    </div>
 
     <!-- footer is started -->
     <footer>
@@ -134,5 +152,74 @@
       </div>
     </footer>
     <!-- footer is ended -->
+
+    <!-- java script -->
+    <script>
+      const loginEmail = JSON.parse(localStorage.getItem("single_barber"));
+
+      const oneShop = JSON.parse(localStorage.getItem("shopinfo")).find(
+        e => e.shop_email == loginEmail
+      );
+
+      const allShopBookedList = JSON.parse(
+        localStorage.getItem("shopBookedDetails")
+      );
+
+      let one_shop_booked_list = allShopBookedList.filter(
+        F => F.booked_shop_email == oneShop["shop_email"]
+      );
+
+      for (let i = 0; i < one_shop_booked_list.length; i++) {
+        let big_div = document.createElement("div");
+        big_div.setAttribute("class", "booked_div");
+        document.querySelector(".shop_list").append(big_div);
+
+        let h2font = document.createElement("h2");
+        h2font.innerHTML = "Booked Details";
+        big_div.append(h2font);
+
+        let shopname = document.createElement("p");
+        shopname.setAttribute("class", "shop_text");
+        shopname.innerHTML = one_shop_booked_list[i]["booked_shop_name"];
+        big_div.append(shopname);
+
+        let ul = document.createElement("ul");
+        big_div.append(ul);
+
+        let text = document.createElement("li");
+        text.setAttribute("class", "detail");
+        text.innerText = one_shop_booked_list[i]["booked_custom_name"];
+        ul.append(text);
+
+        let text_1 = document.createElement("li");
+        text_1.setAttribute("class", "detail");
+        text_1.innerText = one_shop_booked_list[i]["booked_shop_date"];
+        ul.append(text_1);
+
+        let text_2 = document.createElement("li");
+        text_2.setAttribute("class", "detail");
+        text_2.innerText = one_shop_booked_list[i]["booked_shop_time"];
+        ul.append(text_2);
+
+        let text_3 = document.createElement("li");
+        text_3.setAttribute("class", "detail");
+        text_3.innerText = one_shop_booked_list[i]["booked_haircut"];
+        ul.append(text_3);
+
+        let text_4 = document.createElement("li");
+        text_4.setAttribute("class", "detail");
+        text_4.innerText = one_shop_booked_list[i]["booked_custom_phone"];
+        ul.append(text_4);
+
+        let donebtn = document.createElement("button");
+        donebtn.setAttribute("class", "done_btn");
+        donebtn.innerText = "Done";
+        // donebtn.setAttribute(
+        //   "onclick",
+        //   "deleteCard(" + one_shop_booked_list[i]["shop_haircut_id"] + ")"
+        // );
+        big_div.append(donebtn);
+      }
+    </script>
   </body>
 </html>

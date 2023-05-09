@@ -147,14 +147,16 @@
         }
 
         const shopEmail = oneShopDetail["shop_email"];
+        const bookedShopname = oneShopDetail["shop_name"]
         const bookedCusName = book_cus_name;
         const bookedDate = book_date;
         const bookedTime = book_time;
         const bookedHaircut = book_haircut;
-        const bookedCusPhone = singleUserInfo["phoneNumber"];
+        const bookedCusPhone = "Customer Phone : " + singleUserInfo["phoneNumber"];
         const bookedId = Date.now();
 // create new object.
         let booked_data = {
+          booked_shop_name:bookedShopname,
           booked_shop_email: shopEmail,
           booked_custom_name: bookedCusName,
           booked_shop_date: bookedDate,
