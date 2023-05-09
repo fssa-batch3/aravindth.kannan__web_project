@@ -97,11 +97,11 @@
           />
         </div>
 
-        <div class="book-now">
+        <!-- <div class="book-now">
           <button id="check_btn" class="book-now-1">
             Check available time
           </button>
-        </div>
+        </div> -->
         <div class="phone">
           <p class="phone-1">Time Shedule</p>
           <select id="shop_time" class="time_div">
@@ -205,29 +205,27 @@
 
       // get data from booking form.
 
-      let Cheker = false;
+      // let Cheker = false;
 
-      const checkTime = document.getElementById("check_btn");
-      // check available function.
-      checkTime.addEventListener("click", function (event) {
-        event.preventDefault();
+      // const checkTime = document.getElementById("check_btn");
+      // // check available function.
+      // checkTime.addEventListener("click", function (event) {
+      //   event.preventDefault();
 
-       
+      //   const selectHaircut = document.getElementById("haircutid").value.trim();
+      //   const shopDate = document
+      //     .getElementById("customer_shop_date")
+      //     .value.trim();
+      //   // shop card data
+      //   const shopCardName = oneShopCard["shop_card_name"];
 
-        const selectHaircut = document.getElementById("haircutid").value.trim();
-        const shopDate = document
-          .getElementById("customer_shop_date")
-          .value.trim();
-        // shop card data
-        const shopCardName =  oneShopCard["shop_card_name"];
-
-        if (shopDate.value === "") {
-          alert("please fill the requirments ");
-        }
-      });
+      //   if (shopDate.value === "") {
+      //     alert("please fill the requirments ");
+      //   }
+      // });
 
       // get data from booking form.
-
+        let checker = false;
       const book = document.getElementById("booking");
       book.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -241,27 +239,44 @@
           .getElementById("customer_shop_date")
           .value.trim();
         const shopTime = document.getElementById("shop_time").value.trim();
-        const shopName = document.getElementById("shop_name").value.trim();
+        const shopName = oneShopCard["shop_card_name"];
+        const customerName = document.getElementById("shop_name").value.trim();
         const shopBookId = Date.now();
 
-        
+       
 
         let shop_book_data = {
-          
+          shop_book_name:shopName,
           shop_book_card_id: oneShopCard["shop_card_id"],
-          shop_book_customer_name: shopName,
+          shop_book_customer_name: customerName,
           select_shop_Haircut: selectHaircut,
           shop_book_date: shopDate,
           shop_book_time: shopTime,
           shop_book_id: shopBookId,
         };
 
-        bookNew.push(shop_book_data);
+        for (let i = 0; i < bookNew.length; i++) {
+          if (
+            shopTime == bookNew[i].shop_book_time &&
+            shopDate == bookNew[i].shop_book_date &&
+            shopName == bookNew[i].shop_book_name
+          ) {
+            checker = true;
+            alert("This date and time is already booked")
+            break;
+          } else{
+            checker = false;
+          }
+        }
+        if(checker === false){
+          bookNew.push(shop_book_data);
         const stringArray = JSON.stringify(bookNew);
         localStorage.setItem("shopBookInfo", stringArray);
         window.location.href =
           "./customer_shop_booking_payment.html?id=" + shopBookId;
+        }
       });
+      console.log(shopBookId);
     </script>
   </body>
 </html>
