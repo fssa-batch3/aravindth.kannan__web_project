@@ -60,8 +60,15 @@
           <p class="font">Booking Your Shop</p>
         </div>
         <div class="name">
-          <p class="name-1">Shop name</p>
-          <input id="shop_name" class="name-input" type="text" disabled />
+          <p class="name-1">Your name</p>
+          <input
+            id="shop_name"
+            class="name-input"
+            type="text"
+            pattern="[A-Za-z0-9]+"
+            title="Make sure that name should not contain space"
+            required
+          />
         </div>
         <div class="select_div">
           <label class="name-1"> Select haircut</label>
@@ -196,11 +203,6 @@
 
       document.querySelector(".right-side").append(content);
 
-      // shop name data from this shop card
-
-      let shopName = (document.getElementById("shop_name").value =
-        oneShopCard["shop_card_name"]);
-
       // get data from booking form.
 
       let Cheker = false;
@@ -210,12 +212,14 @@
       checkTime.addEventListener("click", function (event) {
         event.preventDefault();
 
+       
+
         const selectHaircut = document.getElementById("haircutid").value.trim();
         const shopDate = document
           .getElementById("customer_shop_date")
           .value.trim();
         // shop card data
-        const shopCardName = shopName;
+        const shopCardName =  oneShopCard["shop_card_name"];
 
         if (shopDate.value === "") {
           alert("please fill the requirments ");
@@ -237,12 +241,15 @@
           .getElementById("customer_shop_date")
           .value.trim();
         const shopTime = document.getElementById("shop_time").value.trim();
-        const shopCardName = shopName;
+        const shopName = document.getElementById("shop_name").value.trim();
         const shopBookId = Date.now();
 
+        
+
         let shop_book_data = {
-          shop_book_card_id:oneShopCard["shop_card_id"],
-          shop_book_name: shopCardName,
+          
+          shop_book_card_id: oneShopCard["shop_card_id"],
+          shop_book_customer_name: shopName,
           select_shop_Haircut: selectHaircut,
           shop_book_date: shopDate,
           shop_book_time: shopTime,

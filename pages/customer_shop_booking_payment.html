@@ -17,9 +17,10 @@
           <div class="left">
             <h2>Schedule Details</h2>
             <ul>
+              <li class="date_font" id="cus_name"></li>
               <li class="date_font" id="date"></li>
-              <li class="date_font" id="time">11:30 AM - 1:15 PM</li>
-              <li class="date_font" id="haircut_name">Long haircut</li>
+              <li class="date_font" id="time"></li>
+              <li class="date_font" id="haircut_name"></li>
             </ul>
           </div>
           <div class="bottum">
@@ -54,19 +55,24 @@
         </div>
       </div>
       <div class="payment_div" onclick="myFunction()">
-        <button class="payment_btn">Book now</button>
+        <button class="payment_btn" id="book_btn">Book now</button>
       </div>
 
       <div class="payment_success_div" id="success_message">
-        <img src="../Assets/Images/right_tick.gif" alt="success">
+        <img src="../Assets/Images/right_tick.gif" alt="success" />
         <p class="payment_success_div_text">Successfully booked</p>
       </div>
     </div>
-   
 
     <script>
-      // get data form booking page used URL prams
+      // get user date from localstorage used login info
 
+      const oneUser = JSON.parse(localStorage.getItem("this_user"));
+      const singleUserInfo = JSON.parse(localStorage.getItem("userinfo")).find(
+        e => e.email == oneUser
+      );
+
+      // get data form booking page used URL prams
       let url = location.search;
       let prams = new URLSearchParams(url);
       let id = prams.get("id");
@@ -74,23 +80,30 @@
       const oneShopBooking = JSON.parse(
         localStorage.getItem("shopBookInfo")
       ).find(e => e.shop_book_id == id);
+
       // set values of booking details
+      let book_cus_name = (document.getElementById("cus_name").innerHTML =
+        "Customer name : " + oneShopBooking["shop_book_customer_name"]);
+
       let book_date = (document.getElementById("date").innerHTML =
         "Date : " + oneShopBooking["shop_book_date"]);
       let book_time = (document.getElementById("time").innerHTML =
         "Time : " + oneShopBooking["shop_book_time"]);
       let book_haircut = (document.getElementById("haircut_name").innerHTML =
         "Haircut type : " + oneShopBooking["select_shop_Haircut"]);
+
       // select the shop card from shop booking page.
       const oneShopCard = JSON.parse(localStorage.getItem("shop_card")).find(
         event => event.shop_card_id == oneShopBooking["shop_book_card_id"]
       );
       console.log(oneShopCard);
+
       // get the shop full details from that shop card.
       const oneShopDetail = JSON.parse(localStorage.getItem("shopinfo")).find(
         ev => ev.shop_email == oneShopCard["shop_card_email"]
       );
       console.log(oneShopDetail);
+
       // set values of booking shop details from that shop card.
 
       let book_shop_name = (document.getElementById("shop_name").innerHTML =
@@ -112,13 +125,49 @@
       let book_shop_about = (document.getElementById("shop_about").innerHTML =
         "About shop :   " + oneShopDetail["shop_about"]);
 
-        function myFunction()
-          {
-              document.getElementById('success_message').setAttribute("class", "payment_success_div_onclick");
-          }
+// function for successful alert!
+      function myFunction() {
+        document
+          .getElementById("success_message")
+          .setAttribute("class", "payment_success_div_onclick");
+      }
 
 
+// function for store date of booked customer data.
+      let checker = true;
+      const booked = document.getElementById("book_btn");
 
+      booked.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        // create new array.
+        let newArr = [];
+        if (localStorage.getItem("shopBookedDetails") != null) {
+          newArr = JSON.parse(localStorage.getItem("shopBookedDetails"));
+        }
+
+        const shopEmail = oneShopDetail["shop_email"];
+        const bookedCusName = book_cus_name;
+        const bookedDate = book_date;
+        const bookedTime = book_time;
+        const bookedHaircut = book_haircut;
+        const bookedCusPhone = singleUserInfo["phoneNumber"];
+        const bookedId = Date.now();
+// create new object.
+        let booked_data = {
+          booked_shop_email: shopEmail,
+          booked_custom_name: bookedCusName,
+          booked_shop_date: bookedDate,
+          booked_shop_time: bookedTime,
+          booked_haircut: bookedHaircut,
+          booked_custom_phone: bookedCusPhone,
+          booked_id: bookedId,
+        };
+// push the data to local storage.
+        newArr.push(booked_data);
+        const stringfy = JSON.stringify(newArr);
+        localStorage.setItem("shopBookedDetails", stringfy);
+      });
     </script>
   </body>
 </html>
