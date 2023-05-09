@@ -249,22 +249,22 @@
         };
 
         // verify this card is already exists or not.
-        for (i = 0; i < newArray.length; i++) {
-          if (shopCardEmail === newArray[i]["shop_card_email"]) {
-            checker = true;
-            alert("this card is already exists");
-            break;
-          } else {
-            checker = false;
-          }
-        }
+        // for (i = 0; i < newArray.length; i++) {
+        //   if (shopCardEmail === newArray[i]["shop_card_email"]) {
+        //     checker = true;
+        //     alert("this card is already exists");
+        //     break;
+        //   } else {
+        //     checker = false;
+        //   }
+        // }
 
-        if (checker === false) {
+        // if (checker === false) {
           newArray.push(one_shop_card);
           const pushArray = JSON.stringify(newArray);
           localStorage.setItem("shop_card", pushArray);
           window.location.href = "./shop_profile.html";
-        }
+        // }
       });
     </script>
   </body>

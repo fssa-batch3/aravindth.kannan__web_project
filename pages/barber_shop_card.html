@@ -276,23 +276,13 @@
         shop_about: shopAbout,
       }
 
-      for(i = 0; i <emptyArray.length; i++){
-        if(shopEmail === emptyArray[i]["shop_email"]){
-          checker = true;
-          alert("This email is already exists")
-          break;
-        }
-        else{
-          checker = false;
-        }
-      }
-      if(checker === false){
+  // push to localstorage 
         emptyArray.push(shopData);
         const pushArray = JSON.stringify(emptyArray);
         localStorage.setItem("shopinfo", pushArray);
         window.location.href = "./shop_profile.html";
 
-      }
+     
     })
     </script>
     <!-- <a href="./shop_profile.html"></a> -->
