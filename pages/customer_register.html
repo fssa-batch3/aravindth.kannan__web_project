@@ -79,7 +79,10 @@
         <label for="phone" class="all_label">phone number</label>
         <br />
 
-        <input required class="input" type="number" id="phone_number" />
+        <input required 
+        pattern="[7-9]{1}[0-9]{9}" 
+       title="Phone number with 7-9 and remaing 9 digit with 0-9"
+        class="input" type="number" id="phone_number" />
       </div>
 
       <div class="submit">
