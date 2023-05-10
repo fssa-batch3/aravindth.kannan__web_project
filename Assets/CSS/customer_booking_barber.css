@@ -25,18 +25,7 @@ body {
   font-weight: bold;
   color: black;
 }
-.time_div {
-  border-radius: 5px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  padding: 3%;
-  width: 70%;
-  margin: 3% auto;
-  display: grid;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  grid-template-columns: auto auto auto;
-}
+
 
 .time_anker {
   margin: 4%;
@@ -52,7 +41,7 @@ body {
 }
 
 .name-input {
-  width: 99%;
+  width: 100%;
   color: black;
   font-size: 30px;
   height: 50px;
@@ -81,6 +70,7 @@ body {
 }
 .img-div {
   border-top: 2px solid black;
+  border-bottom: 2px solid black;
   border-radius: 5px;
   padding: 3%;
   margin: 2% auto;

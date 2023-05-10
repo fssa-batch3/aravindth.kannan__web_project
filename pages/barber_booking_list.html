@@ -220,6 +220,77 @@
         // );
         big_div.append(donebtn);
       }
+
+      // function for booked list for barber
+
+      const oneBarber = JSON.parse(localStorage.getItem("barber_profile")).find(
+        e => e.barber_email == loginEmail
+      );
+
+      const allBarberBookedList = JSON.parse(
+        localStorage.getItem("barberBookedDetails")
+      );
+
+      let one_barber_booked_list = allBarberBookedList.filter(
+        F => F.booked_barber_email == oneBarber["barber_email"]
+      );
+
+      for (let i = 0; i < one_barber_booked_list.length; i++) {
+        let big_div = document.createElement("div");
+        big_div.setAttribute("class", "booked_div");
+        document.querySelector(".barber_list").append(big_div);
+
+        let h2font = document.createElement("h2");
+        h2font.innerHTML = "Booked Details";
+        big_div.append(h2font);
+
+        let shopname = document.createElement("p");
+        shopname.setAttribute("class", "shop_text");
+        shopname.innerHTML = one_barber_booked_list[i]["booked_barber_name"];
+        big_div.append(shopname);
+
+        let ul = document.createElement("ul");
+        big_div.append(ul);
+
+        let text = document.createElement("li");
+        text.setAttribute("class", "detail");
+        text.innerText = one_barber_booked_list[i]["booked_custom_name"];
+        ul.append(text);
+
+        let text_1 = document.createElement("li");
+        text_1.setAttribute("class", "detail");
+        text_1.innerText = one_barber_booked_list[i]["booked_barber_date"];
+        ul.append(text_1);
+
+        let text_2 = document.createElement("li");
+        text_2.setAttribute("class", "detail");
+        text_2.innerText = one_barber_booked_list[i]["booked_barber_time"];
+        ul.append(text_2);
+
+        let text_3 = document.createElement("li");
+        text_3.setAttribute("class", "detail");
+        text_3.innerText = one_barber_booked_list[i]["booked_haircut"];
+        ul.append(text_3);
+
+        let text_4 = document.createElement("li");
+        text_4.setAttribute("class", "detail");
+        text_4.innerText = one_barber_booked_list[i]["booked_custom_phone"];
+        ul.append(text_4);
+
+        let text_5 = document.createElement("li");
+        text_5.setAttribute("class", "detail");
+        text_5.innerText = one_barber_booked_list[i]["booked_cus_address"];
+        ul.append(text_5);
+
+        let donebtn = document.createElement("button");
+        donebtn.setAttribute("class", "done_btn");
+        donebtn.innerText = "Done";
+        // donebtn.setAttribute(
+        //   "onclick",
+        //   "deleteCard(" + one_barber_booked_list[i]["shop_haircut_id"] + ")"
+        // );
+        big_div.append(donebtn);
+      }
     </script>
   </body>
 </html>

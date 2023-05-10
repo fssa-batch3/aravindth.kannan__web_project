@@ -65,14 +65,14 @@
     </div>
 
     <script>
-      // get user date from localstorage used login info
+      // get user data from localstorage used login info
 
       const oneUser = JSON.parse(localStorage.getItem("this_user"));
       const singleUserInfo = JSON.parse(localStorage.getItem("userinfo")).find(
         e => e.email == oneUser
       );
 
-      // get data form booking page used URL prams
+      // get data form booking page used URL params
       let url = location.search;
       let prams = new URLSearchParams(url);
       let id = prams.get("id");
@@ -82,6 +82,8 @@
       ).find(e => e.shop_book_id == id);
 
       // set values of booking details
+
+    
       let book_cus_name = (document.getElementById("cus_name").innerHTML =
         "Customer name : " + oneShopBooking["shop_book_customer_name"]);
 
@@ -145,7 +147,7 @@
         if (localStorage.getItem("shopBookedDetails") != null) {
           newArr = JSON.parse(localStorage.getItem("shopBookedDetails"));
         }
-
+       
         const shopEmail = oneShopDetail["shop_email"];
         const bookedShopname = oneShopDetail["shop_name"]
         const bookedCusName = book_cus_name;
@@ -156,6 +158,7 @@
         const bookedId = Date.now();
 // create new object.
         let booked_data = {
+         
           booked_shop_name:bookedShopname,
           booked_shop_email: shopEmail,
           booked_custom_name: bookedCusName,

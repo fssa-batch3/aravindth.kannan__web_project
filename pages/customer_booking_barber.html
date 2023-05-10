@@ -12,19 +12,24 @@
       <div class="left-side"></div>
       <div class="right-side">
         <div class="img-div">
+          <label class="phone"> Your name</label>
+          <br />
+          <input id="cus_name" class="name-input" type="text" required />
+          <br />
+          <br />
           <label class="phone"> Phone number</label>
           <br />
-          <input class="name-input" type="number"  required/>
+          <input id="cus_number" class="name-input" type="number" required />
           <br />
           <br />
           <label class="phone">Fill your address</label>
           <br />
-          <input class="name-input" type="text"  required/>
+          <input id="cus_address" class="name-input" type="text" required />
           <br />
           <br />
           <label class="phone">Date</label>
           <br />
-          <input class="name-input" type="date" required />
+          <input id="cus_date" class="name-input" type="date" required />
           <br />
           <br />
           <label class="phone">Select haircut</label>
@@ -39,26 +44,27 @@
           </select>
           <br />
           <br />
+          <label class="phone">Select haircut</label>
+          <br>
+          <select id="select_time" class="name-input">
+            <option class="time_anker">08:00Am - 09:50Am</option>
+
+            <option class="time_anker">10:00Am - 11:50Am</option>
+
+            <option class="time_anker">12:00Pm - 01:50Pm</option>
+
+            <option class="time_anker">02:00Pm - 03:50Pm</option>
+
+            <option class="time_anker">04:00Pm - 05:50Pm</option>
+
+            <option class="time_anker">06:00Pm - 07:50Pm</option>
+          </select>
+          <br />
+          <br />
 
           <div class="book-1">
-            <button class="book">Check available time</button>
+            <button id="next_btn" class="book">Next</button>
           </div>
-          
-           
-            <div class="time_div">
-              <a class="time_anker">08:00Am</a>
-
-              <a class="time_anker">10:00Am</a>
-
-              <a class="time_anker">12:00Pm</a>
-
-              <a class="time_anker">02:00Pm</a>
-
-              <a class="time_anker">04:00Pm</a>
-
-              <a class="time_anker">06:00Pm</a>
-            </div>
-          
         </div>
       </div>
     </div>
@@ -162,6 +168,66 @@
       select_btn.setAttribute("class", "select-button");
       select_btn.innerText = "Select";
       buttons_div.append(select_btn);
+
+           // get data from booking form.
+           let checker = false;
+      const book = document.getElementById("next_btn");
+      book.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        let bookNew = [];
+        if (localStorage.getItem("barberBookInfo") != null) {
+          bookNew = JSON.parse(localStorage.getItem("barberBookInfo"));
+        }
+        const cusAddress = document.getElementById("cus_address").value.trim();
+        const selectHaircut = document.getElementById("serviceid").value.trim();
+        const barberDate = document
+          .getElementById("cus_date")
+          .value.trim();
+          const cusPhone = document.getElementById("cus_number").value.trim();
+        const barberTime = document.getElementById("select_time").value.trim();
+        const barberName = oneBarberCard["barbername"];
+        const customerName = document.getElementById("cus_name").value.trim();
+        const barberBookId = Date.now();
+
+       
+
+        let barber_book_date = {
+          book_cus_address:cusAddress,
+          book_cus_phone:cusPhone,
+          barber_book_name:barberName,
+          barber_book_card_id: oneBarberCard["barberid"],
+          barber_book_customer_name: customerName,
+          select_barber_Haircut: selectHaircut,
+          barber_book_date: barberDate,
+          barber_book_time: barberTime,
+          barber_book_id: barberBookId,
+        };
+
+        for (let i = 0; i < bookNew.length; i++) {
+          if (
+            barberTime == bookNew[i].barber_book_time &&
+            barberDate == bookNew[i].barber_book_date &&
+            barberName == bookNew[i].barber_book_name
+          ) {
+            checker = true;
+            alert("This date and time is already booked")
+            break;
+          } else{
+            checker = false;
+          }
+        }
+        if(checker === false){
+          bookNew.push(barber_book_date);
+        const stringArray = JSON.stringify(bookNew);
+        localStorage.setItem("barberBookInfo", stringArray);
+        window.location.href =
+          "./customer_barber_booking_payment.html?id=" + barberBookId;
+        }
+      });
+      
+
     </script>
+   
   </body>
 </html>
