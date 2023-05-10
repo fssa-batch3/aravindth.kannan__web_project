@@ -1,22 +1,36 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: azure;
 }
 
 .both_list {
+  margin: 2%;
   height: 80%;
-  width: 100%;
+  width: 96%;
   display: flex;
-  background-color: azure;
 }
 .shop_list {
+  border-right: 1px solid black;
   width: 50%;
   height: fit-content;
+}
+.shop_list h2 {
+  font-size: 30px;
+  text-decoration: underline;
+  text-align: center;
+  font-weight: bolder;
 }
 .barber_list {
   width: 50%;
-
+  border-left: 1px solid black;
   height: fit-content;
+}
+.barber_list h2 {
+  text-decoration: underline;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bolder;
 }
 .booked_div {
   border: 1px solid black;
