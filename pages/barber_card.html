@@ -59,7 +59,7 @@
 
     <!-- section is started -->
     <div class="head">
-      <p class="head_text">Create Your Barber Card</p>
+      <p class="head_text">register for barber</p>
     </div>
     <form class="card_form" id="barber_profile_form">
       <div class="name">
@@ -90,8 +90,7 @@
         <div class="address-box">
           <input 
           required
-          pattern="[A-Za-z0-9]+"
-          title="Make sure that name should not contain space"
+          
           class="name-box-1" type="text" id="slogan" />
         </div>
       </div>
@@ -99,6 +98,8 @@
         <label>Phone</label>
         <div class="address-box">
           <input 
+          pattern="[7-9]{1}[0-9]{9}" 
+       title="Phone number with 7-9 and remaing 9 digit with 0-9"
           required
           class="name-box-1" type="number" id="barber_phone" />
         </div>
@@ -108,8 +109,7 @@
         <div class="address-box">
           <input 
           required
-          pattern="[A-Za-z0-9]+"
-          title="Make sure that name should not contain space"
+          
           class="name-box-1" type="text" id="experience" />
         </div>
       </div>  
@@ -119,8 +119,7 @@
             <br />
             <textarea 
             required
-            pattern="[A-Za-z0-9]+"
-            title="Make sure that name should not contain space"
+           
             id="address" class="name-box-1" name="address" rows="5" cols="50"></textarea>
           </div>
 
@@ -130,8 +129,7 @@
             <br />
             <textarea 
             required
-            pattern="[A-Za-z0-9]+"
-            title="Make sure that name should not contain space"
+       
             id="about" class="name-box-1" name="address" rows="5" cols="50"></textarea>
           </div>
       <div class="submit">

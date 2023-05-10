@@ -59,7 +59,7 @@
 
     <!-- section is started -->
     <div class="head">
-      <p class="head_text">Create your shop card</p>
+      <p class="head_text">Register your barber shop</p>
     </div>
     <form class="card_form" id="shop_profile_form">
       <div class="name">
@@ -76,19 +76,7 @@
           />
         </div>
       </div>
-      <!-- <div class="name">
-        <label> Shop email</label>
-        <div class="name-box">
-          <input
-          required
-          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-            id="s_email"
-            class="name-box-1"
-            type="email"
-            autocomplete="name"
-          />
-        </div>
-      </div> -->
+    
       <div class="name">
         <label>Shop photo</label>
         <div class="name-box">
@@ -102,8 +90,7 @@
         <div class="address-box">
           <input 
           required
-          pattern="[A-Za-z0-9]+"
-          title="Make sure that name should not contain space"
+          
           class="name-box-1" type="text" id="s_slogan" />
         </div>
       </div>
@@ -111,6 +98,8 @@
         <label> Shop phone</label>
         <div class="address-box">
           <input 
+          pattern="[7-9]{1}[0-9]{9}" 
+       title="Phone number with 7-9 and remaing 9 digit with 0-9"
           required
           class="name-box-1" type="number" id="s_phone" />
         </div>
@@ -120,8 +109,7 @@
         <div class="address-box">
           <input 
           required
-          pattern="[A-Za-z0-9]+"
-          title="Make sure that name should not contain space"
+         
           class="name-box-1" type="text" id="s_experience" />
         </div>
       </div>  
@@ -130,8 +118,7 @@
         <div class="address-box">
           <input 
           required
-          pattern="[A-Za-z0-9]+"
-          title="Make sure that name should not contain space"
+         
           class="name-box-1" type="text" id="s_price" />
         </div>
       </div>  
@@ -141,8 +128,7 @@
             <br />
             <textarea 
             required
-            pattern="[A-Za-z0-9]+"
-            title="Make sure that name should not contain space"
+           
             id="s_address" class="name-box-1" name="address" rows="5" cols="50"></textarea>
           </div>
 
@@ -152,8 +138,7 @@
             <br />
             <textarea 
             required
-            pattern="[A-Za-z0-9]+"
-            title="Make sure that name should not contain space"
+           
             id="s_about" class="name-box-1" name="address" rows="5" cols="50"></textarea>
           </div>
       <div class="submit">

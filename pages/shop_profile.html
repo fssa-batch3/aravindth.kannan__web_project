@@ -407,6 +407,8 @@
         }
       });
 
+      // function for add new hairstyle.
+
       let checker = false;
       const addDesign = document.getElementById("add_form_1");
       addDesign.addEventListener("submit", function (event) {
@@ -439,6 +441,7 @@
         new_hair.push(hair_cut_data);
         const new_Array = JSON.stringify(new_hair);
         localStorage.setItem("shop_newhaircuts", new_Array);
+        alert("Please refresh the page after you added a haircut style");
       });
 
       // add haircuts Java script

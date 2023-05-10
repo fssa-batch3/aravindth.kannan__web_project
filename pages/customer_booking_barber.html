@@ -14,7 +14,10 @@
         <div class="img-div">
           <label class="phone"> Your name</label>
           <br />
-          <input id="cus_name" class="name-input" type="text" required />
+          <input
+          pattern="[A-Za-z0-9]+"
+          title="Make sure that name should not contain space"
+           id="cus_name" class="name-input" type="text" required />
           <br />
           <br />
           <label class="phone"> Phone number</label>
