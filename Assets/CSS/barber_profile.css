@@ -411,6 +411,7 @@ body {
   font-size: 30px;
 }
 .haircuts {
+  margin: 1%;
   flex-wrap: wrap;
   justify-content: space-around;
   display: grid;

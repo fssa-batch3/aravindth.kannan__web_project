@@ -5,8 +5,7 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid black;
-  background-color: #e6ebed;
-  background-image: linear-gradient(0deg, #e6ebed 0%, #b7c0bd 100%);
+  background-color: #9BA4B5;
 
   height: 130px;
 }
@@ -76,13 +75,17 @@
   color: black;
   transition: 0.4s;
 }
-
+.nav i fa-user-alt {
+  color: aquamarine;
+  font: 20px;
+}
 .nav:hover,
 .nav_dropbtn:hover {
   transform: scale(1);
 
   border-bottom: 5px solid black;
 }
+
 /* dropdown css is ended*/
 
 /* header css is ended */
@@ -94,8 +97,8 @@
   justify-content: space-around;
   align-items: center;
   height: 550px;
-  background-color: #e6ebed;
-  background-image: linear-gradient(0deg, #e6ebed 0%, #b7c0bd 100%);
+  background-color: rgba(185, 193, 204, 1);
+  /* background-image: linear-gradient(0deg, #e6ebed 0%, #b7c0bd 100%); */
 
   font-size: 1rem;
 }

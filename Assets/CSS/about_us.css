@@ -2,6 +2,7 @@
 body {
   margin: 0px;
   padding: 0px;
+  /* background-color: #b9c1cc; */
 }
 .about_us {
   display: flex;
@@ -12,29 +13,36 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+  background: rgb(240,244,240);
+background: radial-gradient(circle, rgba(240,244,240,1) 0%, rgba(129,141,149,1) 100%);
 }
 .about_us h2 {
+  border-top-right-radius: 70px;
+  border-bottom-right-radius: 70px;
   display: flex;
   align-items: center;
-  background-color: #b9c1cc;
-  width: 500px;
-  height: 200px;
+  text-align: center;
+  background-color: white;
+  /* background-color: rgb(121, 126, 129); */
+  width: 20%;
+  height: 90%;
   font-size: 40px;
-  padding-left: 20px;
+  padding-left: 2%;
 }
 .about_us p {
-  display: flex;
-  margin-left: 300px;
-  width: 700px;
-  font-size: 20px;
+ margin: 8% auto;
+  
+
+  width: 70%;
+  font-size: 25px;
   color: #000000;
 }
 .heroimgdiv {
-  margin-left: -150px;
+  /* margin-left: -150px; */
 }
 .heroimg {
-  width: 475px;
-  height: 649px;
+  width: 100%;
+  height: 100%;
 }
 /* section 2 is started */
 .online_booking {
@@ -47,7 +55,7 @@ body {
 }
 .book {
   margin-top: 450px;
-  margin-left: -380px;
+  /* margin-left: -380px; */
   font-size: 25px;
   width: 620px;
   height: fit-content;

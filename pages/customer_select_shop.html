@@ -146,16 +146,12 @@
 
       let shop_card = JSON.parse(localStorage.getItem("shop_card"));
 
-     
-
       for (let i = 0; i < shop_card.length; i++) {
         select_shop_list.push(shop_card[i]);
       }
 
       for (i = 0; i < select_shop_list.length; i++) {
         const barber = select_shop_list[i];
-
-      
 
         let content = document.createElement("div");
         content.setAttribute("class", "container");
@@ -237,15 +233,16 @@
 
         let select_btn = document.createElement("a");
         select_btn.setAttribute("class", "select_btn");
-        select_btn.setAttribute("href", "./customer_shop_booking_form.html?id=" + select_shop_list[i]["shop_card_id"]);
+        select_btn.setAttribute(
+          "href",
+          "./customer_shop_booking_form.html?id=" +
+            select_shop_list[i]["shop_card_id"]
+        );
         select_btn.innerText = "Select";
         select_div.append(select_btn);
 
         document.querySelector(".all-content").append(content);
       }
-  
-
-    
     </script>
   </body>
 </html>
