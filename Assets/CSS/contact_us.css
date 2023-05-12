@@ -1,8 +1,18 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .maincontent {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  
+  background-color: #d8dada;
+}
+.big_img {
+  width: 60rem;
+  height: 40rem;
+  border-radius: 50px;
 }
 /* cont with contact css is started */
 
