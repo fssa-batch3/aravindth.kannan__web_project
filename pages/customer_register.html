@@ -116,6 +116,14 @@
           .value.trim();
         const singleUserid = Date.now();
 
+        var regex = /^[6789]{1}[0-9]{9,15}$/;
+    if (regex.test(phoneNumber)) {
+      console.log("Valid phone number!");
+    } else {
+      alert("Phone number is invalid kindly change your number");
+      return;
+    }
+
         if (userName.value === "") {
           alert("please fill the requirments ");
         }

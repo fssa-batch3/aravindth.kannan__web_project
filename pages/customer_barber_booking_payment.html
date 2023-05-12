@@ -44,7 +44,7 @@
           </div>
         </div>
         <div class="right">
-          <h2>Shop Details</h2>
+          <h2>Barber Details</h2>
 
           <p id="barber_name" class="shop_text"></p>
 
@@ -86,7 +86,8 @@
       ).find(e => e.barber_book_id == id);
 
       // set values of booking details
-      let cus_address = document.getElementById("cus_add").innerHTML = "Customer address: " + oneBarberBooking["book_cus_address"];
+      let cus_address = (document.getElementById("cus_add").innerHTML =
+        "Customer address: " + oneBarberBooking["book_cus_address"]);
       let book_cus_name = (document.getElementById("cus_name").innerHTML =
         "Customer name : " + oneBarberBooking["barber_book_customer_name"]);
       let book_cus_phone = (document.getElementById("cus_phone").innerHTML =
@@ -155,17 +156,21 @@
         }
         const cusAddress = cus_address;
         const barberEmail = oneBarberDetail["barber_email"];
-        const bookedShopname = oneBarberDetail["barbername"]
+        const bookedBarbername = oneBarberDetail["barbername"];
+        const bookedBarberPhone = "Barber phone : " + oneBarberDetail["barber_phone"];
         const bookedCusName = book_cus_name;
         const bookedDate = book_date;
         const bookCusPhone = book_cus_phone;
         const bookedTime = book_time;
         const bookedHaircut = book_haircut;
+        const bookedCusEmail = oneUser;
         const bookedId = Date.now();
-// create new object.
+        // create new object.
         let booked_data = {
-          booked_cus_address:cusAddress,
-          booked_barber_name:bookedShopname,
+          booked_barber_phone: bookedBarberPhone,
+          booked_cus_email: bookedCusEmail,
+          booked_cus_address: cusAddress,
+          booked_barber_name: bookedBarbername,
           booked_barber_email: barberEmail,
           booked_custom_name: bookedCusName,
           booked_barber_date: bookedDate,
@@ -174,7 +179,7 @@
           booked_custom_phone: bookCusPhone,
           booked_id: bookedId,
         };
-// push the data to local storage.
+        // push the data to local storage.
         newArr.push(booked_data);
         const stringfy = JSON.stringify(newArr);
         localStorage.setItem("barberBookedDetails", stringfy);

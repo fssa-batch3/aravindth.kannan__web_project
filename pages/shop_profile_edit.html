@@ -261,6 +261,14 @@
         let shop_price = document.getElementById("s_price").value;
         let shop_address = document.getElementById("s_address").value;
         let shop_about = document.getElementById("s_about").value;
+
+        var regex = /^[6789]{1}[0-9]{9,15}$/;
+    if (regex.test(shop_phone)) {
+      console.log("Valid phone number!");
+    } else {
+      alert("Phone number is invalid kindly change your number");
+      return;
+    }
       
 
 

@@ -132,6 +132,14 @@
             let barber_address = document.getElementById("b_address").value;
             let barber_about = document.getElementById("about").value;
             let barber_email = thisBarber;
+            
+            var regex = /^[6789]{1}[0-9]{9,15}$/;
+    if (regex.test(barber_phone)) {
+      console.log("Valid phone number!");
+    } else {
+      alert("Phone number is invalid kindly change your number");
+      return;
+    }
 //  some errors in this step
             let editBarberData = {
                 barbername,

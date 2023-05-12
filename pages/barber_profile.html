@@ -35,7 +35,9 @@
               </div>
             </div>
             <a class="nav" href="../pages/barber_card.html">Apply barber </a>
-            <a class="nav" href="../pages/barber_shop_card.html">Register shop </a>
+            <a class="nav" href="../pages/barber_shop_card.html"
+              >Register shop
+            </a>
             <a class="nav" href="../pages/barber_booking_list.html"
               >booking list</a
             >
@@ -214,7 +216,7 @@
               autocomplete="name"
             />
           </div>
-        
+
           <div class="small_form_div">
             <label class="label">Haircut photo</label>
             <br />
@@ -226,11 +228,7 @@
         </form>
       </div>
 
-      <div class="haircuts">
-        
-      </div>
-
-     
+      <div class="haircuts"></div>
     </div>
 
     <!-- section is ended -->
@@ -305,7 +303,6 @@
               </div>
             </div>
           </div>
-         
         </div>
       </div>
     </footer>
@@ -334,7 +331,7 @@
         .setAttribute("src", oneBarber["barber_photo"]);
       const barberName = (document.getElementById("barber_name").value =
         oneBarber["barbername"]);
-      
+
       const barberExperience = (document.getElementById("experience").value =
         oneBarber["barber_experience"]);
       const barberSlogan = (document.getElementById("slogan").value =
@@ -413,7 +410,6 @@
 
       // get data from add more hairstyles
 
-
       let checker = false;
       const addDesign = document.getElementById("add_form");
       addDesign.addEventListener("submit", function (event) {
@@ -447,7 +443,6 @@
         const new_Array = JSON.stringify(new_hair);
         localStorage.setItem("newhaircuts", new_Array);
         window.location.href = "./barber_profile.html";
-       
       });
 
       // add haircuts Java script
@@ -457,7 +452,6 @@
       let one_email_haircuts_array = oneBarberHaircuts.filter(
         F => F.haircut_email == thisBarber
       );
-
 
       console.log(one_email_haircuts_array);
 
@@ -488,7 +482,7 @@
         content_div.append(text);
 
         let delete_haircut = document.createElement("button");
-        delete_haircut.setAttribute("class","haircut_delete")
+        delete_haircut.setAttribute("class", "haircut_delete");
         delete_haircut.innerText = "Delete";
         delete_haircut.setAttribute(
           "onclick",
@@ -497,8 +491,8 @@
         content_div.append(delete_haircut);
       }
 
-        // delete haircut function
-        function deleteCard(id) {
+      // delete haircut function
+      function deleteCard(id) {
         let arr = oneBarberHaircuts;
         let card = arr.find(e => {
           if (id == e["haircut_id"]) {
