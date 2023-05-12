@@ -1,17 +1,20 @@
 body {
   margin: 0px;
   padding: 0px;
-  background-color: aliceblue;
 }
 .full_content {
   margin: 10% auto;
+  border: none;
 
-  background-color: rgb(179, 179, 179);
   width: 70%;
   height: fit-content;
 }
 .content {
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-color: #f1f6f9;
+  box-shadow: 0px 0px 50px 0px rgb(113, 112, 112);
   display: flex;
   margin: auto;
   padding: 2%;
@@ -51,8 +54,9 @@ body {
   font-weight: bold;
 }
 .bottum {
-  background-color: rgb(114, 113, 113);
+  background-color: #bdc2cd;
   padding: 2%;
+  border-radius: 20px;
   margin: 2%;
   border: 1px solid black;
 }
@@ -72,11 +76,13 @@ body {
 }
 .payment_btn {
   color: white;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
   background-color: black;
   cursor: pointer;
   font-size: 20px;
   font-weight: bolder;
-  border: 1px solid black;
+  
   width: 100%;
   height: 70px;
 }
