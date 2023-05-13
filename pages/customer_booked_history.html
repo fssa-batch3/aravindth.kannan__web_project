@@ -213,6 +213,74 @@
         // );
         big_div.append(donebtn);
       }
+
+      // function for all shopbooked history!
+
+      // get all shopbooked data from local storage.
+      const allShopBookedList = JSON.parse(
+        localStorage.getItem("shopBookedDetails")
+      );
+      // find this user's shopbooked data by this user email.
+      const shopBookedList = allShopBookedList.filter(
+        e => e.booked_shop_email == thisUser
+      );
+      // create loop function for careet a booked card to show user.
+      for (let i = 0; i < shopBookedList.length; i++) {
+        let big_div = document.createElement("div");
+        big_div.setAttribute("class", "booked_div");
+        document.querySelector(".shop_list").append(big_div);
+
+        let h2font = document.createElement("h2");
+        h2font.innerHTML = "Booked Details";
+        big_div.append(h2font);
+
+        let shopname = document.createElement("p");
+        shopname.setAttribute("class", "shop_text");
+        shopname.innerHTML = shopBookedList[i]["booked_shop_name"];
+        big_div.append(shopname);
+
+        let ul = document.createElement("ul");
+        big_div.append(ul);
+
+        let text = document.createElement("li");
+        text.setAttribute("class", "detail");
+        text.innerText = shopBookedList[i]["booked_custom_name"];
+        ul.append(text);
+
+        let text_1 = document.createElement("li");
+        text_1.setAttribute("class", "detail");
+        text_1.innerText = shopBookedList[i]["booked_shop_date"];
+        ul.append(text_1);
+
+        let text_2 = document.createElement("li");
+        text_2.setAttribute("class", "detail");
+        text_2.innerText = shopBookedList[i]["booked_shop_time"];
+        ul.append(text_2);
+
+        let text_3 = document.createElement("li");
+        text_3.setAttribute("class", "detail");
+        text_3.innerText = shopBookedList[i]["booked_haircut"];
+        ul.append(text_3);
+
+        let text_4 = document.createElement("li");
+        text_4.setAttribute("class", "detail");
+        text_4.innerText = shopBookedList[i]["booked_shop_phone"];
+        ul.append(text_4);
+
+        let text_5 = document.createElement("li");
+        text_5.setAttribute("class", "detail");
+        text_5.innerText = shopBookedList[i]["booked_shop_address"];
+        ul.append(text_5);
+
+        let donebtn = document.createElement("button");
+        donebtn.setAttribute("class", "done_btn");
+        donebtn.innerText = "Done";
+        // donebtn.setAttribute(
+        //   "onclick",
+        //   "deleteCard(" + shopBookedList[i]["shop_haircut_id"] + ")"
+        // );
+        big_div.append(donebtn);
+      }
     </script>
   </body>
 </html>

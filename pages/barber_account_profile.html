@@ -104,7 +104,7 @@
         <a class="create_card" href="./barber_account_edit.html">Edit </a>
         <button id="delete_barber" class="edit_card">Delete</button>
       </div>
-      <a class="create_card" href="../index.html">Log out</a>
+      <a class="create_card" id="logout">Log out</a>
     </div>
     <!-- section is ended -->
 
@@ -230,6 +230,20 @@
           barberInfo.splice(index, 1);
           localStorage.setItem("barberinfo", JSON.stringify(barberInfo));
           window.location.href = "../index.html";
+        }
+      });
+
+      
+      // logout function!
+      let logout = document.getElementById("logout");
+      logout.addEventListener("click", function (event) {
+        event.preventDefault();
+        let msg = confirm("Are you sure you want to logout this account");
+        if (msg !== true) {
+          return;
+        } else {
+          localStorage.setItem("single_barber", JSON.stringify(null));
+           window.location.href ="../index.html";
         }
       });
     </script>

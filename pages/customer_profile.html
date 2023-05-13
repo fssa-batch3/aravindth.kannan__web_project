@@ -48,7 +48,7 @@
                 width="30px"
             /></a>
 
-            <a class="nav" href="../index.html">Log out</a>
+            <a id="logout" class="nav">Log out</a>
           </nav>
         </div>
       </div>
@@ -229,8 +229,20 @@
         }
       });
 
-      // window.location.href = "../pages/profile_edit.html";
+    
+
+      // logout function!
+      let logout = document.getElementById("logout");
+      logout.addEventListener("click", function (event) {
+        event.preventDefault();
+        let msg = confirm("Are you sure you want to logout this account");
+        if (msg !== true) {
+          return;
+        } else {
+          localStorage.setItem("this_user", JSON.stringify(null));
+           window.location.href ="../index.html";
+        }
+      });
     </script>
-   
   </body>
 </html>
