@@ -214,6 +214,11 @@
         text_4.innerText = one_shop_booked_list[i]["booked_custom_phone"];
         ul.append(text_4);
 
+        let text_5 = document.createElement("li");
+        text_5.setAttribute("class", "detail");
+        text_5.innerText = one_shop_booked_list[i]["booked_custom_otp"];
+        ul.append(text_5);
+
         let donebtn = document.createElement("button");
         donebtn.setAttribute("class", "done_btn");
         donebtn.innerText = "Done";
@@ -284,6 +289,11 @@
         text_5.setAttribute("class", "detail");
         text_5.innerText = one_barber_booked_list[i]["booked_cus_address"];
         ul.append(text_5);
+
+        let text_6 = document.createElement("li");
+        text_6.setAttribute("class", "detail");
+        text_6.innerText = one_barber_booked_list[i]["booked_barber_otp"];
+        ul.append(text_6);
 
         let donebtn = document.createElement("button");
         donebtn.setAttribute("class", "done_btn");
