@@ -37,7 +37,9 @@
               </div>
             </div>
             <a class="nav" href="../pages/customer_book_now.html">book now</a>
-            <a class="nav" href="./customer_booked_history.html">Booked history</a>
+            <a class="nav" href="./customer_booked_history.html"
+              >Booked history</a
+            >
             <a class="nav" href="../pages/customer_about_us.html">About Us</a>
             <a class="nav" href="../pages/customer_contact_us.html"
               >Contact Us</a
@@ -97,7 +99,6 @@
           />
         </div>
 
-      
         <div class="phone">
           <p class="phone-1">Time Shedule</p>
           <select id="shop_time" class="time_div">
@@ -221,7 +222,7 @@
       // });
 
       // get data from booking form.
-        let checker = false;
+      let checker = false;
       const book = document.getElementById("booking");
       book.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -239,10 +240,10 @@
         const customerName = document.getElementById("shop_name").value.trim();
         const shopBookId = Date.now();
 
-       
+      
 
         let shop_book_data = {
-          shop_book_name:shopName,
+          shop_book_name: shopName,
           shop_book_card_id: oneShopCard["shop_card_id"],
           shop_book_customer_name: customerName,
           select_shop_Haircut: selectHaircut,
@@ -258,18 +259,18 @@
             shopName == bookNew[i].shop_book_name
           ) {
             checker = true;
-            alert("This date and time is already booked")
+            alert("This date and time is already booked");
             break;
-          } else{
+          } else {
             checker = false;
           }
         }
-        if(checker === false){
+        if (checker === false) {
           bookNew.push(shop_book_data);
-        const stringArray = JSON.stringify(bookNew);
-        localStorage.setItem("shopBookInfo", stringArray);
-        window.location.href =
-          "./customer_shop_booking_payment.html?id=" + shopBookId;
+          const stringArray = JSON.stringify(bookNew);
+          localStorage.setItem("shopBookInfo", stringArray);
+          window.location.href =
+            "./customer_shop_booking_payment.html?id=" + shopBookId;
         }
       });
     </script>

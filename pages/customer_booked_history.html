@@ -204,6 +204,11 @@
         text_4.innerText = barberBookedList[i]["booked_barber_phone"];
         ul.append(text_4);
 
+        let text_5 = document.createElement("li");
+        text_5.setAttribute("class", "detail");
+        text_5.innerText = barberBookedList[i]["booked_barber_otp"];
+        ul.append(text_5);
+
         let donebtn = document.createElement("button");
         donebtn.setAttribute("class", "done_btn");
         donebtn.innerText = "Done";
@@ -271,6 +276,12 @@
         text_5.setAttribute("class", "detail");
         text_5.innerText = shopBookedList[i]["booked_shop_address"];
         ul.append(text_5);
+
+        
+        let text_6 = document.createElement("li");
+        text_6.setAttribute("class", "detail");
+        text_6.innerText = shopBookedList[i]["booked_custom_otp"];
+        ul.append(text_6);
 
         let donebtn = document.createElement("button");
         donebtn.setAttribute("class", "done_btn");

@@ -165,8 +165,21 @@
         const bookedHaircut = book_haircut;
         const bookedCusEmail = oneUser;
         const bookedId = Date.now();
+
+         // function for genarate a random OTP to user and that shop.
+      function generateOTP(limit) {
+        let digits = "1234567890";
+        let OTP = "";
+        for (let i = 0; i < limit; i++) {
+          OTP += digits[Math.floor(Math.random() * 10)];
+        }
+        return OTP;
+      }
+
+      const cusBookedOTP = generateOTP(4);
         // create new object.
         let booked_data = {
+          booked_barber_otp: "Booked OTP : " + cusBookedOTP,
           booked_barber_phone: bookedBarberPhone,
           booked_cus_email: bookedCusEmail,
           booked_cus_address: cusAddress,
