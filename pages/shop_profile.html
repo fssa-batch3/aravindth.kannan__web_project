@@ -415,9 +415,9 @@
       addDesign.addEventListener("submit", function (event) {
         event.preventDefault();
  
-      
+        let new_hair = [];
         if (localStorage.getItem("shop_newhaircuts") != null) {
-          let new_hair = JSON.parse(localStorage.getItem("shop_newhaircuts"));
+          new_hair = JSON.parse(localStorage.getItem("shop_newhaircuts"));
         }
 
         const hairName = document.getElementById("style_name").value.trim();
@@ -441,11 +441,10 @@
 
         new_hair.push(hair_cut_data);
         
-        localStorage.setItem("shop_newhaircuts",JSON.stringify(new_hair));
-        // const new_Array = JSON.stringify(new_hair);
-        // localStorage.setItem("shop_newhaircuts", new_Array);
+
+        const new_Array = JSON.stringify(new_hair);
+        localStorage.setItem("shop_newhaircuts", new_Array);
         window.location.href = "./shop_profile.html";
-        // alert("Please refresh the page after you added a haircut style");
       });
 
       // add haircuts Java script
