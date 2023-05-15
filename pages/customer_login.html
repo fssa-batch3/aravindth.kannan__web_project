@@ -47,9 +47,9 @@
         <div class="Password-box"></div>
 
         <div class="login-button">
-          <!-- <a href="./pages/home.html"> -->
+        
           <button class="login-button-1" type="submit">Login</button>
-          <!-- </a> -->
+        
           <a href="./costomer_home_page.html"></a>
         </div>
 
@@ -70,7 +70,7 @@
         event.preventDefault();
         let all_user_data = JSON.parse(localStorage.getItem("userinfo"));
         console.log(all_user_data);
-        // const userName = document.getElementById("username");
+     
         const useremail = document.getElementById("email").value;
         const emailPassword = document.getElementById("password").value;
         let match = false;
@@ -91,7 +91,7 @@
           const thisUser = JSON.stringify(matchObject.email);
           localStorage.setItem("this_user", thisUser);
 
-          // document.querySelector("login_form").reset();
+         
           window.location.href = "./customer_home.html";
         } else {
           alert("Fail");

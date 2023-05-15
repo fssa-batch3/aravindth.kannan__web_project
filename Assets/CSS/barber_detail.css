@@ -310,9 +310,6 @@ body {
   border: none;
   transition: 0.7s;
 }
-.detail:hover {
-  transform: scale(1.1);
-}
 .select-button {
   width: 40%;
   text-decoration: none;
