@@ -33,7 +33,7 @@ body {
   height: 280px;
   border-bottom: 0.1em solid rgb(71, 70, 70);
   margin: auto;
-  /* gap: 3%; */
+
 }
 .photo {
   width: 80%;
@@ -136,9 +136,7 @@ body {
   display: grid;
   grid-template-columns: auto auto auto;
 
-  /* padding: 1%; */
-
-  /* gap: 1rem; */
+ 
 }
 .right_head {
   width: 100%;
@@ -450,7 +448,6 @@ body {
 
 .haircut_card:hover {
   transform: scale(1.02);
-  /* opacity: 0; */
 }
 
 .haircut_card:hover .haircut_card-title::after {

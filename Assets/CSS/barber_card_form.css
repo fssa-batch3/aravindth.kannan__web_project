@@ -2,7 +2,7 @@ body {
   padding: 0px;
   margin: 0px;
   background: rgb(240, 244, 240);
-  /* background: radial-gradient(circle, rgba(240,244,240,1) 0%, rgba(222,233,241,1) 100%); */
+
 }
 .head {
   height: 10%;
@@ -13,7 +13,7 @@ body {
 .head_text {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 50px;
-  /* text-shadow: 0px 0px 20px white; */
+
   color: black;
 }
 .card_form {
@@ -68,7 +68,7 @@ label {
   color: white;
   background-color: black;
   transition: 0.7s;
-  /* box-shadow: inset 0px 0px 10px white; */
+ 
 }
 .submit-1:hover {
   transform: scale(1.2);

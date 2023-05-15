@@ -156,14 +156,13 @@ body {
 
   width: 72%;
   height: fit-content;
-  /* background-color: red; */
+
 }
 
 .profile-card {
   width: 100%;
   border-radius: 10px;
   background-color: grey;
-  /* margin-bottom: 20px; */
 }
 .img-responsive {
   width: 100%;
@@ -397,7 +396,6 @@ body {
 
 .haircut_card:hover {
   transform: scale(1.02);
-  /* opacity: 0; */
 }
 
 .haircut_card:hover .haircut_card-title::after {

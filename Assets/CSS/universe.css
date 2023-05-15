@@ -98,8 +98,6 @@
   align-items: center;
   height: 550px;
   background-color: rgba(185, 193, 204, 1);
-  /* background-image: linear-gradient(0deg, #e6ebed 0%, #b7c0bd 100%); */
-
   font-size: 1rem;
 }
 .footround {

@@ -71,7 +71,6 @@ body {
 
 .projects {
   display: flex;
-  /* border-radius: 2%; */
   flex-direction: row;
   align-content: space-around;
   justify-content: space-around;

@@ -34,7 +34,6 @@ body {
 }
 .service-font {
   display: flex;
-  /* flex-wrap: wrap; */
   justify-content: end;
 }
 .service {

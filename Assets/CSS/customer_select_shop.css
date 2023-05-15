@@ -21,7 +21,6 @@ body {
 
 .all-content {
   display: flex;
-  /* gap: 3%; */
   flex-wrap: wrap;
   justify-content: space-around;
 }
@@ -41,7 +40,6 @@ body {
   width: 100%;
   border-radius: 10px;
   background-color: grey;
-  /* margin-bottom: 20px; */
 }
 .img-responsive {
   width: 100%;

@@ -17,7 +17,7 @@ body {
 /* cont with contact css is started */
 
 .cont_container {
-  /* width: 100; */
+
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -36,8 +36,7 @@ body {
   border-radius: 20px;
   position: relative;
   overflow: hidden;
-  /* background: #a2a3a3; */
-  /* background: -webkit-linear-gradient(to right, #adadad, #d5d5d5, #eae9ea); */
+  
   background: linear-gradient(to right, #f7f6f6, #c0bebe, #aeaeae);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
