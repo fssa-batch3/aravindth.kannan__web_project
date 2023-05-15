@@ -17,10 +17,11 @@ body {
 /* cont with contact css is started */
 
 .cont_container {
-  width: 100wv;
+  /* width: 100; */
   min-height: 100vh;
   display: flex;
   justify-content: center;
+ 
   align-items: center;
   padding: 20px 0;
   padding: 0;
@@ -29,14 +30,15 @@ body {
 }
 
 .cont_contact {
+  border: 1px solid black;
   width: 500px;
   height: 90%;
   border-radius: 20px;
   position: relative;
   overflow: hidden;
-  background: #a2a3a3;
+  /* background: #a2a3a3; */
   background: -webkit-linear-gradient(to right, #adadad, #d5d5d5, #eae9ea);
-  background: linear-gradient(to right, #f7f6f6, #c0bebe, #aeaeae);
+  /* background: linear-gradient(to right, #f7f6f6, #c0bebe, #aeaeae); */
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
   padding: 20px 0;
@@ -51,7 +53,6 @@ body {
   color: black;
   height: 20%;
   margin-bottom: 30px;
-  position: relative;
 }
 
 .cont_contact__title:after,

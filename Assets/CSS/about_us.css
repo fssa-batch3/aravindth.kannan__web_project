@@ -13,7 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background: rgb(240,244,240);
+  /* background: rgb(240,244,240); */
 background: radial-gradient(circle, rgba(240,244,240,1) 0%, rgba(129,141,149,1) 100%);
 }
 .about_us h2 {
@@ -68,7 +68,7 @@ background: radial-gradient(circle, rgba(240,244,240,1) 0%, rgba(129,141,149,1) 
   font-weight: bold;
   width: 150px;
   height: 60px;
-  border: 5px soild black;
+  border: 5px solid black;
   border-radius: 5px;
 }
 .bookbtn:hover {
