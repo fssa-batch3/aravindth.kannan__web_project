@@ -159,7 +159,7 @@
       );
 
       const barberBookedList = allBarberBookedList.filter(
-        e => e.booked_barber_email == thisUser
+        e => e.booked_cus_email == thisUser
       );
 
       for (let i = 0; i < barberBookedList.length; i++) {
@@ -227,7 +227,7 @@
       );
       // find this user's shopbooked data by this user email.
       const shopBookedList = allShopBookedList.filter(
-        e => e.booked_shop_email == thisUser
+        e => e.booked_custom_email == thisUser
       );
       // create loop function for careet a booked card to show user.
       for (let i = 0; i < shopBookedList.length; i++) {
@@ -277,7 +277,6 @@
         text_5.innerText = shopBookedList[i]["booked_shop_address"];
         ul.append(text_5);
 
-        
         let text_6 = document.createElement("li");
         text_6.setAttribute("class", "detail");
         text_6.innerText = shopBookedList[i]["booked_custom_otp"];

@@ -153,6 +153,7 @@
         const bookedShopAddress = book_shop_address;
         const bookedDate = book_date;
         const bookedShopPhone = book_phone;
+        const bookedCusEmail = oneUser;
         const bookedTime = book_time;
         const bookedHaircut = book_haircut;
         const bookedCusPhone = "Customer Phone : " + singleUserInfo["phoneNumber"];
@@ -172,6 +173,7 @@
 
        // create new object.
         let booked_data = {
+          booked_custom_email:bookedCusEmail,
           booked_custom_otp:"Booked OTP : " + cusBookedOTP,
           booked_shop_address:bookedShopAddress,
           booked_shop_phone:bookedShopPhone,
