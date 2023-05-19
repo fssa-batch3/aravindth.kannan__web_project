@@ -1,7 +1,7 @@
 body {
   padding: 0px;
   margin: 0px;
-  background-color: #ebe9e9;
+  background-color: rgb(221, 240, 247);
 }
 
 * {
@@ -24,12 +24,9 @@ body {
   font-size: 3rem;
 }
 .card_and_profile_div {
-  background: rgb(213, 245, 245);
-  background: linear-gradient(
-    0deg,
-    rgb(242, 245, 245) 0%,
-    rgb(173, 173, 172) 100%
-  );
+  background-color: #f3b37d;
+  background-image: linear-gradient(132deg, #f3b37d 0%, #f7f7c4 100%);
+
   border: 1px solid black;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
@@ -38,8 +35,8 @@ body {
 }
 .about_shop {
   width: 60%;
-  background-color: #cff3ed;
-  background-image: linear-gradient(62deg, #eff2f2 0%, #999996 100%);
+  background-color: #f3b37d;
+  background-image: linear-gradient(132deg, #f3b37d 0%, #f7f7c4 100%);
 
   border: 1px solid black;
   border-top-right-radius: 10px;
@@ -345,6 +342,14 @@ body {
   font-size: 30px;
 }
 .add_style_form {
+  background-color: #ff9a8b;
+  background-image: linear-gradient(
+    90deg,
+    #ff9a8b 0%,
+    #f7ebf3 55%,
+    #ff99ac 100%
+  );
+
   border-radius: 10px;
   margin: 4%;
   width: 100%;
@@ -394,7 +399,7 @@ body {
 }
 .haircut_card-content {
   z-index: 1;
-  margin-top: -58%;
+  margin-top: -65%;
   width: 288px;
   height: fit-content;
   padding: 2%;
@@ -433,7 +438,6 @@ body {
 
 .haircut_card:hover {
   transform: scale(1.02);
-
 }
 
 .haircut_card:hover .haircut_card-title::after {

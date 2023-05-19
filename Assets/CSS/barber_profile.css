@@ -1,6 +1,7 @@
 body {
   padding: 0px;
   margin: 0px;
+  background-color: rgb(221, 240, 247);
 }
 
 * {
@@ -12,8 +13,6 @@ body {
 
   display: flex;
   gap: 1rem;
-  background-color: grey;
- 
 }
 
 .photo_div {
@@ -22,7 +21,8 @@ body {
   display: flex;
   flex-direction: column;
   flex: 1;
-  background-color: rgb(223, 225, 225);
+  background-color: #f3b37d;
+  background-image: linear-gradient(132deg, #f3b37d 0%, #f7f7c4 100%);
   margin: 5% 3%;
   border-radius: 1em;
 }
@@ -31,7 +31,6 @@ body {
   flex-wrap: wrap;
 
   justify-content: center;
- 
 
   width: 80%;
   height: 280px;
@@ -136,7 +135,8 @@ body {
   margin: 1%;
   border-radius: 0.7%;
   gap: 1rem;
-  background-color: rgb(223, 225, 225);
+  background-color: #f3b37d;
+  background-image: linear-gradient(132deg, #f3b37d 0%, #f7f7c4 100%);
 }
 .right_head {
   width: 100%;
@@ -421,6 +421,13 @@ body {
   font-size: 30px;
 }
 .add_style_form {
+  background-color: #ff9a8b;
+  background-image: linear-gradient(
+    90deg,
+    #ff9a8b 0%,
+    #f7ebf3 55%,
+    #ff99ac 100%
+  );
   border-radius: 10px;
   margin: 4%;
   width: 100%;
@@ -451,7 +458,7 @@ body {
   border-radius: 10px;
   transition: 200ms ease;
   opacity: 0.9;
-  margin-top: 0;
+  margin-top: 3%;
   width: 300px;
   height: 420px;
   overflow: hidden;
@@ -470,7 +477,7 @@ body {
 }
 .haircut_card-content {
   z-index: 1;
-  margin-top: -58%;
+  margin-top: -65%;
   width: 285px;
   height: fit-content;
   padding: 2%;

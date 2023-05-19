@@ -1,12 +1,7 @@
 body {
   margin: 0px;
   padding: 0px;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(59, 59, 59, 1) 50%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  background-color: rgb(221, 240, 247);
 }
 
 .success {

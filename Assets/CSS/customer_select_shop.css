@@ -1,12 +1,7 @@
 body {  
   margin: 0px;
   padding: 0px;
-  background: rgb(245, 239, 242);
-  background: radial-gradient(
-    circle,
-    rgba(245, 239, 242, 1) 0%,
-    rgba(207, 207, 208, 1) 100%
-  );
+  background-color: rgb(221, 240, 247);
 }
 
 .big-font {
