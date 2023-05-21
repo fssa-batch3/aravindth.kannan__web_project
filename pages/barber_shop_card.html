@@ -230,10 +230,10 @@
       const shopCard = document.getElementById("shop_profile_form");
       shopCard.addEventListener("submit",function (event){
         event.preventDefault();
-
+        // create empty array
          let emptyArray = [];
          if(localStorage.getItem("shopinfo") != null){
-          shopinfo = JSON.parse(localStorage.getItem("shopinfo"));
+          emptyArray = JSON.parse(localStorage.getItem("shopinfo"));
          } 
      
 
@@ -265,8 +265,6 @@
         const pushArray = JSON.stringify(emptyArray);
         localStorage.setItem("shopinfo", pushArray);
         window.location.href = "./shop_profile.html";
-
-     
     })
     </script>
   </body>

@@ -49,9 +49,9 @@ body {
   margin: auto;
 }
 .photo {
-  width: 15rem;
+  width: 20rem;
   height: 15rem;
-  border-radius: 8rem;
+  border-radius: 1rem;
   margin: 4% auto;
   box-shadow: 0px 0px 10px black;
 }

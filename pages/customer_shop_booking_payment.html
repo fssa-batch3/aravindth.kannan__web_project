@@ -23,25 +23,8 @@
               <li class="date_font" id="haircut_name"></li>
             </ul>
           </div>
-          <div class="bottum">
-            <h1>Please make payment for our service</h1>
-            <form id="payment_methods">
-              <input class="check" type="radio" name="payment" />
-              <label class="pay_font">G PAY</label>
-              <br />
-
-              <input class="check" type="radio" name="payment" />
-              <label class="pay_font"> Phone pay</label>
-              <br />
-
-              <input class="check" type="radio" name="payment" />
-              <label class="pay_font">Paypal</label>
-              <br />
-
-              <input class="check" type="radio" name="payment" />
-              <label class="pay_font">Pay At arrival</label>
-            </form>
-          </div>
+          <img alt="shop Image" id="booked_shop_img" class="bottum">
+           
         </div>
         <div class="right">
           <h2>Shop Details</h2>
@@ -92,7 +75,7 @@
       let book_time = (document.getElementById("time").innerHTML =
         "Time : " + oneShopBooking["shop_book_time"]);
       let book_haircut = (document.getElementById("haircut_name").innerHTML =
-        "Haircut type : " + oneShopBooking["select_shop_Haircut"]);
+        "Service type : " + oneShopBooking["select_shop_Haircut"]);
 
       // select the shop card from shop booking page.
       const oneShopCard = JSON.parse(localStorage.getItem("shop_card")).find(
@@ -107,6 +90,8 @@
       console.log(oneShopDetail);
 
       // set values of booking shop details from that shop card.
+
+      let booked_shop_image = document.getElementById("booked_shop_img").setAttribute("src",oneShopDetail["shop_photo"]);
 
       let book_shop_name = (document.getElementById("shop_name").innerHTML =
         "Shop name :   " + oneShopDetail["shop_name"]);

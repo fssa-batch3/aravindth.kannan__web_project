@@ -54,10 +54,10 @@ body {
   font-weight: bold;
 }
 .bottum {
-  background-color: #bdc2cd;
-  padding: 2%;
+  width: 80%;
+  height: 20rem;
   border-radius: 20px;
-  margin: 2%;
+  margin: 2% auto;
   border: 1px solid black;
 }
 .bottum h1 {
@@ -82,7 +82,6 @@ body {
   cursor: pointer;
   font-size: 20px;
   font-weight: bolder;
-  
   width: 100%;
   height: 70px;
 }

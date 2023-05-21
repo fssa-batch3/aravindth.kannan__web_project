@@ -92,37 +92,52 @@
 
 /* footer css is started */
 .footer {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 1%;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   height: fit-content;
-  background-color: rgb(246, 185, 73);
+  background-color: black;
   font-size: 1rem;
 }
 .footround {
-  width: 4rem;
-  height: 4rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 2rem;
+}
+.c_round {
+  margin-bottom: -2%;
+  width: 20px;
+  height: 20px;
   border-radius: 2rem;
 }
 .footicons {
+  width: 100%;
+  gap: 1%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 400px;
 }
 .footer_firsthalf {
   font-size: 25px;
-  width: 750px;
-  color: black;
+  display: flex;
+  gap: 2%;
+  justify-content: center;
+  width: 100%;
+  color: #ffd700;
 }
 .footer_secondhalf {
   width: 500px;
 }
+.copy_right_div {
+  color: #ffd700;
+}
 
 .footcard {
-  color: white;
+  color: #ffd700;
   font-weight: bold;
   border-radius: 5%;
   box-sizing: border-box;
