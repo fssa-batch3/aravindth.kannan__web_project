@@ -51,7 +51,7 @@
  
 
     <div class="Short">
-      <p class="short-1">Fade</p>
+      <p class="short-1">Hair straightening</p>
     </div>
     <section>
       <div class="big-div">
@@ -151,101 +151,44 @@
 
     
 
-    <!-- java script -->
+   <!-- java script -->
 
-    <script>
-      // JSON
+   <script>
+    // JSON
+    let hair_type = "Hair straightening";
+    const shopNewHaircuts = JSON.parse(localStorage.getItem("shop_newhaircuts")).filter( F => F.shop_hair_type == hair_type);
 
-      const barber_list_beard = [
-        {
-          image: "../Assets/Images/fade-0.jpeg",
-          alt: "Fire short",
-          barber_name: "ajith",
-          description:
-            "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
-        },
-        {
-          image: "../Assets/Images/fade-1.jpeg",
-          alt: "Fire short",
-          barber_name: "aathi",
-          description:
-            "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
-        },
-        {
-          image: "../Assets/Images/fade-2.jpeg",
-          alt: "Fire short",
-          barber_name: "vijay",
-          description:
-            "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
-        },
-        {
-          image: "../Assets/Images/fade-3.jpeg",
-          alt: "Fire short",
-          barber_name: "danush",
-          description:
-            "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
-        },
-        {
-          image: "../Assets/Images/fade-4.jpeg",
-          alt: "Fire short",
-          barber_name: "ariyaa",
-          description:
-            "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
-        },
-        {
-          image: "../Assets/Images/fade-5.jpg",
-          alt: "Fire short",
-          barber_name: "vikram",
-          description:
-            "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
-        },
-        {
-          image: "../Assets/Images/fade-6.jpeg",
-          alt: "Fire short",
-          barber_name: "braimravi",
-          description:
-            "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
-        },
-        {
-          image: "../Assets/Images/fade-8.jpeg",
-          alt: "Fire short",
-          barber_name: "actimasbrim",
-          description:
-            "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
-        },
-      ];
+    // card java script
 
-      // card java script
+    for (let i = 0; i < shopNewHaircuts.length; i++) {
+      let big_div = document.createElement("div");
+      big_div.setAttribute("class", "card");
+      document.querySelector(".all_styles").append(big_div);
 
-      for (let i = 0; i < barber_list_beard.length; i++) {
-        let big_div = document.createElement("div");
-        big_div.setAttribute("class", "card");
-        document.querySelector(".all_styles").append(big_div);
+      let image = document.createElement("img");
+      image.setAttribute("class", "card_img");
+      image.setAttribute("src", shopNewHaircuts[i]["shop_haircutImage"]);
+      image.setAttribute("alt", shopNewHaircuts[i]["shop_haircutname"]);
+      image.setAttribute("alt", "image");
+      big_div.append(image);
 
-        let image = document.createElement("img");
-        image.setAttribute("class", "card_img");
-        image.setAttribute("src", barber_list_beard[i]["image"]);
-        image.setAttribute("alt", barber_list_beard[i]["alt"]);
-        image.setAttribute("alt", "image");
-        big_div.append(image);
+      let content_div = document.createElement("div");
+      content_div.setAttribute("class", "card-content");
+      big_div.append(content_div);
 
-        let content_div = document.createElement("div");
-        content_div.setAttribute("class", "card-content");
-        big_div.append(content_div);
+      let name = document.createElement("h2");
+      name.setAttribute("class", "card-title");
+      name.innerText = shopNewHaircuts[i]["shop_haircutname"];
+      content_div.append(name);
 
-        let name = document.createElement("h2");
-        name.setAttribute("class", "card-title");
-        name.innerText = barber_list_beard[i]["barber_name"];
-        content_div.append(name);
+      let text = document.createElement("p");
+      text.setAttribute("class", "card-text");
+      text.innerText = shopNewHaircuts[i]["shop_haircut_para"];
+      content_div.append(text);
+    }
 
-        let text = document.createElement("p");
-        text.setAttribute("class", "card-text");
-        text.innerText = barber_list_beard[i]["description"];
-        content_div.append(text);
-      }
-
-      console.log(barber_list_beard);
-    </script>
+    
+  </script>
 
   </body>
 </html>

@@ -49,7 +49,7 @@
     </header>
 
     <div class="Short">
-      <p class="short-1">Undercut</p>
+      <p class="short-1">Facials</p>
     </div>
     <section>
       <div class="big-div">
@@ -155,77 +155,22 @@
 
     <script>
       // JSON
+      let hair_type = "Facials";
+      const shopNewHaircuts = JSON.parse(localStorage.getItem("shop_newhaircuts")).filter( F => F.shop_hair_type == hair_type);
 
-      const barber_list_beard = [
-        {
-          image: "../Assets/Images/undercut-8.jpeg",
-          alt: "Fire short",
-          barber_name: "kumar",
-          description:
-            "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
-        },
-        {
-          image: "../Assets/Images/undercut-9.jpeg",
-          alt: "Fire short",
-          barber_name: "mugil",
-          description:
-            "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
-        },
-        {
-          image: "../Assets/Images/undercut-7.jpeg",
-          alt: "Fire short",
-          barber_name: "sunil",
-          description:
-            "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
-        },
-        {
-          image: "../Assets/Images/undercut-6.jpeg",
-          alt: "Fire short",
-          barber_name: "sunny",
-          description:
-            "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
-        },
-        {
-          image: "../Assets/Images/undercut-5.jpg",
-          alt: "Fire short",
-          barber_name: "babu",
-          description:
-            "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
-        },
-        {
-          image: "../Assets/Images/undercut-4.jpeg",
-          alt: "Fire short",
-          barber_name: "blacki",
-          description:
-            "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
-        },
-        {
-          image: "../Assets/Images/undercut-3.jpeg",
-          alt: "Fire short",
-          barber_name: "susila",
-          description:
-            "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
-        },
-        {
-          image: "../Assets/Images/undercut-2.jpeg",
-          alt: "Fire short",
-          barber_name: "magesh",
-          description:
-            "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
-        },
-      ];
+  
 
       // card java script
 
-      for (let i = 0; i < barber_list_beard.length; i++) {
+      for (let i = 0; i < shopNewHaircuts.length; i++) {
         let big_div = document.createElement("div");
         big_div.setAttribute("class", "card");
         document.querySelector(".all_styles").append(big_div);
 
         let image = document.createElement("img");
         image.setAttribute("class", "card_img");
-        image.setAttribute("src", barber_list_beard[i]["image"]);
-        image.setAttribute("alt", barber_list_beard[i]["alt"]);
+        image.setAttribute("src", shopNewHaircuts[i]["shop_haircutImage"]);
+        image.setAttribute("alt", shopNewHaircuts[i]["shop_haircutname"]);
         image.setAttribute("alt", "image");
         big_div.append(image);
 
@@ -235,16 +180,16 @@
 
         let name = document.createElement("h2");
         name.setAttribute("class", "card-title");
-        name.innerText = barber_list_beard[i]["barber_name"];
+        name.innerText = shopNewHaircuts[i]["shop_haircutname"];
         content_div.append(name);
 
         let text = document.createElement("p");
         text.setAttribute("class", "card-text");
-        text.innerText = barber_list_beard[i]["description"];
+        text.innerText = shopNewHaircuts[i]["shop_haircut_para"];
         content_div.append(text);
       }
 
-      console.log(barber_list_beard);
+      
     </script>
   </body>
 </html>
