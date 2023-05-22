@@ -25,23 +25,7 @@
               <li class="date_font" id="haircut_name"></li>
             </ul>
           </div>
-          <div class="bottum">
-            <h1>Please make payment for our service</h1>
-            <form id="payment_methods">
-              <input class="check" type="radio" name="payment" />
-              <label class="pay_font">G pay</label>
-
-              <br />
-              <input class="check" type="radio" name="payment" />
-              <label class="pay_font"> Phone pay</label>
-              <br />
-              <input class="check" type="radio" name="payment" />
-              <label class="pay_font"> Paypal</label>
-              <br />
-              <input class="check" type="radio" name="payment" />
-              <label class="pay_font"> Pay At arrival</label>
-            </form>
-          </div>
+          <img class="bottum_image" id="booked_barber_img" alt="Barber Name">
         </div>
         <div class="right">
           <h2>Barber Details</h2>
@@ -97,7 +81,7 @@
       let book_time = (document.getElementById("time").innerHTML =
         "Time : " + oneBarberBooking["barber_book_time"]);
       let book_haircut = (document.getElementById("haircut_name").innerHTML =
-        "Haircut type : " + oneBarberBooking["select_barber_Haircut"]);
+        "Service type : " + oneBarberBooking["select_barber_Haircut"]);
 
       // select the barber card from barber booking page.
       const oneBarberCard = JSON.parse(
@@ -114,6 +98,8 @@
       console.log(oneBarberDetail);
 
       // set values of booking barber details from that barber card.
+
+      let booked_barber_image = document.getElementById("booked_barber_img").setAttribute("src",oneBarberDetail["barber_photo"]);
 
       let book_barber_name = (document.getElementById("barber_name").innerHTML =
         "Barber name :   " + oneBarberDetail["barbername"]);

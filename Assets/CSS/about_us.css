@@ -59,11 +59,13 @@
   text-decoration: underline;
 }
 .bookbtn {
+  cursor: pointer;
   font-size: 19px;
   font-weight: bold;
-  width: 150px;
-  height: 60px;
-  border: 5px solid black;
+  color: black;
+  padding: 1%;
+  text-decoration: none;
+  border: 3px solid black;
   border-radius: 5px;
 }
 .bookbtn:hover {

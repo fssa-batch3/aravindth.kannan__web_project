@@ -92,6 +92,7 @@
 
 /* footer css is started */
 .footer {
+  height: 15rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 1%;
   display: flex;
@@ -99,7 +100,6 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  height: fit-content;
   background-color: black;
   font-size: 1rem;
 }
@@ -115,6 +115,7 @@
   border-radius: 2rem;
 }
 .footicons {
+  margin-top: 2.5%;
   width: 100%;
   gap: 1%;
   display: flex;
