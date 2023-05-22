@@ -2,7 +2,6 @@ body {
   margin: 0px;
   padding: 0px;
   background-color: rgb(221, 240, 247);
- 
 }
 
 .Short {
@@ -151,12 +150,12 @@ span {
 }
 .card-content {
   z-index: 1;
-  margin-top: -55%;
+  margin-top: -50%;
   width: 285px;
   padding: 5%;
   background: linear-gradient(
     hsl(0 0% 0% / 0),
-    hsl(20 0% 0% / 0.3) 20%,
+    hsl(20 0% 0% / 0.3) 50%,
     hsl(0 0% 0% / 1)
   );
   transform: translateY(58%);

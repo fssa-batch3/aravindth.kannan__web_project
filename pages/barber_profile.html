@@ -26,12 +26,12 @@
             <div class="nav_dropdown">
               <button class="nav_dropbtn">Hair styles</button>
               <div class="nav_dropdown-content">
-                <a href="../pages/barber_short_style.html">Short</a>
-                <a href="../pages/barber_medium_style.html">Medium</a>
-                <a href="../pages/barber_long_style.html">Long</a>
-                <a href="../pages/barber_fade_style.html">Fade</a>
-                <a href="../pages/barber_undercut_style.html">Undercut</a>
-                <a href="../pages/barber_beard_style.html">Beard</a>
+                <a href="../pages/barber_short_style.html">Haircut</a>
+                <a href="../pages/barber_medium_style.html">Hair straightening</a>
+                <a href="../pages/barber_long_style.html">Hair coloring</a>
+                <a href="../pages/barber_fade_style.html">Facials</a>
+                <a href="../pages/barber_undercut_style.html">Shaves</a>
+                <a href="../pages/barber_beard_style.html">Beard trim</a>
               </div>
             </div>
             <a class="nav" href="../pages/barber_card.html">Apply barber </a>
@@ -93,7 +93,6 @@
         <div class="right_head">
           <p>Barber information</p>
         </div>
-       
 
         <fieldset class="input_div">
           <legend class="label_full_details">Experience</legend>
@@ -129,7 +128,7 @@
           <div class="card-content">
             <div class="card-img">
               <img
-              alt="Barber profile"
+                alt="Barber profile"
                 id="card_profile"
                 src="https://source.unsplash.com/0fN7Fxv1eWA"
               />
@@ -137,7 +136,7 @@
             <div class="projects">
               <div class="project">
                 <img
-                alt="sample haircut"
+                  alt="sample haircut"
                   id="card_sample_1"
                   src="https://source.unsplash.com/Q3NEoed1dzs"
                 />
@@ -145,7 +144,7 @@
 
               <div class="project">
                 <img
-                alt="sample haircut"
+                  alt="sample haircut"
                   id="card_sample_2"
                   src="https://source.unsplash.com/vYRAP3yMa3I"
                 />
@@ -153,7 +152,7 @@
 
               <div class="project">
                 <img
-                alt="sample haircut"
+                  alt="sample haircut"
                   id="card_sample_3"
                   src="https://source.unsplash.com/4uojMEdcwI8"
                 />
@@ -204,6 +203,18 @@
               autocomplete="name"
             />
           </div>
+          <div class="small_form_div">
+            <label class="label"> Select service</label>
+            <br />
+            <select name="type" id="type_id" class="name-box-1" required>
+              <option>Haircut</option>
+              <option>Hair coloring</option>
+              <option>Hair straitning</option>
+              <option>Facials</option>
+              <option>Shaves</option>
+              <option>Beard trim</option>
+            </select>
+          </div>
 
           <div class="small_form_div">
             <label class="label">Description</label>
@@ -237,73 +248,36 @@
     <!-- footer is started -->
     <footer>
       <div class="footer">
-        <div class="footer_firsthalf">
-          <div>
-            <h3>About us</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo
-              optio sequi minima, reprehenderit excepturi quos beatae deserunt
-              praesentium officiis ipsa vitae nostrum maxime ratione
-              exercitationem ea culpa odio expedita tempora. Lorem ipsum dolor
-              sit amet, consectetur adipisicing elit. Nemo optio sequi minima,
-              reprehenderit excepturi quos beatae deserunt praesentium officiis
-              ipsa vitae nostrum maxime ratione exercitationem ea culpa odio
-              expedita tempora.
-            </p>
-          </div>
-
-          <br />
-          <div class="footicons">
-            <a href="#"
-              ><img
-                class="footround"
-                src="../Assets/Images/whatsapp.png"
-                alt="What's app"
-            /></a>
-            <a href="#">
-              <img
-                class="footround"
-                src="../Assets/Images/facebook-2.png"
-                alt="face book"
-            /></a>
-            <a href="#">
-              <img
-                class="footround"
-                src="../Assets/Images/instagram-2.png"
-                alt="instagram"
-            /></a>
-            <a href="#"
-              ><img
-                class="footround"
-                src="../Assets/Images/twitter-2.png"
-                alt="twitter"
-            /></a>
-          </div>
+        <div class="footicons">
+          <a href="#"
+            ><img
+              class="footround"
+              src="../Assets/Images/Y- facebook.png"
+              alt="What's app"
+          /></a>
+          <a href="#">
+            <img
+              class="footround"
+              src="../Assets/Images/Y- insta.png"
+              alt="face book"
+          /></a>
+          <a href="#">
+            <img
+              class="footround"
+              src="../Assets/Images/Y- twitter.png"
+              alt="instagram"
+          /></a>
         </div>
-
-        <div class="footer_secondhalf">
-          <div class="footcard">
-            <img src="../Assets/Images/about us.jpg" alt="Haircut" />
-            <div class="footinfo">
-              <div>
-                <h3>Address</h3>
-                <p>
-                  Lorem, ipsum dolor sit amet <br />
-                  consectetur adipisicing <br />
-                  elit. Nam nulla dolorem <br />
-                  fugiat <br />
-                </p>
-              </div>
-              <div>
-                <h3>Contact us</h3>
-                <p>9764652785</p>
-              </div>
-              <div>
-                <h3>email</h3>
-                <p>sharp&clean@gmail.com</p>
-              </div>
-            </div>
-          </div>
+        <br />
+        <div class="footer_firsthalf">
+          <a>Home</a>
+          <a>Services</a>
+          <a>About</a>
+          <a>terms</a>
+          <a>Privacy policy</a>
+        </div>
+        <div class="copy_right_div">
+          <pre>sharp & clean  <img class="c_round" src="../Assets/Images/C - copyright.png"/>  2023</pre>
         </div>
       </div>
     </footer>
@@ -422,7 +396,7 @@
         }
 
         const hairName = document.getElementById("style_name").value.trim();
-
+        const hairType = document.getElementById("type_id").value.trim();
         const hairDescription = document
           .getElementById("style_para")
           .value.trim();
@@ -434,6 +408,7 @@
         let hair_cut_data = {
           haircut_id: haircutId,
           haircutname: hairName,
+          hair_type: hairType,
           // this email is profile email
           haircut_email: thisBarber,
           haircut_para: hairDescription,

@@ -17,7 +17,6 @@ body {
 }
 .shop_list h2 {
   font-size: 30px;
-  text-decoration: underline;
   text-align: center;
   font-weight: bolder;
 }
@@ -27,7 +26,6 @@ body {
   height: fit-content;
 }
 .barber_list h2 {
-  text-decoration: underline;
   font-size: 30px;
   text-align: center;
   font-weight: bolder;

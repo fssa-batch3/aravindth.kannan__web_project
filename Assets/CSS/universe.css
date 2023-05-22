@@ -5,9 +5,9 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid black;
-  background-color: rgb(246, 185, 73);
-
-  height: 130px;
+  background-color: #f39a67;
+  background-image: linear-gradient(62deg, #f39a67 0%, #f7b815 100%);
+  height: 9rem;
 }
 
 .logo_img {

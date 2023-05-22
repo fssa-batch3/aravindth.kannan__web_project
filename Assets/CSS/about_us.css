@@ -2,11 +2,7 @@
 
 .about_us {
   display: flex;
-  background: radial-gradient(
-    circle,
-    rgba(240, 244, 240, 1) 0%,
-    rgba(129, 141, 149, 1) 100%
-  );
+  background: black;
 }
 
 .about_info {
@@ -20,7 +16,9 @@
   display: flex;
   align-items: center;
   text-align: center;
-  background-color: white;
+  background-color: #f39a67;
+background-image: linear-gradient(62deg, #f39a67 0%, #f7b815 100%);
+
   width: 20%;
   height: 90%;
   font-size: 40px;
@@ -30,7 +28,7 @@
   margin: 8% auto;
   width: 70%;
   font-size: 25px;
-  color: #000000;
+  color: white;
 }
 
 .heroimg {
@@ -74,11 +72,7 @@
 }
 /* section 3 is started */
 .shop_sec {
-  background: radial-gradient(
-    circle,
-    rgba(240, 244, 240, 1) 0%,
-    rgba(129, 141, 149, 1) 100%
-  );
+  background: white;
 }
 .shop {
   display: flex;

@@ -25,12 +25,12 @@
             <div class="nav_dropdown">
               <button class="nav_dropbtn">Hair styles</button>
               <div class="nav_dropdown-content">
-                <a href="../pages/barber_short_style.html">Short</a>
-                <a href="../pages/barber_medium_style.html">Medium</a>
-                <a href="../pages/barber_long_style.html">Long</a>
-                <a href="../pages/barber_fade_style.html">Fade</a>
-                <a href="../pages/barber_undercut_style.html">Undercut</a>
-                <a href="../pages/barber_beard_style.html">Beard</a>
+                <a href="../pages/barber_short_style.html">Haircut</a>
+                <a href="../pages/barber_medium_style.html">Hair coloring</a>
+                <a href="../pages/barber_long_style.html">Hair straightening</a>
+                <a href="../pages/barber_fade_style.html">Facials</a>
+                <a href="../pages/barber_undercut_style.html">Shaves</a>
+                <a href="../pages/barber_beard_style.html">Beard trim</a>
               </div>
             </div>
             <a class="nav" href="../pages/barber_card.html">Apply barber</a>
@@ -58,7 +58,7 @@
     </header>
 
     <div class="Short">
-      <p class="short-1">Beard</p>
+      <p class="short-1">Beard trim</p>
     </div>
     <section>
       <div class="big-div">
@@ -125,7 +125,7 @@
     </section>
 
     <div class="back_div">
-      <a class="back_btn" href="/index.html">Back</a>
+      <a class="back_btn" href="./barber_home.html">Back</a>
     </div>
     <!-- footer start -->
     <footer>
@@ -167,77 +167,81 @@
     <!-- java script -->
     <script>
       // JSON
+      let hair_type = "Beard trim";
+      const barberNewHaircuts = JSON.parse(
+        localStorage.getItem("newhaircuts")
+      ).filter(F => F.hair_type == hair_type);
 
-      const barber_list_beard = [
-        {
-          image: "../Assets/Images/beard-3.jpeg",
-          alt: "Fire short",
-          barber_name: "mathi",
-          description:
-            "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
-        },
-        {
-          image: "../Assets/Images/beard-4.jpeg",
-          alt: "Fire short",
-          barber_name: "Guna",
-          description:
-            "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
-        },
-        {
-          image: "../Assets/Images/beard-5.jpeg",
-          alt: "Fire short",
-          barber_name: "Velu",
-          description:
-            "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
-        },
-        {
-          image: "../Assets/Images/beard-6.jpeg",
-          alt: "Fire short",
-          barber_name: "Vikram",
-          description:
-            "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
-        },
-        {
-          image: "../Assets/Images/beard-7.jpeg",
-          alt: "Fire short",
-          barber_name: "Murali",
-          description:
-            "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
-        },
-        {
-          image: "../Assets/Images/beard-8.jpeg",
-          alt: "Fire short",
-          barber_name: "Ajith",
-          description:
-            "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
-        },
-        {
-          image: "../Assets/Images/beard-9.jpeg",
-          alt: "Fire short",
-          barber_name: "Vijay",
-          description:
-            "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
-        },
-        {
-          image: "../Assets/Images/beard-0.jpg",
-          alt: "Fire short",
-          barber_name: "Dhanush",
-          description:
-            "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
-        },
-      ];
+      // const barber_list_beard = [
+      //   {
+      //     image: "../Assets/Images/beard-3.jpeg",
+      //     alt: "Fire short",
+      //     barber_name: "mathi",
+      //     description:
+      //       "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
+      //   },
+      //   {
+      //     image: "../Assets/Images/beard-4.jpeg",
+      //     alt: "Fire short",
+      //     barber_name: "Guna",
+      //     description:
+      //       "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
+      //   },
+      //   {
+      //     image: "../Assets/Images/beard-5.jpeg",
+      //     alt: "Fire short",
+      //     barber_name: "Velu",
+      //     description:
+      //       "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
+      //   },
+      //   {
+      //     image: "../Assets/Images/beard-6.jpeg",
+      //     alt: "Fire short",
+      //     barber_name: "Vikram",
+      //     description:
+      //       "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
+      //   },
+      //   {
+      //     image: "../Assets/Images/beard-7.jpeg",
+      //     alt: "Fire short",
+      //     barber_name: "Murali",
+      //     description:
+      //       "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
+      //   },
+      //   {
+      //     image: "../Assets/Images/beard-8.jpeg",
+      //     alt: "Fire short",
+      //     barber_name: "Ajith",
+      //     description:
+      //       "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
+      //   },
+      //   {
+      //     image: "../Assets/Images/beard-9.jpeg",
+      //     alt: "Fire short",
+      //     barber_name: "Vijay",
+      //     description:
+      //       "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
+      //   },
+      //   {
+      //     image: "../Assets/Images/beard-0.jpg",
+      //     alt: "Fire short",
+      //     barber_name: "Dhanush",
+      //     description:
+      //       "With the variety of types of haircuts for men, it is quite easy to feel overwhelmed when choosing your next .",
+      //   },
+      // ];
 
       // card java script
 
-      for (let i = 0; i < barber_list_beard.length; i++) {
+      for (let i = 0; i < barberNewHaircuts.length; i++) {
         let big_div = document.createElement("div");
         big_div.setAttribute("class", "card");
         document.querySelector(".all_styles").append(big_div);
 
         let image = document.createElement("img");
         image.setAttribute("class", "card_img");
-        image.setAttribute("src", barber_list_beard[i]["image"]);
-        image.setAttribute("alt", barber_list_beard[i]["alt"]);
+        image.setAttribute("src", barberNewHaircuts[i]["haircutImage"]);
+        image.setAttribute("alt", barberNewHaircuts[i]["haircutname"]);
         image.setAttribute("alt", "image");
         big_div.append(image);
 
@@ -247,16 +251,16 @@
 
         let name = document.createElement("h2");
         name.setAttribute("class", "card-title");
-        name.innerText = barber_list_beard[i]["barber_name"];
+        name.innerText = barberNewHaircuts[i]["haircutname"];
         content_div.append(name);
 
         let text = document.createElement("p");
         text.setAttribute("class", "card-text");
-        text.innerText = barber_list_beard[i]["description"];
+        text.innerText = barberNewHaircuts[i]["haircut_para"];
         content_div.append(text);
       }
 
-      console.log(barber_list_beard);
+      console.log(barberNewHaircuts);
     </script>
   </body>
 </html>

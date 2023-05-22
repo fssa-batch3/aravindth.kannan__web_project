@@ -26,12 +26,12 @@
             <div class="nav_dropdown">
               <button class="nav_dropbtn">Hair styles</button>
               <div class="nav_dropdown-content">
-                <a href="../pages/barber_short_style.html">Short</a>
-                <a href="../pages/barber_medium_style.html">Medium</a>
-                <a href="../pages/barber_long_style.html">Long</a>
-                <a href="../pages/barber_fade_style.html">Fade</a>
-                <a href="../pages/barber_undercut_style.html">Undercut</a>
-                <a href="../pages/barber_beard_style.html">Beard</a>
+                <a href="../pages/barber_short_style.html">Haircut</a>
+                <a href="../pages/barber_medium_style.html">Hair straightening</a>
+                <a href="../pages/barber_long_style.html">Hair coloring</a>
+                <a href="../pages/barber_fade_style.html">Facials</a>
+                <a href="../pages/barber_undercut_style.html">Shaves</a>
+                <a href="../pages/barber_beard_style.html">Beard trim</a>
               </div>
             </div>
             <a class="nav" href="../pages/barber_card.html">Apply barber</a>
@@ -209,6 +209,19 @@
           </div>
 
           <div class="small_form_div">
+            <label class="label"> Select service</label>
+            <br />
+            <select name="type" id="type_id" class="name-box-1" required>
+              <option>Haircut</option>
+              <option>Hair coloring</option>
+              <option>Hair straitning</option>
+              <option>Facials</option>
+              <option>Shaves</option>
+              <option>Beard trim</option>
+            </select>
+          </div>
+
+          <div class="small_form_div">
             <label class="label">Description</label>
 
             <br />
@@ -345,7 +358,7 @@
         }
 
         const hairName = document.getElementById("style_name").value.trim();
-
+        const hairType = document.getElementById("type_id").value.trim();
         const hairDescription = document
           .getElementById("style_para")
           .value.trim();
@@ -357,6 +370,7 @@
         let hair_cut_data = {
           shop_haircut_id: haircutId,
           shop_haircutname: hairName,
+          shop_hair_type: hairType,
           // this email is profile email
           shop_haircut_email: thisBarber,
           shop_haircut_para: hairDescription,
