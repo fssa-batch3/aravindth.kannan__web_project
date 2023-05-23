@@ -198,6 +198,7 @@
 
             <br />
             <input
+              value="oil facial"
               required
               pattern="[A-Z a-z]{1,32}"
               title="Make sure that name should space"
@@ -226,6 +227,7 @@
 
             <br />
             <input
+              value="In this service we use oil to wash your face and we give oil facial. after this facial your face look very soft."
               required
               id="style_para"
               class="name-box-1"
@@ -253,11 +255,9 @@
 
     <script>
       // get data from both storage of login & register
-
       const thisBarber = JSON.parse(localStorage.getItem("single_barber"));
       const shopInfo = JSON.parse(localStorage.getItem("shopinfo"));
       // get object from local storage by email
-
       let oneShop = shopInfo.find(function (event) {
         let oneShopEmail = event["shop_email"];
         if (thisBarber == oneShopEmail) {
@@ -284,9 +284,7 @@
         oneShop["shop_about"]);
 
       // delete  profile function
-
       let deleteOneShop = document.getElementById("delete_shop");
-
       deleteOneShop.addEventListener("click", function (event) {
         event.preventDefault();
         let index = shopInfo.indexOf(oneShop);
@@ -330,7 +328,6 @@
 
       //  delete card function
       let deleteOneCard = document.getElementById("delete_shop_card");
-
       deleteOneCard.addEventListener("click", function (event) {
         event.preventDefault();
         let index = shopCard.indexOf(shop_Card);
@@ -382,6 +379,7 @@
 
         const new_Array = JSON.stringify(new_hair);
         localStorage.setItem("shop_newhaircuts", new_Array);
+        alert("Successfully new hair type added");
         window.location.href = "./shop_profile.html";
       });
 
@@ -451,6 +449,7 @@
           let index = arr.indexOf(card);
           arr.splice(index, 1);
           localStorage.setItem("shop_newhaircuts", JSON.stringify(arr));
+          alert("Successfully hair type card deleted");
         }
       }
     </script>

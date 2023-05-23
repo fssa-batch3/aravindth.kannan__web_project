@@ -194,6 +194,7 @@
 
             <br />
             <input
+            value="fire coloring"
               required
               pattern="[A-Z a-z]{1,32}"
               title="Make sure that name should space"
@@ -221,6 +222,7 @@
 
             <br />
             <input
+            value="This type coloring is going trending now. In this service we use fire to coloring your hair."
               required
               id="style_para"
               class="name-box-1"
@@ -481,6 +483,7 @@
           let index = arr.indexOf(card);
           arr.splice(index, 1);
           localStorage.setItem("newhaircuts", JSON.stringify(arr));
+          alert("Successfully hair type deleted")
         }
       }
     </script>
