@@ -85,7 +85,7 @@
         }
 
         if (match == true) {
-          alert("Success");
+          alert("Successfully logen in");
           const matchObject = all_user_data.find(
             o => o["barber_email"] == useremail
           );
@@ -96,7 +96,7 @@
           // document.querySelector("login_form").reset();
           window.location.href = "./barber_home.html";
         } else {
-          alert("Fail");
+          alert(" Login Failed");
         }
       });
 

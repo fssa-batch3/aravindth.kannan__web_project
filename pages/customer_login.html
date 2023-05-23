@@ -85,7 +85,7 @@
         }
 
         if (match == true) {
-          alert("Success");
+          alert(" Successfully loged In ");
           const matchObject = all_user_data.find(o => o["email"] == useremail);
           console.log(matchObject);
           const thisUser = JSON.stringify(matchObject.email);
@@ -94,7 +94,7 @@
          
           window.location.href = "./customer_home.html";
         } else {
-          alert("Fail");
+          alert(" Login Failed ");
         }
       });
     </script>

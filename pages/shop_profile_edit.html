@@ -222,6 +222,7 @@
         let index = newData.indexOf(oldData.shop_email);
         newData[index] = updated;
         localStorage.setItem("shopinfo", JSON.stringify(newData));
+        alert("Successfully shop profile edited");
         window.location.href ="./shop_profile.html";
       }
     })

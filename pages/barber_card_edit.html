@@ -156,6 +156,7 @@
           let index = newData.indexOf(oldData.barber_card_email);
           newData[index] = updated;
           localStorage.setItem("barber_card", JSON.stringify(newData));
+          alert("Successfully Barber card Edited");
           window.location.href = "./barber_profile.html";
         }
       });

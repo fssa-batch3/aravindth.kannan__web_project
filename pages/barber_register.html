@@ -123,7 +123,7 @@
         for (let i = 0; i < userNew.length; i++) {
           if (barberEmail === userNew[i]["barber_email"]) {
             checker = true;
-            alert("email is already exists");
+            alert(" This Email is already exists");
             break;
           } else {
             checker = false;
@@ -134,6 +134,7 @@
             userNew.push(userData);
             const newarray = JSON.stringify(userNew);
             localStorage.setItem("barberinfo", newarray);
+            alert("Successfully registered");
             window.location.href = "./barber_login.html";
           } else {
             alert("Invalid Password");

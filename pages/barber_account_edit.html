@@ -169,6 +169,7 @@
             let index = newData.indexOf(oldData.barber_email);
             newData[index] = updated;
             localStorage.setItem("barberinfo", JSON.stringify(newData));
+            alert("Successfully account Edited");
             window.location.href = "./barber_account_profile.html";
           }
         } else {
