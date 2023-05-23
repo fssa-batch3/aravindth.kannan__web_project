@@ -93,8 +93,6 @@
           console.log(matchObject);
           const thisUser = JSON.stringify(matchObject.barber_email);
           localStorage.setItem("single_barber", thisUser);
-
-          // document.querySelector("login_form").reset();
           window.location.href = "./barber_home.html";
         } else {
           alert(" Login Failed");

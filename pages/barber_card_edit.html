@@ -136,7 +136,7 @@
         let barber_sample = document.getElementById("sample").value;
         let barber_sample_1 = document.getElementById("sample_1").value;
         let barber_sample_2 = document.getElementById("sample_2").value;
-// create object for edit data
+        // create object for edit data
         let one_barber_card = {
           barbername,
           barber_card_email,
@@ -146,7 +146,7 @@
           barber_sample_1,
           barber_sample_2,
         };
-//  assign data in the correct object!
+        //  assign data in the correct object!
         let newData = JSON.parse(localStorage.getItem("barber_card"));
 
         let oldData = newData.find(i => i.barber_card_email == barber_card_email);
