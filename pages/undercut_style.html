@@ -7,10 +7,14 @@
     <title>undercut</title>
     <link rel="stylesheet" href="../Assets/CSS/hair_style.css" />
     <link rel="stylesheet" href="../Assets/CSS/universe.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
   </head>
   <body>
     <header>
-      <div class="header">        
+      <div class="header">
         <div>
           <a href="../index.html">
             <img
@@ -25,17 +29,15 @@
             <div class="nav_dropdown">
               <button class="nav_dropbtn">Hair styles</button>
               <div class="nav_dropdown-content">
-                <a href="../pages/short_style.html">Haircut</a>
-                <a href="../pages/medium_style.html">Hair straightening</a>
-                <a href="../pages/long_style.html">Hair coloring</a>
-                <a href="../pages/fade_style.html">Facials</a>
-                <a href="../pages/undercut_style.html">Shaves</a>
-                <a href="../pages/beard_style.html">Beard trim</a>
+                <a href="./pages/medium_style.html">Haircut</a>
+                <a href="./pages/fade_style.html">Hair straightening</a>
+                <a href="./pages/long_style.html">Hair coloring</a>
+                <a href="./pages/undercut_style.html">Facials</a>
+                <a href="./pages/short_style.html">Shaves</a>
+                <a href="./pages/beard_style.html">Beard trim</a>
               </div>
             </div>
             <a class="nav" href="../pages/services.html">services</a>
-            <!-- <a class="nav" href="../pages/about_us.html">About Us</a>
-            <a class="nav" href="../pages/contact_us.html">Contact Us</a> -->
             <div class="nav_dropdown">
               <button class="nav_dropbtn">Login</button>
               <div class="nav_dropdown-content">
@@ -47,6 +49,11 @@
         </div>
       </div>
     </header>
+
+    <div class="search_bar_div">
+      <input type="text" class="search_bar" />
+     
+    </div>
 
     <div class="Short">
       <p class="short-1">Facials</p>
@@ -101,8 +108,8 @@
 
       <!-- 8 styles -->
       <div class="all_styles">
-      <!-- all styles here -->
-    </div>
+        <!-- all styles here -->
+      </div>
     </section>
 
     <!-- back button -->
@@ -110,55 +117,51 @@
     <div class="back_div">
       <a class="back_btn" href="/index.html">Back</a>
     </div>
-<!-- footer started -->
-<footer>
-  <div class="footer">
-    
-      <div class="footicons">
-        <a href="#"
-          ><img
-            class="footround"
-            src="../Assets/Images/Y- facebook.png"
-            alt="What's app"
-        /></a>
-        <a href="#">
-          <img
-            class="footround"
-            src="../Assets/Images/Y- insta.png"
-            alt="face book"
-        /></a>
-        <a href="#">
-          <img
-            class="footround"
-            src="../Assets/Images/Y- twitter.png"
-            alt="instagram"
-        /></a>
-       
+    <!-- footer started -->
+    <footer>
+      <div class="footer">
+        <div class="footicons">
+          <a href="#"
+            ><img
+              class="footround"
+              src="../Assets/Images/Y- facebook.png"
+              alt="What's app"
+          /></a>
+          <a href="#">
+            <img
+              class="footround"
+              src="../Assets/Images/Y- insta.png"
+              alt="face book"
+          /></a>
+          <a href="#">
+            <img
+              class="footround"
+              src="../Assets/Images/Y- twitter.png"
+              alt="instagram"
+          /></a>
+        </div>
+        <br />
+        <div class="footer_firsthalf">
+          <a>Home</a>
+          <a>Services</a>
+          <a>About</a>
+          <a>terms</a>
+          <a>Privacy policy</a>
+        </div>
+        <div class="copy_right_div">
+          <pre>sharp & clean  <img class="c_round" src="../Assets/Images/C - copyright.png"/>  2023</pre>
+        </div>
       </div>
-      <br>
-      <div class="footer_firsthalf">
-        <a>Home</a>
-        <a>Services</a>
-        <a>About</a>
-        <a>terms</a>
-        <a>Privacy policy</a>
-    </div>
-    <div class="copy_right_div">
-      <pre>sharp & clean  <img class="c_round" src="../Assets/Images/C - copyright.png"/>  2023</pre>
-    </div>
-  </div>
-</footer>
-    
-
+    </footer>
 
     <!-- java script -->
 
     <script>
       // JSON
       let hair_type = "Facials";
-      const shopNewHaircuts = JSON.parse(localStorage.getItem("shop_newhaircuts")).filter( F => F.shop_hair_type == hair_type);
-
-  
+      const shopNewHaircuts = JSON.parse(
+        localStorage.getItem("shop_newhaircuts")
+      ).filter(F => F.shop_hair_type == hair_type);
 
       // card java script
 
@@ -188,8 +191,6 @@
         text.innerText = shopNewHaircuts[i]["shop_haircut_para"];
         content_div.append(text);
       }
-
-      
     </script>
   </body>
 </html>
