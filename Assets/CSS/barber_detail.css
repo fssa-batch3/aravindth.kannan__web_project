@@ -13,7 +13,6 @@ body {
 
   display: flex;
   gap: 1rem;
-  
 }
 
 .photo_div {
@@ -35,7 +34,6 @@ body {
   height: 280px;
   border-bottom: 0.1em solid rgb(71, 70, 70);
   margin: auto;
-
 }
 .photo {
   width: 80%;
@@ -133,13 +131,11 @@ body {
 .information {
   margin-top: 3%;
   width: 100%;
-  gap: 2%;
+  height: fit-content;
   flex-wrap: wrap;
   justify-content: space-around;
   display: grid;
   grid-template-columns: auto auto auto;
-
- 
 }
 .right_head {
   width: 100%;
@@ -393,7 +389,7 @@ body {
   border-radius: 10px;
   transition: 200ms ease;
   opacity: 0.9;
-  margin-top: 0;
+  margin: 2%;
   width: 300px;
   height: 420px;
   overflow: hidden;

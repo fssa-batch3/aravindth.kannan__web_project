@@ -21,7 +21,7 @@ section {
 }
 .all_styles {
   border: 1px solid black;
-  background-color: rgb(207, 204, 204);
+  background-color: white;
   margin: 2%;
   border-radius: 1%;
 
@@ -35,7 +35,7 @@ section {
 
 .big-div {
   margin-top: 40px;
-  background-color: rgb(220, 219, 219);
+  background-color: white;
 
   border-radius: 1%;
   box-shadow: inset 0px 0px 20px white;
@@ -126,6 +126,7 @@ span {
 /* new card css start */
 
 .card {
+  border: 1px solid black;
   background-size: cover;
   border-radius: 10px;
   transition: 200ms ease;
