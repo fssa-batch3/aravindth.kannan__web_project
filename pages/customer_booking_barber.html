@@ -15,29 +15,49 @@
           <label class="phone"> Your name</label>
           <br />
           <input
-          value="aravindth"
-          pattern="[A-Za-z0-9]+"
-          title="Make sure that name should not contain space"
-           id="cus_name" class="name-input" type="text" required />
+            value="aravindth"
+            pattern="[A-Za-z0-9]+"
+            title="Make sure that name should not contain space"
+            id="cus_name"
+            class="name-input"
+            type="text"
+            required
+          />
           <br />
           <br />
           <label class="phone"> Phone number</label>
           <br />
           <input
-          value="9887654387"
-          pattern="[7-9]{1}[0-9]{9}" 
-       title="Phone number with 7-9 and remaing 9 digit with 0-9"
-           id="cus_number" class="name-input" type="number" required />
+            value="9887654387"
+            pattern="[7-9]{1}[0-9]{9}"
+            title="Phone number with 7-9 and remaing 9 digit with 0-9"
+            id="cus_number"
+            class="name-input"
+            type="number"
+            required
+          />
           <br />
           <br />
           <label class="phone">Fill your address</label>
           <br />
-          <input value="3/24, East street, A.kumara puram, kurukkusalai, thoothukudi-05" id="cus_address" class="name-input" type="text" required />
+          <input
+            value="3/24, East street, A.kumara puram, kurukkusalai, thoothukudi-05"
+            id="cus_address"
+            class="name-input"
+            type="text"
+            required
+          />
           <br />
           <br />
           <label class="phone">Date</label>
           <br />
-          <input id="cus_date" class="name-input" type="date" required />
+          <input
+            onchange="checkDate()"
+            id="cus_date"
+            class="name-input"
+            type="date"
+            required
+          />
           <br />
           <br />
           <label class="phone">Select service</label>
@@ -53,7 +73,7 @@
           <br />
           <br />
           <label class="phone">Time Schedule</label>
-          <br>
+          <br />
           <select id="select_time" class="name-input">
             <option class="time_anker">08:00Am - 09:00Am</option>
 
@@ -76,6 +96,17 @@
         </div>
       </div>
     </div>
+    <script>
+      // date valitation  function.
+      function checkDate() {
+        let selectedText = document.getElementById("cus_date").value;
+        let selectedDate = new Date(selectedText);
+        let now = new Date();
+        if (selectedDate < now) {
+          alert("Date must be in the future");
+        }
+      }
+    </script>
 
     <script>
       // java script
@@ -177,8 +208,8 @@
       select_btn.innerText = "Select";
       buttons_div.append(select_btn);
 
-           // get data from booking form.
-           let checker = false;
+      // get data from booking form.
+      let checker = false;
       const book = document.getElementById("next_btn");
       book.addEventListener("click", function (e) {
         e.preventDefault();
@@ -189,21 +220,17 @@
         }
         const cusAddress = document.getElementById("cus_address").value.trim();
         const selectHaircut = document.getElementById("serviceid").value.trim();
-        const barberDate = document
-          .getElementById("cus_date")
-          .value.trim();
-          const cusPhone = document.getElementById("cus_number").value.trim();
+        const barberDate = document.getElementById("cus_date").value.trim();
+        const cusPhone = document.getElementById("cus_number").value.trim();
         const barberTime = document.getElementById("select_time").value.trim();
         const barberName = oneBarberCard["barbername"];
         const customerName = document.getElementById("cus_name").value.trim();
         const barberBookId = Date.now();
 
-       
-
         let barber_book_date = {
-          book_cus_address:cusAddress,
-          book_cus_phone:cusPhone,
-          barber_book_name:barberName,
+          book_cus_address: cusAddress,
+          book_cus_phone: cusPhone,
+          barber_book_name: barberName,
           barber_book_card_id: oneBarberCard["barberid"],
           barber_book_customer_name: customerName,
           select_barber_Haircut: selectHaircut,
@@ -219,23 +246,20 @@
             barberName == bookNew[i].barber_book_name
           ) {
             checker = true;
-            alert("This date and time is already booked")
+            alert("This date and time is already booked");
             break;
-          } else{
+          } else {
             checker = false;
           }
         }
-        if(checker === false){
+        if (checker === false) {
           bookNew.push(barber_book_date);
-        const stringArray = JSON.stringify(bookNew);
-        localStorage.setItem("barberBookInfo", stringArray);
-        window.location.href =
-          "./customer_barber_booking_payment.html?id=" + barberBookId;
+          const stringArray = JSON.stringify(bookNew);
+          localStorage.setItem("barberBookInfo", stringArray);
+          window.location.href =
+            "./customer_barber_booking_payment.html?id=" + barberBookId;
         }
       });
-      
-
     </script>
-   
   </body>
 </html>

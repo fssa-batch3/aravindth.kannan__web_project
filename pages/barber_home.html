@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="../Assets/CSS/about_us.css">
     <link rel="stylesheet" href="../Assets/CSS/contact_us.css">
     <title>barber home</title>
+
+    <!-- <script type="text/javascript">
+      (function () {
+          emailjs.init("xJczW25BwYvEu6S51");
+      })();
+      </script>
+    <script src="https://smtpjs.com/v3/smtp.js" integrity=""></script> -->
   </head>
   <body>
     <!-- header is started -->
@@ -263,6 +270,7 @@
             </div>
             <div class="cont_subject_cnt">
               <input
+                
                 type="text"
                 class="cont_subject"
                 id="cont_subject"
@@ -272,6 +280,7 @@
             </div>
             <div class="cont_msg_ctn">
               <textarea
+             
                 name="msg"
                 cols="30"
                 rows="4"
@@ -281,12 +290,17 @@
               ></textarea>
               <label for="msg" class="cont_msg_lbl">Message</label>
             </div>
-            <button class="cont_btn">Send Message</button>
+            <button id="send_id" class="cont_btn">Send Message</button>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+
+
+    
+  
     <!-- section is ended -->
 
     <!-- footer is started -->
@@ -329,5 +343,8 @@
     </footer>
 
     <!-- footer is ended -->
+
+    <!-- <script src="../Assets/JS/contact_us.js"> -->
+    </script>
   </body>
 </html>
