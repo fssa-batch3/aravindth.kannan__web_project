@@ -50,6 +50,12 @@
 
     <!-- header is ended -->
 
+     <!-- search bar  start-->
+     <div class="search_bar_div">
+      <input placeholder="Search here.." type="text" class="search_bar" id="search_bar_id"/>
+    </div>
+     <!-- search bar end-->
+
     <!-- section is started -->
     <p class="big-font">Select Your Shop</p>
     <div class="all-content">
@@ -115,7 +121,7 @@
         const barber = select_shop_list[i];
 
         let content = document.createElement("div");
-        content.setAttribute("class", "container");
+        content.setAttribute("class", "card");
 
         let profile_card = document.createElement("div");
         profile_card.setAttribute("class", "profile-card");
@@ -205,5 +211,7 @@
         document.querySelector(".all-content").append(content);
       }
     </script>
+
+  <script src="../Assets/JS/search_br.js"></script>
   </body>
 </html>
