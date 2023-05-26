@@ -246,7 +246,7 @@
       <div class="cont_container">
         <div class="cont_contact" id="cont_contact">
           <div class="cont_contact__title">Contact</div>
-          <div class="cont_contact__content">
+          <div class="cont_contact__content"  id="emailForm">
             <div class="cont_name_cnt">
               <input type="text" class="cont_name" id="cont_name" required />
               <label for="name">Full Name</label>
@@ -275,7 +275,7 @@
               ></textarea>
               <label for="msg" class="cont_msg_lbl">Message</label>
             </div>
-            <button class="cont_btn">Send Message</button>
+            <button id="send_id" onclick="sende()" class="cont_btn">Send Message</button>
           </div>
         </div>
       </div>
@@ -321,5 +321,11 @@
         </div>
       </div>
     </footer>
+
+
+    <!-- java script -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="./Assets/JS/contact_us.js">
+      </script>
   </body>
 </html>
