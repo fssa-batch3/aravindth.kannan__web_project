@@ -20,9 +20,9 @@ function sende() {
   Email.send({
     Host: "smtp.elasticemail.com",
     Username: "kaviprakash594@gmail.com",
-    Password: "D822D3CB3EF5FCB9D45AEAA7E84252D5707B",
+    Password: "F57ED265C7039A247A7846B5BA2D3433317B",
     To: "kaviprakash594@gmail.com",
-    From: email,
+    From: "kaviprakash594@gmail.com",
     Subject: subject,
     Body: body,
   }).then(alert("Message sent successfully!"));
