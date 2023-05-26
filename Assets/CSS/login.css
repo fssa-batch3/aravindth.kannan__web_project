@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  background-image: url(../Images/login\ page.jpg);
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.content {
+  background-color: transparent;
+  backdrop-filter: blur(2px);
+
+  margin-top: 10px;
+  border: 2px solid black;
+  padding: 2%;
+  margin-left: 80px;
+  box-shadow: 10px 10px 10px 5px black;
+  width: 25%;
+  height: 80%;
+
+  border-radius: 3px;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  height: 20%;
+  align-items: center;
+}
+.login-1 {
+  margin-top: 20px;
+  font-weight: bolder;
+  color: white;
+  text-shadow: 0px 0px 8px black;
+  font-size: 50px;
+}
+.user-name {
+  width: 100%;
+}
+
+.user-box {
+  width: 100%;
+  height: 15%;
+}
+
+.user-box-1,
+.email-id-box-1,
+.password-box-1 {
+  margin-top: 20px;
+  width: 100%;
+  padding-left: 2%;
+  color: black;
+  height: 50px;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: transparent;
+  box-shadow: 10px 10px 10px black;
+}
+.email-id {
+  width: 100%;
+  height: 20%;
+}
+.email-id-1,
+.password-1,
+.user-name-1 {
+  margin-top: 20px;
+  padding-left: 2%;
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 0px 0px 8px black;
+  color: white;
+}
+.email-id-box {
+  width: 100%;
+}
+
+.password {
+  width: 100%;
+  height: 20%;
+}
+
+.Password-box {
+  width: 100%;
+  height: 20%;
+}
+
+.login-button {
+  padding-top: 10%;
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  width: 100%;
+}
+.login-button-1 {
+  width: 100%;
+  color: white;
+  height: 90%;
+  border-radius: 5px;
+  border: none;
+  background-color: black;
+
+  font-size: 30px;
+  font-weight: bolder;
+
+  transition: 0.7s;
+}
+.login-button-1:hover {
+
+  transform: scale(1.09);
+}
+.forgot-password {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.forgot-password-1 {
+  text-decoration: none;
+  font-size: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  transition: 0.7s;
+}
+.forgot-password-1:hover {
+  transform: scale(1.1);
+}
+
+.logo {
+  width: 30rem;
+  height: 20rem;
+  padding-left: 5%;
+}
+
+@media screen and (max-width: 600px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+
+  body {
+    background-color: rgb(135, 132, 132);
+
+    background-image: none;
+  }
+  .content {
+    width: 80%;
+    height: 70%;
+    margin: auto;
+  }
+}

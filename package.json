@@ -1,0 +1,24 @@
+{
+  "name": "aravindth.kannan__web_project",
+  "version": "1.0.0",
+  "description": "My project\r My project is solve this problem.\r nowadays people facing the timing problem and favorite barber and subcribe the barber.\r So I decide to solve this problems to this website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fssa-batch3/aravindth.kannan__web_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fssa-batch3/aravindth.kannan__web_project/issues"
+  },
+  "homepage": "https://github.com/fssa-batch3/aravindth.kannan__web_project#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "husky": "^8.0.3"
+  }
+}

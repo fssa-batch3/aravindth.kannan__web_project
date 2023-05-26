@@ -4,77 +4,96 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../Assets/CSS/register.css" />
+    <title>barber register</title>
+    <link rel="stylesheet" href="../Assets/CSS/barber_register.css" />
   </head>
   <body>
-    <form class="resister_form" id="form">
-      <div class="head_div">
-        <p class="head">Registration info</p>
-      </div>
-
-      <div class="all_inputs">
-        <label for="user_name" pattern="[A-Z a-z]{1,32}" class="all_label"
-          >Username</label
-        >
-        <br />
-        <br />
-        <input class="input" type="text" id="username" autocomplete="name" />
-      </div>
-
-      <div class="all_inputs">
-        <label for="email" class="all_label">Email Id</label>
-        <br />
-        <br />
-        <input class="input" type="email" id="email" autocomplete="email" />
-      </div>
-
-      <div class="all_inputs">
-        <label for="password" class="all_label">Password</label>
-        <br />
-        <br />
-        <input
-          class="input"
-          type="password"
-          id="password"
-          autocomplete="password"
-        />
-      </div>
-
-      <div class="all_inputs">
-        <label for="password" class="all_label"> Confirm Password</label>
-        <br />
-        <br />
-        <input
-          class="input"
-          type="password"
-          id="c_password"
-          autocomplete="password"
-        />
-      </div>
-
-      <div class="all_inputs">
-        <label for="phone" class="all_label">phone number</label>
-        <br />
-        <br />
-
-        <input class="input" type="number" id="phone_number" />
-      </div>
+    <form  class="resister_form" id="form">
       
+          <div class="head_div">
+            <p class="head">Sign up</p>
+          </div>
+          <div class="all_inputs">
+            <label class="all_label" >Username</label>
+            <br />
+            
+            <input
+            pattern="[A-Za-z0-9]+"
+          title="Make sure that name should not contain space"
+              class="input"
+              type="text"
+              id="username"
+              pattern="[A-Z a-z]{1,32}"
+              autocomplete="name"
+            />
+          </div>
+          <br />
+          <div class="all_inputs">
+            <label for="email" class="all_label">Email Id</label>
+            <br />
+            
+            <input
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            class="input" type="email" id="b_email" autocomplete="email" />
+          </div>
+          <br />
+          <div class="all_inputs">
+            <label for="password" class="all_label">Password</label>
+            <br />
+            
+            <input
+            pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\S+$).{8,}$"
+            title="Must contain at least one number and one uppercase and lowercase letter,at least 8 or more characters and must not contain space "
+  
+              class="input"
+              type="password"
+              id="password"
+              autocomplete="password"
+            />
+          </div>
+          <br />
+          <div class="all_inputs">
+            <label for="password" class="all_label"> Confirm Password</label>
+            <br />
+            
+            <input
+            pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\S+$).{8,}$"
+            title="Must contain at least one number and one uppercase and lowercase letter,at least 8 or more characters and must not contain space "
+  
+              class="input"
+              type="password"
+              id="c_password"
+              autocomplete="password"
+            />
+          </div>
+          <br />
+          <div class="all_inputs">
+            <label for="phone" class="all_label">phone number</label>
+            <br />
+            
 
-      <div class="submit">
-        <button class="submit_btn" type="submit" id="btn">Submit</button>
+            <input
+            pattern="[7-9]{1}[0-9]{9}" 
+       title="Phone number with 7-9 and remaing 9 digit with 0-9"
+             class="input" type="number" id="phone_number" />
+          </div>
+        
+          <br /><br />
+        
+          <div class="submit">
+            <button class="submit_btn" type="submit" id="btn">Sign up</button>
+          </div>
+        
       </div>
     </form>
-    <!-- <a href="./login_barber.html"></a> -->
 
     <!-- javav-script -->
 
     <script>
-      // JSON
+     
       // Java Script
+      
       let checker = false;
-
       const signUp = document.getElementById("form");
       signUp.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -83,47 +102,46 @@
           userNew = JSON.parse(localStorage.getItem("barberinfo"));
         }
 
-        const userName = document.getElementById("username").value.trim();
-        const useremail = document.getElementById("email").value.trim();
-        const emailPassword = document.getElementById("password").value.trim();
-        const emailc_password = document
-          .getElementById("c_password")
-          .value.trim();
-
-        const phoneNumber = document
-          .getElementById("phone_number")
-          .value.trim();
-          const singleUserid = Date.now();
+        const barberName = document.getElementById("username").value.trim();
+        const barberEmail = document.getElementById("b_email").value.trim();
+        const barberEmailPassword = document.getElementById("password").value.trim();
+        const barberEmailcPassword = document.getElementById("c_password").value.trim();
+        const phoneNumber = document.getElementById("phone_number").value.trim();
+   
+        const singleUserid = Date.now();
 
         let userData = {
-          userId:singleUserid,
-          userName: userName,
-          email: useremail,
-          email_password: emailPassword,
-          emailc_password: emailc_password,
+          userId: singleUserid,
+          barberName: barberName,
+          barber_email: barberEmail,
+          email_password: barberEmailPassword,
+          confirm_Password: barberEmailcPassword,
           phoneNumber: phoneNumber,
+         
         };
 
         for (let i = 0; i < userNew.length; i++) {
-          if (useremail === userNew[i]["email"]) {
+          if (barberEmail === userNew[i]["barber_email"]) {
             checker = true;
-            alert("email is already exists");
+            alert(" This Email is already exists");
             break;
           } else {
             checker = false;
           }
         }
         if (checker === false) {
-          if (emailPassword === emailc_password) {
+          if (barberEmailPassword === barberEmailcPassword) {
             userNew.push(userData);
             const newarray = JSON.stringify(userNew);
             localStorage.setItem("barberinfo", newarray);
-            window.location.href = "./login_barber.html";
+            alert("Successfully registered");
+            window.location.href = "./barber_login.html";
           } else {
             alert("Invalid Password");
           }
         }
       });
     </script>
+   
   </body>
 </html>

@@ -1,0 +1,77 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: rgb(221, 240, 247);
+
+}
+.head {
+  height: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.head_text {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 50px;
+
+  color: black;
+}
+.card_form {
+  background-color: #d7d9de;
+  border: 1px solid black;
+  padding-top: 20px;
+  gap: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  height: 20%;
+  margin: 3% auto;
+}
+.name {
+  width: 100%;
+}
+label {
+  margin-left: 15%;
+  font-size: 30px;
+  color: black;
+}
+.name-box {
+  width: 100%;
+  margin-top: 1%;
+}
+.name-box-1 {
+  border-radius: 20px;
+  margin-left: 120px;
+  padding-left: 2%;
+  width: 70%;
+  background-color: transparent;
+  font-size: 20px;
+  height: 50px;
+  color: black;
+}
+
+.submit {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.submit-1 {
+  margin-bottom: 20px;
+  width: 150px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+  font-weight: bolder;
+  color: white;
+  background-color: black;
+  transition: 0.7s;
+ 
+}
+.submit-1:hover {
+  transform: scale(1.2);
+  background-color: white;
+  color: black;
+}

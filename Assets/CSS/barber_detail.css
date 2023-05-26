@@ -20,29 +20,25 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  flex: 1;
+  width: 40%;
   background-color: #f3b37d;
   background-image: linear-gradient(132deg, #f3b37d 0%, #f7f7c4 100%);
-  margin: 5% 3%;
+  margin: 1% 1%;
   border-radius: 1em;
 }
 .profile {
   display: flex;
   flex-wrap: wrap;
-
   justify-content: center;
-
-  width: 80%;
+  width: 50%;
   height: 280px;
-
   border-bottom: 0.1em solid rgb(71, 70, 70);
-  margin: 7% auto;
-  gap: 3%;
+  margin: auto;
 }
 .photo {
   width: 80%;
-  height: 90%;
-  border-radius: 6%;
+  height: 95%;
+  border-radius: 50%;
   border: 0.1em solid black;
 }
 .site_name_div {
@@ -63,7 +59,6 @@ body {
 }
 .site_name::first-letter {
   font-size: 3rem;
-
   color: black;
   font-weight: bolder;
 }
@@ -72,7 +67,6 @@ body {
   display: flex;
   margin: 0 5%;
   flex-direction: column;
-  gap: 1em;
 }
 .field_div {
   border-radius: 2%;
@@ -103,9 +97,9 @@ body {
 }
 
 .p_edit {
-  width: 40%;
+  width: 25%;
   text-decoration: none;
-  height: 4rem;
+  height: 3.5rem;
   font-size: 1.2em;
   font-weight: bold;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -126,37 +120,37 @@ body {
 
 /* small profile div css end */
 
-.information {
-  padding: 1%;
-  flex: 3;
-  height: fit-content;
-  height: 55em;
-  overflow-y: auto;
+.all_haircuts {
+  width: 54%;
   margin: 1%;
-  border-radius: 0.7%;
-  gap: 1rem;
+  padding: 2%;
+  border-radius: 10px;
   background-color: #f3b37d;
   background-image: linear-gradient(132deg, #f3b37d 0%, #f7f7c4 100%);
+}
+.information {
+  margin-top: 3%;
+  width: 100%;
+  height: fit-content;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
 .right_head {
   width: 100%;
   text-align: center;
   border-bottom: 2px solid black;
-  margin-bottom: 2%;
 }
 .right_head p {
   font-size: 2em;
   font-weight: bolder;
 }
-.input_div_add {
-  width: 90%;
-  height: 20%;
-  margin: 2% auto;
-}
+
 .input_div {
   border-radius: 2%;
   width: 90%;
-  height: 10%;
+  height: 6em;
   margin: 2% auto;
 }
 
@@ -313,7 +307,6 @@ body {
   border: none;
   transition: 0.7s;
 }
-
 .select-button {
   width: 40%;
   text-decoration: none;
@@ -390,68 +383,6 @@ body {
   transform: scale(1.1);
 }
 
-.all_haircut_designs {
-  width: 100%;
-  display: flex;
-  gap: 2.5%;
-}
-.add_more_hsircuts_font {
-  text-align: center;
-}
-.form_div {
-  width: 25%;
-}
-.form_div p {
-  text-align: center;
-  font-size: 30px;
-}
-.haircuts {
-  margin: 1%;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  padding: 1%;
-  border-radius: 10px;
-  width: 70%;
-  border: 1px solid black;
-}
-.haircuts_head {
-  text-align: center;
-  font-size: 30px;
-}
-.add_style_form {
-  background-color: #ff9a8b;
-  background-image: linear-gradient(
-    90deg,
-    #ff9a8b 0%,
-    #f7ebf3 55%,
-    #ff99ac 100%
-  );
-  border-radius: 10px;
-  margin: 4%;
-  width: 100%;
-  border: 1px solid black;
-}
-.small_form_div {
-  height: 3rem;
-  padding: 5%;
-  width: 70%;
-  margin: auto;
-}
-
-.name-box-1 {
-  width: 100%;
-  height: 80%;
-}
-.submit_1 {
-  color: white;
-  background-color: black;
-  font-size: 20px;
-  width: 10rem;
-  height: 3rem;
-}
-
 /* card css */
 .haircut_card {
   background-size: cover;
@@ -477,7 +408,7 @@ body {
 }
 .haircut_card-content {
   z-index: 1;
-  margin-top: -65%;
+  margin-top: -50%;
   width: 285px;
   height: fit-content;
   padding: 2%;
@@ -507,14 +438,6 @@ body {
   transform-origin: left;
   transition: transform 500ms ease-in-out;
 }
-/* .type_drop_btn {
-  width: 100%;
-  height: 50px;
-  margin: auto;
-  border-radius: 10px;
-  font-size: 20px;
-  background-color: white;
-} */
 
 .haircut_card-text {
   color: rgb(255 255 255 / 0.8);
@@ -536,14 +459,4 @@ body {
 .haircut_card_img:hover {
   transform: scale(1.02);
   z-index: -2;
-}
-
-.haircut_delete {
-  width: 60px;
-  margin-left: 2%;
-  border-radius: 3px;
-  height: auto;
-  color: white;
-  border: 1px solid white;
-  background-color: black;
 }

@@ -1,0 +1,200 @@
+/* section 1 is started */
+
+.about_us {
+  display: flex;
+  background: black;
+}
+
+.about_info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.about_us h2 {
+  border-top-right-radius: 70px;
+  border-bottom-right-radius: 70px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: #f39a67;
+background-image: linear-gradient(62deg, #f39a67 0%, #f7b815 100%);
+
+  width: 20%;
+  height: 90%;
+  font-size: 40px;
+  padding-left: 2%;
+}
+.about_us p {
+  margin: 8% auto;
+  width: 70%;
+  font-size: 25px;
+  color: white;
+}
+
+.heroimg {
+  width: 90%;
+  margin: 5% 2%;
+  border-radius: 50px;
+  height: 90%;
+}
+/* section 2 is started */
+.online_booking {
+  display: flex;
+  align-items: center;
+  background-color: #555c66;
+}
+
+.book {
+  font-size: 25px;
+  width: 40%;
+  height: 30%;
+  height: fit-content;
+  background-color: white;
+  border-radius: 12px;
+  padding: 2%;
+}
+.book h2 {
+  text-decoration: underline;
+}
+.bookbtn {
+  cursor: pointer;
+  font-size: 19px;
+  font-weight: bold;
+  color: black;
+  padding: 1%;
+  text-decoration: none;
+  border: 3px solid black;
+  border-radius: 5px;
+}
+.bookbtn:hover {
+  background-color: black;
+  color: white;
+}
+/* section 3 is started */
+.shop_sec {
+  background: white;
+}
+.shop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+.shop h2 {
+  text-decoration: underline;
+}
+
+.features {
+  padding: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.all {
+  display: flex;
+  width: 500px;
+  flex-wrap: wrap;
+}
+
+.service {
+  margin: 20px;
+  padding: 20px 50px;
+  border-radius: 10px;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
+.service_div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.service_img {
+  /* margin: auto; */
+  width: 60%;
+  height: 60%;
+  border-radius: 50px;
+}
+/* works css */
+
+.Our-works {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 70px;
+  justify-content: center;
+  text-align: center;
+  background: rgb(185, 193, 204);
+  background: linear-gradient(
+    0deg,
+    rgba(185, 193, 204, 1) 60%,
+    rgba(85, 92, 102, 1) 60%
+  );
+}
+.works {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 1500px;
+  flex-direction: column;
+  align-items: center;
+}
+.works h2 {
+  font-size: 50px;
+  text-decoration: underline;
+  color: white;
+}
+.free_img {
+  width: 380px;
+  height: 430px;
+  margin: 10px;
+  border-radius: 12px;
+}
+.free_img:hover {
+  transform: scale(1.01);
+  box-shadow: 3px 3px 10px 2px rgb(155, 155, 155);
+}
+
+/* testimolials */
+.fullcard {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.review {
+  font-size: 25px;
+  text-align: center;
+  color: black;
+}
+.review h2 {
+  text-decoration: underline;
+}
+.reviewcard {
+  width: 250px;
+  height: 250px;
+  text-align: right;
+  background-color: #555c66;
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+.flex {
+  display: flex;
+}
+.flexin {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+.flex h3 {
+  margin-left: -40px;
+  font-size: 25px;
+}
+.tester {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  border: 6px solid #b9c1cc;
+}

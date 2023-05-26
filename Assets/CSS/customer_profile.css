@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  background-image: url(../Images/customer\ profile\ page_1.jpg);
+  background-size: contain;
+ 
+}
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.profile_form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  flex-wrap: wrap;
+  margin-left: 10%;
+  border-radius: 5px;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  background-color: transparent;
+  height: 50rem;
+  width: 30%;
+  box-shadow: 20px 20px 20px  black;
+}
+.head_div {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.head {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: white;
+}
+.form-group {
+  margin-left: 18%;
+  width: 100%;
+  height: 15%;
+}
+.form-control {
+  font-size: 20px;
+  color: white;
+  background-color: transparent;
+  padding-left: 2%;
+  box-shadow: 10px 10px 10px black;
+  border: 1px solid white;
+  width: 60%;
+  border-radius: 3px;
+  height: 30%;
+
+}
+.all_label {
+  font-size: 2rem;
+
+  color: white;
+}
+.submit {
+
+  width: 100%;
+  gap: 3%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete_btn {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: white;
+  border-radius: 5px;
+  width: 12rem;
+  height: 3rem;
+
+  border: 1px solid white;
+
+  background-color: black;
+
+  transition: 0.7s;
+}
+.delete_btn:hover {
+  transform: scale(1.1);
+}
+.submit_btn {
+  text-decoration: none;
+  color: white;
+
+  text-align: center;
+  padding: 0px;
+
+  font-size: 2rem;
+  font-weight: bolder;
+
+  width: 12rem;
+  height: 3rem;
+  border-radius: 5px;
+  border: 1px solid white;
+ 
+  background-color: black;
+  
+  transition: 0.7s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.submit_btn:hover {
+  transform: scale(1.1);
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>customer register</title>
+    <link rel="stylesheet" href="../Assets/CSS/customer_register.css" />
+  </head>
+  <body>
+    <form class="resister_form" id="form">
+      <div class="head_div">
+        <p class="head">Sign up</p>
+      </div>
+
+      <div class="all_inputs">
+        <label for="user_name" class="all_label">Username</label>
+        <br />
+
+        <input
+          required
+          class="input"
+          pattern="[A-Za-z0-9]+"
+          title="Make sure that name should not contain space"
+          type="text"
+          id="username"
+          autocomplete="name"
+        />
+      </div>
+      <br />
+
+      <div class="all_inputs">
+        <label for="email" class="all_label">Email Id</label>
+        <br />
+
+        <input
+          required
+          class="input"
+          type="email"
+          id="email"
+          autocomplete="gghjhfy"
+        />
+      </div>
+      <br />
+
+      <div class="all_inputs">
+        <label for="password" class="all_label">Password</label>
+        <br />
+
+        <input
+          required
+          pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\S+$).{8,}$"
+          title="Must contain at least one number and one uppercase and lowercase letter,at least 8 or more characters and must not contain space "
+          class="input"
+          type="password"
+          id="password"
+          autocomplete="password"
+        />
+      </div>
+      <br />
+
+      <div class="all_inputs">
+        <label for="password" class="all_label"> Confirm Password</label>
+        <br />
+
+        <input
+          required
+          pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\S+$).{8,}$"
+          title="Must contain at least one number and one uppercase and lowercase letter,at least 8 or more characters and must not contain space "
+          class="input"
+          type="password"
+          id="c_password"
+          autocomplete="password"
+        />
+      </div>
+      <br />
+
+      <div class="all_inputs">
+        <label for="phone" class="all_label">phone number</label>
+        <br />
+
+        <input required 
+        pattern="[7-9]{1}[0-9]{9}" 
+       title="Phone number with 7-9 and remaing 9 digit with 0-9"
+        class="input" type="number" id="phone_number" />
+      </div>
+
+      <div class="submit">
+        <button class="submit_btn" type="submit" id="btn">Sign up</button>
+      </div>
+    </form>
+
+    <!-- javav-script -->
+
+    <script>
+      // Java Script
+      let checker = false;
+
+      const signUp = document.getElementById("form");
+      signUp.addEventListener("submit", function (event) {
+        event.preventDefault();
+        let userNew = [];
+        if (localStorage.getItem("userinfo") != null) {
+          userNew = JSON.parse(localStorage.getItem("userinfo"));
+        }
+
+        const userName = document.getElementById("username").value.trim();
+        const useremail = document.getElementById("email").value.trim();
+        const emailPassword = document.getElementById("password").value.trim();
+        const emailc_password = document
+          .getElementById("c_password")
+          .value.trim();
+
+        const phoneNumber = document
+          .getElementById("phone_number")
+          .value.trim();
+        const singleUserid = Date.now();
+
+        var regex = /^[6789]{1}[0-9]{9,15}$/;
+    if (regex.test(phoneNumber)) {
+      
+    } else {
+      alert("Phone number is invalid kindly change your number");
+      return;
+    }
+
+        if (userName.value === "") {
+          alert(" Please fill the requirments ");
+        }
+
+        let userData = {
+          userId: singleUserid,
+          userName: userName,
+          email: useremail,
+          email_password: emailPassword,
+          emailc_password: emailc_password,
+          phoneNumber: phoneNumber,
+        };
+
+        for (let i = 0; i < userNew.length; i++) {
+          if (useremail === userNew[i]["email"]) {
+            checker = true;
+            alert(" This Email is already exists");
+            break;
+          } else {
+            checker = false;
+          }
+        }
+        if (checker === false) {
+          if (emailPassword === emailc_password) {
+            userNew.push(userData);
+            const newarray = JSON.stringify(userNew);
+            localStorage.setItem("userinfo", newarray);
+            window.location.href = "./customer_login.html";
+          } else {
+            alert("Invalid Password");
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

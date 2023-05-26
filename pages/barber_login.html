@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Assets/CSS/login.css" />
+    <title>barber Login</title>
+  </head>
+  <body>
+    <div class="logo-div">
+      <img
+        class="logo"
+        alt="image"
+        src="../Assets/Images/sharp logo black.png"
+      />
+    </div>
+    <form id="b_login_form">
+      <div class="content">
+        <div class="login">
+          <h1 class="login-1">Login</h1>
+        </div>
+      
+        <div class="email-id">
+          <p class="email-id-1">Email</p>
+        </div>
+        <div class="email-id-box">
+          <input
+            value="mahaan@gmail.com"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            class="email-id-box-1"
+            type="email"
+            placeholder="abcda@gmail.com"
+            id="b_email"
+          />
+        </div>
+        <div class="password">
+          <p class="password-1">Password</p>
+        </div>
+        <input
+          value="Akkam432@"
+          class="password-box-1"
+          type="password"
+          placeholder=" 123456"
+          id="b_password"
+        />
+        <div class="Password-box"></div>
+
+        <div class="login-button">
+        
+          <button class="login-button-1" type="submit">Login</button>
+        
+        </div>
+
+        <div class="forgot-password">
+          <a href="../pages/barber_register.html" class="forgot-password-1"
+            ><p>Sign up</p></a
+          >
+        </div>
+       
+      </div>
+    </form>
+
+    <!-- Java script -->
+    <script>
+      // JSON
+
+      let logIn = document.getElementById("b_login_form");
+      logIn.addEventListener("submit", event => {
+        event.preventDefault();
+        let all_user_data = JSON.parse(localStorage.getItem("barberinfo"));
+        console.log(all_user_data);
+        // const userName = document.getElementById("username");
+        const useremail = document.getElementById("b_email").value;
+        const emailPassword = document.getElementById("b_password").value;
+        let match = false;
+        for (let i = 0; i < all_user_data.length; i++) {
+          if (
+            useremail == all_user_data[i].barber_email &&
+            emailPassword == all_user_data[i].email_password
+          ) {
+            match = true;
+           
+            break;
+          }
+        }
+
+        if (match == true) {
+          alert("Successfully logen in");
+          const matchObject = all_user_data.find(
+            o => o["barber_email"] == useremail
+          );
+          console.log(matchObject);
+          const thisUser = JSON.stringify(matchObject.barber_email);
+          localStorage.setItem("single_barber", thisUser);
+          window.location.href = "./barber_home.html";
+        } else {
+          alert(" Login Failed");
+        }
+      });
+
+     
+    </script>
+  </body>
+</html>
