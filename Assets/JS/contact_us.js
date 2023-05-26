@@ -22,7 +22,7 @@ function sende() {
     Username: "kaviprakash594@gmail.com",
     Password: "D822D3CB3EF5FCB9D45AEAA7E84252D5707B",
     To: "kaviprakash594@gmail.com",
-    From: "kaviprakash594@gmail.com",
+    From: email,
     Subject: subject,
     Body: body,
   }).then(alert("Message sent successfully!"));
